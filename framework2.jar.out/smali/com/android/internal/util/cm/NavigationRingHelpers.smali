@@ -917,7 +917,7 @@
     if-lez v1, :cond_1
 
     .line 237
-    invoke-virtual {p1}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->getTargetDrawables()Ljava/util/ArrayList;
+    invoke-direct {p1}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->getTargetDrawables()Ljava/util/ArrayList;
 
     move-result-object v2
 

@@ -11565,13 +11565,7 @@
 
     const/4 v12, 0x0
 
-    const/4 v13, 0x2
-    
-    if-eqz v2, :cond_miui_0
-
     const/4 v13, 0x1
-
-    :cond_miui_0
 
     const/4 v14, 0x0
 
@@ -16041,7 +16035,13 @@
     .line 4607
     const/4 v2, 0x0
 
+    const/4 v3, 0x2
+    
+    if-eqz v12, :cond_miui_0
+
     const/4 v3, 0x1
+
+    :cond_miui_0
 
     const/4 v4, 0x0
 
