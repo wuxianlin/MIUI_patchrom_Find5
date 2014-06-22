@@ -3651,12 +3651,14 @@
     .parameter "defaultCountryIso"
 
     .prologue
-    .line 1488
+    invoke-static {p0}, Landroid/telephony/Injector$PhoneNumberUtilsHook;->before_formatNumber(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 1489
     .local v1, len:I
     const/4 v0, 0x0
 

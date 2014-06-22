@@ -1499,22 +1499,30 @@
     .parameter "context"
 
     .prologue
-    .line 131
+    const/4 v5, 0x1
+
+    invoke-static {p0}, Landroid/text/format/Injector$DateFormatHook;->before_is24HourFormat(Landroid/content/Context;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_miui
+
+    return v5
+
+    :cond_miui
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    const-string/jumbo v6, "time_12_24"
+    const-string v6, "time_12_24"
 
     invoke-static {v5, v6}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 134
     .local v4, value:Ljava/lang/String;
     if-nez v4, :cond_3
 
-    .line 135
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5

@@ -482,6 +482,15 @@
     goto :goto_0
 .end method
 
+.method protected findViews()V
+    .locals 0
+
+    .prologue
+    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarOverlayLayout;->pullChildren()V
+
+    return-void
+.end method
+
 .method protected fitSystemWindows(Landroid/graphics/Rect;)Z
     .locals 10
     .parameter "insets"
@@ -674,6 +683,114 @@
     invoke-direct {v0, v1, p1}, Lcom/android/internal/widget/ActionBarOverlayLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
+.end method
+
+.method protected getActionBar()Lcom/android/internal/app/ActionBarImpl;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBar:Lcom/android/internal/app/ActionBarImpl;
+
+    return-object v0
+.end method
+
+.method protected getActionBarBottom()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarBottom:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method protected getActionBarTop()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarTop:Lcom/android/internal/widget/ActionBarContainer;
+
+    return-object v0
+.end method
+
+.method protected getActionView()Lcom/android/internal/widget/ActionBarView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarView:Lcom/android/internal/widget/ActionBarView;
+
+    return-object v0
+.end method
+
+.method protected getBaseContentInsets()Landroid/graphics/Rect;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mBaseContentInsets:Landroid/graphics/Rect;
+
+    return-object v0
+.end method
+
+.method protected getBaseInnerInsets()Landroid/graphics/Rect;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mBaseInnerInsets:Landroid/graphics/Rect;
+
+    return-object v0
+.end method
+
+.method protected getContainerView()Lcom/android/internal/widget/ActionBarContainer;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarTop:Lcom/android/internal/widget/ActionBarContainer;
+
+    return-object v0
+.end method
+
+.method protected getContent()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mContent:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method protected getContentInsets()Landroid/graphics/Rect;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mContentInsets:Landroid/graphics/Rect;
+
+    return-object v0
+.end method
+
+.method protected getInnerInsets()Landroid/graphics/Rect;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mInnerInsets:Landroid/graphics/Rect;
+
+    return-object v0
+.end method
+
+.method protected getLastInnerInsets()Landroid/graphics/Rect;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mLastInnerInsets:Landroid/graphics/Rect;
+
+    return-object v0
+.end method
+
+.method protected isOverlayMode()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mOverlayMode:Z
+
+    return v0
 .end method
 
 .method protected onLayout(ZIIII)V
@@ -1802,4 +1919,14 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method protected superFitSystemWindows(Landroid/graphics/Rect;)V
+    .locals 0
+    .parameter "insets"
+
+    .prologue
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->fitSystemWindows(Landroid/graphics/Rect;)Z
+
+    return-void
 .end method

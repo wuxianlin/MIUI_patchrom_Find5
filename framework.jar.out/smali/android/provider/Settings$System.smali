@@ -202,6 +202,8 @@
 
 .field public static final ENABLE_STYLUS_GESTURES:Ljava/lang/String; = "enable_stylus_gestures"
 
+.field public static final EMERGENCY_TONE:Ljava/lang/String; = "emergency_tone"
+
 .field public static final END_BUTTON_BEHAVIOR:Ljava/lang/String; = "end_button_behavior"
 
 .field public static final END_BUTTON_BEHAVIOR_DEFAULT:I = 0x2

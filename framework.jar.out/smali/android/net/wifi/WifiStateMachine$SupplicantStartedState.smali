@@ -148,6 +148,8 @@
 
     const/4 v1, 0x0
 
+    invoke-static {p1}, Landroid/net/wifi/Injector$WifiStateMachineHook$SupplicantStartedState;->processMessage(Landroid/os/Message;)V
+
     .line 2876
     iget v3, p1, Landroid/os/Message;->what:I
 

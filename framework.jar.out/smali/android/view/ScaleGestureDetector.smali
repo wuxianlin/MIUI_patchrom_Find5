@@ -186,16 +186,21 @@
 
     if-le v1, v2, :cond_0
 
-    .line 213
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
-    .line 215
     :cond_0
+    const/high16 v2, 0x7fc0
+
+    iput v2, p0, Landroid/view/ScaleGestureDetector;->mTouchUpper:F
+
+    iput v2, p0, Landroid/view/ScaleGestureDetector;->mTouchLower:F
+
+    iput v2, p0, Landroid/view/ScaleGestureDetector;->mTouchHistoryLastAccepted:F
+
     return-void
 
-    .line 168
     .end local v0           #res:Landroid/content/res/Resources;
     :cond_1
     const/4 v1, 0x0

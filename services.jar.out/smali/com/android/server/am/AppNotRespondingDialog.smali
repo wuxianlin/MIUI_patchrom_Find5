@@ -356,6 +356,15 @@
 
 
 # virtual methods
+.method getProc()Lcom/android/server/am/ProcessRecord;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
+
+    return-object v0
+.end method
+
 .method public onStop()V
     .locals 0
 

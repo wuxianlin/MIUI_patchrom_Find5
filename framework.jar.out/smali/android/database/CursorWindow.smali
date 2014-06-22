@@ -514,32 +514,28 @@
     :goto_2
     if-ge v1, v5, :cond_3
 
-    .line 756
     const-string v12, " (# cursors opened by "
 
     invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 757
     invoke-virtual {v7, v1}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v6
 
-    .line 758
     .restart local v6       #pid:I
+    invoke-static {v0, v6}, Landroid/database/Injector$CursorWindowHook;->appendPackageName(Ljava/lang/StringBuilder;I)V
+
     if-ne v6, v3, :cond_2
 
-    .line 759
-    const-string/jumbo v12, "this proc="
+    const-string v12, "this proc="
 
     invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 763
     :goto_3
     invoke-virtual {v7, v6}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v4
 
-    .line 764
     .local v4, num:I
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -678,12 +674,12 @@
     .parameter "window"
 
     .prologue
-    .line 728
+    invoke-static {p1}, Landroid/database/Injector$CursorWindowHook;->before_recordClosingOfWindow(I)V
+
     sget-object v1, Landroid/database/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
     monitor-enter v1
 
-    .line 729
     :try_start_0
     sget-object v0, Landroid/database/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
@@ -727,18 +723,17 @@
     .parameter "window"
 
     .prologue
-    .line 719
+    invoke-static {p1, p2}, Landroid/database/Injector$CursorWindowHook;->before_recordNewWindow(II)V
+
     sget-object v1, Landroid/database/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
     monitor-enter v1
 
-    .line 720
     :try_start_0
     sget-object v0, Landroid/database/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 721
     const-string v0, "CursorWindowStats"
 
     const/4 v2, 0x2

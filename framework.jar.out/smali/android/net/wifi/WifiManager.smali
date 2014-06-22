@@ -856,6 +856,17 @@
     return-void
 .end method
 
+.method public cancelWps(Landroid/net/wifi/WifiManager$Channel;Landroid/net/wifi/WifiManager$ActionListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2}, Landroid/net/wifi/WifiManager;->cancelWps(Landroid/net/wifi/WifiManager$ActionListener;)V
+
+    return-void
+.end method
+
 .method public captivePortalCheckComplete()V
     .locals 1
 
@@ -980,6 +991,30 @@
     invoke-virtual {v0, v1, v2, v3, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
     .line 1637
+    return-void
+.end method
+
+.method public connect(Landroid/net/wifi/WifiManager$Channel;ILandroid/net/wifi/WifiManager$ActionListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "networkId"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2, p3}, Landroid/net/wifi/WifiManager;->connect(ILandroid/net/wifi/WifiManager$ActionListener;)V
+
+    return-void
+.end method
+
+.method public connect(Landroid/net/wifi/WifiManager$Channel;Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "config"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2, p3}, Landroid/net/wifi/WifiManager;->connect(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+
     return-void
 .end method
 
@@ -1262,6 +1297,18 @@
     invoke-virtual {v0, v1, p1, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
     .line 1699
+    return-void
+.end method
+
+.method public forget(Landroid/net/wifi/WifiManager$Channel;ILandroid/net/wifi/WifiManager$ActionListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "netId"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2, p3}, Landroid/net/wifi/WifiManager;->forget(ILandroid/net/wifi/WifiManager$ActionListener;)V
+
     return-void
 .end method
 
@@ -1754,6 +1801,18 @@
     goto :goto_0
 .end method
 
+.method public initialize(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/WifiManager$ChannelListener;)Landroid/net/wifi/WifiManager$Channel;
+    .locals 1
+    .parameter "srcContext"
+    .parameter "srcLooper"
+    .parameter "listener"
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public initializeMulticastFiltering()Z
     .locals 2
 
@@ -1864,6 +1923,40 @@
 
     .line 1017
     .local v0, e:Landroid/os/RemoteException;
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isMiWifi()Z
+    .locals 3
+
+    .prologue
+    invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
+
+    move-result-object v0
+
+    .local v0, wifiInfo:Landroid/net/wifi/WifiInfo;
+    if-eqz v0, :cond_0
+
+    const-string v1, "XIAOMI_ROUTER"
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getVendorInfo()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    :goto_0
+    return v1
+
+    :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2230,6 +2323,18 @@
     return-void
 .end method
 
+.method public save(Landroid/net/wifi/WifiManager$Channel;Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "config"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2, p3}, Landroid/net/wifi/WifiManager;->save(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+
+    return-void
+.end method
+
 .method public saveConfiguration()Z
     .locals 2
 
@@ -2569,6 +2674,18 @@
     const/4 v1, 0x0
 
     goto :goto_0
+.end method
+
+.method public startWps(Landroid/net/wifi/WifiManager$Channel;Landroid/net/wifi/WpsInfo;Landroid/net/wifi/WifiManager$WpsListener;)V
+    .locals 0
+    .parameter "c"
+    .parameter "config"
+    .parameter "listener"
+
+    .prologue
+    invoke-virtual {p0, p2, p3}, Landroid/net/wifi/WifiManager;->startWps(Landroid/net/wifi/WpsInfo;Landroid/net/wifi/WifiManager$WpsListener;)V
+
+    return-void
 .end method
 
 .method public startWps(Landroid/net/wifi/WpsInfo;Landroid/net/wifi/WifiManager$WpsListener;)V

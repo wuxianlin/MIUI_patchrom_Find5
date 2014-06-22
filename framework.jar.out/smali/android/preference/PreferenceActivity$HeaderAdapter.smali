@@ -90,12 +90,18 @@
 
     const v5, 0x1090079
 
+    invoke-static {p0, v5}, Landroid/preference/Injector$PreferenceActivityHook;->getPreferenceHeaderLayout(Landroid/widget/ArrayAdapter;I)I
+
+    move-result v5
+
     invoke-virtual {v4, v5, p3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v3
 
     .line 285
     .local v3, view:Landroid/view/View;
+    invoke-static {p0, v3}, Landroid/preference/Injector$PreferenceActivityHook;->initializePreferenceHeaderView(Landroid/widget/ArrayAdapter;Landroid/view/View;)V
+
     new-instance v1, Landroid/preference/PreferenceActivity$HeaderAdapter$HeaderViewHolder;
 
     const/4 v4, 0x0
@@ -154,6 +160,12 @@
     iget v5, v0, Landroid/preference/PreferenceActivity$Header;->iconRes:I
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    iget-object v4, v1, Landroid/preference/PreferenceActivity$HeaderAdapter$HeaderViewHolder;->icon:Landroid/widget/ImageView;
+
+    iget v5, v0, Landroid/preference/PreferenceActivity$Header;->iconRes:I
+
+    invoke-static {v4, v5}, Landroid/preference/Injector$PreferenceActivityHook;->setIconVisibility(Landroid/widget/ImageView;I)V
 
     .line 298
     iget-object v4, v1, Landroid/preference/PreferenceActivity$HeaderAdapter$HeaderViewHolder;->title:Landroid/widget/TextView;

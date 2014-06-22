@@ -87,6 +87,8 @@
 
 .field private mPreferenceManager:Landroid/preference/PreferenceManager;
 
+.field mPreferenceParent:Landroid/preference/PreferenceGroup;
+
 .field private mRequiresKey:Z
 
 .field private mSelectable:Z
@@ -1782,6 +1784,8 @@
 
     const/4 v5, 0x0
 
+    invoke-static {p0, p1}, Landroid/preference/Injector$PreferenceHook;->before_onBindView(Landroid/preference/Preference;Landroid/view/View;)V
+
     .line 509
     const v7, 0x1020016
 
@@ -2940,6 +2944,16 @@
 
     .line 585
     :cond_0
+    return-void
+.end method
+
+.method public setParent(Landroid/preference/PreferenceGroup;)V
+    .locals 0
+    .parameter "parent"
+
+    .prologue
+    iput-object p1, p0, Landroid/preference/Preference;->mPreferenceParent:Landroid/preference/PreferenceGroup;
+
     return-void
 .end method
 

@@ -64,38 +64,37 @@
     .end local p2
     move-object v3, p2
 
-    .line 317
     .local v3, extras:Landroid/os/Bundle;
     :goto_0
     packed-switch p1, :pswitch_data_0
 
-    .line 348
     :cond_0
     :goto_1
     if-eqz p3, :cond_1
 
-    .line 349
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 353
     :cond_1
     iget-object v8, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
     #setter for: Landroid/widget/QuickContactBadge;->mContactUri:Landroid/net/Uri;
     invoke-static {v8, v6}, Landroid/widget/QuickContactBadge;->access$002(Landroid/widget/QuickContactBadge;Landroid/net/Uri;)Landroid/net/Uri;
 
-    .line 354
     iget-object v8, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
     #calls: Landroid/widget/QuickContactBadge;->onContactUriChanged()V
     invoke-static {v8}, Landroid/widget/QuickContactBadge;->access$100(Landroid/widget/QuickContactBadge;)V
 
-    .line 356
+    iget-object v8, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
+
+    invoke-static {v8, v7, v6, v2}, Landroid/widget/Injector$QuickContactBadgeHook;->showQuickContactForStranger(Landroid/widget/QuickContactBadge;ZLandroid/net/Uri;Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v2
+
     if-eqz v7, :cond_5
 
     if-eqz v6, :cond_5
 
-    .line 358
     iget-object v8, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v8}, Landroid/widget/QuickContactBadge;->getContext()Landroid/content/Context;

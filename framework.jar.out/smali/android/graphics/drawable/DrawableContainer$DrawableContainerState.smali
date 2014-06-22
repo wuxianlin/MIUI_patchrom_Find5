@@ -1145,6 +1145,15 @@
     goto :goto_0
 .end method
 
+.method public final getVariablePadding()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->mVariablePadding:Z
+
+    return v0
+.end method
+
 .method public growArray(II)V
     .locals 3
     .parameter "oldSize"

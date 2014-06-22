@@ -153,6 +153,17 @@
     goto :goto_0
 .end method
 
+.method public static callGetDefaultUserAgent()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    invoke-static {}, Lcom/android/internal/os/RuntimeInit;->getDefaultUserAgent()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private static final commonInit()V
     .locals 4
 
@@ -317,20 +328,20 @@
 
     if-lez v4, :cond_0
 
-    .line 170
     const-string v4, "; "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 171
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     .end local v1           #model:Ljava/lang/String;
     :cond_0
-    sget-object v0, Landroid/os/Build;->ID:Ljava/lang/String;
+    sget-object v4, Landroid/os/Build;->ID:Ljava/lang/String;
 
-    .line 175
+    invoke-static {v2, v4}, Lcom/android/internal/os/Injector$RuntimeInitHook;->appendBuildVersion(Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .local v0, id:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 

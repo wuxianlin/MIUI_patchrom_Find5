@@ -640,22 +640,25 @@
 
     invoke-direct {v1, v7, v8}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1044
     .local v1, cmd:Lcom/android/server/NativeDaemonConnector$Command;
+    const/4 v6, 0x0
+
+    .local v6, internalNetworkInterface:Ljava/net/NetworkInterface;
+    :try_start_miui
     invoke-static {p2}, Ljava/net/NetworkInterface;->getByName(Ljava/lang/String;)Ljava/net/NetworkInterface;
+    :try_end_miui
+    .catch Ljava/net/SocketException; {:try_start_miui .. :try_end_miui} :catch_miui
 
     move-result-object v6
 
-    .line 1046
     .local v6, internalNetworkInterface:Ljava/net/NetworkInterface;
+    :goto_miui
     if-nez v6, :cond_1
 
-    .line 1047
     const-string v7, "0"
 
     invoke-virtual {v1, v7}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 1062
     :cond_0
     :try_start_0
     iget-object v7, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -664,10 +667,41 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1066
     return-void
 
-    .line 1051
+    :catch_miui
+    move-exception v2
+
+    .local v2, e:Ljava/net/SocketException;
+    const-string v7, "NetworkManagementService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "get interface by name error: "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v2}, Ljava/net/SocketException;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_miui
+
+    .end local v2           #e:Ljava/net/SocketException;
     :cond_1
     invoke-virtual {v6}, Ljava/net/NetworkInterface;->getInterfaceAddresses()Ljava/util/List;
 

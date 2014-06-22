@@ -373,6 +373,18 @@
     return-void
 .end method
 
+.method callGetImplForUser(I)Lcom/android/server/AppWidgetServiceImpl;
+    .locals 1
+    .parameter "userId"
+
+    .prologue
+    invoke-direct {p0, p1}, Lcom/android/server/AppWidgetService;->getImplForUser(I)Lcom/android/server/AppWidgetServiceImpl;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public deleteAllHosts(I)V
     .locals 1
     .parameter "userId"
@@ -1129,6 +1141,8 @@
     invoke-direct {v1, p0}, Lcom/android/server/AppWidgetService$1;-><init>(Lcom/android/server/AppWidgetService;)V
 
     invoke-virtual {v0, v1, v11}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    invoke-static {p0}, Lcom/android/server/Injector$AppWidgetServiceHook;->after_systemRunning(Lcom/android/server/AppWidgetService;)V
 
     .line 120
     return-void

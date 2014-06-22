@@ -7260,6 +7260,20 @@
 
     move-object/from16 v0, p0
 
+    move/from16 v1, v33
+
+    invoke-static {v0, v1}, Lcom/android/server/Injector$AppWidgetServiceImplHook;->isDuplicateWidgetId(Lcom/android/server/AppWidgetServiceImpl;I)Z
+
+    move-result v33
+
+    if-nez v33, :cond_1
+
+    iget v0, v13, Lcom/android/server/AppWidgetServiceImpl$AppWidgetId;->appWidgetId:I
+
+    move/from16 v33, v0
+
+    move-object/from16 v0, p0
+
     iget v0, v0, Lcom/android/server/AppWidgetServiceImpl;->mNextAppWidgetId:I
 
     move/from16 v34, v0

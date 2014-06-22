@@ -233,10 +233,12 @@
     .parameter "p"
 
     .prologue
-    .line 1242
+    invoke-static {p0}, Landroid/hardware/Injector$SensorManagerHook;->getSeaLevelPressure(F)F
+
+    move-result p0
+
     const v0, 0x3e42dcae
 
-    .line 1243
     .local v0, coef:F
     const v1, 0x472d2a00
 
@@ -2573,6 +2575,16 @@
 
 
 # virtual methods
+.method public calibrateSensor(Landroid/hardware/Sensor;)Z
+    .locals 1
+    .parameter "sensor"
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public cancelTriggerSensor(Landroid/hardware/TriggerEventListener;Landroid/hardware/Sensor;)Z
     .locals 1
     .parameter "listener"

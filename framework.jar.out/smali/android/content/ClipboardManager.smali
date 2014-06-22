@@ -235,6 +235,15 @@
     goto :goto_0
 .end method
 
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
 .method public getPrimaryClip()Landroid/content/ClipData;
     .locals 3
 
@@ -574,14 +583,13 @@
     .parameter "clip"
 
     .prologue
-    .line 122
+    invoke-static {p0, p1}, Landroid/content/Injector$ClipboardManagerHook;->before_setPrimaryClip(Landroid/content/ClipboardManager;Landroid/content/ClipData;)V
+
     if-eqz p1, :cond_0
 
-    .line 123
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ClipData;->prepareToLeaveProcess()V
 
-    .line 125
     :cond_0
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 

@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/AssetManager;->getLocales()[Ljava/lang/String;
+    invoke-static/range {v22 .. v22}, Lcom/android/internal/app/LocalePicker;->getMiuiSupportLocale(Landroid/content/res/Resources;)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -486,28 +486,25 @@
     :cond_5
     new-array v6, v13, [Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    .line 190
     .local v6, localeInfos:[Lcom/android/internal/app/LocalePicker$LocaleInfo;
     const/4 v14, 0x0
 
     :goto_3
     if-ge v14, v13, :cond_6
 
-    .line 191
     aget-object v2, v21, v14
 
     aput-object v2, v6, v14
 
-    .line 190
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_3
 
-    .line 193
     :cond_6
     invoke-static {v6}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 195
+    invoke-static {v6}, Lcom/android/internal/app/Injector$LocalePickerHook;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
+
     const-string v2, "layout_inflater"
 
     move-object/from16 v0, p0
@@ -835,4 +832,18 @@
 
     .line 250
     return-void
+.end method
+
+.method private static getMiuiSupportLocale(Landroid/content/res/Resources;)[Ljava/lang/String;
+    .locals 1
+    .parameter "resources"
+
+    .prologue
+    sget v0, Lcom/miui/internal/R$array;->supported_locale:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

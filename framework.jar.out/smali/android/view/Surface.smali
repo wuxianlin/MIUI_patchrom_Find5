@@ -386,6 +386,34 @@
     .end packed-switch
 .end method
 
+.method public static screenshot(II)Landroid/graphics/Bitmap;
+    .locals 1
+    .parameter "width"
+    .parameter "height"
+
+    .prologue
+    invoke-static {p0, p1}, Landroid/view/SurfaceControl;->screenshot(II)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static screenshot(IIII)Landroid/graphics/Bitmap;
+    .locals 1
+    .parameter "width"
+    .parameter "height"
+    .parameter "minLayer"
+    .parameter "maxLayer"
+
+    .prologue
+    invoke-static {p0, p1, p2, p3}, Landroid/view/SurfaceControl;->screenshot(IIII)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private setNativeObjectLocked(I)V
     .locals 2
     .parameter "ptr"

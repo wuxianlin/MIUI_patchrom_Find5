@@ -38,6 +38,9 @@
 .method public abstract reboot()V
 .end method
 
+.method public abstract rebootSafeMode()V
+.end method
+
 .method public abstract rebootSafeMode(Z)V
 .end method
 
@@ -45,6 +48,9 @@
 .end method
 
 .method public abstract registerPointerEventListener(Landroid/view/WindowManagerPolicy$PointerEventListener;)V
+.end method
+
+.method public abstract shutdown()V
 .end method
 
 .method public abstract shutdown(Z)V

@@ -4128,9 +4128,10 @@
     goto/16 :goto_0
 .end method
 
-.method private scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;)V
+.method private scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;Z)V
     .locals 5
     .parameter "r"
+    .parameter "immediate"
 
     .prologue
     .line 1659
@@ -4149,13 +4150,9 @@
 
     .line 1661
     .local v2, m:Landroid/os/Message;
-    iget v3, p1, Lcom/android/server/NotificationManagerService$ToastRecord;->duration:I
+    if-eqz p2, :cond_0
 
-    const/4 v4, 0x1
-
-    if-ne v3, v4, :cond_0
-
-    const-wide/16 v0, 0xdac
+    const-wide/16 v0, 0x0
 
     .line 1662
     .local v0, delay:J
@@ -4170,9 +4167,23 @@
     .line 1661
     .end local v0           #delay:J
     :cond_0
-    const-wide/16 v0, 0x7d0
+    iget v3, p1, Lcom/android/server/NotificationManagerService$ToastRecord;->duration:I
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_1
+
+    const/16 v3, 0xdac
+
+    :goto_1
+    int-to-long v0, v3
 
     goto :goto_0
+
+    :cond_1
+    const/16 v3, 0x7d0
+
+    goto :goto_1
 .end method
 
 .method private sendAccessibilityEvent(Landroid/app/Notification;Ljava/lang/CharSequence;)V
@@ -4296,31 +4307,27 @@
 
     check-cast v2, Lcom/android/server/NotificationManagerService$ToastRecord;
 
-    .line 1613
     .local v2, record:Lcom/android/server/NotificationManagerService$ToastRecord;
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 1616
     :try_start_0
     iget-object v3, v2, Lcom/android/server/NotificationManagerService$ToastRecord;->callback:Landroid/app/ITransientNotification;
 
     invoke-interface {v3}, Landroid/app/ITransientNotification;->show()V
 
-    .line 1617
-    invoke-direct {p0, v2}, Lcom/android/server/NotificationManagerService;->scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;)V
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v2, v3}, Lcom/android/server/NotificationManagerService;->scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1635
     :cond_0
     return-void
 
-    .line 1619
     :catch_0
     move-exception v0
 
-    .line 1620
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "NotificationService"
 
@@ -6393,30 +6400,33 @@
 
     invoke-virtual {v6, p2, v8}, Lcom/android/server/NotificationManagerService$ToastRecord;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 2545
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 2548
+    invoke-static {p0, v3}, Lcom/android/server/Injector$NotificationManagerServiceHook;->updateNotificationLight(Lcom/android/server/NotificationManagerService;Landroid/app/Notification;)V
+
+    iget v0, v3, Landroid/app/Notification;->ledARGB:I
+
+    iget v2, v3, Landroid/app/Notification;->ledOnMS:I
+
+    iget v1, v3, Landroid/app/Notification;->ledOffMS:I
+
     :cond_4
     const-string v6, "  "
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2550
     .end local v2           #i:I
     :cond_5
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2552
     iget-object v7, p0, Lcom/android/server/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
     monitor-enter v7
 
-    .line 2553
     :try_start_1
     iget-object v6, p0, Lcom/android/server/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
@@ -7654,6 +7664,10 @@
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/android/server/NotificationManagerService;->keepProcessAliveLocked(I)V
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v9}, Lcom/android/server/Injector$NotificationManagerServiceHook;->cancelCurrentToast(Lcom/android/server/NotificationManagerService;I)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -7877,6 +7891,15 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v6
+.end method
+
+.method getDefaultNotificationColor()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
+
+    return v0
 .end method
 
 .method public getHistoricalNotifications(Ljava/lang/String;I)[Landroid/service/notification/StatusBarNotification;

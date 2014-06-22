@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Landroid/text/util/LinkSpec;",
+        "Landroid/text/util/Linkify$LinkSpec;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final compare(Landroid/text/util/LinkSpec;Landroid/text/util/LinkSpec;)I
+.method public final compare(Landroid/text/util/Linkify$LinkSpec;Landroid/text/util/Linkify$LinkSpec;)I
     .locals 4
     .parameter "a"
     .parameter "b"
@@ -50,23 +50,20 @@
 
     const/4 v0, -0x1
 
-    .line 500
-    iget v2, p1, Landroid/text/util/LinkSpec;->start:I
+    iget v2, p1, Landroid/text/util/Linkify$LinkSpec;->start:I
 
-    iget v3, p2, Landroid/text/util/LinkSpec;->start:I
+    iget v3, p2, Landroid/text/util/Linkify$LinkSpec;->start:I
 
     if-ge v2, v3, :cond_1
 
-    .line 516
     :cond_0
     :goto_0
     return v0
 
-    .line 504
     :cond_1
-    iget v2, p1, Landroid/text/util/LinkSpec;->start:I
+    iget v2, p1, Landroid/text/util/Linkify$LinkSpec;->start:I
 
-    iget v3, p2, Landroid/text/util/LinkSpec;->start:I
+    iget v3, p2, Landroid/text/util/Linkify$LinkSpec;->start:I
 
     if-le v2, v3, :cond_2
 
@@ -77,9 +74,9 @@
 
     .line 508
     :cond_2
-    iget v2, p1, Landroid/text/util/LinkSpec;->end:I
+    iget v2, p1, Landroid/text/util/Linkify$LinkSpec;->end:I
 
-    iget v3, p2, Landroid/text/util/LinkSpec;->end:I
+    iget v3, p2, Landroid/text/util/Linkify$LinkSpec;->end:I
 
     if-ge v2, v3, :cond_3
 
@@ -90,9 +87,9 @@
 
     .line 512
     :cond_3
-    iget v1, p1, Landroid/text/util/LinkSpec;->end:I
+    iget v1, p1, Landroid/text/util/Linkify$LinkSpec;->end:I
 
-    iget v2, p2, Landroid/text/util/LinkSpec;->end:I
+    iget v2, p2, Landroid/text/util/Linkify$LinkSpec;->end:I
 
     if-gt v1, v2, :cond_0
 
@@ -108,14 +105,13 @@
     .parameter "x1"
 
     .prologue
-    .line 498
-    check-cast p1, Landroid/text/util/LinkSpec;
+    check-cast p1, Landroid/text/util/Linkify$LinkSpec;
 
     .end local p1
-    check-cast p2, Landroid/text/util/LinkSpec;
+    check-cast p2, Landroid/text/util/Linkify$LinkSpec;
 
     .end local p2
-    invoke-virtual {p0, p1, p2}, Landroid/text/util/Linkify$4;->compare(Landroid/text/util/LinkSpec;Landroid/text/util/LinkSpec;)I
+    invoke-virtual {p0, p1, p2}, Landroid/text/util/Linkify$4;->compare(Landroid/text/util/Linkify$LinkSpec;Landroid/text/util/Linkify$LinkSpec;)I
 
     move-result v0
 

@@ -632,9 +632,8 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Landroid/speech/SpeechRecognizer;->putMessage(Landroid/os/Message;)V
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 251
     return-void
 .end method
 
@@ -649,10 +648,8 @@
 
     const/4 v4, 0x0
 
-    .line 263
     if-nez p1, :cond_0
 
-    .line 264
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "intent must not be null"
@@ -661,49 +658,42 @@
 
     throw v2
 
-    .line 266
     :cond_0
     invoke-static {}, Landroid/speech/SpeechRecognizer;->checkIsCalledFromMainThread()V
 
-    .line 267
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mConnection:Landroid/speech/SpeechRecognizer$Connection;
 
     if-nez v2, :cond_3
 
-    .line 268
     new-instance v2, Landroid/speech/SpeechRecognizer$Connection;
 
     invoke-direct {v2, p0, v4}, Landroid/speech/SpeechRecognizer$Connection;-><init>(Landroid/speech/SpeechRecognizer;Landroid/speech/SpeechRecognizer$1;)V
 
     iput-object v2, p0, Landroid/speech/SpeechRecognizer;->mConnection:Landroid/speech/SpeechRecognizer$Connection;
 
-    .line 270
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.speech.RecognitionService"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 272
     .local v1, serviceIntent:Landroid/content/Intent;
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mServiceComponent:Landroid/content/ComponentName;
 
     if-nez v2, :cond_2
 
-    .line 273
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "voice_recognition_service"
+    const-string v3, "voice_recognition_service"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 276
     .local v0, serviceComponent:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -711,25 +701,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 277
     const-string v2, "SpeechRecognizer"
 
-    const-string/jumbo v3, "no selected voice recognition service"
+    const-string v3, "no selected voice recognition service"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mListener:Landroid/speech/SpeechRecognizer$InternalListener;
 
     invoke-virtual {v2, v6}, Landroid/speech/SpeechRecognizer$InternalListener;->onError(I)V
 
-    .line 296
     .end local v0           #serviceComponent:Ljava/lang/String;
     .end local v1           #serviceIntent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 282
     .restart local v0       #serviceComponent:Ljava/lang/String;
     .restart local v1       #serviceIntent:Landroid/content/Intent;
     :cond_1
@@ -739,7 +725,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 287
     .end local v0           #serviceComponent:Ljava/lang/String;
     :goto_1
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mContext:Landroid/content/Context;
@@ -752,27 +737,22 @@
 
     if-nez v2, :cond_3
 
-    .line 288
     const-string v2, "SpeechRecognizer"
 
     const-string v3, "bind to recognition service failed"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     iput-object v4, p0, Landroid/speech/SpeechRecognizer;->mConnection:Landroid/speech/SpeechRecognizer$Connection;
 
-    .line 290
     iput-object v4, p0, Landroid/speech/SpeechRecognizer;->mService:Landroid/speech/IRecognitionService;
 
-    .line 291
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mListener:Landroid/speech/SpeechRecognizer$InternalListener;
 
     invoke-virtual {v2, v6}, Landroid/speech/SpeechRecognizer$InternalListener;->onError(I)V
 
     goto :goto_0
 
-    .line 284
     :cond_2
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mServiceComponent:Landroid/content/ComponentName;
 
@@ -780,7 +760,6 @@
 
     goto :goto_1
 
-    .line 295
     .end local v1           #serviceIntent:Landroid/content/Intent;
     :cond_3
     iget-object v2, p0, Landroid/speech/SpeechRecognizer;->mHandler:Landroid/os/Handler;
@@ -798,10 +777,8 @@
     .locals 2
 
     .prologue
-    .line 309
     invoke-static {}, Landroid/speech/SpeechRecognizer;->checkIsCalledFromMainThread()V
 
-    .line 310
     iget-object v0, p0, Landroid/speech/SpeechRecognizer;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -812,6 +789,7 @@
 
     invoke-direct {p0, v0}, Landroid/speech/SpeechRecognizer;->putMessage(Landroid/os/Message;)V
 
+    .line 251
     .line 311
     return-void
 .end method

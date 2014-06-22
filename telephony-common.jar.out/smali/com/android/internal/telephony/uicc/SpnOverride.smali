@@ -107,18 +107,19 @@
 
     if-nez v7, :cond_0
 
-    .line 92
     .end local v2           #name:Ljava/lang/String;
     .end local v4           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v6           #spnReader:Ljava/io/FileReader;
     :goto_1
+    invoke-static {v6}, Lcom/android/internal/telephony/uicc/SpnOverride$Injector;->closeSpnReader(Ljava/io/FileReader;)V
+
+    .end local v6           #spnReader:Ljava/io/FileReader;
+    :goto_miui
     return-void
 
-    .line 62
     :catch_0
     move-exception v1
 
-    .line 63
     .local v1, e:Ljava/io/FileNotFoundException;
     const-string v7, "SpnOverride"
 
@@ -158,7 +159,7 @@
 
     invoke-static {v7, v8}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_miui
 
     .line 82
     .end local v1           #e:Ljava/io/FileNotFoundException;

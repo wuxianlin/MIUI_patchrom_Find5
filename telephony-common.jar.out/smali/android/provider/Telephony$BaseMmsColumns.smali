@@ -235,6 +235,8 @@
     .end annotation
 .end field
 
+.field public static final SIM_ID:Ljava/lang/String; = "sim_id"
+
 .field public static final START:Ljava/lang/String; = "start"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation

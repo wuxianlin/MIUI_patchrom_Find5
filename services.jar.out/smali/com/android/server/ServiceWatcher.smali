@@ -192,6 +192,85 @@
     goto :goto_0
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Runnable;Landroid/os/Handler;)V
+    .locals 1
+    .parameter "context"
+    .parameter "logTag"
+    .parameter "action"
+    .parameter
+    .parameter "newServiceWork"
+    .parameter "handler"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/Runnable;",
+            "Landroid/os/Handler;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .local p4, initialPackageNames:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
+
+    const/high16 v0, -0x8000
+
+    iput v0, p0, Lcom/android/server/ServiceWatcher;->mVersion:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/ServiceWatcher;->mIsMultiuser:Z
+
+    new-instance v0, Lcom/android/server/ServiceWatcher$2;
+
+    invoke-direct {v0, p0}, Lcom/android/server/ServiceWatcher$2;-><init>(Lcom/android/server/ServiceWatcher;)V
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
+
+    iput-object p1, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/android/server/ServiceWatcher;->mAction:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mPm:Landroid/content/pm/PackageManager;
+
+    iput-object p5, p0, Lcom/android/server/ServiceWatcher;->mNewServiceWork:Ljava/lang/Runnable;
+
+    iput-object p6, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
+
+    invoke-static {p1, p4}, Lcom/android/server/ServiceWatcher;->getSignatureSets(Landroid/content/Context;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mSignatureSets:Ljava/util/List;
+
+    return-void
+.end method
+
 .method static synthetic access$000(Lcom/android/server/ServiceWatcher;)Ljava/lang/Object;
     .locals 1
     .parameter "x0"

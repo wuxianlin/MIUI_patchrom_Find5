@@ -129,6 +129,15 @@
     return-void
 .end method
 
+.method static getURL_MATCHER()Landroid/content/UriMatcher;
+    .locals 1
+
+    .prologue
+    sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
+
+    return-object v0
+.end method
+
 .method private loadFromEf(I)Landroid/database/MatrixCursor;
     .locals 7
     .parameter "efType"

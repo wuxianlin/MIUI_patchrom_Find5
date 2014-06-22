@@ -53,6 +53,8 @@
 
 .field public static final SERVICE_CENTER:Ljava/lang/String; = "service_center"
 
+.field public static final SIM_ID:Ljava/lang/String; = "sim_id"
+
 .field public static final STATUS:Ljava/lang/String; = "status"
 
 .field public static final STATUS_COMPLETE:I = 0x0

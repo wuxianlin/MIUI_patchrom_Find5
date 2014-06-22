@@ -43,7 +43,9 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Landroid/app/DownloadManager;-><init>(Landroid/content/ContentResolver;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Landroid/app/Injector$ContextImplHook;->createDownloadManager(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
 .end method

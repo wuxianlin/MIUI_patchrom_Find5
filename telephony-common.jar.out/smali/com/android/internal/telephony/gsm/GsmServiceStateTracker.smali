@@ -2682,10 +2682,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/gsm/GSMPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1020
-    if-nez v27, :cond_1e
+    invoke-static/range {v27 .. v27}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 1021
+    move-result v37
+
+    if-eqz v37, :cond_1e
+
     const-string v37, "operatorNumeric is null"
 
     move-object/from16 v0, p0
@@ -3346,6 +3348,16 @@
     move-object/from16 v1, v37
 
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->setAndBroadcastNetworkSetTimeZone(Ljava/lang/String;)V
+
+    invoke-virtual/range {v35 .. v35}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
+
+    move-result-object v37
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v37
+
+    invoke-direct {v0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->saveNitzTimeZone(Ljava/lang/String;)V
 
     .line 1069
     .end local v30           #testOneUniqueOffsetPath:Z
@@ -10043,4 +10055,10 @@
 
     .line 555
     goto/16 :goto_4
+
+    .restart local v5       #showSpn:Z
+    :cond_miui
+    move v5, v7
+
+    goto/16 :goto_miui
 .end method

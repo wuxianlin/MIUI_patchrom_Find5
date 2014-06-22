@@ -983,6 +983,16 @@
     .end annotation
 .end method
 
+.method public setParameters(Ljava/lang/String;)V
+    .locals 0
+    .parameter "nameValuePair"
+
+    .prologue
+    invoke-direct {p0, p1}, Landroid/media/MediaRecorder;->setParameter(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public setPreviewDisplay(Landroid/view/Surface;)V
     .locals 0
     .parameter "sv"

@@ -63,12 +63,10 @@
     .parameter "handler"
 
     .prologue
-    .line 68
-    const/4 v0, 0x2
+    const/4 v0, 0x3
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/policy/impl/WindowOrientationListener;-><init>(Landroid/content/Context;Landroid/os/Handler;I)V
 
-    .line 69
     return-void
 .end method
 

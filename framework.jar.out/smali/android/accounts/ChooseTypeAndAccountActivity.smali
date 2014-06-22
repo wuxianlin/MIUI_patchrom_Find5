@@ -902,13 +902,13 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 442
     .local v0, intent:Landroid/content/Intent;
+    invoke-static {v0}, Landroid/accounts/Injector$ChooseTypeAndAccountActivityHook;->useMiuiChooseAccountTypeActivity(Landroid/content/Intent;)V
+
     const/high16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 443
     const-string v1, "allowableAccountTypes"
 
     invoke-virtual {p0}, Landroid/accounts/ChooseTypeAndAccountActivity;->getIntent()Landroid/content/Intent;

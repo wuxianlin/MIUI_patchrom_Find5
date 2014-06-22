@@ -755,6 +755,24 @@
     goto :goto_0
 .end method
 
+.method protected getSelectedTabIndex()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
+
+    return v0
+.end method
+
+.method protected getTabLayout()Landroid/widget/LinearLayout;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
 .method public onAttachedToWindow()V
     .locals 1
 

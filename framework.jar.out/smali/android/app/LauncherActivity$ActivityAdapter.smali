@@ -293,7 +293,13 @@
     .line 153
     iget-object v1, p0, Landroid/app/LauncherActivity$ActivityAdapter;->mInflater:Landroid/view/LayoutInflater;
 
+    iget-object v3, p0, Landroid/app/LauncherActivity$ActivityAdapter;->this$0:Landroid/app/LauncherActivity;
+
     const v2, 0x1090022
+
+    invoke-static {v3, v2}, Landroid/app/Injector$LauncherActivityHook;->getActivityListItemLayout(Landroid/app/LauncherActivity;I)I
+
+    move-result v2
 
     const/4 v3, 0x0
 

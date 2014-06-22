@@ -71,14 +71,25 @@
     .parameter "b"
 
     .prologue
-    .line 377
+    invoke-static {p1, p2}, Landroid/content/pm/Injector$ResolveInfoHook$DisplayNameComparator;->before_compare(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I
+
+    move-result v0
+
+    .local v0, ret:I
+    if-eqz v0, :cond_miui
+
+    .end local v0           #ret:I
+    return v0
+
+    .restart local v0       #ret:I
+    :cond_miui
+
     iget-object v2, p0, Landroid/content/pm/ResolveInfo$DisplayNameComparator;->mPM:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v2}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 378
     .local v0, sa:Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 

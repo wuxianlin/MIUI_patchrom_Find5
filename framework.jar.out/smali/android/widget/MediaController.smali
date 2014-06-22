@@ -1397,6 +1397,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
+    :goto_1
+    invoke-static {p0}, Landroid/widget/Injector$MediaControllerHook;->after_updatePausePlay(Landroid/widget/MediaController;)V
+
     goto :goto_0
 
     .line 517
@@ -1407,7 +1410,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 
@@ -1610,6 +1613,24 @@
     move-result v2
 
     goto :goto_1
+.end method
+
+.method getPauseButton()Landroid/widget/ImageButton;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/MediaController;->mPauseButton:Landroid/widget/ImageButton;
+
+    return-object v0
+.end method
+
+.method getPlayer()Landroid/widget/MediaController$MediaPlayerControl;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/MediaController;->mPlayer:Landroid/widget/MediaController$MediaPlayerControl;
+
+    return-object v0
 .end method
 
 .method public hide()V

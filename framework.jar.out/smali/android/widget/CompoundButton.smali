@@ -335,48 +335,38 @@
     .parameter "canvas"
 
     .prologue
-    .line 261
     invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 263
     iget-object v1, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 264
     .local v1, buttonDrawable:Landroid/graphics/drawable/Drawable;
     if-eqz v1, :cond_0
 
-    .line 265
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getGravity()I
 
     move-result v8
 
     and-int/lit8 v7, v8, 0x70
 
-    .line 266
     .local v7, verticalGravity:I
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-static {v1, p0}, Landroid/widget/Injector$CompoundButtonHook;->getDrawableHeight(Landroid/graphics/drawable/Drawable;Landroid/widget/CompoundButton;)I
 
     move-result v2
 
-    .line 267
     .local v2, drawableHeight:I
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
 
-    .line 269
     .local v3, drawableWidth:I
     const/4 v6, 0x0
 
-    .line 270
     .local v6, top:I
     sparse-switch v7, :sswitch_data_0
 
-    .line 278
     :goto_0
     add-int v0, v6, v2
 
-    .line 279
     .local v0, bottom:I
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->isLayoutRtl()Z
 
@@ -403,15 +393,20 @@
 
     move-result v5
 
-    .line 282
     .local v5, right:I
     :goto_2
+    invoke-static {p0, v4}, Landroid/widget/Injector$CompoundButtonHook;->adjustDrawablePosition(Landroid/widget/CompoundButton;I)I
+
+    move-result v4
+
+    invoke-static {p0, v5}, Landroid/widget/Injector$CompoundButtonHook;->adjustDrawablePosition(Landroid/widget/CompoundButton;I)I
+
+    move-result v5
+
     invoke-virtual {v1, v4, v6, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 283
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 285
     .end local v0           #bottom:I
     .end local v2           #drawableHeight:I
     .end local v3           #drawableWidth:I

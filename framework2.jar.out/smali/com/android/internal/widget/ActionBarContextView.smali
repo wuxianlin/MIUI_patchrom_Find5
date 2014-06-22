@@ -180,12 +180,19 @@
 
     const/4 v5, 0x0
 
-    .line 177
+    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->miuiInitTitle()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_miui
+
+    return-void
+
+    :cond_miui
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
     if-nez v3, :cond_1
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -763,6 +770,15 @@
     return-object v0
 .end method
 
+.method protected getAnimationMode()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mAnimationMode:I
+
+    return v0
+.end method
+
 .method public getSubtitle()Ljava/lang/CharSequence;
     .locals 1
 
@@ -779,6 +795,33 @@
     .prologue
     .line 169
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitle:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getTitleLayout()Landroid/widget/LinearLayout;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
+.method public getTitleStyleRes()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleStyleRes:I
+
+    return v0
+.end method
+
+.method public getTitleView()Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -1113,6 +1156,15 @@
 
     .line 284
     return-void
+.end method
+
+.method protected miuiInitTitle()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public onAnimationCancel(Landroid/animation/Animator;)V
@@ -2195,6 +2247,16 @@
     goto :goto_9
 .end method
 
+.method protected setAnimationMode(I)V
+    .locals 0
+    .parameter "mode"
+
+    .prologue
+    iput p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mAnimationMode:I
+
+    return-void
+.end method
+
 .method public setContentHeight(I)V
     .locals 0
     .parameter "height"
@@ -2450,6 +2512,16 @@
     return-void
 .end method
 
+.method public setTitleLayout(Landroid/widget/LinearLayout;)V
+    .locals 0
+    .parameter "titleLayout"
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
+
+    return-void
+.end method
+
 .method public setTitleOptional(Z)V
     .locals 1
     .parameter "titleOptional"
@@ -2468,6 +2540,16 @@
     iput-boolean p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleOptional:Z
 
     .line 536
+    return-void
+.end method
+
+.method public setTitleView(Landroid/widget/TextView;)V
+    .locals 0
+    .parameter "titleView"
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
+
     return-void
 .end method
 
