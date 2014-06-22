@@ -18749,7 +18749,7 @@
 
     const/4 v3, 0x0
 
-    move-object/from16 v1, p3
+    move-object/from16 v0, p3
 
     invoke-static {v2, v0, v3}, Landroid/content/pm/Injector$PackageParserHook;->createResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)Landroid/content/res/Resources;
 
