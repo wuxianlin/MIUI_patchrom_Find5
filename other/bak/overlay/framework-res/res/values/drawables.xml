@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="notification_bg">#00000000</item>
+    <item type="drawable" name="notification_bg_low">#00000000</item>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?dividerHorizontal" android:showDividers="middle" android:dividerPadding="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ListView android:id="@id/resolver_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layoutDirection="locale" style="?android:attr/buttonBarStyle">
+        <Button android:enabled="false" android:textSize="14.0sp" android:layout_gravity="end" android:id="@id/button_always" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/alert_dialog_button_bar_height" android:text="@string/activity_resolver_use_always" android:maxLines="2" android:layout_weight="1.0" android:onClick="onButtonClick" style="?android:attr/buttonBarButtonStyle" />
+        <Button android:enabled="false" android:textSize="14.0sp" android:layout_gravity="start" android:id="@id/button_once" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/alert_dialog_button_bar_height" android:text="@string/activity_resolver_use_once" android:maxLines="2" android:layout_weight="1.0" android:onClick="onButtonClick" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

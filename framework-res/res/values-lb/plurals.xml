@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d Sekonnen</item>
+        <item quantity="one">1 Sekonn</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d Minutten</item>
+        <item quantity="one">1 Minutt</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d Stonnen</item>
+        <item quantity="one">1 Stonn</item>
+    </plurals>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d سېكۇنت ئىلگىرى</item>
+        <item quantity="one">1 سېكۇنت ئىلگىرى</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d مىنۇت ئىلگىرى</item>
+        <item quantity="one">1 مىنۇت ئىلگىرى</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d سائەت ئىلگىرى</item>
+        <item quantity="one">1 سائەت ئىلگىرى</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">ئاخىرقى %d كۈن</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d كۈن ئىلگىرى</item>
+        <item quantity="one">تۈنۈگۈن</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d سېكۇنتتىن كېيىن</item>
+        <item quantity="one">1 سېكۇنت كېيىن</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d سېكۇنتتىن كېيىن</item>
+        <item quantity="one">1 مىنۇتتىن كېيىن</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d سائەتتىن كېيىن</item>
+        <item quantity="one">1 سائەتتىن كېيىن</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d كۈندىن كېيىن</item>
+        <item quantity="one">ئەتە</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d سېكۇنت ئىلگىرى</item>
+        <item quantity="one">1 سېكۇنت ئىلگىرى</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d مىنۇت ئىلگىرى</item>
+        <item quantity="one">1 مىنۇت ئىلگىرى</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d سائەت ئىلگىرى</item>
+        <item quantity="one">1 سائەت ئىلگىرى</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d كۈن ئىلگىرى</item>
+        <item quantity="one">تۈنۈگۈن</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d سېكۇنتتىن كېيىن</item>
+        <item quantity="one">1 سېكۇنت كېيىن</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d مىنۇتتىن كېيىن</item>
+        <item quantity="one">1 مىنۇتتىن كېيىن</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d سائەتتىن كېيىن</item>
+        <item quantity="one">1 سائەتتىن كېيىن</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d كۈندىن كېيىن</item>
+        <item quantity="one">ئەتە</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d سېكۇنت</item>
+        <item quantity="one">1 سېكۇنت</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d مىنۇت</item>
+        <item quantity="one">1 مىنۇت</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d سائەت</item>
+        <item quantity="one">1 سائەت</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">ئىشلىتىلىشچان Wi-Fi تورلىرى بار</item>
+        <item quantity="one">ئىشلىتىلىشچان Wi-Fi تورى بار</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ئىشلىتىلىشچان Wi-Fi تورلىرىنى ئاچ</item>
+        <item quantity="one">ئىشلىتىلىشچان Wi-Fi تورىنى ئاچ</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d / %2$d</item>
+        <item quantity="one">ماس كەلگىنى 1</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d سېكۇنتتىن كېيىن قايتا سىناڭ</item>
+        <item quantity="one">1 سېكۇنتتىن كېيىن قايتا سىناڭ</item>
+    </plurals>
+</resources>

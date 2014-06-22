@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="?actionModeSelectAllDrawable" android:id="@id/webviewchromium_select_action_menu_select_all" android:title="@string/selectAll" android:alphabeticShortcut="a" android:showAsAction="always|withText" />
+    <item android:icon="?actionModeCutDrawable" android:id="@id/webviewchromium_select_action_menu_cut" android:title="@string/cut" android:alphabeticShortcut="x" android:showAsAction="always|withText" />
+    <item android:icon="?actionModeCopyDrawable" android:id="@id/webviewchromium_select_action_menu_copy" android:title="@string/copy" android:alphabeticShortcut="c" android:showAsAction="always|withText" />
+    <item android:icon="?actionModePasteDrawable" android:id="@id/webviewchromium_select_action_menu_paste" android:title="@string/paste" android:alphabeticShortcut="v" android:showAsAction="always|withText" />
+    <item android:icon="?actionModeShareDrawable" android:id="@id/webviewchromium_select_action_menu_share" android:title="@string/share" android:showAsAction="always|withText" />
+    <item android:icon="?actionModeWebSearchDrawable" android:id="@id/webviewchromium_select_action_menu_web_search" android:title="@string/websearch" android:showAsAction="always|withText" />
+</menu>
