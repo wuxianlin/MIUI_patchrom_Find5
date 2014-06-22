@@ -1,0 +1,1033 @@
+===================================
+Since Sun May  4 20:25:50 UTC 2014
+===================================
+
+   * external/koush/AndroidAsync
+d7c7470 watch for socket close, fix sdk version 8 method missing issue.
+aba6e63 remove imports
+83410e2 Fix connection: close honoring
+ac3026e Switch from URI to Uri.
+63065b0 Improve exception trace in SSL errors.
+3d8a0af Merge pull request #154 from sst8696/master
+47402e2 Fix Classpath to line up with original
+2b2eeb7 Changed content length to be a long
+19bb0f6 FileCallback onProgress >2GiB file support
+c9fbc13 Optional websocket user agent header support.
+0546f21 build.gradle update
+e13a869 1.2.5
+63faaf3 Merge pull request #150 from paulpdaniels/patch-1
+deb24e8 Fixed #149
+c5a57de Merge pull request #147 from paulpdaniels/master
+ede2bd3 Fix for #146
+7dc178e AsyncHttpServerResponse.sendStream: Fix stream closing
+
+   * external/koush/Superuser
+eefebe7 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+eca2df6 Automatic translation import
+5ecd790 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+4f9824f Automatic translation import
+4f20fac Merge remote-tracking branch 'github/cm-11.0' into HEAD
+036dd62 Automatic translation import
+
+   * android
+e9fa505 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+a50d0b3 Add ebtables
+8191a75 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+ecc1ef6 manifest: Add simplerecovery (bootable/recovery-cm)
+da21175 Merge "New Theme Chooser UI" into cm-11.0
+802304f Add FFMPEG and stagefright-plugins to the project
+f57852c New Theme Chooser UI
+
+   * bionic
+38e8c79 Fix pthread_detach for already-exited threads.
+
+   * bootable/recovery
+8156541 format non vold extra storage to ext4 when no selinux context is defined
+7d53181 create /data/media directory after internal storage is wiped
+7a2c3cf dedupe: backup & restore selinux contexts.
+bb6ed28 Keep 'show log' on screen until user dismisses it
+3edda44 cwm: Honor recovery variant
+
+   * bootable/recovery-cm
+ab45cda fix vulnerability in bspatch
+b924824 sr: Return to main menu after selection
+cf74afb Merge "sr: Finish oemlock support" into cm-11.0
+43cce54 sr: Handle back in update_directory
+d6548e9 sr: Finish oemlock support
+d0f80a4 sr: Terminate apply update menu
+5a5851c sr: Fix apply update menu issues
+8d29f3a sr: board flag to disable MSM_BSP for 3.0 kernel devices
+c875bd3 Merge "sr: Handle oemunlock command" into cm-11.0
+8e2373c sr: Handle oemunlock command
+6374547 sr: Fix "nesting bug"
+d38700e Merge "install: Ditch the generic error" into cm-11.0
+a5323dd install: Ditch the generic error
+87f8f08 Merge "sr: Add support for f2fs formated data partition" into cm-11.0
+78ae07a sr: Fix includes for burecovery
+ff62765 sr: Add support for f2fs formated data partition
+6a9f0f1 sr: Honor recovery variant
+18abc5e Merge "sr: bu: Fix a couple backup bugs" into cm-11.0
+c36020f Merge "sr: Support dynamic storage paths" into cm-11.0
+57f1c94 sr: bu: Fix a couple backup bugs
+cbe51cf sr: Support dynamic storage paths
+
+   * build
+17ddde0 Revert "Revert "releasetools: bring back boot.img handling""
+5c84893 ota: Allow devices to skip generation of recovery-from-boot.p
+cb92821 Generate extra userdata partition if needed
+1510a8e Change CM recovery install script filename [1/2]
+3385bc5 keys: avoid duplicating recovery keys
+b9cc203 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+c440451 ota: Generate recovery-from-boot.p file
+9f7b879 Revert "releasetools: bring back boot.img handling"
+7d5b351 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+3bb6b8b Don't set CCACHE_BASEDIR if its already set
+14e552e Merge "build: Set ccache base to build top" into cm-11.0
+c044754 build: Include an extra device.mk
+8ab0ed0 build: Add new public keys to recovery
+7d49eba build: Add new public keys to recovery
+db07c52 build: Set ccache base to build top
+0b34286 releasetools: bring back boot.img handling
+adf8622 build: use /usr/bin/env to call python
+c015b8d Merge remote-tracking branch 'github/cm-11.0' into HEAD
+24ae489 releasetools: Fix whitespace error for INSTALLED_DTIMAGE_TARGET
+955d61b releasetools: Fix whitespace error for INSTALLED_DTIMAGE_TARGET
+98dc43d Merge remote-tracking branch 'github/cm-11.0' into HEAD
+b8ae759 releasetools: Properly handle boot images that use dt
+389c621 Store the base64 release key in the OTA zips
+be532ab tools: getb64key - print the base64 version of a PEM public key file
+c1b0bb6 build: core: Parameterize recovery with a variant
+
+   * dalvik
+398ba5d Merge remote-tracking branch 'github/cm-11.0' into HEAD
+c3ef9bb dalvik: Disable loop hoisting optimization on perf builds
+e342245 dalvik: Disable loop hoisting optimization on perf builds
+
+   * device/generic/goldfish
+c2e6d7c Build for goldfish at cm11.0
+
+   * device/oppo/apq8064-common
+e1db6d1 init: Ensure the modem bridge is up before triggering late_start
+dc18482 Revert "apq8064-common: Delay sensor init"
+f8279f6 Revert "Moar hax: Fetch the baseband version from the modem image"
+9867bb1 apq8064-common: Simplify BT initialization
+6ff8cc8 Revert "apq8064: Fix baseband version"
+ed0b5d6 apq8064-common: Delay sensor init
+a52e893 apq8064-common: Reorganize init files
+1ef8767 apq8064-common: Remove unused radio services
+945c8b7 apq8064-common: Remove unused init entries
+57238e9 apq8064-common: Fix spacing
+ab79273 apq8064-common: Cleanup symlinks
+437e762 apq8064-common: Add FFMPEG media codecs
+16fe5d9 fix typo in init.qcom.rc
+7f1aa6e apq8064: Fix baseband version
+bbbd77d apq8064: Remove unused QCOM init scripts
+
+   * device/oppo/common
+35e94a6 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+f822935 Automatic translation import
+1270cb0 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+202e081 Automatic translation import
+f2a3298 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+67322ac Merge "OppoCommon : Update device config to use KEY_DOUBLE_TAP" into cm-11.0
+5c3cc4b Automatic translation import
+3211b52 OppoCommon : Update device config to use KEY_DOUBLE_TAP
+bb8d1b4 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+49923db Move Recents to longpress menu
+d4f5370 ConfigPanel : Improve behaviour with secure keyguard
+1dd589d ConfigPanel : Improve behaviour with secure keyguard
+99fd9a2 Automatic translation import
+
+   * device/oppo/find5
+103edc8 find5: Remove deprecated entries
+
+   * device/qcom/common
+0e9a8ed power: Disable the 8974pro-specific display on/off path
+c8b4822 power: Add support for SET_PROFILE hints
+0b8b480 power: Kill logspam
+5e84777 power: Add support for CPU boost hint
+
+   * external/bluetooth/bluedroid
+356f9fd Merge branch 'cm-11.0' of git://github.com/CyanogenMod/android_external_bluetooth_bluedroid into stable/cm-11.0
+c88d800 BT:Don't open SCO on state change for multi party call on DUT.
+af3d188 Bluetooh: Fix for BTIF context stuck while updating INQ Responses
+9a9bb20 Bluetooth: Handled delayed info rsp from remote during SDP
+87ed2e5 Bluetooth : Ignores Included service read response event of HOGP remote
+138a4a0 Bluetooth: Prevent unpairing if encryption returns conn timeout
+63f7ac7 Bluetooth:CoreStack: DUT Stack Logging
+0582ed7 Bluetooth: Handle Open after set_config
+1a65ea7 Bluetooth: Proper AV state movement.
+de7597e Bluetooth: Set rendering bit in COD for A2DP Sink
+974ab34 Bluetooth: Start preload timer before sending preload request
+a5a031e HID: Prevent freeing buffer twice during set report
+8b0e424 HID-D: Don't always remove pairing on reception of VC unplug
+a55666b Bluetooth: Set sniff subrate with optimize latency value on HID link
+cf5551b Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+ae8f93f A2DP: Stop spamming log with buffer size
+f670178 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+9d67acd Don't leak process-private data on Change Local Name command.
+c81f299 Use 0000 as pin key for PORCHE_PAIRING_CONFLICT issue
+4734498 Fix uipc.c to never pass -1 to FD_ISSET.
+5f5cfb0 Fix bug in PAN code where no new PAN connections can be made.
+2fd9496 TARGET_SIMULATOR is long dead.
+8465daa Fix "Bluetooth: Handle sub system restart gracefully"
+5db4854 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+77ff30b A2dp: Reduce out buffer size to accomodate 8 PCM frames
+22bc092 A2DP HAL: Delay open_output_stream
+cea1e4b A2DP HAL: Update maximum Audio buffer size
+68701aa Bluetooth: Avoid premption while modifying gki timer queue
+8b00996 Raise the transmission priority for a2dp media channel to high
+af19dfa Revert "bluetooth: Do not sleep when you have already overslept your tick"
+00674d1 Fix calls to pthread_setschedparam.
+
+   * external/chromium_org/third_party/openssl
+6701a4e Cherrypick "OpenSSL: add CVE fixes from 1.0.1h"
+
+   * external/dnsmasq
+131a58b dnsmasq: dnsmasq should not die if interface not found
+3340f26 dnsmasq: Update listeners when interface set changes
+
+   * external/ebtables
+feee5dd Don't try to link the old shared libraries
+5eca502 ebtables: Build as a single binary
+
+   * external/google
+ec71f05 update Play Services to 4.3.23
+
+   * external/openssl
+d51d9f3 Fix for CVE-2014-0195
+f672e21 Fix for CVE-2014-0224
+f12d924 Additional CVE-2014-0224 protection.
+8653da8 Fix CVE-2014-0221
+df94c89 Fix CVE-2014-3470
+
+   * external/sepolicy
+2d2a2c9 Add rules to permit CTS security-related tests to run.
+008e80a Allow untrusted apps to execute binaries from their sandbox directories.
+19a1792 Introduce controls on wake lock interface
+
+   * external/skia
+422ecc5 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+0f2cd78 Fallback to system's monospace font if theme excludes it
+64b9c05 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+e53fdee Only force purge all when clearing singleton interface
+4ce66cf Only force purge all when clearing singleton interface
+
+   * external/sonivox
+ee2f2d2 audio: Support for mxmf file playback
+
+   * external/stagefright-plugins
+82aab6b extractor: Underp mpeg4 fastpath
+267285c extractor: More NULL checks...
+dbaceb6 Fix resource leak in cached mpeg4 fast exit
+fda32b9 extractor: Fast-track the stream analysis if we already have a skip condition
+293c98c FFmpegExtractor: don't print list of supported formats
+c5b79b6 FFmpegExtractor: set proper mimetype for VP8/9
+2b5ec4a FFmpegExtractor: mark VP9 as supported
+0924866 FFmpegExtractor: add mp3 to supported list
+5b0efb8 Add additional WAV types to Stagefright supported list
+cb98b5b FFmpegExtractor: ignore fake album art MJPEG streams
+
+   * external/whispersystems/TextSecure
+de0a7ab TextSecure: add Play Services version
+
+   * external/whispersystems/WhisperPush
+b86b920 WhisperPush: Update gcm registration id weekly.
+8ce7a48 WhisperPush: Get a new registration id on each request.
+c30cd4b WhisperPush: Don't allow adb backup.
+e090111 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+07fe760 Automatic translation import
+e6674b0 WhisperPush: update last Holo.Light screen to Holo
+01e68e0 WhisperPush: update last Holo.Light screen to Holo
+09a0cc7 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+87b8c84 WhisperPush: add Play Services version
+27a3ddb Automatic translation import
+3a34007 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+1961300 Automatic translation import
+
+   * frameworks/av
+79ef6a5 MediaExtractor: Add more skip conditions for the second-pass extractors
+10c9954 stagefright: yield callbackDispatcher to writer only for video
+66eff10 libstagefright: Fix to handle EAGAIN error on first read to source
+37facb2 audio: mute duration at the beginning of recording
+15d79c1 camera: Disable extra HDR frame on QCOM_HARDWARE
+f2348ca Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+1d28c25 RTSP: Fix crash issue while repeated pause/resume
+0843a3e audio: Fix for failure in CTS MediaRecorderTest cases
+a6a232b audioflinger: Remove fatal error handling for non offload tracks
+ac65aa2 libstagefright/omx: Fix CallbackDispatcher dereference in callback.
+51a7e40 stagefright: Cancel audioCheck event when setting nativewindow
+3d25c7b libstagefright: handle error when B-frame is sent to MPEG4Writer
+3efee38 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+ef7c494 libstagefright: Check for data partitioned clips
+d2375a5 DataSource: Split off ffmpeg sniffer to a second pass, and only if necessary
+8e22dd0 stagefright: Fix playback for mkv files with lacing
+bbed64c Merge remote-tracking branch 'github/cm-11.0' into HEAD
+71928c9 libmedia: Add timelapse profiles for 4k sizes
+62ab437 libmedia: Add timelapse profiles for 4k sizes
+ed27c0c libeffect: Fix enabled effect count calculation error
+cebdc84 libstagefright: Fix crash while setting buffer size
+c2cbd9c libstagefright: Add MPEG2 Codec support
+3397714 DataSource: Remove global variables in DataSource related to sniff
+bbd5bfe Merge remote-tracking branch 'github/cm-11.0' into HEAD
+90044a9 libstagefright: Re-introduce a QCOM_HARDWARE ifdef after the FFMPEG commit
+3113d5d libstagefright: Extended media support via FFMPEG
+
+   * frameworks/base
+58fe2f6 Add a HAF access permission
+5bbe559 UsbDebuggingManager : Handle race condition when toggling rapidly
+e5a3028 WallpaperCropper: do not display null bitmaps
+6494493 Change defaultDreams to com.android namespace
+cbdd749 perf: Send a boost hint when a key on the navbar is pressed
+505f89b perf: Don't persist the perf profile across a reboot
+1d24874 No need to hide flags in configChange
+3305b2a Fix wallpapers not applying in full screen
+e428add Revert "WallpaperCropper requires these permission."
+406def6 CM11 Themes: Don't kill setup wizards
+719abe8 CM11 Themes: Add themeChange config change to manifest
+4163a2b Revert "CM11 Themes: Delay setting default theme"
+a5c1b11 framework: Add equalizer tile
+61b6354 wm: Simplify menu action decision paths
+b68ccb0 WallpaperCropper requires these permission.
+01019b3 CM11 Themes: Delay setting default theme
+df93e1d Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+ac69e04 Merge "SystemUI: Make wifi combo margin themable" into cm-11.0
+8df12e5 Reduce memory leaks by removing all views.
+0abf0ae Merge "Revert "Reduce memory leaks by removing all views."" into cm-11.0
+63a5283 Revert "Reduce memory leaks by removing all views."
+0c4c261 wm: Underp menu key release processing
+5d430a3 Merge "wm: Underp menu key release processing" into cm-11.0
+5aa8024 wm: Underp menu key release processing
+f6bd6ff Merge "Fix circle battery opaqueness for the low battery color" into cm-11.0
+8bfcaad Merge "Reduce memory leaks by removing all views." into cm-11.0
+c840301 Merge "CM11 Themes: Use package name from AndroidManifest" into cm-11.0
+7885093 Merge "CM11 Themes: Use sendBroadcastAsUser in ThemeService" into cm-11.0
+7087225 CM11 Themes: Use package name from AndroidManifest
+f271f53 Make KeyguardMultiUserAvatar fully themeable
+b142e37 add a getter for the x and y offsets of the wallpaper window
+b63acf7 SystemUI: Make wifi combo margin themable
+4579013 CM11 Themes: Use sendBroadcastAsUser in ThemeService
+8c7a877 Automatic translation import
+581697f CM11 Themes: load wp from apk if uri is null
+4849b8f add a getter for the x and y offsets of the wallpaper window
+073b939 Merge "Tele2 considered non-roaming on T-Mo" into cm-11.0
+55ce2c4 Merge "Saunalahti considered non-roaming on Elisa" into cm-11.0
+0a20646 Tele2 considered non-roaming on T-Mo
+579f11e Saunalahti considered non-roaming on Elisa
+501aef3 Themes: Map themed icon to app after upgrade
+15917c8 Merge "Themes: Map themed icon to app after upgrade" into cm-11.0
+fd55c3e CM11 Themes: load wp from apk if uri is null
+8c2e9f9 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+88a5574 Themes: Map themed icon to app after upgrade
+91d9efd AppOps: don't make delay for permission dialog
+db790c1 Alarm: ignore less than 2 mins upcomming power off alarm
+a3f87cc Fix socket descriptor leak from Zygote to child app
+136494d Fix descriptor leak after accepting connections
+d599fa9 AppOps: fix framework reboot issue when AppOps enabled
+d38adaa ExtMediaPlayer: Increase parcel pool size to 30
+d9c28d7 AlarmMangerService: Fix the delay of ACTION_TIME_CHANGED for time-services
+e2d2dde Clear cached locations when location providers disabled Bug: 12118307
+a6c8295 BT: HF: Control verbose logging at runtime.
+284d042 Bluetooth: Adds check to verify Bluetooth adapter state
+5ddfecc Bluetooth: Unbind only in case of OFF state
+ae707cc audio: no notification sound when adjusting volume bar twice.
+f50bfad Bluetooth: use  virtual sco calls for VOIP
+7d4d227 audio: Volume can't adjust during HFP call when screen is off.
+83b3417 AppOps: Don't apply OP_ALARM_WAKEUP to system components
+2a8064c Merge "AppOps: Don't apply OP_ALARM_WAKEUP to system components" into cm-11.0
+5587a43 AppOps: Don't apply OP_ALARM_WAKEUP to system components
+00a38ce Avoid calling idmap w/ trailing whitespace [1/2]
+e971d05 Themes: Fix bad idmaps for system themes
+94186f8 SignalStrength: Hotfix TD-SCDMA take 2
+4f4c8ed SignalStrength: Hotfix TD-SCDMA take 2
+f61bb7e Merge "CM11 Themes: Clear wallpaper mixnmatch entry on external change" into cm-11.0
+5d1fc33 Merge "Notify callbacks on "any" wallpaper change" into cm-11.0
+7faba2b Merge "CM11 Themes: Fix applyDefaultTheme implementation" into cm-11.0
+874c93e Automatic translation import
+64348cc CM11 Themes: Clear wallpaper mixnmatch entry on external change
+8fe25d0 Notify callbacks on "any" wallpaper change
+f3e12ab persist the changed position values in updateWallpaperOffsetLocked, even with a null mWallpaperTarget
+edbc9b1 CM11 Themes: Fix applyDefaultTheme implementation
+36454f0 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+345bdd8 Fix circle battery opaqueness for the low battery color
+1801b2c Merge "CM11 Themes: Expose applyDefaultTheme to public service" into cm-11.0
+a97b0d3 Avoid app install failures from malformed themes
+53ac070 Merge "Themes: Fix -110 install error [2/2]" into cm-11.0
+504d42b CM11 Themes: Expose applyDefaultTheme to public service
+0d75900 Merge "CM11 Themes: Get proper package name in attachThemeAssets" into cm-11.0
+f7809b5 Merge "CM11 Themes: Reduce "unable to load asset" log spam" into cm-11.0
+b8d8f6f Themes: Fix -110 install error [2/2]
+6e19533 Automatic translation import
+2ec036c Cleanup themes that fail to install
+954f824 Merge "wm: Nullify hardkey function assignments if enabling the navbar" into cm-11.0
+9567dda settings: Add support for default ribbon config
+571becc wm: Make the default menu longpress action configurable at build time
+2d6cb2a wm: Nullify hardkey function assignments if enabling the navbar
+7695fad perf: Improve performance profiles
+5c4db82 Revert "ActivityTrigger:  New class to invoke when activity starts/resumes"
+13b3b69 CM11 Themes: Get proper package name in attachThemeAssets
+e803aa1 Merge "immersive mode: don't unconfirm a package, that's just dumb" into cm-11.0
+80d8929 Merge "MSimNetworkController: disable log spew" into cm-11.0
+46803461 CM11 Themes: Reduce "unable to load asset" log spam
+3a951da Merge "Don't animate the circle battery meter when battery is fully charged" into cm-11.0
+f59d069 [1/3]frameworks/base: add "Accept all files" option for incoming files via Bluetooth
+1bb82a7 settings: Enable the status bar double-tap to sleep gesture
+c65b0e6 CM11 Themes: Allow defining a custom default theme [1/3]
+577b3c4 Merge changes Iff42bac7,I7ce5454a into cm-11.0
+238e80a Send broadcast when package is 'about' to be removed
+b400cf4 Merge "CM11 Themes: Don't set sys.refresh_theme on icon update" into cm-11.0
+8634868 Themes: Support launcher based icon packs [1/2]
+515fc0e Merge "CM11 Themes: Fix how common resources are found" into cm-11.0
+0b02a88 CM11 Themes: Fix how common resources are found
+64bb3a2 Don't animate the circle battery meter when battery is fully charged
+78a2967 Add CPU boosting hooks
+7f011fc CM11 Themes: Handle legacy themes in createIdmapsForPackageLI
+de44fe5 CM11 Themes: Properly handle themeing apps on install
+1878af5 CM11 Themes: Don't set sys.refresh_theme on icon update
+4651af5 immersive mode: don't unconfirm a package, that's just dumb
+84e290f MSimNetworkController: disable log spew
+dbd3649 Merge "National Roaming: Allow T-Mobile AT (MNC03) to roam on 3 AT (MNC10) in Austria" into cm-11.0
+16e75e0 WallpaperPicker: Destroy cropview to avoid leaks
+c91c765 WallpaperPicker: Destroy cropview to avoid leaks
+a9e8aa6 CamcorderProfile: Add 4k timelapse encoder constants
+300787a Merge "CM11 Themes: remove handleThemeConfigChanges" into cm-11.0
+71cc747 CM11 Themes: remove handleThemeConfigChanges
+7e51a81 National Roaming: Allow T-Mobile AT (MNC03) to roam on 3 AT (MNC10) in Austria
+8e794a6 Allow 3 AT (mnc05) to roam on T-Mobile in Austria
+ff3a1ff Merge "Revert "telephony: set additional audioparameters for incall audio (1/2)"" into cm-11.0
+c8f41bf Merge "Avoid SystemUI crash due to NPE" into cm-11.0
+42ceba9 Avoid SystemUI crash due to NPE
+b2d5440 Set ActionMode title to the number of selected files
+2544ee3 AudioService: fix safe volume enforced even when disabled
+3785ec3 CamcorderProfile: Add 4k timelapse encoder constants
+bd9a711 Revert "telephony: set additional audioparameters for incall audio (1/2)"
+f0699b6 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+44029dc Merge "rename the custom lockscreen state action" into cm-11.0
+2040b2b Merge "Add wallpaper pickers to seperate package [1/2]" into cm-11.0
+d5bcd2a Add wallpaper pickers to seperate package [1/2]
+b84cd0d Automatic translation import
+ab2a53a rename the custom lockscreen state action
+d043b6b Add AutoRotate as Default tile
+1c57c20 Set themes to install internal only
+a61cab7 Reduce memory leaks by removing all views.
+814f46b Merge "CM11 Themes: Common overlay for sharing resources. [1/2]" into cm-11.0
+0dbf8c2 Merge "CM11 Themes: Include alarms in mixnmatch." into cm-11.0
+2bb7946 CM11 Themes: Properly handle SystemUI theme package name.
+ea33d48 CM11 Themes: Include alarms in mixnmatch.
+0f620c7 Merge "CM11 Themes: Ensure customTheme is not null." into cm-11.0
+04a1823 CM11 Themes: Ensure customTheme is not null.
+c66f674 MediaFile: support more media types
+ed59758 UserTile: Fix displaying user information for multi-user devices
+5599a86 Merge "UserTile: Fix displaying user information for multi-user devices" into cm-11.0
+8842fb6 UserTile: Fix displaying user information for multi-user devices
+5d89ef9 services: change default sampling interval to -1
+87de5ef Connectivity: Set TCP delayed ACK and User Configuration Flag
+08a1faa Update LinkProperties with MTU value
+602a43c Only allow System apps to make VPN exempt routes
+fe9b529 Add the calling package name to requestRouteToHost
+ea76a73 Merge "New Icons for the location tile..." into cm-11.0
+25eb522 CM11 Themes: Common overlay for sharing resources. [1/2]
+
+   * frameworks/native
+0f46307 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+a852d21 Avoid calling idmap w/ trailing whitespace [2/2]
+5f88435 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+ba5f5a0 Themes: Fix -110 install error [1/2]
+bfa404a Revert "SF: Reduce size of DisplayFrame according to "transparent region""
+3fda6ef SF: Reduce size of DisplayFrame according to "transparent region"
+350b6eb Merge remote-tracking branch 'github/cm-11.0' into HEAD
+b0f3fdc Merge "CM11 Themes: Common overlay for sharing resources. [2/2]" into cm-11.0
+d6abee6 Add OMX_AUDIO_CodingAPE and OMX_AUDIO_CodingDTS
+
+   * frameworks/opt/telephony
+181c6bb Don't write blank baseband version
+
+   * frameworks/opt/telephony-msim
+ce4a46d MSIM: Use single baseband version for all SUB's
+
+   * frameworks/opt/vcard
+047d5a1 vcard: Add support to generate vcard jar.
+
+   * hardware/libhardware
+cd3e9a2 libhardware: Add power hint to set profile
+
+   * hardware/libhardware_legacy
+4108341 Revert "audio: Handle sonification for last stream in stopOutput"
+7aa7313 wlan: Fix for improper comparison of driver_status string
+0b5cec1  Audio: Fix for audio loss on switching between speaker and USB headset
+33f41b2 Audio: Fix HDMI audio device switch issue
+faa89e3 audio: Handle sonification for last stream in stopOutput
+
+   * hardware/qcom/audio-caf
+b044df4 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+c7da8c9 hal: Add path for VR headset
+175502e hal: Add path for VR headset
+b346eb4 hal/usb: Add initial volume setting for USB headset
+b77dd5f hal: Fix VoIP Mute failure in SIP call during Voice call HOLD
+e6b407f Audiod: Priority change for AudioDaemon
+8656d49 audio: Remove unused var 'update_mixer'
+4a7a530 hal: Correct PCM offload fragment size
+ca2a9fa Revert "  hal: Fix device disable/enable sequence"
+377c996 hal: Set echo reference from mixer file
+d62adde Revert "Revert "audio: primary desc check for sonification""
+d5f77aa audio: use of audio_route_{apply/reset}_and_update_path APIs
+733f232 hal: Update BT sample rate for BT input device
+aef8ce5 Revert "audio: primary desc check for sonification"
+957c3d9 hal: Add speaker backend case handling
+
+   * hardware/qcom/bt
+c176fd8 libbt: Fix case where SoC type is not set
+de4ad23 libbt-qcom: Allow building without proprietary bits
+
+   * hardware/qcom/media
+2e082d6 media: Avoid collision with FFMPEG plugin
+
+   * hardware/qcom/media-caf
+dab6ad4 media-caf: Avoid collision with FFMPEG plugin
+
+   * kernel/oppo/n1
+cbfcb64 futex: Make lookup_pi_state more robust
+96c9bf9 futex: Always cleanup owner tid in unlock_pi
+cfb6bc5 futex: Validate atomic acquisition in futex_lock_pi_atomic()
+a940d29 futex-prevent-requeue-pi-on-same-futex.patch futex: Forbid uaddr == uaddr2 in futex_requeue(..., requeue_pi=1)
+1da8808 futex: Add another early deadlock detection check
+54bcc80 futex: Prevent attaching to kernel threads
+0eca1dd n_tty: Fix n_tty_write crash when echoing in raw mode
+
+   * libcore
+0012258 Add API to check certificate chain signatures
+f2a38ed Merge remote-tracking branch 'github/cm-11.0' into HEAD
+8905615 Audio: AWR-WB format playback support in email and download
+9d17b06 libcore: fix error in javdoc todo file generation
+
+   * packages/apps/Apollo
+e22fae5 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+7a32bea Automatic translation import
+72011e0 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+4b32905 Automatic translation import
+87d1e2c Merge remote-tracking branch 'github/cm-11.0' into HEAD
+eef389e Automatic translation import
+
+   * packages/apps/BasicSmsReceiver
+ebac54c Automatic translation import
+db72bf2 Revert "Automatic translation import"
+0f79d04 Automatic translation import
+
+   * packages/apps/Bluetooth
+4f63bf9 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+15bb907 [2/3]Bluetooth: add "Accept all files" option for incoming files via Bluetooth
+83e048a Bluetooth: Set HFP HF stream Volume.
+66b6af8 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+
+   * packages/apps/BluetoothExt
+f4bec04 Automatic translation import
+2235723 Automatic translation import
+5336ccc Automatic translation import
+a4c5693 Bluetooth: Disable BTC app layer for non Athroes BT socs
+
+   * packages/apps/Browser
+202ef50 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+250e630 Automatic translation import
+04eee8f Merge remote-tracking branch 'github/cm-11.0' into HEAD
+fcd4bd6 Automatic translation import
+8570f0a Merge remote-tracking branch 'github/cm-11.0' into HEAD
+ad53f7a Automatic translation import
+869581f Handle DownloadManager expceptions
+03b1039 Fix Memory leaks on Browser application
+cdf2e16 Revert "Automatic translation import"
+c4ef906 Automatic translation import
+74427ae Merge remote-tracking branch 'github/cm-11.0' into HEAD
+f7e4625 Automatic translation import
+
+   * packages/apps/CMAccount
+0789a50 CMAccount: Use new hardware abstraction permission
+f9f9891 CMAccount: update holo preview image
+86a00cb CMAccount: don't crash when toggling nav keys quickly
+6d0aae5 Wait for theme change before finishing (if applicable)
+6584100 CMAccount: Do not finish twice.
+c6ce5b7 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+921ed06 CMAccount: fix setup wizard crash
+c1473e0 CMAccount: Remove "or" between account buttons
+36383a4 Automatic translation import
+d973deb CMAccount: Update strings
+fba0bee Merge remote-tracking branch 'github/cm-11.0' into HEAD
+91b07ae CMAccount: add Play Services version
+27a3071 CMAccount: refactor privacy page to personalization
+7a87602 Automatic translation import
+c559465 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+74c6026 CMAccount : Fix terms of service
+87dd11e Merge remote-tracking branch 'github/cm-11.0' into HEAD
+60307c3 Automatic translation import
+
+   * packages/apps/CMFileManager
+ff0f90f Automatic translation import
+20961ae Automatic translation import
+4eb485a Automatic translation import
+
+   * packages/apps/CMUpdater
+9d8ba42 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+63b178c Automatic translation import
+de5058f Merge remote-tracking branch 'github/cm-11.0' into HEAD
+3c84e58 Automatic translation import
+1e3733a Merge remote-tracking branch 'github/cm-11.0' into HEAD
+c082b59 Automatic translation import
+
+   * packages/apps/CMWallpapers
+89a8072 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+2c482ed Automatic translation import
+b77513f Merge remote-tracking branch 'github/cm-11.0' into HEAD
+b625f45 New abstract wallpapers from Asher and Shane
+1eaa2ab New abstract wallpapers from Asher and Shane
+d410bb5 Automatic translation import
+3da89bb Fix Spelling of Contributor name
+
+   * packages/apps/Calculator
+d2cd5b7 Tie decimal and grouping separators to the locale
+04f7a95 Automatic translation import
+715e0fb Calculator: New Features Part 6
+c26db2c Automatic translation import
+728e692 Automatic translation import
+598924e Automatic translation import
+2e4669c Revert "Automatic translation import"
+1fe1dd3 Automatic translation import
+56835d2 Automatic translation import
+
+   * packages/apps/Calendar
+db3fddc Automatic translation import
+13f4ca1 Automatic translation import
+1b365c5 Automatic translation import
+ee65470 Revert "Automatic translation import"
+37459df Automatic translation import
+422555f Automatic translation import
+
+   * packages/apps/Camera2
+229239f Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+db9a71c Automatic translation import
+48cf1f3 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+d65f1a5 Automatic translation import
+1b7b5a5 Automatic translation import
+d717ac8 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+71c9446 Camera2: Fix camera application memory leak
+6d8899b Merge "camera2: fix pref_camera_picturesize_entryvalues values order" into cm-11.0
+f7153ad camera2: fix pref_camera_picturesize_entryvalues values order
+6d84132 make settings menu themable
+f9a57df Camera2: Use consistent translations for megapixels
+3e27a1f Camera2: Fix default slow shutter option
+6c33235 Camera2: Tweak some strings
+0cdb7f0 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+648695b Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver
+0b98b3b Automatic translation import
+
+   * packages/apps/CertInstaller
+04c43e6 Automatic translation import
+
+   * packages/apps/Contacts
+224a320 Automatic translation import
+f6f5c22 Automatic translation import
+611081b Automatic translation import
+ed54a46 Automatic translation import
+
+   * packages/apps/ContactsCommon
+5488fc4 Automatic translation import
+b5e2bbf Automatic translation import
+638d3a6 Automatic translation import
+5c1ea12 Automatic translation import
+
+   * packages/apps/DSPManager
+7f74b55 Automatic translation import
+0b8509b Automatic translation import
+5f7d09f Automatic translation import
+
+   * packages/apps/DeskClock
+d661c75 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+ef56f3e Automatic translation import
+485c463 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+ee6e338 Automatic translation import
+4e13b15 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+2e68c13 Automatic translation import
+301a8b9 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+806a28d Automatic translation import
+
+   * packages/apps/Dialer
+fce7dec OpenCnameReverseLookup: fix import class
+1d04f2e ReverseLookup: Don't return OpenCNAM errors as caller IDs
+6c14630 Automatic translation import
+b41c5be Automatic translation import
+e094472 Automatic translation import
+8a57359 Automatic translation import
+
+   * packages/apps/Email
+2c636da Automatic translation import
+2a3ba38 Automatic translation import
+bb8c39f Automatic translation import
+01d584a Fix leaking a cursor
+f58bee1 Automatic translation import
+
+   * packages/apps/Exchange
+da409cc Automatic translation import
+
+   * packages/apps/Gallery2
+dc9c927 Automatic translation import
+3eba292 Automatic translation import
+
+   * packages/apps/HTMLViewer
+8184f5d Automatic translation import
+
+   * packages/apps/InCallUI
+d0b24b8 incallui: fix callbuttons xxhdpi images
+95d0f30 Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+82ed2ae Automatic translation import
+6b186d9 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+392ad1f Automatic translation import
+26278c3 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+7ed0354 Automatic translation import
+843d5f4 Revert "Underp the dialpad buttons"
+f46c624 Underp the dialpad buttons
+ff9749c Merge remote-tracking branch 'github/cm-11.0' into HEAD
+0b956a1 Automatic translation import
+
+   * packages/apps/KeyChain
+ca06981 Automatic translation import
+
+   * packages/apps/LockClock
+7622ace LockClock: remove unused BroadcastReceiver
+e38651f LockClock: do not use GPS if Play Services is available
+2be8453 Automatic translation import
+16aa433 Automatic translation import
+9aab0bb Automatic translation import
+
+   * packages/apps/Mms
+24f7391 Mms: Clear notifications and mark messages read in certain situations
+8cf3e6e Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+85d7e1b Automatic translation import
+8932a60 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+4768596 Automatic translation import
+ec6785d Merge remote-tracking branch 'github/cm-11.0' into HEAD
+f0993ef Automatic translation import
+c34e9e8 Merge "Stop previous TaskStack worker" into cm-11.0
+4cb3022 Stop previous TaskStack worker
+22ea5b0 Avoid ConversationList/ComposeMessage activity leaks
+f43d8dd Merge remote-tracking branch 'github/cm-11.0' into HEAD
+b9aa848 Automatic translation import
+
+   * packages/apps/Nfc
+78f931f nxp: Include support declaration for Mifare tags
+892feb8 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+8b297e7 Nfc : Switch to notification sound
+4406abb Merge "Nfc : Switch to notification sound" into cm-11.0
+acbb21d Automatic translation import
+de5ae6c Nfc : Switch to notification sound
+
+   * packages/apps/PackageInstaller
+73bcc9f Automatic translation import
+
+   * packages/apps/Settings
+98d3466 Settings: give boot_completed receiver higher priority
+5445756 Settings: Fix error when input WLAN Direct name with long Chinese name
+711e82d Setting: Fix error when turn on wifi hotspot with long Chinese Ssid issue
+119dd15 P2P : Fix for P2P group name
+ad9598f Settings: Move CM stats to privacy, organize.
+109e0cb settings: Move headset option, hide MoreDeviceSettings if empty
+1608eeb Bluetooth: Fix for device gets stuck in pairing
+b2276eb Bluetooth: Acquire wakelock to turn on lcd during Connection
+e56cea2 Settings: Disable Battery status preference on ModLock.
+869ea60 Settings: Remove "Make pattern visible" regardless.
+8694470 Settings: add equalizer tile toggle
+254cc1a Automatic translation import
+ac4f030 Settings: create cm string for wallpapers
+09f3906 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+9484a4b development: Add setting for overwriting recovery
+a56ce4c settings: Rename FOTA package
+565b300 Automatic translation import
+569bd56 Revert "Settings: move 'Take bug report' from Dev to About"
+3f1f309 Merge "Revert "Settings: move 'Take bug report' from Dev to About"" into cm-11.0
+733794d Revert "Settings: move 'Take bug report' from Dev to About"
+26f8891 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+5e4982f Merge "Settings: move 'Take bug report' from Dev to About" into cm-11.0
+0c438ed Merge "Settings: remove lockscreen wallpaper picker from Lockscreen Interface" into cm-11.0
+8ad7910 settings: Cleanup and add auto power profiles option
+5427abe Merge "Telephony(MSIM): Disable DDS Switch in Airplane Mode." into cm-11.0
+d5542b2 Merge "Settings: correct y-axis brightness in preview" into cm-11.0
+71f09d7 Merge "Revert "Fix MSIM Network Settings (1/2)"" into cm-11.0
+c941669 [3/3]Settings: add "Accept all files" option for incoming files via Bluetooth
+c5eec41 settings: This is CyanogenMod!
+0a311b3 Settings: correct y-axis brightness in preview
+f7e8aeb Settings: remove lockscreen wallpaper picker from Lockscreen Interface
+f62f7c2 Settings: move 'Take bug report' from Dev to About
+908a780 Telephony(MSIM): Disable DDS Switch in Airplane Mode.
+538b938 settings: Various cleanups
+6354496 Add missing mdpi, hdpi, xhdpi drawables for new theme engine
+775cb14 Merge "Consistently use start/end instead of left/right layout properties." into cm-11.0
+1613245 Revert "Fix MSIM Network Settings (1/2)"
+bac921f Fix NullPointerException issue when user change
+05b7aee Merge "make LinearColorBar themeable" into cm-11.0
+9d89b6d Packages : Fix for Softap turn ON/OFF fail issue.
+3cacb4f P2PSetting:Avoid p2p_find on group removal event
+8db72eb Bluetooth: Increase allowed duration to connect to a profile
+ba9dc50 Fixes error message during pairing of HOGP devices
+8ad3b51 Bluetooth: Ignore the second button if one already pressed
+ba4c7d5 Bluetooth: Release pan proxy object while coming out from tethering menu
+f05ff38 settings: Remove "mobile plan"
+7705c3b Merge "Settings: preferences use keys, not ids" into cm-11.0
+31d5f75 Settings: modify AOSP RU translation
+6eed064 Settings: preferences use keys, not ids
+8dbb2c1 Themes: List ThemeSettings as a valid fragment
+bb26530 Automatic translation import
+cef1628 make LinearColorBar themeable
+78cb01f Consistently use start/end instead of left/right layout properties.
+46af808 settings: Various cleanups
+c30ffee Merge remote-tracking branch 'github/cm-11.0' into HEAD
+8c9e4cf Merge "Add wallpaper pickers to seperate package [2/2]" into cm-11.0
+f23be04 Add wallpaper pickers to seperate package [2/2]
+11dad69 MSIM: Update icon for Multi Sim Settings category
+dc187ad MSim Settings: Update UI/UX with user friendly strings
+4ab4dd2 Settings: Use consistent title for button wake up
+8b7f3b8 Show "Eject card" for usb storage
+6b5bf87 Settings: Remove redundancy in description
+ab975d1 Merge "Settings: Quiet hours: Bring back summaries" into cm-11.0
+
+   * packages/apps/SoundRecorder
+2977ffa Automatic translation import
+4b77fa7 SoundRecorder: mark file types as untranslatable
+
+   * packages/apps/Stk
+66a47d7 Automatic translation import
+f0ff508 Add mimimum width of the buttonPanel layout
+
+   * packages/apps/Tag
+83672c5 Automatic translation import
+
+   * packages/apps/ThemeChooser
+80f3d67 Automatic translation import
+12e630b Fix handling of new intents from installed theme notifications.
+4cd6d0a Fix NP when activity detaches from fragment
+0756392 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+4b4401c Automatic translation import
+fc75cca Merge remote-tracking branch 'github/cm-11.0' into HEAD
+d8fb00c Merge "Save and restore state of checkboxes" into cm-11.0
+b197ea0 ThemeChooser: minor strings update
+2896a6e Save and restore state of checkboxes
+332427e Merge "CM11 Themes: Allow defining a custom default theme [3/3]" into cm-11.0
+350b05b Merge "ThemeChooser: Add missing up navigation" into cm-11.0
+88938a7 Merge "Don't rely on dimensions given in desc.txt" into cm-11.0
+37e6bff CM11 Themes: Allow defining a custom default theme [3/3]
+0f1b3dc Don't rely on dimensions given in desc.txt
+cb78a66 Merge "If default theme, get localized title string" into cm-11.0
+7234a07 ThemeChooser: Add missing up navigation
+81d45c6 ThemeChooser: Update lock screen wallpaper string
+abf8ea8 If default theme, get localized title string
+2fe8ad9 Merge "Don't add components that are disabled." into cm-11.0
+472bd33 Add a page indicator to the theme preview screen
+cf8f5e7 Replace sliding panel with scrollview
+f368487 Preview lockscreen preview image in detail view
+6e76f7c Don't add components that are disabled.
+3af4536 Provide alternative applications.
+8f6649b Fix style previews scaling in ComponentBrowseFragment
+8c086ac Make theme title width match_parent
+b9c3fbb Show list if package was uninstalled while launching
+b51da02 Animate boot animation using double buffered bitmaps
+e35e617 Provide alternative applications.
+7c36fde Fix style previews scaling in ComponentBrowseFragment
+7277d1d Make theme title width match_parent
+26d5e45 Theme Chooser: Initial Contribution [1/2]
+
+   * packages/apps/Torch
+713dfda Automatic translation import
+e66a27a Automatic translation import
+682fe90 Torch: only include src files from src dir
+c55642c Merge "torch: toggle on/off once" into cm-11.0
+951e2ef Merge "Make sure mFullScreenScale is non-zero before animating." into cm-11.0
+11f8e2d torch: toggle on/off once
+9ac9b00 Make sure mFullScreenScale is non-zero before animating.
+6fadfc0 Automatic translation import
+636c3d4 Torch: fix xhdpi notification icon
+e6f2f35 Torch: set default hasHighBrightness flag to false
+
+   * packages/apps/Trebuchet
+4b66843 Fix bug: Scroll Effect issues in Workspace
+64ea178 Automatic translation import
+5bc1b81 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+0b43621 Automatic translation import
+ee507b7 Merge "Use wallpaper picker added to WallpaperCropper apk." into cm-11.0
+4bf0d27 Merge "Fix hidden "Remove" and "App info" buttons in landscape" into cm-11.0
+46c118a Trebuchet : Destroy cropview to avoid leaks in picker
+9319afb Trebuchet : Destroy cropview to avoid leaks in picker
+3c4c81a Use wallpaper picker added to WallpaperCropper apk.
+614620e Merge "fix READ_SETTINGS/WRITE_SETTINGS to be "dangerous"" into cm-11.0
+5bd2daf Merge remote-tracking branch 'github/cm-11.0' into HEAD
+98adac0 Fix name of default
+6231641 Automatic translation import
+73da300 Trebuchet : Only reset overscrolled child
+e1d8965 Revert "Trebuchet : Fix overscroll overlay issue"
+f296451 Trebuchet : Fix overscroll overlay issue
+aaadc78 Folders: Merge Folders
+1505347 Fix hidden "Remove" and "App info" buttons in landscape
+f33342b fix READ_SETTINGS/WRITE_SETTINGS to be "dangerous"
+
+   * packages/apps/UnifiedEmail
+4fef586 Automatic translation import
+
+   * packages/apps/VideoEditor
+c5232d4 Automatic translation import
+
+   * packages/apps/VoiceDialer
+813c06c Automatic translation import
+
+   * packages/apps/VoicePlus
+a1dda08 Automatic translation import
+a61622a Automatic translation import
+625aade Automatic translation import
+
+   * packages/inputmethods/LatinIME
+03fd3b7 Automatic translation import
+860e09c Automatic translation import
+5ffa524 Automatic translation import
+867c481 Automatic translation import
+8d5498e Merge "LatinIME: Add a configuration for preview view transient test" into cm-11.0
+
+   * packages/providers/CalendarProvider
+3acfd1a Automatic translation import
+
+   * packages/providers/ContactsProvider
+b2e8249 Automatic translation import
+
+   * packages/providers/DownloadProvider
+263a68b Automatic translation import
+208f392 Automatic translation import
+e9ec855 Automatic translation import
+116f574 Avoid leaking cursors
+f2f141e Automatic translation import
+
+   * packages/providers/MediaProvider
+23270ec Automatic translation import
+
+   * packages/providers/TelephonyProvider
+5fcc84d Automatic translation import
+
+   * packages/providers/ThemesProvider
+047b5bd Fix NPE if themeContext is null - round 2
+1e42506 Automatic translation import
+5ec7588 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+52f62a4 Standardize preview images.
+535100f Automatic translation import
+411d244 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+6d17ea6 Properly handle updating holo theme.
+8ff5a8c CM11 Themes: Allow defining a custom default theme [2/3]
+3f39f20 Merge "Listen for ACTION_PACKAGE_BEING_REMOVED" into cm-11.0
+4456de1 Themes: Support launcher based icon packs [2/2]
+13b9a54 Listen for ACTION_PACKAGE_BEING_REMOVED
+ff2884c Fix NPE if themeContext is null
+dda7d28 Fix NPE if themeContext is null
+bd04dff Include alarms in mixnmatch.
+d0f415a Theme Chooser: Initial Contribution [2/2]
+
+   * packages/providers/UserDictionaryProvider
+457581d Automatic translation import
+88c8a2c Automatic translation import
+a152969 Automatic translation import
+
+   * packages/screensavers/Basic
+399299b Automatic translation import
+
+   * packages/screensavers/PhotoTable
+1033c5d Automatic translation import
+
+   * packages/services/Telephony
+83b393a Telephony: respect quiet hours vibration settings when ringing
+dfd2d2e Merge remote-tracking branch 'gerrit/cm-11.0' into HEAD
+6cb8587 Automatic translation import
+9fb9875 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+8975a29 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+a911fdd Automatic translation import
+262a58a SelectSubscription: set default parameters for ACTION_DATA_ROAMING_SETTINGS
+55f760a MSim: always enable activity disabler
+f816b8f Telephony: Set X-Divert as untranslatable.
+f587082 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+f8c1bc6 Automatic translation import
+2fead5e Merge "MSimDialerActivity: actually dial when an option is selected" into cm-11.0
+cc6d633 MSimDialerActivity: actually dial when an option is selected
+
+   * packages/wallpapers/Basic
+cc98ce3 Automatic translation import
+
+   * packages/wallpapers/Galaxy4
+efa0138 Automatic translation import
+142b121 Automatic translation import
+5c697fc Automatic translation import
+
+   * packages/wallpapers/HoloSpiral
+2ae3a9e Automatic translation import
+
+   * packages/wallpapers/LivePicker
+e530050 Automatic translation import
+
+   * packages/wallpapers/MagicSmoke
+c02ba06 Automatic translation import
+
+   * packages/wallpapers/MusicVisualization
+56204a9 Automatic translation import
+
+   * packages/wallpapers/NoiseField
+73238e2 Automatic translation import
+
+   * packages/wallpapers/PhaseBeam
+3b3cac9 Automatic translation import
+0963068 Automatic translation import
+431cd7b Automatic translation import
+a051c36 Automatic translation import
+
+   * system/core
+9d5f7df Change CM recovery install script filename [2/2]
+0347c91 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+1aecc59 init: update recovery when enabled in settings
+c1178f7 Merge remote-tracking branch 'github/cm-11.0' into HEAD
+d16953d toolbox: Avoid issues with non-regular files
+8795e5f Merge remote-tracking branch 'github/cm-11.0' into HEAD
+3f2d222 system/core: Remove AID_GRAPHICS from adb groups.
+358b01c Make tombstones directory to not follow symlink.
+6cc5150 Remove obsolete vdc call.
+
+   * system/media
+c28da97 audio_route: Add APIs to update mixer based on path
+
+   * system/qcom
+c54aba9 qsap: Kill more logspam
+b980ab0 qsap: Put files in a sane location
+6cf22dc qsap: Don't log sensitive information
+
+   * system/vold
+2ef6bc2 Merge "vold: Honor mount options for ext4 mounts" into cm-11.0
+b047f87 Validate asec names.
+
+   * vendor/cm
+0d61f06 Fix changelog typos
+9e99b1b Update changelog for M7
+e4af715 disabled packages: Add new GMS updater activity names
+ada0a6c Add/fix APNs...
+e0e8c27 recovery: default recovery updating to false
+34d5e90 cm: Add some app-specific performance settings
+8b9d693 Fix some translator names
+484b262 Merge "Fix Etisalat UAE APNs" into cm-11.0
+3325783 sepolicy: Allow relabeling after wallpaper change
+fbccf65 Fix Etisalat UAE APNs
+f815de9 Update translation contributors list
+fdf1aff cm: policy for ipv6 tethering
+674bebb fix typo for True-Move carrier
+beb47fc Merge "Remove me from contributors." into cm-11.0
+f2dd79a Merge "cm-11 themes: Build new ThemesProvider" into cm-11.0
+b60442e Integrate duplicated NTT DOCOMO carrier labels
+f1deb14 cm: Underp package names
+08bfcb3 cm: Build Stagefright FFMPEG plugin
+187199d contributors: update sony maintainers
+ad16885 Remove me from contributors.
+942bf85 cm-11 themes: Build new ThemesProvider
+
+   * external/koush/ion
+12349d4 Merge remote-tracking branch 'koush/master' into cm-11.0
+cbc51af Add support for multiple multipart parts in a single call.
+4979084 Switch from URI to Uri.
+81a3da1 build.gradle update
+3efb342 1.2.5
+
