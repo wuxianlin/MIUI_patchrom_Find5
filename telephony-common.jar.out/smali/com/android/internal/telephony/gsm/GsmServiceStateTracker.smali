@@ -9793,6 +9793,10 @@
     .line 555
     .local v7, spn:Ljava/lang/String;
     :goto_3
+    invoke-static {p0, v7}, Lcom/android/internal/telephony/Injector$ServiceStateTrackerHook;->getSpn(Lcom/android/internal/telephony/ServiceStateTracker;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
@@ -9808,6 +9812,23 @@
     .line 560
     .local v6, showSpn:Z
     :goto_4
+    if-eqz v6, :cond_miui
+
+    iget-boolean v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mEmergencyOnly:Z
+
+    if-nez v10, :cond_miui
+
+    iget-object v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
+
+    invoke-virtual {v10}, Landroid/telephony/ServiceState;->getState()I
+
+    move-result v10
+
+    if-nez v10, :cond_miui
+
+    move v6, v9
+
+    :goto_miui
     iget-boolean v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mCurShowPlmn:Z
 
     if-ne v5, v10, :cond_1
@@ -9988,7 +10009,10 @@
 
     move-result-object v3
 
-    .line 542
+    invoke-static {p0, v3}, Lcom/android/internal/telephony/Injector$ServiceStateTrackerHook;->getSpn(Lcom/android/internal/telephony/ServiceStateTracker;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10

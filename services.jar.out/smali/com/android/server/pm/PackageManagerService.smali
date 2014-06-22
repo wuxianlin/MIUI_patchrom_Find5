@@ -3465,7 +3465,8 @@
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mRequiredVerifierPackage:Ljava/lang/String;
 
-    .line 1582
+    invoke-static {}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->postScanPackages()V
+
     monitor-exit v54
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
@@ -21206,6 +21207,12 @@
     .end local v39           #i:I
     .end local v66           #renamed:Ljava/lang/String;
     :cond_14
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v62
+
+    invoke-static {v0, v1}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->addMiuiExtendFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
+
     move-object/from16 v0, v62
 
     iget-object v3, v0, Lcom/android/server/pm/PackageSetting;->origPackage:Lcom/android/server/pm/PackageSettingBase;
@@ -41773,6 +41780,12 @@
 
     .line 7220
     :cond_4
+    move-object/from16 v0, p4
+
+    invoke-static {p0, v0}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->getPackageInstaller(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p4
+
     move-object/from16 v0, p5
 
     invoke-virtual {v0, v11}, Landroid/content/pm/VerificationParams;->setInstallerUid(I)V

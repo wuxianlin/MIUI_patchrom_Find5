@@ -1238,7 +1238,11 @@
 
     .line 1085
     :cond_14
-    return v0
+    invoke-static {p0, p1, v0}, Landroid/content/res/Injector$ConfigurationHook;->diff(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
+    return v2
 .end method
 
 .method public equals(Landroid/content/res/Configuration;)Z
@@ -2462,6 +2466,10 @@
 
     move-result-object v2
 
+    invoke-static {p0, v2}, Landroid/content/res/Injector$ConfigurationHook;->toString(Landroid/content/res/Configuration;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
     return-object v2
 
     .line 670
@@ -3555,7 +3563,11 @@
 
     .line 972
     :cond_1b
-    return v0
+    invoke-static {p0, p1, v0}, Landroid/content/res/Injector$ConfigurationHook;->updateFrom(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
+    return v2
 
     .line 855
     .end local v1           #deltaScreenLayoutDir:I
@@ -3677,6 +3689,8 @@
     iget v0, p0, Landroid/content/res/Configuration;->seq:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/Injector$ConfigurationHook;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
 
     iget-object v0, p0, Landroid/content/res/Configuration;->customTheme:Landroid/content/res/CustomTheme;
 

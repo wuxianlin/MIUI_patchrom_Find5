@@ -2465,9 +2465,7 @@
 
     .prologue
     .line 953
-    const-string v0, "gsm.sim.operator.numeric"
-
-    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefaultSubscription()I
+    invoke-static {p0}, Landroid/telephony/Injector$TelephonyManagerHook;->getSimOperator(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result v1
 

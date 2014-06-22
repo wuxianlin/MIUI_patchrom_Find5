@@ -2736,6 +2736,14 @@
 
     iput-object v0, v8, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
 
+    iget-object v0, v8, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
+
+    iget-object v1, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
+
+    iget-object v1, v1, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/app/Injector$ActivityThreadHook;->setResourcesPackageName(Landroid/content/res/Resources;Ljava/lang/String;)V
+
     return-object v8
 .end method
 
@@ -2811,6 +2819,14 @@
     move-result-object v0
 
     iput-object v0, v8, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
+
+    iget-object v0, v8, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
+
+    iget-object v1, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
+
+    iget-object v1, v1, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/app/Injector$ActivityThreadHook;->setResourcesPackageName(Landroid/content/res/Resources;Ljava/lang/String;)V
 
     return-object v8
 .end method

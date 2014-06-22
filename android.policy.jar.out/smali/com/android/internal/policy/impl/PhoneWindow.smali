@@ -1496,6 +1496,10 @@
 
     .line 3386
     :cond_7
+    iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mActionBar:Lcom/android/internal/widget/ActionBarView;
+
+    invoke-static {p0, v7}, Lcom/android/internal/policy/impl/Injector$PhoneWindowHook;->handleStartingWindow(Lcom/android/internal/policy/impl/PhoneWindow;Lcom/android/internal/widget/ActionBarView;)V
+
     const v7, 0x1020318
 
     invoke-virtual {p0, v7}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
@@ -5252,8 +5256,13 @@
 
     if-eqz v19, :cond_29
 
-    .line 3272
-    const v10, 0x109008f
+    sget v19, Lcom/android/internal/R$layout;->screen_action_bar:I
+
+    move/from16 v0, v19
+
+    invoke-static {v5, v0}, Lcom/android/internal/policy/impl/Injector$PhoneWindowHook;->getActionBarResourceId(Landroid/content/Context;I)I
+
+    move-result v10
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8

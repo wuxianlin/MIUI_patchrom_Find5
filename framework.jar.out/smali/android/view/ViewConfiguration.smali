@@ -359,13 +359,17 @@
     iput v8, p0, Landroid/view/ViewConfiguration;->mMaximumDrawingCacheSize:I
 
     .line 293
-    const/4 v8, 0x0
+    const/high16 v8, 0x40c0
 
     mul-float/2addr v8, v6
 
     add-float/2addr v8, v10
 
     float-to-int v8, v8
+
+    invoke-static {p1, v8}, Landroid/view/Injector$ViewConfigurationHook;->getOverscrollDistance(Landroid/content/Context;I)I
+
+    move-result v8
 
     iput v8, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
 
@@ -377,6 +381,10 @@
     add-float/2addr v8, v10
 
     float-to-int v8, v8
+
+    invoke-static {p1, v8}, Landroid/view/Injector$ViewConfigurationHook;->getOverflingDistance(Landroid/content/Context;I)I
+
+    move-result v8
 
     iput v8, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
 

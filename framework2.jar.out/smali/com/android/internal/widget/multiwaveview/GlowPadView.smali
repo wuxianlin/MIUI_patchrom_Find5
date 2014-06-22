@@ -1398,7 +1398,7 @@
     invoke-virtual {v2}, Lcom/android/internal/widget/multiwaveview/GlowPadView$AnimationBundle;->stop()V
 
     :cond_0
-    invoke-direct {p0, v3, v3}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
+    invoke-virtual {p0, v3, v3}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
 
     :goto_1
     invoke-direct {p0, v3}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setGrabbedState(I)V
@@ -3713,7 +3713,7 @@
     invoke-direct {p0, v5, v6}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->updatePointCloudPosition(FF)V
 
     .line 637
-    invoke-direct {p0, v7, v7}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
+    invoke-virtual {p0, v7, v7}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
 
     goto :goto_1
 .end method
@@ -5591,25 +5591,6 @@
     return v0
 .end method
 
-.method public getTargetDrawables()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/android/internal/widget/multiwaveview/TargetDrawable;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 669
-    iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView;->mTargetDrawables:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
 .method getTargetDrawables()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -5932,7 +5913,7 @@
     invoke-direct {p0}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->stopAndHideWaveAnimation()V
 
     .line 1177
-    invoke-direct {p0, v6, v6}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
+    invoke-virtual {p0, v6, v6}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->hideTargets(ZZ)V
 
     .line 1178
     iput-boolean v6, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView;->mInitialLayout:Z

@@ -10987,6 +10987,14 @@
     .end local v16           #proxy:Landroid/net/ProxyProperties;
     :cond_4
     :goto_2
+    invoke-virtual {v3}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getApnSetting()Lcom/android/internal/telephony/dataconnection/ApnSetting;
+
+    move-result-object v17
+
+    move-object/from16 v0, v17
+
+    invoke-static {v3, v0}, Lcom/android/internal/telephony/dataconnection/Injector$DcTrackerHook;->onDataSetupComplete(Lcom/android/internal/telephony/dataconnection/ApnContext;Lcom/android/internal/telephony/dataconnection/ApnSetting;)V
+
     invoke-virtual {v3}, Lcom/android/internal/telephony/dataconnection/ApnContext;->getDataProfileType()Ljava/lang/String;
 
     move-result-object v17

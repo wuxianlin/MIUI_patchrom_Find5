@@ -787,18 +787,11 @@
 
     if-nez v5, :cond_1
 
-    .line 277
+    const-string v2, "AdnRecord"
+
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/AdnRecord;->mAlphaTag:Ljava/lang/String;
 
-    invoke-static {v5}, Lcom/android/internal/telephony/uicc/IccUtils;->stringToAdnStringField(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    .line 278
-    .local v2, byteTag:[B
-    array-length v5, v2
-
-    invoke-static {v2, v9, v0, v9, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v0, v5, v3}, Lcom/android/internal/telephony/uicc/Injector$AdnRecordHook;->encodeAlphaTag(Ljava/lang/String;[BLjava/lang/String;I)Z
 
     goto :goto_1
 .end method

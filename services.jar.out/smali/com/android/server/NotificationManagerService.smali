@@ -4882,6 +4882,33 @@
 
 
 # virtual methods
+.method public areNotificationsEnabled(Ljava/lang/String;)Z
+    .locals 1
+    .parameter "pkg"
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/android/server/NotificationManagerService;->areNotificationsEnabledForPackage(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public areNotificationsEnabled(Ljava/lang/String;I)Z
+    .locals 1
+    .parameter "pkg"
+    .parameter "uid"
+
+    .prologue
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/NotificationManagerService;->areNotificationsEnabledForPackage(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public areNotificationsEnabledForPackage(Ljava/lang/String;I)Z
     .locals 2
     .parameter "pkg"
@@ -5309,6 +5336,31 @@
     move v4, v1
 
     goto :goto_2
+.end method
+
+.method cancelCurrentToast(I)V
+    .locals 2
+    .parameter "index"
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mToastQueue:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/NotificationManagerService$ToastRecord;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, v0, v1}, Lcom/android/server/NotificationManagerService;->scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;Z)V
+
+    :cond_0
+    return-void
 .end method
 
 .method public cancelNotificationFromListener(Landroid/service/notification/INotificationListener;Ljava/lang/String;Ljava/lang/String;I)V
