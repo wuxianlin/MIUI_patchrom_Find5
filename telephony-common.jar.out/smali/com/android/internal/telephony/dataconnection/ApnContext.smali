@@ -10,6 +10,10 @@
 # instance fields
 .field public final LOG_TAG:Ljava/lang/String;
 
+.field private mApnSetting:Lcom/android/internal/telephony/dataconnection/ApnSetting;
+
+.field private final mApnType:Ljava/lang/String;
+
 .field private final mContext:Landroid/content/Context;
 
 .field mDataEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -184,6 +188,51 @@
     return-void
 .end method
 
+.method public declared-synchronized getApnSetting()Lcom/android/internal/telephony/dataconnection/ApnSetting;
+    .locals 2
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "getApnSetting: apnSetting="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mApnSetting:Lcom/android/internal/telephony/dataconnection/ApnSetting;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/ApnContext;->log(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mApnSetting:Lcom/android/internal/telephony/dataconnection/ApnSetting;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public declared-synchronized getDataProfile()Lcom/android/internal/telephony/dataconnection/DataProfile;
     .locals 2
 
@@ -230,6 +279,15 @@
     monitor-exit p0
 
     throw v0
+.end method
+
+.method public getApnType()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mApnType:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public getDataProfileType()Ljava/lang/String;

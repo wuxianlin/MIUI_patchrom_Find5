@@ -847,13 +847,9 @@
     .line 1274
     iget-object v3, p1, Landroid/content/res/Configuration;->customTheme:Landroid/content/res/CustomTheme;
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_7
 
     move v2, v4
-
-    invoke-static {p0, v2, p1}, Landroid/content/res/Injector$ConfigurationHook;->compareTo(Landroid/content/res/Configuration;ILandroid/content/res/Configuration;)I
-
-    move-result v2
 
     goto/16 :goto_0
 
@@ -864,6 +860,11 @@
     iget-object v4, p1, Landroid/content/res/Configuration;->customTheme:Landroid/content/res/CustomTheme;
 
     invoke-virtual {v3, v4}, Landroid/content/res/CustomTheme;->compareTo(Landroid/content/res/CustomTheme;)I
+
+    move-result v2
+
+    :cond_7
+    invoke-static {p0, v2, p1}, Landroid/content/res/Injector$ConfigurationHook;->compareTo(Landroid/content/res/Configuration;ILandroid/content/res/Configuration;)I
 
     move-result v2
 
@@ -2009,6 +2010,8 @@
 
     .line 659
     :cond_1
+    invoke-static {p0, p1}, Landroid/content/res/Injector$ConfigurationHook;->setTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
@@ -3688,13 +3691,11 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {p0, p1, p2}, Landroid/content/res/Injector$ConfigurationHook;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
-
     iget-object v0, p0, Landroid/content/res/Configuration;->customTheme:Landroid/content/res/CustomTheme;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    invoke-static {p0}, Landroid/content/res/Injector$ConfigurationHook;->setToDefaults(Landroid/content/res/Configuration;)V
+    invoke-static {p0, p1, p2}, Landroid/content/res/Injector$ConfigurationHook;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
 
     return-void
 

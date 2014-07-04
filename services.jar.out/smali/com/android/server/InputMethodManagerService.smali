@@ -1777,35 +1777,11 @@
     .locals 1
 
     .prologue
-    .line 2603
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mUiContext:Landroid/content/Context;
-
-    if-nez v0, :cond_0
 
     .line 2604
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Landroid/content/pm/ThemeUtils;->createUiContext(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/InputMethodManagerService;->mUiContext:Landroid/content/Context;
-
-    .line 2606
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mUiContext:Landroid/content/Context;
-
-    :goto_0
     return-object v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
-
-    goto :goto_0
 .end method
 
 .method private isKeyguardLocked()Z

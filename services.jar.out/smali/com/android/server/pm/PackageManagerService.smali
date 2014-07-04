@@ -1086,6 +1086,8 @@
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/pm/Settings;->addSharedUserLPw(Ljava/lang/String;II)Lcom/android/server/pm/SharedUserSetting;
 
     .line 1177
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->addMiuiSharedUids(Lcom/android/server/pm/PackageManagerService;)V
+
     const-string v2, "appops"
 
     move-object/from16 v0, p1
@@ -1099,8 +1101,6 @@
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mAppOps:Landroid/app/AppOpsManager;
-
-    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->addMiuiSharedUids(Lcom/android/server/pm/PackageManagerService;)V
 
     .line 1178
     const-string v2, "debug.separate_processes"
@@ -2742,6 +2742,8 @@
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
+
+    move-object/from16 v0, p0
 
     invoke-static {v0, v2}, Lcom/android/server/pm/Injector$PackageManagerServiceHook;->performPreinstallApp(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/Settings;)V
 

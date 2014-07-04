@@ -2232,6 +2232,9 @@
     .end local v3           #sendNext:Landroid/content/Intent;
     :cond_3
     :goto_1
+    invoke-static {p0}, Lcom/android/internal/telephony/Injector$SMSDispatcherHook;->processNextPendingMessageIfSynchronous(Lcom/android/internal/telephony/SMSDispatcher;)V
+
+    :cond_miui
     return-void
 
     .line 350
