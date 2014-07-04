@@ -10080,9 +10080,9 @@
     .line 555
     goto/16 :goto_4
 
-    .restart local v5       #showSpn:Z
+    .restart local v6       #showSpn:Z
     :cond_miui
-    move v5, v7
+    move v6, v8
 
     goto/16 :goto_miui
 .end method
