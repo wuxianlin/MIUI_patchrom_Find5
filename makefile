@@ -18,9 +18,9 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := 
 
-local-miui-removed-priv-apps := 
+local-miui-removed-priv-apps := MediaProvider
 
-local-miui-modified-apps := 
+local-miui-modified-apps := MiuiHome Settings
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -52,3 +52,17 @@ local-pre-zip-misc:
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
+
+	@echo Replace app and priv-app
+	cp other/app/* $(ZIP_DIR)/system/app/
+	#cp other/priv-app/* $(ZIP_DIR)/system/priv-app/
+
+	@echo Replace custom lib
+	cp other/lib/* $(ZIP_DIR)/system/lib/
+
+	@echo Replace custom bin
+	cp other/bin/* $(ZIP_DIR)/system/bin/
+
+	@echo Replace custom etc
+	cp other/etc/* $(ZIP_DIR)/system/etc/
+

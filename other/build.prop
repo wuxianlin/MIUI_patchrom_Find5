@@ -13,13 +13,13 @@ ro.build.user=jenkins
 ro.build.host=cyanogenmod
 ro.build.tags=test-keys
 ro.product.brand=OPPO
-ro.product.name=occam
+ro.product.name=cm_find5
 ro.product.board=MSM8960
 ro.product.cpu.abi=armeabi-v7a
 ro.product.cpu.abi2=armeabi
 ro.product.manufacturer=OPPO
-ro.product.locale.language=en
-ro.product.locale.region=US
+ro.product.locale.language=zh
+ro.product.locale.region=CN
 ro.wifi.channels=
 ro.board.platform=msm8960
 # ro.build.product is obsolete; use ro.product.device
@@ -27,10 +27,11 @@ ro.build.product=find5
 ro.product.model=Find 5
 ro.product.device=find5
 # Do not try to parse ro.build.description or .fingerprint
-ro.build.description=msm8960-user 4.1.1 JRO03L eng.oppo.20130328.172033 release-keys
-ro.build.fingerprint=OPPO/oppo_12069/FIND5:4.1.1/JRO03L/1362469752:user/release-keys
+ro.build.description=cm_find5-userdebug 4.4.2 KVT49L 73a61c8545 test-keys
+ro.build.fingerprint=OPPO/cm_find5/find5:4.4.2/KVT49L/73a61c8545:userdebug/test-keys
 ro.build.characteristics=default
 ro.cm.device=find5
+persist.sys.timezone=Asia/Shanghai
 # end build properties
 #
 # from device/oppo/find5/system.prop

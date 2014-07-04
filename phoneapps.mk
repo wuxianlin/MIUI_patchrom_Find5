@@ -19,7 +19,6 @@ private-phone-apps := ApplicationsProvider \
                                           LatinIME \
 					  LiveWallpapers \
 					  MagicSmokeWallpapers \
-					  Nfc \
 					  NoiseField \
 					  OppoNvProcess \
 					  OppoRadioShutdown \

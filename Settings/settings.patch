@@ -1,0 +1,46 @@
+diff --git a/Settings/res/xml/settings_headers.xml b/Settings/res/xml/settings_headers.xml
+index b200bc7..8799470 100644
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -56,7 +56,7 @@
+     <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
+         <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
+     </header>
+-    <header android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+     <header android:id="@id/system_section" android:title="@string/header_category_system" />
+@@ -75,4 +75,4 @@
+     <header android:icon="@drawable/ic_about_settings" android:id="@id/about_settings" android:title="@string/about_settings">
+         <intent android:targetPackage="com.android.settings" android:targetClass="com.android.settings.Settings$DeviceInfoSettingsActivity" />
+     </header>
+-</preference-headers>
+\ No newline at end of file
++</preference-headers>
+diff --git a/Settings/smali/com/android/settings/BugreportPreference.smali b/Settings/smali/com/android/settings/BugreportPreference.smali
+index 08b6f8a..84c30a6 100644
+--- a/Settings/smali/com/android/settings/BugreportPreference.smali
++++ b/Settings/smali/com/android/settings/BugreportPreference.smali
+@@ -75,7 +75,7 @@
+     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onPrepareDialogBuilder(Landroid/app/AlertDialog$Builder;)V
+ 
+     .line 36
+-    const v0, 0x1040405
++    const v0, 0x10404ba
+ 
+     invoke-virtual {p1, v0, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+ 
+diff --git a/Settings/smali/com/android/settings/applications/RunningServiceDetails.smali b/Settings/smali/com/android/settings/applications/RunningServiceDetails.smali
+index 5266c3a..b5a5d14 100644
+--- a/Settings/smali/com/android/settings/applications/RunningServiceDetails.smali
++++ b/Settings/smali/com/android/settings/applications/RunningServiceDetails.smali
+@@ -1185,7 +1185,7 @@
+     .line 314
+     iget-object v7, v3, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mReportButton:Landroid/widget/Button;
+ 
+-    const v8, 0x1040405
++    const v8, 0x10404ba
+ 
+     invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(I)V
+ 
