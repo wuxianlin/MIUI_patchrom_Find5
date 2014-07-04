@@ -13528,17 +13528,19 @@
     move-result v35
 
     if-eqz v35, :cond_e
+
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v35
+    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    iget-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
+    move-object/from16 v35, v0
 
-    invoke-static {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->isInCallScreenShowing(Landroid/content/Context;)Z
+    invoke-static/range {v35 .. v35}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->isInCallScreenShowing(Landroid/content/Context;)Z
 
-    move-result v1
+    move-result v35
 
-    if-eqz v1, :cond_e
+    if-eqz v35, :cond_e
+
     .line 2527
     move-object/from16 v0, p0
 

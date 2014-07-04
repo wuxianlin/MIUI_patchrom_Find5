@@ -86,6 +86,19 @@
 
 .field protected mImsSMSDispatcher:Lcom/android/internal/telephony/ImsSMSDispatcher;
 
+.field public mIsSynchronizedSending:Z
+
+.field public mPendingMessagesList:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mPendingTrackerCount:I
 
 .field protected mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -105,6 +118,8 @@
 .field protected mSmsSendDisabled:Z
 
 .field protected mSmsUseExpectMore:Z
+
+.field public mSyncronousSending:Z
 
 .field protected final mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -161,7 +176,8 @@
 
     iput v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mRemainingMessages:I
 
-    .line 267
+    iput-boolean v2, p0, Lcom/android/internal/telephony/SMSDispatcher;->mIsSynchronizedSending:Z
+
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -269,6 +285,10 @@
 
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSmsSendDisabled:Z
+
+    iput-boolean v2, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSyncronousSending:Z
+
+    invoke-static {p0}, Lcom/android/internal/telephony/Injector$SMSDispatcherHook;->initSynchronousSending(Lcom/android/internal/telephony/SMSDispatcher;)V
 
     .line 198
     const-string v0, "telephony.sms.pseudo_multipart"
@@ -2099,7 +2119,10 @@
 
     const/4 v10, -0x1
 
-    .line 344
+    const/4 v7, 0x0
+
+    iput-boolean v7, p0, Lcom/android/internal/telephony/SMSDispatcher;->mIsSynchronizedSending:Z
+
     iget-object v6, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v6, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -2406,7 +2429,7 @@
     :cond_9
     iget-object v7, v6, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_miui
 
     .line 420
     const/4 v0, 0x1
@@ -3143,7 +3166,7 @@
 
     .line 791
     :cond_8
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher;->sendSms(Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;)V
+    invoke-static {p0, p1}, Lcom/android/internal/telephony/Injector$SMSDispatcherHook;->enqueueOrSendSms(Lcom/android/internal/telephony/SMSDispatcher;Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;)V
 
     goto/16 :goto_1
 
