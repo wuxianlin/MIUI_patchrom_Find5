@@ -1492,10 +1492,8 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
-    .line 80
     return-void
 .end method
 
@@ -1503,10 +1501,8 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Landroid/widget/TimePicker;->updateInputState()V
 
-    .line 74
     return-void
 .end method
 

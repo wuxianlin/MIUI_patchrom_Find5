@@ -58,11 +58,20 @@ local-pre-zip-misc:
 	#cp other/priv-app/* $(ZIP_DIR)/system/priv-app/
 
 	@echo Replace custom lib
-	cp other/lib/* $(ZIP_DIR)/system/lib/
+	cp -rf other/lib/* $(ZIP_DIR)/system/lib/
 
 	@echo Replace custom bin
 	cp other/bin/* $(ZIP_DIR)/system/bin/
 
 	@echo Replace custom etc
 	cp other/etc/* $(ZIP_DIR)/system/etc/
+
+	@echo Replace custom xbin
+	cp other/xbin/* $(ZIP_DIR)/system/xbin/
+
+	@echo Replace custom vendor
+	cp -rf other/vendor/* $(ZIP_DIR)/system/vendor/
+
+	@echo Delete some unneeded files
+	rm -rf $(ZIP_DIR)/system/etc/.has_su_daemon
 

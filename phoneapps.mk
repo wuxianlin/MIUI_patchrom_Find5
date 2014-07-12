@@ -19,6 +19,7 @@ private-phone-apps := ApplicationsProvider \
                                           LatinIME \
 					  LiveWallpapers \
 					  MagicSmokeWallpapers \
+					  Nfc \
 					  NoiseField \
 					  OppoNvProcess \
 					  OppoRadioShutdown \
@@ -34,6 +35,7 @@ private-phone-apps := ApplicationsProvider \
 					  WAPPushManager
 
 private-phone-priv-apps := BackupRestoreConfirmation \
+					  InputDevices \
 					  DefaultContainerService \
 					  ExternalStorageProvider \
                                           MediaProvider \
@@ -42,4 +44,6 @@ private-phone-priv-apps := BackupRestoreConfirmation \
                                           SharedStorageBackup \
 					  Shell \
 					  Tag \
+					  ThemeChooser \
+					  ThemesProvider \
 					  WallpaperCropper

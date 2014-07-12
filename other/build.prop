@@ -143,4 +143,5 @@ ro.config.notification_sound=FadeIn.ogg
 ro.config.alarm_alert=GoodMorning.ogg
 ro.config.sms_received_sound=FadeIn.ogg
 ro.config.sms_delivered_sound=MessageComplete.ogg
+ro.com.android.mobiledata=false
 persist.sys.mitalk.enable=true

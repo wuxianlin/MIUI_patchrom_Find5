@@ -56,7 +56,11 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
-
+    rm -rf $BUILD_OUT/framework/smali/android/provider/Telephony\$Intents.smali
+    #cp -rf overlay/framework/smali/* $BUILD_OUT/framework/smali
+    cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
+    #fix wrong ids
+    sed -i -e 's/111003c/1110047/' $BUILD_OUT/framework/smali/android/net/sip/SipManager.smali
 fi
 
 if [ $2 = "$BUILD_OUT/framework2" ]
@@ -73,7 +77,14 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
-
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/cdma/CdmaConnection\$Injector.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/gsm/GSMPhone\$2.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/uicc/SpnOverride\$Injector.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/CallManager\$2.smali
+    #fix wrong ids
+    sed -i -e 's/1040452/1040507/' $BUILD_OUT/framework2/smali/com/android/internal/telephony/uicc/Injector\$UiccCardHook.smali
+    sed -i -e 's/1110042/111004d/' $BUILD_OUT/framework2/smali/com/google/android/mms/pdu/PduParser.smali
+    sed -i -e 's/10400af/1040164/' $BUILD_OUT/framework2/smali/com/google/android/mms/util/SqliteWrapper.smali
 fi
 
 if [ $2 = "$BUILD_OUT/telephony-common" ]
@@ -90,5 +101,20 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
-
 fi
+
+if [ $2 = "$BUILD_OUT/services" ]
+then
+    #cp -rf overlay/services/smali/* $BUILD_OUT/services/smali
+    rm -rf $BUILD_OUT/services/smali/com/android/server/ThemeService*
+    rm $BUILD_OUT/services/smali/com/android/server/am/ActivityManagerService\$13\$1.smali
+fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/GlobalActions\$3\$1\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/GlobalActions\$3\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/PhoneWindowManager\$13\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/PhoneWindowManager\$21\$1.smali
+fi
+
