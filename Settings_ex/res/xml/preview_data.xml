@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/preview_data_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <Preference android:title="@string/preview_id_title" android:key="preview_id" android:summary="%s" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/preview_device_title" android:key="preview_device" android:summary="%s" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/preview_version_title" android:key="preview_version" android:summary="%s" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/preview_country_title" android:key="preview_country" android:summary="%s" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/preview_carrier_title" android:key="preview_carrier" android:summary="%s" style="?android:preferenceInformationStyle" />
+</PreferenceScreen>

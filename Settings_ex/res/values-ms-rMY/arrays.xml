@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>Amerika</item>
+        <item>Eropah</item>
+        <item>Afrika</item>
+        <item>Asia</item>
+        <item>Australia</item>
+        <item>Pasifik</item>
+        <item>Semua</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 saat</item>
+        <item>30 saat</item>
+        <item>1 minit</item>
+        <item>2 minit</item>
+        <item>5 minit</item>
+        <item>10 minit</item>
+        <item>30 minit</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Jangan sekali-kali</item>
+        <item>15 saat</item>
+        <item>30 saat</item>
+        <item>1 minit</item>
+        <item>2 minit</item>
+        <item>5 minit</item>
+        <item>10 minit</item>
+        <item>30 minit</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Serta-merta</item>
+        <item>5 saat</item>
+        <item>15 saat</item>
+        <item>30 saat</item>
+        <item>1 minit</item>
+        <item>2 minit</item>
+        <item>5 minit</item>
+        <item>10 minit</item>
+        <item>30 minit</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Kecil</item>
+        <item>Normal</item>
+        <item>Besar</item>
+        <item>Sangat besar</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Sangat perlahan</item>
+        <item>Perlahan</item>
+        <item>Biasa</item>
+        <item>Laju</item>
+        <item>Lebih cepat</item>
+        <item>Sangat cepat</item>
+        <item>Cepat</item>
+        <item>Sangat cepat</item>
+        <item>Terpantas</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Sangat rendah</item>
+        <item>Rendah</item>
+        <item>Biasa</item>
+        <item>Tinggi</item>
+        <item>Sangat tinggi</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Mengimbas...</item>
+        <item>Menyambung...</item>
+        <item>Mengesahkan...</item>
+        <item>Mendapatkan alamat IP...</item>
+        <item>Disambungkan</item>
+        <item>Digantung</item>
+        <item>Memutuskan sambungan...</item>
+        <item>Diputuskan sambungan</item>
+        <item>Tidak berjaya</item>
+        <item>Disekat</item>
+        <item>Mengelakkan sambungan lemah buat sementara</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Mengimbas...</item>
+        <item>Menyambung kepada %1$s...</item>
+        <item>Mengesahkan dengan %1$s...</item>
+        <item>Mendapatkan alamat IP dari %1$s...</item>
+        <item>Disambungkan kepada %1$s</item>
+        <item>Digantung</item>
+        <item>Memutuskan sambungan dari %1$s...</item>
+        <item>Diputuskan sambungan</item>
+        <item>Tidak berjaya</item>
+        <item>Disekat</item>
+        <item>Mengelakkan sambungan lemah buat sementara</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Butang tekan</item>
+        <item>PIN daripada peranti rakan</item>
+        <item>PIN dari peranti ini</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Bersambung</item>
+        <item>Dijemput</item>
+        <item>Tidak berjaya</item>
+        <item>Ada</item>
+        <item>Di luar liputan</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 minit</item>
+        <item>5 minit</item>
+        <item>1 jam</item>
+        <item>Jangan sekali-kali tamat masa</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Lemah</item>
+        <item>Sederhana</item>
+        <item>Baik</item>
+        <item>Sangat baik</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Sentiasa</item>
+        <item>Hanya apabila dipalamkan</item>
+        <item>Jangan sekali-kali (menaikkan penggunaan data)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Sentiasa</item>
+        <item>Hanya apabila dipasang</item>
+        <item>Jangan sekali-kali</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Auto</item>
+        <item>5 GHz sahaja</item>
+        <item>2.4 GHz sahaja</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Masa penggunaan</item>
+        <item>Lancarkan kiraan</item>
+        <item>Nama aplikasi</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Tiada</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Tiada</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statik</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Tiada</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Matikan</item>
+        <item>Awasan</item>
+        <item>Getar</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Tiada</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP atau CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Tidak ditentukan</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Tiada</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Storan dalaman peranti</item>
+        <item>Kad SD boleh tanggal</item>
+        <item>Biar sistem menentukan</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>Lokasi</item>
+        <item>Peribadi</item>
+        <item>Pemesejan</item>
+        <item>Media</item>
+        <item>Peranti</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>lokasi kasar</item>
+        <item>lokasi terperinci</item>
+        <item>GPS</item>
+        <item>bergetar</item>
+        <item>baca kenalan</item>
+        <item>ubah suai kenalan</item>
+        <item>baca log panggilan</item>
+        <item>ubah suai log panggilan</item>
+        <item>baca kalendar</item>
+        <item>ubah suai kalendar</item>
+        <item>imbasan wi-fi</item>
+        <item>pemberitahuan</item>
+        <item>imbasan sel</item>
+        <item>Hubungi telefon</item>
+        <item>baca SMS</item>
+        <item>tulis SMS</item>
+        <item>terima SMS</item>
+        <item>terima SMS kecemasan</item>
+        <item>terima MMS</item>
+        <item>terima penolakan WAP</item>
+        <item>hantar SMS</item>
+        <item>baca SMS ICC</item>
+        <item>tulis SMS ICC</item>
+        <item>ubah suai tetapan</item>
+        <item>lukiskan di atas</item>
+        <item>pemberitahuan akses</item>
+        <item>kamera</item>
+        <item>rakam audio</item>
+        <item>mainkan audio</item>
+        <item>baca papan keratan</item>
+        <item>ubah suai papan keratan</item>
+        <item>butang media</item>
+        <item>tumpuan audio</item>
+        <item>kelantangan induk</item>
+        <item>kelantangan suara</item>
+        <item>kelantangan deringan</item>
+        <item>kelantangan media</item>
+        <item>kelantangan penggera</item>
+        <item>kelantangan pemberitahuan</item>
+        <item>kelantangan bluetooth</item>
+        <item>kekal berjaga</item>
+        <item>pantau lokasi</item>
+        <item>awasi lokasi kuasa tinggi</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+        <item>Bergetar</item>
+        <item>Baca kenalan</item>
+        <item>Ubah suai kenalan</item>
+        <item>Baca log panggilan</item>
+        <item>Ubah suai log panggilan</item>
+        <item>Baca kalendar</item>
+        <item>Ubah suai kalendar</item>
+        <item>Lokasi</item>
+        <item>Siarkan pemberitahuan</item>
+        <item>Lokasi</item>
+        <item>Hubungi telefon</item>
+        <item>Baca SMS/MMS</item>
+        <item>Tulis SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Terima SMS/MMS</item>
+        <item>Hantar SMS/MMS</item>
+        <item>Baca SMS/MMS</item>
+        <item>Tulis SMS/MMS</item>
+        <item>Ubah suai tetapan</item>
+        <item>Lukiskan di atas</item>
+        <item>Pemberitahuan akses</item>
+        <item>Kamera</item>
+        <item>Rakam audio</item>
+        <item>Mainkan audio</item>
+        <item>Baca papan keratan</item>
+        <item>Ubah suai papan keratan</item>
+        <item>Butang media</item>
+        <item>Tumpuan audio</item>
+        <item>Kelantangan utama</item>
+        <item>Kelantangan suara</item>
+        <item>Kelantangan deringan</item>
+        <item>Kelantangan media</item>
+        <item>Kelantangan penggera</item>
+        <item>Kelantangan pemberitahuan</item>
+        <item>Kelantangan Bluetooth</item>
+        <item>Kekal berjaga</item>
+        <item>Lokasi</item>
+        <item>Lokasi</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Pendek</item>
+        <item>Sederhana</item>
+        <item>Panjang</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Lalai</item>
+        <item>Sans-serif</item>
+        <item>Sans-serif diringkaskan</item>
+        <item>Serif</item>
+        <item>Monospace</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Sangat kecil</item>
+        <item>Kecil</item>
+        <item>Biasa</item>
+        <item>Besar</item>
+        <item>Sangat besar</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Tiada</item>
+        <item>Garis bentuk</item>
+        <item>Huruf bayang</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Putih pada hitam</item>
+        <item>Hitam pada putih</item>
+        <item>Kuning pada hitam</item>
+        <item>Kuning pada biru</item>
+        <item>Peribadi</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (nyahpepijat)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Gunakan Dalvik</item>
+        <item>Gunakan ART</item>
+        <item>Gunakan binaan nyahpepijat ART</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Jangan sekali-kali semak</item>
+        <item>Semak kandungan DRM sahaja</item>
+        <item>Sentiasa semak</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Jangan sekali-kali gunakan penyemakan HDCP</item>
+        <item>Gunakan penyemakan HDCP untuk kandungan DRM sahaja</item>
+        <item>Sentiasa gunakan penyemakan HDCP</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animasi dimatikan</item>
+        <item>Skala animasi .5x</item>
+        <item>Skala animasi 1x</item>
+        <item>Skala animasi 1.5x</item>
+        <item>Skala animasi 2x</item>
+        <item>Skala animasi 5x</item>
+        <item>Skala animasi 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animasi dimatikan</item>
+        <item>Skala animasi .5x</item>
+        <item>Skala animasi 1x</item>
+        <item>Skala animasi 1.5x</item>
+        <item>Skala animasi 2x</item>
+        <item>Skala animasi 5x</item>
+        <item>Skala animasi 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Animasi dimatikan</item>
+        <item>Skala animasi .5x</item>
+        <item>Skala animasi 1x</item>
+        <item>Skala animasi 1.5x</item>
+        <item>Skala animasi 2x</item>
+        <item>Skala animasi 5x</item>
+        <item>Skala animasi 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Tiada</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (selamat)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (selamat)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (selamat)</item>
+        <item>1280x720 tvdpi dan 1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Tiada</item>
+        <item>Logcat</item>
+        <item>Systrace (Grafik)</item>
+        <item>Tindanan panggilan pada glGetError</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Mati</item>
+        <item>Lukis kawasan keratan bukan segi empat tepat berwarna biru</item>
+        <item>Serlahkan perintah lukisan berwarna hijau yang diuji</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Matikan</item>
+        <item>Pada skrin sebagai bar</item>
+        <item>Pada skrin sebagai garis</item>
+        <item>Dalam adb shell dumpsys gfxinfo</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Mati</item>
+        <item>Tunjukkan kawasan lebih lukis</item>
+        <item>Tunjukkan kawasan untuk Deuteranomaly</item>
+        <item>Tunjukkan kaunter lebih lukis</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Had standard</item>
+        <item>Tiada proses latar belakang</item>
+        <item>Paling banyak 1 proses</item>
+        <item>Paling banyak 2 proses</item>
+        <item>Paling banyak 3 proses</item>
+        <item>Paling banyak 4 proses</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>VPN PPTP</item>
+        <item>VPN L2TP/IPSec dengan kunci prakongsi</item>
+        <item>VPN L2TP/IPSec dengan sijil</item>
+        <item>VPN IPSec dengan kunci prakongsi dan pengesahan Xauth</item>
+        <item>VPN IPSec dengan sijil dan pengesahan Xauth</item>
+        <item>VPN IPSec dengan sijil dan pengesahan hibrid</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Diputuskan sambungan</item>
+        <item>Memulakan...</item>
+        <item>Menyambung...</item>
+        <item>Disambungkan</item>
+        <item>Tamat masa</item>
+        <item>Tidak berjaya</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Tanya</item>
+        <item>Jangan benarkan</item>
+        <item>Sentiasa benarkan</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>biasa</item>
+        <item>sederhana</item>
+        <item>rendah</item>
+        <item>kritikal</item>
+    </string-array>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d 秒</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d 次</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">只需 %1$d 步操作即可进入开发者模式。</item>
+        <item quantity="one">只需 %1$d 步操作即可进入开发者模式。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">密码必须包含至少 %d 个字母。</item>
+        <item quantity="one">密码必须包含至少 1 个字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">密码必须包含至少 %d 个小写字母。</item>
+        <item quantity="one">密码必须包含至少 1 个小写字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">密码必须包含至少 %d 个大写字母。</item>
+        <item quantity="one">密码必须包含至少 1 个大写字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">密码必须包含至少 %d 个数字。</item>
+        <item quantity="one">密码必须包含至少 1 个数字。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">密码必须包含至少 %d 个特殊符号。</item>
+        <item quantity="one">密码必须包含至少 1 个特殊符号。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">密码必须包含至少 %d 个非字母字符。</item>
+        <item quantity="one">密码必须包含至少 1 个非字母字符。</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d个应用可以读取通知</item>
+        <item quantity="one">%d个应用可以读取通知</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">SIM 卡 PIN 码不正确，您还有%d次尝试机会。</item>
+        <item quantity="one">SIM 卡 PIN 码不正确，您还有%d次尝试机会。如果仍然失败，则必须联系运营商帮您解锁设备。</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">找到%1$s台打印机</item>
+        <item quantity="one">找到%1$s台打印机</item>
+    </plurals>
+</resources>

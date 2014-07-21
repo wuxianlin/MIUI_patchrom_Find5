@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Зараз вы ў некалькіх (%1$d) кроках ад таго, каб стаць распрацоўшчыкам.</item>
+        <item quantity="one">Зараз вы ў некалькіх (%1$d) кроках ад таго, каб стаць распрацоўшчыкам.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Мiнiмальная колькасць лiтар, якую павiнен змяшчаць пароль: %d.</item>
+        <item quantity="one">Пароль павінен змяшчаць не менш за 1 літару.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Пароль павінен змяшчаць малыя літары (не менш за %d).</item>
+        <item quantity="one">Пароль павінен змяшчаць не менш за 1 малую літару.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Пароль павінен змяшчаць вялікія літары (не менш за %d).</item>
+        <item quantity="one">Пароль павінен змяшчаць не менш за 1 вялікую літару.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Пароль павінен змяшчаць лiчбы (не менш за %d).</item>
+        <item quantity="one">Пароль павінен змяшчаць не менш за 1 лічбу.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Пароль павінен змяшчаць спецыяльныя сімвалы (не менш за %d).</item>
+        <item quantity="one">Пароль павінен змяшчаць не менш за 1 спецыяльны сiмвал.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">"Пароль павінен змяшчаць не менш за пэўную колькасць знакаў (%d), якія не з'яўляюцца літарамі."</item>
+        <item quantity="one">"Пароль павінен змяшчаць хаця б 1 сімвал, які не з'яўляецца літарай."</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Прыкладанні %d могуць чытаць апавяшчэнні</item>
+        <item quantity="one">Прыкладанне %d можа чытаць апавяшчэнні</item>
+    </plurals>
+</resources>

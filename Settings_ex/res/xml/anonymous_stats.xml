@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/anonymous_statistics_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <CheckBoxPreference android:title="@string/enable_reporting_title" android:key="pref_anonymous_opt_in" android:defaultValue="true" />
+    <PreferenceScreen android:title="@string/preview_data_title" android:fragment="com.android.settings.cmstats.PreviewData" />
+    <Preference android:title="@string/view_stats_title" android:key="pref_view_stats" />
+</PreferenceScreen>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>America</item>
+        <item>Europa</item>
+        <item>Africa</item>
+        <item>Asia</item>
+        <item>Australia</item>
+        <item>Pacific</item>
+        <item>Tuts</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Fitg bass</item>
+        <item>Bass</item>
+        <item>Normal</item>
+        <item>Aut</item>
+        <item>Fitg aut</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Flaivel</item>
+        <item>Bun</item>
+        <item>Bun</item>
+        <item>Excellent</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Nagina</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Deactivà</item>
+        <item>Avis</item>
+        <item>Vibraziun</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Nagins</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP u CHAP</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Memoria interna da telefonin</item>
+        <item>Carta SD che po vegnir barattada</item>
+        <item>Laschar decider il sistem</item>
+    </string-array>
+</resources>

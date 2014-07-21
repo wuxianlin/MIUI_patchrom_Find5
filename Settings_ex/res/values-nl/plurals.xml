@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d seconden</item>
+        <item quantity="one">%d seconde</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d keer</item>
+        <item quantity="one">1 keer</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">U moet nog %1$d stappen uitvoeren om ontwikkelaar te worden.</item>
+        <item quantity="one">U moet nog %1$d stap uitvoeren om ontwikkelaar te worden.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Wachtwoord moet ten minste %d letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één letter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Wachtwoord moet ten minste %d kleine letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één kleine letter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Wachtwoord moet ten minste %d hoofdletters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één hoofdletter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Wachtwoord moet ten minste %d cijfers bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één cijfer bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Wachtwoord moet ten minste %d speciale symbolen bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één speciaal symbool bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Wachtwoord moet ten minste %d andere tekens dan letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één ander teken dan letters bevatten.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d apps kunnen meldingen lezen</item>
+        <item quantity="one">%d app kan meldingen lezen</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Onjuiste pincode voor simkaart. U heeft nog %d pogingen over.</item>
+        <item quantity="one">Onjuiste pincode voor simkaart. U heeft nog %d poging over voordat u contact met uw provider moet opnemen om uw apparaat te ontgrendelen.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s printers gevonden</item>
+        <item quantity="one">%1$s printer gevonden</item>
+    </plurals>
+</resources>

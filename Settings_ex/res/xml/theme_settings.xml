@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:icon="@drawable/prd_ic_themepacks" android:title="@string/themepacks_settings_title" android:key="themepacks_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+        </intent>
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_style" android:title="@string/styles_settings_title" android:key="style_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+            <extra android:name="component_filter" android:value="mods_overlays" />
+        </intent>
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_icons" android:title="@string/icons_settings_title" android:key="icon_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+            <extra android:name="component_filter" android:value="mods_icons" />
+        </intent>
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_fonts" android:title="@string/fonts_settings_title" android:key="font_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+            <extra android:name="component_filter" android:value="mods_fonts" />
+        </intent>
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_wallpapers" android:title="@string/wallpaper_settings_title_cm" android:key="wallpaper_settings">
+        <intent android:targetPackage="com.android.wallpapercropper" android:targetClass="com.android.wallpapercropper.WallpaperPickerActivity" />
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_lockscreen_wallpapers" android:title="@string/lockscreen_wallpaper_settings_title" android:key="lockscreen_wallpaper_settings">
+        <intent android:targetPackage="com.android.wallpapercropper" android:targetClass="com.android.wallpapercropper.LockWallpaperPickerActivity" />
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_boot" android:title="@string/bootanim_settings_title" android:key="bootanim_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+            <extra android:name="component_filter" android:value="mods_bootanim" />
+        </intent>
+    </Preference>
+    <Preference android:icon="@drawable/prd_ic_soundpacks" android:title="@string/soundpack_settings_title" android:key="soundpack_settings">
+        <intent android:action="android.intent.action.MAIN">
+            <category android:name="cyanogenmod.intent.category.APP_THEMES" />
+            <extra android:name="component_filter" android:value="mods_alarms,mods_ringtones,mods_notifications" />
+        </intent>
+    </Preference>
+</PreferenceScreen>

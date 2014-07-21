@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#ff1f1f1f</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="list_separator">#fff1f1f1</color>
+    <color name="linear_color_bar_left_color">#ff0099cc</color>
+    <color name="linear_color_bar_middle_color">#ff0099cc</color>
+    <color name="linear_color_bar_right_color">#ff888888</color>
+    <color name="linear_color_bar_gray_color">#ff555555</color>
+    <color name="linear_color_bar_white_color">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="memory_used">#ffff0000</color>
+    <color name="memory_avail">#ff333333</color>
+    <color name="memory_apps_usage">#ff77831a</color>
+    <color name="memory_downloads">#ff476093</color>
+    <color name="memory_dcim">#ff793a7f</color>
+    <color name="memory_music">#ff8e562a</color>
+    <color name="memory_cache">#ff479392</color>
+    <color name="memory_misc">#ff7c3030</color>
+    <color name="memory_user_light">#ff479392</color>
+    <color name="memory_user_dark">#ff316665</color>
+    <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
+    <color name="crypt_keeper_clock_foreground">#ff666666</color>
+    <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
+    <color name="divider_color">#20ffffff</color>
+    <item type="color" name="title_color">@*android:color/holo_blue_light</item>
+    <color name="setup_divider_color_dark">#33ffffff</color>
+    <color name="setup_divider_color_light">#33000000</color>
+    <color name="circle_avatar_frame_color">#ffffffff</color>
+    <color name="circle_avatar_frame_shadow_color">#80000000</color>
+    <color name="circle_avatar_frame_pressed_color">#ffffffff</color>
+    <item type="color" name="auto_brightness_preview_background">@*android:color/black</item>
+    <item type="color" name="auto_brightness_preview_foreground">@*android:color/white</item>
+    <item type="color" name="auto_brightness_preview_markers">@*android:color/holo_blue_light</item>
+    <color name="auto_brightness_preview_grid">#44ffffff</color>
+    <color name="screencolor_background">#50000000</color>
+</resources>

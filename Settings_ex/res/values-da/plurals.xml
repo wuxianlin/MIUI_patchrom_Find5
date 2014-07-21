@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d gange</item>
+        <item quantity="one">1 gang</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Du er nu %1$d skridt væk fra at være udvikler.</item>
+        <item quantity="one">Du er nu %1$d skridt væk fra at være udvikler.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d små bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét lille bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d store bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét stort bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d tal.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 tal.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d specialtegn.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét specialtegn.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d tegn, der ikke er bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét tegn, der ikke er et bogstav.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Appene %d kan læse underretninger</item>
+        <item quantity="one">Appen %d kan læse underretninger</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Forkert pinkode til SIM-kort. Du har %d forsøg tilbage.</item>
+        <item quantity="one">Forkert pinkode til SIM-kort. Du har %d forsøg tilbage, før du skal kontakte dit mobilselskab for at låse din enhed op.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s printere blev fundet</item>
+        <item quantity="one">%1$s printer blev fundet</item>
+    </plurals>
+</resources>

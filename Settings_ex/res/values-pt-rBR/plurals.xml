@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">%d segundo</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d vezes</item>
+        <item quantity="one">uma vez</item>
+    </plurals>
+</resources>

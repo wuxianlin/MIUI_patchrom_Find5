@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_vertical" android:id="@id/lux" android:layout_width="65.0dip" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <SeekBar android:id="@id/backlight" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:layout_gravity="end" android:id="@id/backlight_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" style="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+</LinearLayout>

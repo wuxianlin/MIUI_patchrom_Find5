@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background_preview" android:background="@drawable/default_screencolor_setting" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:id="@id/bottons_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="?android:attr/buttonBarStyle">
+        <Button android:layout_gravity="center_vertical" android:id="@id/cancel" android:background="@drawable/screencolor_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/screencolor_cancel" android:layout_weight="1.0" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/save" android:background="@drawable/screencolor_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/screencolor_save" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/controls_layout" android:background="@drawable/transparent_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottons_layout" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/up_down" android:background="@drawable/down_button" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <ImageView android:id="@id/more" android:background="@drawable/more_button" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/more" android:layout_toEndOf="@id/up_down">
+                <Button android:id="@id/previous_btn" android:background="@drawable/previous_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <Button android:id="@id/new_btn" android:background="@drawable/new_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/preview_layout" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/controls_layout" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/screencolor_control" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="@*android:color/white" android:id="@id/hue" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hue_str" android:paddingStart="20.0dip" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <ImageView android:id="@id/reduce_hue" android:background="@drawable/ic_zoom_out" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:id="@id/increase_hue" android:background="@drawable/ic_zoom_in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <SeekBar android:id="@id/hcontrol" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="12.0px" android:progressDrawable="@drawable/seekbar_define_style" android:minHeight="12.0px" android:thumb="@drawable/ic_zoom_slider" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_toStartOf="@id/increase_hue" android:layout_toEndOf="@id/reduce_hue" />
+            </RelativeLayout>
+            <TextView android:textColor="@*android:color/white" android:id="@id/saturation" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/saturation_str" android:paddingStart="20.0dip" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <ImageView android:id="@id/reduce_saturation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_out" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:id="@id/increase_saturation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_in" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <SeekBar android:id="@id/scontrol" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@drawable/seekbar_define_style" android:thumb="@drawable/ic_zoom_slider" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_toStartOf="@id/increase_saturation" android:layout_toEndOf="@id/reduce_saturation" />
+            </RelativeLayout>
+            <TextView android:textColor="@*android:color/white" android:id="@id/contrast" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/contrast_str" android:paddingStart="20.0dip" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <ImageView android:id="@id/reduce_contrast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_out" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:id="@id/increase_contrast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_in" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <SeekBar android:id="@id/ccontrol" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@drawable/seekbar_define_style" android:thumb="@drawable/ic_zoom_slider" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_toStartOf="@id/increase_contrast" android:layout_toEndOf="@id/reduce_contrast" />
+            </RelativeLayout>
+            <TextView android:textColor="@*android:color/white" android:id="@id/intensity" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/intensity_str" android:paddingStart="20.0dip" />
+            <RelativeLayout android:id="@id/intensity_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <ImageView android:id="@id/reduce_intensity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_out" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:id="@id/increase_intensity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_zoom_in" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <SeekBar android:id="@id/icontrol" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@drawable/seekbar_define_style" android:thumb="@drawable/ic_zoom_slider" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_toStartOf="@id/increase_intensity" android:layout_toEndOf="@id/reduce_intensity" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

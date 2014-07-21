@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d secondi</item>
+        <item quantity="one">%d secondo</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d volte</item>
+        <item quantity="one">1 volta</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Ora ti mancano %1$d passaggi per diventare uno sviluppatore.</item>
+        <item quantity="one">Ora ti manca %1$d passaggio per diventare uno sviluppatore.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">La password deve contenere almeno %d lettere.</item>
+        <item quantity="one">La password deve contenere almeno una lettera.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">La password deve contenere almeno %d lettere minuscole.</item>
+        <item quantity="one">La password deve contenere almeno una lettera minuscola.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">La password deve contenere almeno %d lettere maiuscole.</item>
+        <item quantity="one">La password deve contenere almeno una lettera maiuscola.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">La password deve contenere almeno %d cifre numeriche.</item>
+        <item quantity="one">La password deve contenere almeno una cifra numerica.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">La password deve contenere almeno %d simboli speciali.</item>
+        <item quantity="one">La password deve contenere almeno un simbolo speciale.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">La password deve contenere almeno %d caratteri non costituiti da lettere.</item>
+        <item quantity="one">La password deve contenere almeno un carattere non costituito da una lettera.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Le app %d possono leggere le notifiche</item>
+        <item quantity="one">"L'app %d può leggere le notifiche"</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Codice PIN della SIM errato. Hai ancora %d tentativi a disposizione.</item>
+        <item quantity="one">"Codice PIN della SIM errato. Hai ancora %d tentativo a disposizione, dopodiché dovrai contattare l'operatore per sbloccare il dispositivo."</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s stampanti trovate</item>
+        <item quantity="one">%1$s stampante trovata</item>
+    </plurals>
+</resources>

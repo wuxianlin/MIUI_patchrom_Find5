@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>미국</item>
+        <item>유럽</item>
+        <item>아프리카</item>
+        <item>아시아</item>
+        <item>호주</item>
+        <item>태평양</item>
+        <item>전체</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15초</item>
+        <item>30초</item>
+        <item>1분</item>
+        <item>2분</item>
+        <item>5분</item>
+        <item>10분</item>
+        <item>30분</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>사용 안함</item>
+        <item>15초</item>
+        <item>30초</item>
+        <item>1분</item>
+        <item>2분</item>
+        <item>5분</item>
+        <item>10분</item>
+        <item>30분</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>즉시</item>
+        <item>5초</item>
+        <item>15초</item>
+        <item>30초</item>
+        <item>1분</item>
+        <item>2분</item>
+        <item>5분</item>
+        <item>10분</item>
+        <item>30분</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>작게</item>
+        <item>보통</item>
+        <item>크게</item>
+        <item>아주 크게</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>매우 느림</item>
+        <item>느림</item>
+        <item>보통</item>
+        <item>빠름</item>
+        <item>조금 빠름</item>
+        <item>비교적 빠름</item>
+        <item>상당히 빠름</item>
+        <item>매우 빠름</item>
+        <item>가장 빠름</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>매우 낮음</item>
+        <item>낮음</item>
+        <item>보통</item>
+        <item>높음</item>
+        <item>매우 높음</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>검색 중...</item>
+        <item>연결 중…</item>
+        <item>인증하는 중...</item>
+        <item>IP 주소를 가져오는 중...</item>
+        <item>연결됨</item>
+        <item>일시 정지됨</item>
+        <item>연결을 끊는 중…</item>
+        <item>연결 끊김</item>
+        <item>실패</item>
+        <item>차단됨</item>
+        <item>연결 불량 일시적으로 방지</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>검색 중...</item>
+        <item>%1$s에 연결 중...</item>
+        <item>%1$s에서 인증하는 중...</item>
+        <item>%1$s에서 IP 주소를 가져오는 중...</item>
+        <item>%1$s에 연결됨</item>
+        <item>일시 정지됨</item>
+        <item>%1$s에서 연결을 끊는 중...</item>
+        <item>연결 끊김</item>
+        <item>실패</item>
+        <item>차단됨</item>
+        <item>연결 상태 불량 일시적으로 방지</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>누름 버튼</item>
+        <item>피어 기기 PIN</item>
+        <item>이 기기의 PIN</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>연결됨</item>
+        <item>초대됨</item>
+        <item>실패</item>
+        <item>사용 가능</item>
+        <item>범위를 벗어났습니다.</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2분</item>
+        <item>5분</item>
+        <item>1시간</item>
+        <item>제한 시간 없음</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>나쁨</item>
+        <item>양호함</item>
+        <item>좋음</item>
+        <item>우수함</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>항상</item>
+        <item>충전 중인 경우에만</item>
+        <item>안함(데이터 사용 증가)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>항상</item>
+        <item>충전 중인 경우에만</item>
+        <item>안함</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>자동</item>
+        <item>5GHz 전용</item>
+        <item>2.4GHz 전용</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>사용 시간</item>
+        <item>계수 시작</item>
+        <item>앱 이름</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>없음</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>없음</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>고정</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>없음</item>
+        <item>수동</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>사용 안함</item>
+        <item>알리미</item>
+        <item>진동</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>없음</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP 또는 CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>지정되지 않음</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>없음</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>내부 기기 저장용량</item>
+        <item>이동식 SD 카드</item>
+        <item>시스템에서 결정</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>위치</item>
+        <item>개인</item>
+        <item>메시지</item>
+        <item>미디어</item>
+        <item>기기</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>대략적 위치</item>
+        <item>세부 위치</item>
+        <item>GPS</item>
+        <item>진동</item>
+        <item>주소록 읽기</item>
+        <item>주소록 수정</item>
+        <item>통화 기록 읽기</item>
+        <item>통화 기록 수정</item>
+        <item>캘린더 읽기</item>
+        <item>캘린더 수정</item>
+        <item>Wi-Fi 검색</item>
+        <item>알림</item>
+        <item>셀 검색</item>
+        <item>전화 걸기</item>
+        <item>SMS 읽기</item>
+        <item>SMS 작성하기</item>
+        <item>SMS 수신</item>
+        <item>긴급 SMS 수신</item>
+        <item>MMS 수신</item>
+        <item>WAP PUSH 수신</item>
+        <item>SMS 보내기</item>
+        <item>ICC SMS 읽기</item>
+        <item>ICC SMS 작성하기</item>
+        <item>설정 수정</item>
+        <item>위에 그림</item>
+        <item>액세스 알림</item>
+        <item>카메라</item>
+        <item>오디오 녹음</item>
+        <item>오디오 재생</item>
+        <item>클립보드 읽기</item>
+        <item>클립보드 수정</item>
+        <item>미디어 버튼</item>
+        <item>오디오 포커스</item>
+        <item>마스터 볼륨</item>
+        <item>음성 볼륨</item>
+        <item>벨소리 볼륨</item>
+        <item>미디어 볼륨</item>
+        <item>알람 볼륨</item>
+        <item>알림 볼륨</item>
+        <item>블루투스 볼륨</item>
+        <item>켜진 상태로 유지</item>
+        <item>위치 모니터링</item>
+        <item>고전력 위치 모니터링</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>위치</item>
+        <item>위치</item>
+        <item>위치</item>
+        <item>진동</item>
+        <item>주소록 읽기</item>
+        <item>주소록 수정</item>
+        <item>통화 기록 읽기</item>
+        <item>통화 기록 수정</item>
+        <item>캘린더 읽기</item>
+        <item>캘린더 수정</item>
+        <item>위치</item>
+        <item>소식 알림</item>
+        <item>위치</item>
+        <item>전화 걸기</item>
+        <item>SMS/MMS 읽기</item>
+        <item>SMS/MMS 쓰기</item>
+        <item>SMS/MMS 수신</item>
+        <item>SMS/MMS 수신</item>
+        <item>SMS/MMS 수신</item>
+        <item>SMS/MMS 수신</item>
+        <item>SMS/MMS 전송</item>
+        <item>SMS/MMS 읽기</item>
+        <item>SMS/MMS 쓰기</item>
+        <item>설정 수정</item>
+        <item>위에 그림</item>
+        <item>액세스 알림</item>
+        <item>카메라</item>
+        <item>오디오 녹음</item>
+        <item>오디오 재생</item>
+        <item>클립보드 읽기</item>
+        <item>클립보드 수정</item>
+        <item>미디어 버튼</item>
+        <item>오디오 포커스</item>
+        <item>마스터 볼륨</item>
+        <item>음성 볼륨</item>
+        <item>벨소리 볼륨</item>
+        <item>미디어 볼륨</item>
+        <item>알람 볼륨</item>
+        <item>알림 볼륨</item>
+        <item>블루투스 볼륨</item>
+        <item>켜진 상태로 유지</item>
+        <item>위치</item>
+        <item>위치</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>짧게</item>
+        <item>보통</item>
+        <item>길게</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>기본값</item>
+        <item>Sans-serif</item>
+        <item>좁은 Sans-serif</item>
+        <item>Serif</item>
+        <item>고정 너비</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>아주 작게</item>
+        <item>작게</item>
+        <item>보통</item>
+        <item>크게</item>
+        <item>아주 크게</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>없음</item>
+        <item>윤곽선</item>
+        <item>그림자</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>검정색 바탕에 흰색</item>
+        <item>흰색 바탕에 검정색</item>
+        <item>검정색 바탕에 노란색</item>
+        <item>파란색 바탕에 흰색</item>
+        <item>맞춤설정</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART(디버그)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Dalvik 사용</item>
+        <item>ART 사용</item>
+        <item>ART 디버그 빌드 사용</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>확인 안함</item>
+        <item>DRM 콘텐츠만 확인</item>
+        <item>항상 확인</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>HDCP 확인 사용 안함</item>
+        <item>DRM 콘텐츠에 대해서만 HDCP 확인 사용</item>
+        <item>항상 HDCP 확인 사용</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율 .5x</item>
+        <item>애니메이션 배율 1x</item>
+        <item>애니메이션 배율 1.5x</item>
+        <item>애니메이션 배율 2x</item>
+        <item>애니메이션 배율 5x</item>
+        <item>애니메이션 배율 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율 .5x</item>
+        <item>애니메이션 배율 1x</item>
+        <item>애니메이션 배율 1.5x</item>
+        <item>애니메이션 배율 2x</item>
+        <item>애니메이션 배율 5x</item>
+        <item>애니메이션 배율 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율 .5x</item>
+        <item>애니메이션 배율 1x</item>
+        <item>애니메이션 배율 1.5x</item>
+        <item>애니메이션 배율 2x</item>
+        <item>애니메이션 배율 5x</item>
+        <item>애니메이션 배율 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>없음</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi(보안)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi(보안)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi(보안)</item>
+        <item>1280x720 tvdpi 및 1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>없음</item>
+        <item>로그캣</item>
+        <item>Systrace(그래픽)</item>
+        <item>glGetError의 스택 호출</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>사용 안함</item>
+        <item>사각형이 아닌 클립 영역을 파란색으로 그립니다.</item>
+        <item>테스트한 그림 그리기 명령을 초록색으로 강조표시합니다.</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>사용 안함</item>
+        <item>화면에 막대로 표시</item>
+        <item>화면에 선으로 표시</item>
+        <item>adb shell dumpsys gfxinfo에서 사용</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>OFF</item>
+        <item>오버드로 영역 표시</item>
+        <item>녹색약 영역 표시</item>
+        <item>오버드로 카운터 표시</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>표준 제한</item>
+        <item>백그라운드 프로세스 없음</item>
+        <item>최대 1개 프로세스</item>
+        <item>최대 2개 프로세스</item>
+        <item>최대 3개 프로세스</item>
+        <item>최대 4개 프로세스</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>사전 공유 키를 사용하는 L2TP/IPSec VPN</item>
+        <item>인증서가 있는 L2TP/IPSec VPN</item>
+        <item>사전 공유 키 및 Xauth 인증을 가진 IPSec VPN</item>
+        <item>인증서 및 Xauth 인증을 가진 IPSec VPN</item>
+        <item>인증서 및 하이브리드 인증을 가진 IPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>연결 끊김</item>
+        <item>초기화 중...</item>
+        <item>연결 중...</item>
+        <item>연결됨</item>
+        <item>시간초과됨</item>
+        <item>실패</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>질문</item>
+        <item>허용 안함</item>
+        <item>항상 허용</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>정상</item>
+        <item>보통</item>
+        <item>낮음</item>
+        <item>심각</item>
+    </string-array>
+</resources>

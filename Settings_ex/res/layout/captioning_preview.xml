@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/captioning_preview_height">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/caption_background" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <com.android.internal.widget.SubtitleView android:layout_gravity="start|bottom|center" android:id="@id/preview_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/captioning_preview_text" />
+    </FrameLayout>
+    <fragment android:name="com.android.settings.accessibility.CaptionPropertiesFragment" android:id="@id/properties_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

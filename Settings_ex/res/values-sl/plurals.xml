@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Št. korakov, ki vas loči od tega, da postanete razvijalec: %1$d.</item>
+        <item quantity="one">Št. korakov, ki vas loči od tega, da postanete razvijalec: %1$d.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Geslo mora imeti vsaj toliko črk: %d.</item>
+        <item quantity="one">Geslo mora imeti vsaj eno črko.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Geslo mora imeti vsaj toliko malih črk: %d.</item>
+        <item quantity="one">Geslo mora imeti vsaj eno malo črko.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Geslo mora imeti vsaj toliko velikih črk: %d.</item>
+        <item quantity="one">Geslo mora imeti vsaj eno veliko črko.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Geslo mora imeti vsaj toliko številk: %d.</item>
+        <item quantity="one">Geslo mora imeti vsaj eno številko.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Geslo mora imeti vsaj toliko posebnih znakov: %d</item>
+        <item quantity="one">Geslo mora imeti vsaj en posebni znak.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Geslo mora imeti vsaj toliko znakov, ki niso črke: %d.</item>
+        <item quantity="one">Geslo mora imeti vsaj en znak, ki ni črka.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Aplikacije (%d) lahko berejo obvestila</item>
+        <item quantity="one">Aplikacija (%d) lahko bere obvestila</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Napačna koda PIN kartice SIM. Poskusite lahko še %d-krat.</item>
+        <item quantity="one">Napačna koda PIN kartice SIM. Na voljo imate še %d poskus. Potem se boste morali za odklenitev naprave obrniti na operaterja.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Število najdenih tiskalnikov: %1$s</item>
+        <item quantity="one">Najden %1$s tiskalnik</item>
+    </plurals>
+</resources>

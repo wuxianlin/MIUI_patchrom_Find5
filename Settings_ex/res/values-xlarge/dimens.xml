@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin_sides">128.0dip</dimen>
+    <dimen name="datetime_margin_top">154.0dip</dimen>
+    <dimen name="datetime_margin_bottom">96.0dip</dimen>
+</resources>

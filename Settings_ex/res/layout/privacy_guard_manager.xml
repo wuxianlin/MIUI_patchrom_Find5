@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.android.settings.privacyguard.PrivacyGuardPrefs" android:id="@id/privacy_guard_prefs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@*android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@*android:color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+    <ListView android:scrollbarStyle="@*android:integer/preference_fragment_scrollbarStyle" android:id="@id/apps_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="false" />
+</LinearLayout>

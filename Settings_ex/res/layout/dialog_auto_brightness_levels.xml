@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/top_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerHorizontal" android:layout_alignParentTop="true" android:showDividers="end" android:dividerPadding="0.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/light_sensor_value" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/more" android:background="?android:actionBarItemBackground" android:layout_width="@dimen/auto_brightness_dialog_more_button_size" android:layout_height="@dimen/auto_brightness_dialog_more_button_size" android:src="@*android:drawable/ic_menu_moreoverflow_holo_dark" android:contentDescription="@string/wifi_menu_more_options" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView android:id="@*android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_container" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">ຕອນນີ້ທ່ານຍັງເຫຼືອອີກ %1$d ຂັ້ນຕອນເພື່ອການເປັນນັກພັດທະນາຊອບແວ.</item>
+        <item quantity="one">ຕອນນີ້ທ່ານຍັງເຫຼືອອີກ %1$d ຂັ້ນຕອນເພື່ອການເປັນນັກພັດທະນາຊອບແວ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີໂຕອັກສອນຢ່າງໜ້ອຍ %d ໂຕ.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີໂຕອັກສອນຢ່າງໜ້ອຍ 1 ໂຕ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ %d ໂຕພິມນ້ອຍ.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ 1 ໂຕພິມນ້ອຍ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີໂຕພິມໃຫຍ່ຢ່າງໜ້ອຍ %d ໂຕ.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີໂຕພິມໃຫຍ່ຢ່າງໜ້ອຍ 1 ໂຕ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີໂຕເລກຢ່າງໜ້ອຍ %d ໂຕ.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີໂຕເລກຢ່າງໜ້ອຍ 1 ໂຕ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ %d ສັນຍາລັກພິເສດ.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີສັນຍາລັກພິເສດຢ່າງໜ້ອຍ 1 ໂຕ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ %d ໂຕອັກສອນທີ່ບໍ່ແມ່ນໂຕໜັງສື.</item>
+        <item quantity="one">ລະຫັດຜ່ານຕ້ອງມີໂຕເລກ ຫຼືສັນຍາລັກນຳຢ່າງໜ້ອຍ 1 ໂຕ.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d ແອັບຯສາມາດອ່ານການແຈ້ງເຕືອນໄດ້</item>
+        <item quantity="one">%d ແອັບຯສາມາດອ່ານການແຈ້ງເຕືອນໄດ້</item>
+    </plurals>
+</resources>

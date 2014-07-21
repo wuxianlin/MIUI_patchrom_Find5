@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/notification_light_general_title" android:key="general_section">
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/notification_pulse_title" android:key="notification_light_pulse" />
+        <com.android.settings.notificationlight.ApplicationLightPreference android:persistent="false" android:title="@string/notification_light_default_value" android:key="default" android:dependency="notification_light_pulse" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/notification_light_use_custom" android:key="notification_light_pulse_custom_enable" android:dependency="notification_light_pulse" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notification_light_phonelist_title" android:key="phone_list">
+        <com.android.settings.notificationlight.ApplicationLightPreference android:persistent="false" android:title="@string/notification_light_missed_call_title" android:key="missed_call" android:dependency="notification_light_pulse_custom_enable" />
+        <com.android.settings.notificationlight.ApplicationLightPreference android:persistent="false" android:title="@string/notification_light_voicemail_title" android:key="voicemail" android:dependency="notification_light_pulse_custom_enable" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notification_light_applist_title" android:key="applications_list" android:dependency="notification_light_pulse_custom_enable" />
+</PreferenceScreen>

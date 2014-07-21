@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Sasa umebakisha hatua %1$d uwe msanidi programu.</item>
+        <item quantity="one">Sasa umebakisha hatua %1$d uwe msanidi programu.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Programu %d zinaweza kusoma arifa</item>
+        <item quantity="one">Programu %d inaweza kusoma arifa</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Msimbo wa PIN ya SIM usio sahihi, umesalia na majaribio %d.</item>
+        <item quantity="one">Msimbo wa PIN ya SIM usio sahihi, umesalia na majaribio %d kabla ulazimike kuwasiliana na mtoa huduma wako ili ufungue kifaa chako.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Printa %1$s zimepatikana</item>
+        <item quantity="one">Printa %1$s imepatikana</item>
+    </plurals>
+</resources>

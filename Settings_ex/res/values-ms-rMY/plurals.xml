@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Anda kini %1$d langkah daripada menjadi pemaju.</item>
+        <item quantity="one">Anda kini %1$d langkah daripada menjadi pemaju.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d huruf.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 huruf.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d huruf kecil.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 huruf kecil.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d huruf besar.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 huruf besar.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d digit angka.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 digit angka.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d simbol khas.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 simbol khas.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Kata laluan mesti mengandungi sekurang-kurangnya %d aksara bukan huruf.</item>
+        <item quantity="one">Kata laluan mesti mengandungi sekurang-kurangnya 1 aksara bukan huruf.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d apl boleh membaca pemberitahuan</item>
+        <item quantity="one">%d apl boleh membaca pemberitahuan</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Kod PIN SIM tidak betul, anda mempunyai %d percubaan lagi.</item>
+        <item quantity="one">Kod PIN SIM tidak betul. Anda mempunyai %d percubaan lagi sebelum anda harus menghubungi pembawa anda untuk membuka kunci peranti.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s pencetak ditemui</item>
+        <item quantity="one">%1$s pencetak ditemui</item>
+    </plurals>
+</resources>

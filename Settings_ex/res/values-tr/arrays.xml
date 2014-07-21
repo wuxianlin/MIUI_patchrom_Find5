@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>Amerika</item>
+        <item>Avrupa</item>
+        <item>Afrika</item>
+        <item>Asya</item>
+        <item>Avustralya</item>
+        <item>Pasifik</item>
+        <item>Tümü</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 saniye</item>
+        <item>30 saniye</item>
+        <item>1 dakika</item>
+        <item>2 dakika</item>
+        <item>5 dakika</item>
+        <item>10 dakika</item>
+        <item>30 dakika</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Hiçbir zaman</item>
+        <item>15 saniye</item>
+        <item>30 saniye</item>
+        <item>1 dakika</item>
+        <item>2 dakika</item>
+        <item>5 dakika</item>
+        <item>10 dakika</item>
+        <item>30 dakika</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Hemen</item>
+        <item>5 saniye</item>
+        <item>15 saniye</item>
+        <item>30 saniye</item>
+        <item>1 dakika</item>
+        <item>2 dakika</item>
+        <item>5 dakika</item>
+        <item>10 dakika</item>
+        <item>30 dakika</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Küçük</item>
+        <item>Normal</item>
+        <item>Büyük</item>
+        <item>Çok Büyük</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Çok yavaş</item>
+        <item>Yavaş</item>
+        <item>Normal</item>
+        <item>Hızlı</item>
+        <item>Daha hızlı</item>
+        <item>Çok hızlı</item>
+        <item>Seri</item>
+        <item>Çok seri</item>
+        <item>En hızlı</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Çok düşük</item>
+        <item>Düşük</item>
+        <item>Normal</item>
+        <item>Yüksek</item>
+        <item>Çok yüksek</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Taranıyor…</item>
+        <item>Bağlanıyor…</item>
+        <item>Kimlik doğrulanıyor…</item>
+        <item>IP adresi alınıyor...</item>
+        <item>Bağlandı</item>
+        <item>Askıya alındı</item>
+        <item>Bağlantı kesiliyor…</item>
+        <item>Bağlantı kesildi</item>
+        <item>Başarısız</item>
+        <item>Engellendi</item>
+        <item>Kötü bağlantıdan geçici olarak kaçınılıyor</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Taranıyor…</item>
+        <item>%1$s ağına bağlanılıyor…</item>
+        <item>%1$s üzerinde kimlik doğrulanıyor…</item>
+        <item>%1$s ağından IP adresi alınıyor…</item>
+        <item>%1$s ağına bağlandı</item>
+        <item>Askıya alındı</item>
+        <item>%1$s bağlantısı kesiliyor…</item>
+        <item>Bağlantı kesildi</item>
+        <item>Başarısız</item>
+        <item>Engellendi</item>
+        <item>Kötü bağlantıdan geçici olarak kaçınılıyor</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Düğme</item>
+        <item>"Eş cihazın PIN'i"</item>
+        <item>"Bu cihazın PIN'i"</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Bağlı</item>
+        <item>Davet edildi</item>
+        <item>Başarısız</item>
+        <item>Müsait</item>
+        <item>Kapsama alanı dışında</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 dakika</item>
+        <item>5 dakika</item>
+        <item>1 saat</item>
+        <item>Asla zaman aşımı olmasın</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Yetersiz</item>
+        <item>Yeterli</item>
+        <item>İyi</item>
+        <item>Mükemmel</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Her zaman</item>
+        <item>Yalnızca prize takıldığında</item>
+        <item>Hiçbir zaman (veri kullanımını artırır)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Her zaman</item>
+        <item>Yalnızca prize takıldığında</item>
+        <item>Hiçbir zaman</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Otomatik</item>
+        <item>Yalnızca 5 GHz</item>
+        <item>Yalnızca 2,4 GHz</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Kullanım süresi</item>
+        <item>Sayımı başlat</item>
+        <item>Uygulama adı</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Yok</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Yok</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statik</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Yok</item>
+        <item>El ile</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Kapalı</item>
+        <item>Uyarı</item>
+        <item>Titret</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Yok</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP veya CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Belirtilmedi</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Yok</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Dahili cihaz depolaması</item>
+        <item>Çıkarılabilir SD kart</item>
+        <item>Sistem karar versin</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>Konum</item>
+        <item>Kişisel</item>
+        <item>Mesajlaşma</item>
+        <item>Medya</item>
+        <item>Cihaz</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>yaklaşık konum</item>
+        <item>hassas konum</item>
+        <item>GPS</item>
+        <item>titreşim</item>
+        <item>kişileri oku</item>
+        <item>kişileri değiştir</item>
+        <item>çağrı günlüğünü oku</item>
+        <item>çağrı günlüğünü değiştir</item>
+        <item>takvimi oku</item>
+        <item>takvimi değiştir</item>
+        <item>kablosuz tarama</item>
+        <item>bildirim</item>
+        <item>hücre tarama</item>
+        <item>telefon et</item>
+        <item>SMS oku</item>
+        <item>SMS yaz</item>
+        <item>SMS al</item>
+        <item>acil SMS al</item>
+        <item>MMS al</item>
+        <item>WAP push al</item>
+        <item>SMS gönder</item>
+        <item>ICC SMS oku</item>
+        <item>ICC SMS yaz</item>
+        <item>ayarları değiştir</item>
+        <item>üste çiz</item>
+        <item>bildirimlere eriş</item>
+        <item>kamera</item>
+        <item>ses kaydet</item>
+        <item>sesi çal</item>
+        <item>panoyu oku</item>
+        <item>panoyu değiştir</item>
+        <item>medya düğmeleri</item>
+        <item>ses odağı</item>
+        <item>ana ses düzeyi</item>
+        <item>konuşma sesi düzeyi</item>
+        <item>çalma sesi düzeyi</item>
+        <item>medya sesi düzeyi</item>
+        <item>alarm sesi düzeyi</item>
+        <item>bildirim sesi düzeyi</item>
+        <item>Bluetooth sesi düzeyi</item>
+        <item>uyanık tut</item>
+        <item>konumu izle</item>
+        <item>yüksek güç tüketen konum hizmetlerini izle</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Konum</item>
+        <item>Konum</item>
+        <item>Konum</item>
+        <item>Titreşim</item>
+        <item>Kişileri oku</item>
+        <item>Kişileri değiştir</item>
+        <item>Çağrı günlüğünü oku</item>
+        <item>Çağrı günlüğünü değiştir</item>
+        <item>Takvimi oku</item>
+        <item>Takvimi değiştir</item>
+        <item>Konum</item>
+        <item>Bildirim yayınla</item>
+        <item>Konum</item>
+        <item>Telefon et</item>
+        <item>SMS/MMS oku</item>
+        <item>SMS/MMS yaz</item>
+        <item>SMS/MMS al</item>
+        <item>SMS/MMS al</item>
+        <item>SMS/MMS al</item>
+        <item>SMS/MMS al</item>
+        <item>SMS/MMS gönder</item>
+        <item>SMS/MMS oku</item>
+        <item>SMS/MMS yaz</item>
+        <item>Ayarları değiştir</item>
+        <item>Üste çiz</item>
+        <item>Bildirimlere eriş</item>
+        <item>Kamera</item>
+        <item>Ses kaydet</item>
+        <item>Sesi çal</item>
+        <item>Panoyu oku</item>
+        <item>Panoyu değiştir</item>
+        <item>Medya düğmeleri</item>
+        <item>Ses odağı</item>
+        <item>Ana ses düzeyi</item>
+        <item>Konuşma sesi düzeyi</item>
+        <item>Zil sesi düzeyi</item>
+        <item>Medya sesi düzeyi</item>
+        <item>Alarm sesi düzeyi</item>
+        <item>Bildirim sesi düzeyi</item>
+        <item>Bluetooth ses düzeyi</item>
+        <item>Uyanık tut</item>
+        <item>Konum</item>
+        <item>Konum</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Kısa</item>
+        <item>Orta</item>
+        <item>Uzun</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Varsayılan</item>
+        <item>Sans Serif</item>
+        <item>Sans Serif dar</item>
+        <item>Serif</item>
+        <item>Sabit boşluklu</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Çok küçük</item>
+        <item>Küçük</item>
+        <item>Normal</item>
+        <item>Büyük</item>
+        <item>Çok büyük</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Hiçbiri</item>
+        <item>Dış çizgi</item>
+        <item>Gölge</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>%25</item>
+        <item>%50</item>
+        <item>%75</item>
+        <item>%100</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Siyah üzerine beyaz</item>
+        <item>Beyaz üzerine siyah</item>
+        <item>Siyah üzerine sarı</item>
+        <item>Mavi üzerine sarı</item>
+        <item>Özel</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (hata ayıklama)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>"Dalvik'i kullan"</item>
+        <item>"ART'yi kullan"</item>
+        <item>ART hata ayıklama derlemesini kullan</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Hiçbir zaman denetleme</item>
+        <item>Yalnızca DRM içeriğini denetle</item>
+        <item>Her zaman denetle</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>HDCP denetimini hiçbir zaman kullanma</item>
+        <item>HDCP denetimini yalnızca DRM içeriği için kullan</item>
+        <item>HDCP denetimini her zaman kullan</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animasyon kapalı</item>
+        <item>Animasyon ölçeği 0,5x</item>
+        <item>Animasyon ölçeği 1x</item>
+        <item>Animasyon ölçeği 1,5x</item>
+        <item>Animasyon ölçeği 2x</item>
+        <item>Animasyon ölçeği 5x</item>
+        <item>Animasyon ölçeği 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animasyon kapalı</item>
+        <item>Animasyon ölçeği 0,5x</item>
+        <item>Animasyon ölçeği 1x</item>
+        <item>Animasyon ölçeği 1,5x</item>
+        <item>Animasyon ölçeği 2x</item>
+        <item>Animasyon ölçeği 5x</item>
+        <item>Animasyon ölçeği 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Animasyon kapalı</item>
+        <item>Animasyon ölçeği 0,5x</item>
+        <item>Animasyon ölçeği 1x</item>
+        <item>Animasyon ölçeği 1,5x</item>
+        <item>Animasyon ölçeği 2x</item>
+        <item>Animasyon ölçeği 5x</item>
+        <item>Animasyon ölçeği 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Yok</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (güvenli)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (güvenli)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (güvenli)</item>
+        <item>1280x720 tvdpi ve 1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Hiçbiri</item>
+        <item>Logcat</item>
+        <item>Systrace (Grafik)</item>
+        <item>"glGetError'da yığın çağır"</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Kapalı</item>
+        <item>Dikdörtgen olmayan mavi renkte kırpma bölgesi çiz</item>
+        <item>Test edilmiş çizim komutlarını yeşille vurgula</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Kapalı</item>
+        <item>Ekranda çubuk şeklinde</item>
+        <item>Ekranda çizgi şeklinde</item>
+        <item>adb shell dumpsys gfxinfo içinde</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Kapalı</item>
+        <item>Fazla çizilen alanları göster</item>
+        <item>Alanları renk körlüğüne uygun olarak göster</item>
+        <item>Fazla çizim sayacını göster</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standart sınır</item>
+        <item>Arka planda işlem yok</item>
+        <item>En çok 1 işlem</item>
+        <item>En çok 2 işlem</item>
+        <item>En çok 3 işlem</item>
+        <item>En çok 4 işlem</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>Önceden paylaşılan anahtara sahip L2TP/IPSec VPN</item>
+        <item>Sertifikalara sahip L2TP/IPSec VPN</item>
+        <item>Önceden paylaşılan anahtarlara ve Xauth kimlik doğrulamaya sahip IPSec VPN</item>
+        <item>Sertifikalara ve Xauth kimlik doğrulamaya sahip IPSec VPN</item>
+        <item>Sertifikalara ve karma kimlik doğrulamaya sahip IPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Bağlı değil</item>
+        <item>Başlatılıyor...</item>
+        <item>Bağlanıyor…</item>
+        <item>Bağlı</item>
+        <item>Zaman aşımı</item>
+        <item>Başarısız</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Sor</item>
+        <item>Asla izin verme</item>
+        <item>Her zaman izin ver</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>normal</item>
+        <item>orta</item>
+        <item>düşük</item>
+        <item>kritik düzeyde düşük</item>
+    </string-array>
+    <string-array name="screen_color_setting">
+        <item>Standart</item>
+        <item>Canlı</item>
+        <item>Özel</item>
+    </string-array>
+    <string-array name="wifi_countrycode_entries">
+        <item>Birleşik Devletler</item>
+        <item>Kanada, Tayvan</item>
+        <item>Almanya</item>
+        <item>Avrupa</item>
+        <item>Japonya, Rusya</item>
+        <item>Avustralya</item>
+        <item>Çin</item>
+        <item>Kore</item>
+        <item>Türkiye</item>
+        <item>Singapur</item>
+        <item>Brazilya</item>
+    </string-array>
+    <string-array name="profile_entries">
+        <item>Açık</item>
+        <item>Kapalı</item>
+        <item>Değişiklik yok</item>
+    </string-array>
+    <string-array name="profile_connection_entries">
+        <item>Devredışı</item>
+        <item>Etkin</item>
+    </string-array>
+    <string-array name="entries_screentimeout_widget">
+        <item>15s | 1dk | 5dk</item>
+        <item>30s | 2dk | 5dk</item>
+    </string-array>
+    <string-array name="data_usage_cycle_weekdays">
+        <item>Pazar</item>
+        <item>Pazartesi</item>
+        <item>Salı</item>
+        <item>Çarşamba</item>
+        <item>Perşembe</item>
+        <item>Cuma</item>
+        <item>Cumartesi</item>
+    </string-array>
+    <string-array name="app_ops_permissions">
+        <item>İzin verildi</item>
+        <item>Reddedildi</item>
+        <item>Her zaman sor</item>
+    </string-array>
+</resources>

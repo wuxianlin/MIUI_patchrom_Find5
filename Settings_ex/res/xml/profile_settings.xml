@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/profile_settings" android:key="profile_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <ListPreference android:persistent="false" android:entries="@array/profile_entries" android:title="@string/sound_mode" android:key="sound_mode" android:summary="@string/sound_mode" android:entryValues="@array/profile_values" />
+    <com.android.settings.profiles.ProfileRingtonePreference android:persistent="false" android:title="@string/soundtone_title" android:key="soundtone" android:summary="@string/soundtone_summary" android:dialogTitle="@string/soundtone_title" android:ringtoneType="notification" />
+    <ListPreference android:persistent="false" android:entries="@array/profile_entries" android:title="@string/ringer_mode" android:key="ringer_mode" android:summary="@string/ringer_mode" android:entryValues="@array/profile_values" />
+    <com.android.settings.profiles.ProfileRingtonePreference android:persistent="false" android:title="@string/ringtone_title" android:key="ringtone" android:summary="@string/ringtone_summary" android:dialogTitle="@string/ringtone_title" android:ringtoneType="ringtone" />
+    <ListPreference android:persistent="false" android:entries="@array/profile_entries" android:title="@string/vibrate_mode" android:key="vibrate_mode" android:summary="@string/sound_mode" android:entryValues="@array/profile_values" />
+    <ListPreference android:persistent="false" android:entries="@array/profile_entries" android:title="@string/lights_mode" android:key="lights_mode" android:summary="@string/sound_mode" android:entryValues="@array/profile_values" />
+</PreferenceScreen>

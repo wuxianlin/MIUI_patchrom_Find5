@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/io_scheds_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <ListPreference android:title="@string/io_sched_title" android:key="pref_io_sched" android:dialogTitle="@string/io_sched_title" />
+    <CheckBoxPreference android:title="@string/performance_set_on_boot" android:key="pref_io_sched_set_on_boot" android:summary="@string/performance_set_on_boot_summary" />
+</PreferenceScreen>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bottomButtonBar" format="reference|color" />
+    <attr name="bottomButtonBarText" format="reference|color" />
+    <attr name="toggleIcon" format="reference|color" />
+    <attr name="multiuserIcon" format="reference|color" />
+    <attr name="declaredPermissionsIcon" format="reference|color" />
+    <attr name="automaticResponseIcon" format="reference|color" />
+    <attr name="pinProtectionIcon" format="reference|color" />
+    <attr name="requestTimeoutIcon" format="reference|color" />
+    <attr name="loggingIcon" format="reference|color" />
+    <attr name="notificationsIcon" format="reference|color" />
+    <attr name="themeIcon" format="reference|color" />
+    <attr name="largeIconTheme" format="reference" />
+    <attr name="listContentBackground" format="reference|color" />
+    <attr name="listItemsLeftBackground" format="reference|color" />
+    <attr name="listItemsRightBackground" format="reference|color" />
+    <attr name="listContentHeader" format="reference" />
+    <attr name="listHeaderTextColor" format="reference|color" />
+    <attr name="listItemSelectableLargeBackground" format="reference|color" />
+    <attr name="listItemSelectableLargeIndicatorStyle" format="reference" />
+    <attr name="iconSize" format="dimension" />
+    <attr name="listPreferredItemPaddingLeft" format="dimension" />
+    <attr name="listPreferredItemPaddingRight" format="dimension" />
+    <attr name="state_encrypted" format="boolean" />
+    <attr name="icon" format="reference" />
+    <attr name="emptyColor" format="color" />
+    <attr name="minTickWidth" format="dimension" />
+    <attr name="optimalWidth" format="dimension" />
+    <attr name="optimalWidthWeight" format="float" />
+    <attr name="sweepDrawable" format="reference" />
+    <attr name="followAxis">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+    <attr name="neighborMargin" format="dimension" />
+    <attr name="labelSize" format="dimension" />
+    <attr name="labelTemplate" format="reference" />
+    <attr name="labelColor" format="color" />
+    <attr name="primaryDrawable" format="reference" />
+    <attr name="secondaryDrawable" format="reference" />
+    <attr name="borderDrawable" format="reference" />
+    <attr name="strokeColor" format="color" />
+    <attr name="fillColor" format="color" />
+    <attr name="fillColorSecondary" format="color" />
+    <attr name="apnPreferenceStyle" format="reference" />
+    <attr name="backgroundColor" format="color" />
+    <attr name="foregroundColor" format="color" />
+    <attr name="gridColor" format="color" />
+    <attr name="markerColor" format="color" />
+    <attr name="textSize" format="dimension" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="markerSize" format="dimension" />
+    <attr name="margin" format="dimension" />
+    <attr name="min" format="float" />
+    <attr name="max" format="float" />
+    <attr name="defaultValue" format="float" />
+    <attr name="digits" format="integer" />
+    <attr name="ic_menu_add" format="reference" />
+    <attr name="ic_menu_moreoverflow" format="reference" />
+    <attr name="ic_wps" format="reference" />
+    <attr name="setup_divider_color" format="reference" />
+    <attr name="wifi_signal" format="reference" />
+</resources>

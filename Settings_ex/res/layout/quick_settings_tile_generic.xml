@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="#aa222222" android:layout_width="wrap_content" android:layout_height="110.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#ffcccccc" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/tile_textview" android:paddingBottom="2.0dip" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" android:drawablePadding="12.0dip" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" style="@style/TextAppearance.QuickSettings" />
+</FrameLayout>

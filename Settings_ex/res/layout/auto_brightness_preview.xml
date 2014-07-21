@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settings.widget.CubicSplinePreviewView android:id="@id/brightness_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" settings:backgroundColor="@color/auto_brightness_preview_background" settings:foregroundColor="@color/auto_brightness_preview_foreground" settings:gridColor="@color/auto_brightness_preview_grid" settings:markerColor="@color/auto_brightness_preview_markers" settings:textSize="@dimen/auto_brightness_preview_text_size" settings:strokeWidth="@dimen/auto_brightness_preview_stroke_width" settings:markerSize="@dimen/auto_brightness_preview_marker_size" settings:margin="@dimen/auto_brightness_preview_grid_margin" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">አሁን ገንቢ ለመሆን %1$d ደረጃዎች ይቀርዎታል።</item>
+        <item quantity="one">አሁን ገንቢ ለመሆን %1$d ደረጃ ይቀርዎታል።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ፊደሎች መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 ፊደል መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ንዑስ ፊደሎች መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 ንዑስ ፊደል መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ከፍ ያሉ ፊደሎች መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 አቢይ ፊደል መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ቁጥር አሀዞች መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 ቁጥር አሀዝ መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ልዩ ምልክቶችን መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 ልዩ ምልክት መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">የይለፍ ቃል ቢያንስ %d ፊደል ያልሆኑ ቁምፊዎች መያዝ አለበት።</item>
+        <item quantity="one">የይለፍ ቃል ቢያንስ 1 ፊደል ያልሆነ ቁምፊ መያዝ አለበት።</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">የ%d መተግበሪያዎች ማሳወቂያዎችን ማንበብ ይችላሉ</item>
+        <item quantity="one">የ%d መተግበሪያ ማሳወቂያዎችን ማንበብ ይችላል</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">ልክ ያልሆነ የሲም ፒን ኮድ፣ %d ሙከራዎች ይቀሩዎታል።</item>
+        <item quantity="one">ልክ ያልሆነ የሲም ፒን ኮድ፣ መሳሪያዎን ለማስከፈት ድምጸ ተያያዥ ሞደምዎን ማግኘት ግዴታዎ ሊሆን %d ሙከራ ይቀርዎታል።</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s አታሚዎች ተገኝተዋል</item>
+        <item quantity="one">%1$s አታሚ ተገኝቷል</item>
+    </plurals>
+</resources>

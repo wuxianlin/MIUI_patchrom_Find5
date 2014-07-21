@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">ឥឡូវ​អ្នក​ស្ថិត​នៅ​ចម្ងាយ %1$d ជំហាន​ពី​ការ​ក្លាយ​ជា​អ្នក​អភិវឌ្ឍ។</item>
+        <item quantity="one">ឥឡូវ​អ្នក​ស្ថិតនៅ %1$d ជំហាន​ពី​ការ​ក្លាយ​ជា​អ្នក​អភិវឌ្ឍ។</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​យ៉ាង​ហោច​ណាស់ %d តួអក្សរ។</item>
+        <item quantity="one">ពាក្យសម្ងាត់​ត្រូវ​មាន​យ៉ាង​ហោច​មួយ​តួអក្សរ។</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​យ៉ាង​ហោច​ណាស់​អក្សរ​តូច %d ។</item>
+        <item quantity="one">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​អក្សរ​តូច​យ៉ាង​ហោច​មួយ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​អក្សរ​ធំ​យ៉ាង​ហោច​ណាស់ %d ។</item>
+        <item quantity="one">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​អក្សរ​ធំ​យ៉ាង​ហោច​ណាស់​មួយ។</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">ពាក្យសម្ងាត់​ត្រូវ​មាន​យ៉ាង​ហោច %d តួលេខ។</item>
+        <item quantity="one">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​លេខ​​យ៉ាង​ហោច​ណាស់​មួយ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​យ៉ាង​ហោច​ណាស់​និមិត្តសញ្ញា​ពិសេស​ %d ។</item>
+        <item quantity="one">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​និមិត្តសញ្ញា​ពិសេស​យ៉ាង​ហោច​ណាស់​មួយ។</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​យ៉ាង​ហោច​ណាស់​តួអក្សរ​មិន​មែ​ន​ជា​អក្សរ %d ។</item>
+        <item quantity="one">ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មិន​មាន​​តួអក្សរ​​យ៉ាង​ហោច​ណាស់​មួយ។</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">កម្មវិធី %d អាច​អាន​ការ​ជូន​ដំណឹង</item>
+        <item quantity="one">កម្មវិធី %d អាច​អាន​ការ​ជូន​ដំណឹង</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">លេខ​កូដ PIN ស៊ីម​មិន​ត្រឹមត្រូវ, អ្នក​មាន %d ការ​ប៉ុនប៉ង​ដែល​នៅ​សល់។</item>
+        <item quantity="one">លេខ​កូដ PIN ស៊ីម​មិន​ត្រឹមត្រូវ, អ្នក​​មាន​ %d ការ​ព្យាយាម​ដែល​នៅ​សល់​​​​មុន​ពេល​ដែល​អ្នក​ត្រូវ​​ទាក់ទង​​ក្រុមហ៊ុន​បញ្ជូន​​ដើម្បី​ដោះ​សោ​ឧបករណ៍​របស់​អ្នក។</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">រក​ឃើញ​ម៉ាស៊ីន​បោះពុម្ព %1$s</item>
+        <item quantity="one">រក​ឃើញ​ម៉ាស៊ីន​បោះពុម្ព %1$s</item>
+    </plurals>
+</resources>

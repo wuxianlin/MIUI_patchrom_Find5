@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d segons</item>
+        <item quantity="one">%d segon</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d vegades</item>
+        <item quantity="one">una vegada</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Ara només et queden %1$d passos per convertir-te en desenvolupador</item>
+        <item quantity="one">Ara només et queda %1$d pas per convertir-te en desenvolupador</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d lletres.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim una lletra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d lletres en minúscules.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim una lletra en minúscules.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d lletres en majúscules.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim 1 lletra en majúscules.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d dígits numèrics.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim un dígit numèric.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d símbols especials.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim un símbol especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">La contrasenya ha de contenir com a mínim %d caràcters que no siguin lletres.</item>
+        <item quantity="one">La contrasenya ha de contenir com a mínim un caràcter que no sigui una lletra.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplicacions poden llegir notificacions.</item>
+        <item quantity="one">%d aplicació pot llegir notificacions.</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">El codi PIN de la SIM no és correcte. Et queden %d intents.</item>
+        <item quantity="one">"El codi PIN de la SIM no és correcte. Et queda %d intent; si no l'encertes, contacta amb l'operador de telefonia mòbil per desbloquejar el dispositiu."</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">"S'han trobat %1$s impressores"</item>
+        <item quantity="one">"S'ha trobat %1$s impressora"</item>
+    </plurals>
+</resources>

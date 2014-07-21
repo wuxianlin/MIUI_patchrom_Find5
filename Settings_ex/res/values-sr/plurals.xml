@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Треба да обавите још %1$d корака да бисте постали програмер.</item>
+        <item quantity="one">Треба да обавите још %1$d корак да бисте постали програмер.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Лозинка мора да садржи најмање %d слова.</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 слово.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Лозинка мора да садржи најмање %d мала(их) слова.</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 мало слово.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Лозинка мора да садржи најмање %d велика(их) слова.</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 велико слово.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Лозинка мора да садржи најмање %d цифре(ара).</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 цифру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Лозинка мора да садржи најмање %d посебна(их) симбола.</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 посебан симбол.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Лозинка мора да садржи најмање %d знак(ов)а који нису слова.</item>
+        <item quantity="one">Лозинка мора да садржи најмање 1 знак који није слово.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Апликације (%d) могу да читају обавештења</item>
+        <item quantity="one">%d апликација може да чита обавештења</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Нетачан SIM PIN кôд. Имате још %d покушаја.</item>
+        <item quantity="one">Нетачан SIM PIN кôд. Имате још %d покушај, а онда морате да контактирате мобилног оператера да бисте откључали уређај.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Пронађено је %1$s штампача</item>
+        <item quantity="one">Пронађен је %1$s штампач</item>
+    </plurals>
+</resources>

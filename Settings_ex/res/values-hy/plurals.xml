@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Դուք այժմ %1$d քայլ եք հեռու ծրագրավորող կոչվելուց:</item>
+        <item quantity="one">Դուք այժմ ծրագրավորող դառնալուց հեռու եք %1$d քայլ:</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d տառ:</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 տառ:</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Գաղտնաբառը պետք է առնվազն %d փոքրատառ տառ պարունակի:</item>
+        <item quantity="one">"Գաղտնաբառը պետք է  առնվազն 1 փոքրատառ տառ պարունակի:"</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d մեծատառ տառ:</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 մեծատառ տառ:</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d թվային նշան:</item>
+        <item quantity="one">"Գաղտնաբառը պետք է պարունակի  առնվազն 1 թվային նիշ:"</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Գաղտնաբառը պետք է առնվազն %d հատուկ նշան պարունակի:</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 հատուկ նշան:</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Գաղտնաբառը պետք է առնվազն %d ոչ-տառային նիշ պարունակի:</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 ոչ տառային նիշ:</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d հավելված կարող է կարդալ ծանուցումները</item>
+        <item quantity="one">%d ծրագիրը կարող է կարդալ ծանուցումները</item>
+    </plurals>
+</resources>

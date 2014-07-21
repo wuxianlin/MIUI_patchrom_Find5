@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/auto_brightness_menu_preview" android:title="@string/auto_brightness_preview" />
+    <item android:id="@id/auto_brightness_menu_help" android:title="@string/help_label" />
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">개발자가 되려면 %1$d단계가 남았습니다.</item>
+        <item quantity="one">개발자가 되려면 %1$d단계가 남았습니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">비밀번호에는 적어도 %d개의 문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">비밀번호에는 적어도 %d개의 소문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 소문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">비밀번호에는 적어도 %d개의 대문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 대문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">비밀번호에는 적어도 %d개의 숫자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 숫자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">비밀번호에는 적어도 %d개의 특수 기호가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 특수 기호가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">비밀번호에는 적어도 %d개 이상의 글자가 아닌 문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 글자가 아닌 문자가 한 개 이상 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d개의 앱이 알림을 읽을 수 있습니다.</item>
+        <item quantity="one">%d개의 앱이 알림을 읽을 수 있습니다.</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">SIM PIN 코드가 잘못되었습니다. %d번의 기회가 남았습니다.</item>
+        <item quantity="one">SIM PIN 코드가 잘못되었습니다. %d회 이상 실패할 경우 이동통신사에 문의하여 기기를 잠금 해제해야 합니다.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">프린터 %1$s대 검색됨</item>
+        <item quantity="one">프린터 %1$s대 검색됨</item>
+    </plurals>
+</resources>

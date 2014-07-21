@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/log_item_padding" android:paddingBottom="@dimen/log_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/section_padding" android:paddingEnd="@dimen/section_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/log_item_base" />
+</LinearLayout>

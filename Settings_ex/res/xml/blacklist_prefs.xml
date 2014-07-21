@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/blacklist_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/blacklist_notify" android:key="phone_blacklist_notify_enabled" android:defaultValue="true" />
+    <MultiSelectListPreference android:persistent="false" android:entries="@array/blacklist_policy_private_entries" android:title="@string/blacklist_private_numbers_title" android:key="button_blacklist_private_numbers" android:dialogTitle="@string/blacklist_private_numbers_title" android:entryValues="@array/blacklist_policy_private_values" />
+    <MultiSelectListPreference android:persistent="false" android:entries="@array/blacklist_policy_unknown_entries" android:title="@string/blacklist_unknown_numbers_title" android:key="button_blacklist_unknown_numbers" android:dialogTitle="@string/blacklist_unknown_numbers_title" android:entryValues="@array/blacklist_policy_unknown_values" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/blacklist_regex_title" android:key="phone_blacklist_regex_enabled" android:summary="@string/blacklist_regex_summary" />
+</PreferenceScreen>

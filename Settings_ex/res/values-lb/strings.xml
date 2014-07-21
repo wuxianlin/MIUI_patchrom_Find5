@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="superuser">Superuser</string>
+    <string name="allow">Erlaben</string>
+    <string name="unknown_uid">Onbekannte UID: %s</string>
+    <string name="application_request">%s freet no Superuser-Accès.</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Gəlişdirici olmağın %1$d addımlığındasınız.</item>
+        <item quantity="one">İndi sizin tərtibatçı olmağınıza %1$d addım qalıb.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parolda ən azı %d hərf olmalıdır.</item>
+        <item quantity="one">Parol ən az 1 hərfdən ibarət olmalıdır.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parolda ən azı %d kiçik hərf olmalıdır.</item>
+        <item quantity="one">Parolda ən azı 1 kiçik hərf olmalıdır.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parolda ən azıt %d böyük hərf olmalıdır.</item>
+        <item quantity="one">Parolda ən azı 1 böyük hərf olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parol ən azı %d ədədi rəqəmdən ibarət olmalıdır.</item>
+        <item quantity="one">Parolda ən azı 1 rəqəm olmalıdır.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parolda ən azı %d xüsusi simvol olmalıdır.</item>
+        <item quantity="one">Parolda ən azı 1 xüsusi simvol olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parolda ən azı %d hərf olmayan simvol olmalıdır.</item>
+        <item quantity="one">Parolda ən azı 1 hərf olmayan simvol olmalıdır</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d tətbiq bildiriş oxuya bilər</item>
+        <item quantity="one">%d tətbiq bildiriş oxuya bilər</item>
+    </plurals>
+</resources>

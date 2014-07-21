@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Manje usalelwe yizinyathelo ezingu-%1$d ukuthi ube ngunjiniyela.</item>
+        <item quantity="one">Manje usalelwe yizinyathelo ezingu-%1$d ukuthi ube ngunjiniyela.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Iphasiwedi kumele okungenani ibe namagama angu-%d.</item>
+        <item quantity="one">Iphasiwedi okungenani kumele ibe negama elingu-1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Iphasiwedi kumele ibe okungenani namagama ezinhlamvu ezingafelebisiwe ze-%d</item>
+        <item quantity="one">Iphasiwedi kumele okungenani ibe negama lombhalo elingafelebisiwe elingu-1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Iphasiwedi kumele okungenani namagama ofeleba e-%d.</item>
+        <item quantity="one">Iphasiwedi kumele ibe okungenani negama lofeleba olungu-1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Iphasiwedi kumele ibe okungenani amadijithi ezinombolo angu-%d.</item>
+        <item quantity="one">Iphasiwedi kumele okungenani ibe nedijithi yenombolo engu-1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Iphasiwedi kumele ibe nezinhlamvu ezikhethekile ezingu-%d.</item>
+        <item quantity="one">Iphasiwedi kumele okungenani ibe nohlamvu olukhethekile olungu-1.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Iphasiwedi kumele okungenani ibe nezinhlamvu ezingewona amagama ezingu-%d.</item>
+        <item quantity="one">Iphasiwedi kumele okungenani ibe nohlamvu olungelona igama olungu-1</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d izinhlelo zokusebenza zingakwazi ukufunda izaziso</item>
+        <item quantity="one">%d uhlelo lokusebenza lungakwazi ukufunda izaziso</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Ikhodi yephinikhodi ye-SIM engalungile, unemizamo esele engu-%d.</item>
+        <item quantity="one">Ikhodi yephinikhodi ye-SIM engalungile, unemizamo engu-%d esele ngaphambi kokuba uxhumane nenkampini yenethiwekhi.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s amaphrinta atholiwe</item>
+        <item quantity="one">%1$s iphrinta itholiwe</item>
+    </plurals>
+</resources>

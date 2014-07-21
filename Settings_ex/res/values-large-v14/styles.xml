@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RequestThemeDark" parent="@*android:style/Theme.Holo.Dialog">
+        <item name="bottomButtonBar">@null</item>
+        <item name="bottomButtonBarText">?android:textColorPrimary</item>
+    </style>
+    <style name="RequestThemeLight" parent="@*android:style/Theme.Holo.Light.Dialog">
+        <item name="bottomButtonBar">@color/background_dark</item>
+        <item name="bottomButtonBarText">?android:textColorPrimaryInverse</item>
+    </style>
+    <style name="AppBaseLargeTheme" parent="@style/AndroidTheme">
+        <item name="listPreferredItemPaddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="listPreferredItemPaddingRight">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="AppBaseDarkLargeTheme" parent="@style/AndroidDarkTheme">
+        <item name="listPreferredItemPaddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="listPreferredItemPaddingRight">?android:listPreferredItemPaddingRight</item>
+    </style>
+</resources>

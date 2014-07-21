@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d วินาที</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d ครั้ง</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">คุณเหลืออีกเพียง %1$d ขั้นตอนเพื่อเป็นนักพัฒนาซอฟต์แวร์</item>
+        <item quantity="one">คุณเหลืออีกเพียง %1$d ขั้นตอนเพื่อเป็นนักพัฒนาซอฟต์แวร์</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">รหัสผ่านต้องมีตัวอักษรอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีตัวอักษรอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">รหัสผ่านต้องมีอักษรตัวพิมพ์เล็กอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักษรตัวพิมพ์เล็กอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">รหัสผ่านต้องมีตัวเลขอย่างน้อย %d ตำแหน่ง</item>
+        <item quantity="one">รหัสผ่านต้องมีตัวเลขอย่างน้อย 1 ตำแหน่ง</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">รหัสผ่านต้องมีสัญลักษณ์พิเศษอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีสัญลักษณ์พิเศษอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">รหัสผ่านต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d แอปสามารถอ่านการแจ้งเตือนได้</item>
+        <item quantity="one">%d แอปสามารถอ่านการแจ้งเตือนได้</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">รหัส PIN ของซิมไม่ถูกต้อง คุณพยายามได้อีก %d ครั้ง</item>
+        <item quantity="one">รหัส PIN ของซิมไม่ถูกต้อง คุณสามารถพยายามได้อีก %d ครั้งก่อนที่จะต้องติดต่อผู้ให้บริการเพื่อปลดล็อกอุปกรณ์ของคุณ</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">พบเครื่องพิมพ์ %1$s เครื่อง</item>
+        <item quantity="one">พบเครื่องพิมพ์ %1$s เครื่อง</item>
+    </plurals>
+</resources>

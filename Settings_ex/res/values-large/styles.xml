@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@style/AppBaseLargeTheme">
+        <item name="listContentHeader">@style/ListContentHeader</item>
+        <item name="listHeaderTextColor">@color/holo_blue_dark</item>
+    </style>
+    <style name="AppBaseDarkTheme" parent="@style/AppBaseDarkLargeTheme">
+        <item name="listContentHeader">?android:listSeparatorTextViewStyle</item>
+        <item name="listHeaderTextColor">@null</item>
+    </style>
+    <style name="AppActivityTheme" parent="@style/AppActivityBaseTheme">
+        <item name="listPreferredItemPaddingLeft">0.0dip</item>
+        <item name="listPreferredItemPaddingRight">0.0dip</item>
+    </style>
+    <style name="AppDarkActivityTheme" parent="@style/AppDarkActivityBaseTheme">
+        <item name="listPreferredItemPaddingLeft">0.0dip</item>
+        <item name="listPreferredItemPaddingRight">0.0dip</item>
+    </style>
+    <style name="AppBaseLargeTheme" parent="@*android:style/Theme">
+        <item name="listPreferredItemPaddingLeft">6.0dip</item>
+        <item name="listPreferredItemPaddingRight">6.0dip</item>
+    </style>
+    <style name="AppBaseDarkLargeTheme" parent="@*android:style/Theme.Black">
+        <item name="listPreferredItemPaddingLeft">6.0dip</item>
+        <item name="listPreferredItemPaddingRight">6.0dip</item>
+    </style>
+    <style name="ListContentHeader" parent="@*android:style/TextAppearance.Medium.Inverse">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/holo_blue_light</item>
+        <item name="android:padding">10.0dip</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbarStyle="@integer/preference_scrollbar_style" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/all_details" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/app_percentage_item" />
+        <LinearLayout android:orientation="vertical" android:id="@id/two_buttons_panel" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/two_buttons_panel" />
+        </LinearLayout>
+        <TextView android:text="@string/details_subtitle" style="?android:attr/listSeparatorTextViewStyle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/details" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" />
+        <TextView android:text="@string/services_subtitle" style="?android:attr/listSeparatorTextViewStyle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/services" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/crypt_keeper_settings_title" android:key="security_category">
+        <Preference android:title="@string/crypt_keeper_encrypt_title" android:summary="@string/crypt_keeper_encrypted_summary" style="?android:preferenceInformationStyle" />
+        <Preference android:title="@string/change_crypt_password_title" android:key="change_crypt_password" android:summary="@string/change_crypt_password_summary">
+            <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.ChooseEncryptionPassword" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

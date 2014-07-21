@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/quiet_hours_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_enabled" android:key="quiet_hours_enabled" android:defaultValue="false" />
+    <com.android.settings.cyanogenmod.TimeRangePreference android:key="quiet_hours_timerange" android:dependency="quiet_hours_enabled" />
+    <ListPreference android:entries="@array/quiet_hours_ringer_entries" android:title="@string/quiet_hours_ringer" android:key="quiet_hours_ringer" android:dependency="quiet_hours_enabled" android:defaultValue="0" android:dialogTitle="@string/quiet_hours_ringer" android:entryValues="@array/quiet_hours_ringer_values" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_mute" android:key="quiet_hours_mute" android:summary="@string/quiet_hours_mute_summary" android:dependency="quiet_hours_enabled" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_haptic" android:key="quiet_hours_haptic" android:summary="@string/quiet_hours_haptic_summary" android:dependency="quiet_hours_enabled" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_system" android:key="quiet_hours_system" android:summary="@string/quiet_hours_system_summary" android:dependency="quiet_hours_enabled" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_still" android:key="quiet_hours_still" android:summary="@string/quiet_hours_still_summary" android:dependency="quiet_hours_enabled" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/quiet_hours_dim" android:key="quiet_hours_dim" android:summary="@string/quiet_hours_dim_summary" android:dependency="quiet_hours_enabled" />
+</PreferenceScreen>

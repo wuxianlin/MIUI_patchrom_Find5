@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Faltam %1$d etapas para você se tornar um desenvolvedor.</item>
+        <item quantity="one">Falta %1$d etapa para você se tornar um desenvolvedor.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">A senha deve conter pelo menos %d letras.</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras minúsculas.</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra minúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras maiúsculas.</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra maiúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">A senha deve conter pelo menos %d dígitos numéricos.</item>
+        <item quantity="one">A senha deve conter pelo menos um dígito numérico.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">A senha deve conter pelo menos %d símbolos especiais.</item>
+        <item quantity="one">A senha deve conter pelo menos um símbolo especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">A senha deve conter pelo menos %d caracteres que não sejam letras.</item>
+        <item quantity="one">A senha deve conter pelo menos um caractere que não seja letra.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplicativos podem ler notificações</item>
+        <item quantity="one">%d aplicativo pode ler notificações</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Código PIN do SIM incorreto. Tentativas restantes: %d.</item>
+        <item quantity="one">Código PIN do SIM incorreto. Tentativas restantes: %d. Caso o código correto não seja digitado, será necessário entrar em contato com a operadora para desbloquear o dispositivo.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s impressoras encontradas</item>
+        <item quantity="one">%1$s impressora encontrada</item>
+    </plurals>
+</resources>

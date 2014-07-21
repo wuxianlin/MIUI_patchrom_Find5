@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/app_light_pref" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@*android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:adjustViewBounds="true" android:maxWidth="36.0dip" android:maxHeight="36.0dip" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:id="@*android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:id="@*android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@*android:id/title" android:layout_alignStart="@*android:id/title" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="end" android:id="@id/textViewTimeOnValue" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="end" android:id="@id/textViewTimeOffValue" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/light_color" android:layout_width="32.0dip" android:layout_height="wrap_content" />
+</LinearLayout>

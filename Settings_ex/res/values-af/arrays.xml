@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>Amerika</item>
+        <item>Europa</item>
+        <item>Afrika</item>
+        <item>Asië</item>
+        <item>Australië</item>
+        <item>Pasifies</item>
+        <item>Alle</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekondes</item>
+        <item>30 sekondes</item>
+        <item>1 minuut</item>
+        <item>2 minute</item>
+        <item>5 minute</item>
+        <item>10 minute</item>
+        <item>30 minute</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Nooit</item>
+        <item>15 sekondes</item>
+        <item>30 sekondes</item>
+        <item>1 minuut</item>
+        <item>2 minute</item>
+        <item>5 minute</item>
+        <item>10 minute</item>
+        <item>30 minute</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Dadelik</item>
+        <item>5 sekondes</item>
+        <item>15 sekondes</item>
+        <item>30 sekondes</item>
+        <item>1 minuut</item>
+        <item>2 minute</item>
+        <item>5 minute</item>
+        <item>10 minute</item>
+        <item>30 minute</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Klein</item>
+        <item>Normaal</item>
+        <item>Groot</item>
+        <item>Baie groot</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Baie stadig</item>
+        <item>Stadig</item>
+        <item>Normaal</item>
+        <item>Vinnig</item>
+        <item>Vinniger</item>
+        <item>Baie vinnig</item>
+        <item>Vinnig</item>
+        <item>Baie vinnig</item>
+        <item>Vinnigste</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Baie laag</item>
+        <item>Laag</item>
+        <item>Normaal</item>
+        <item>Hoog</item>
+        <item>Baie hoog</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Skandeer tans…</item>
+        <item>Koppel tans…</item>
+        <item>Staaf tans…</item>
+        <item>Bekom tans IP-adres…</item>
+        <item>Gekoppel</item>
+        <item>Opgeskort</item>
+        <item>Ontkoppel tans…</item>
+        <item>Ontkoppel</item>
+        <item>Onsuksesvol</item>
+        <item>Geblokkeer</item>
+        <item>Vermy tydelik swak verbinding</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Skandeer tans…</item>
+        <item>Koppel tans aan %1$s…</item>
+        <item>Staaf tans met %1$s…</item>
+        <item>Verkry tans IP-adres van %1$s…</item>
+        <item>Gekoppel aan %1$s</item>
+        <item>Opgeskort</item>
+        <item>Ontkoppel tans van %1$s…</item>
+        <item>Ontkoppel</item>
+        <item>Onsuksesvol</item>
+        <item>Geblokkeer</item>
+        <item>Vermy tydelik swak verbinding</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Druk knoppie</item>
+        <item>PIN van eweknietoestel</item>
+        <item>PIN van dié toestel</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Gekoppel</item>
+        <item>Uitgenooi</item>
+        <item>Onsuksesvol</item>
+        <item>Beskikbaar</item>
+        <item>Buite reikwydte</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 minute</item>
+        <item>5 minute</item>
+        <item>1 uur</item>
+        <item>Moenie uittel nie</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Swak</item>
+        <item>Redelik</item>
+        <item>Goed</item>
+        <item>Uitstekend</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Altyd</item>
+        <item>Slegs wanneer ingeprop</item>
+        <item>Nooit (verhoog datagebruik)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Altyd</item>
+        <item>Slegs wanneer ingeprop</item>
+        <item>Nooit</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Outo</item>
+        <item>Net 5 GHz</item>
+        <item>Net 2.4 GHz</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Gebruikstyd</item>
+        <item>Bekendstelling-aftelling</item>
+        <item>Programnaam</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Geen</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Geen</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Staties</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Geen</item>
+        <item>Handmatig</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Af</item>
+        <item>Berig</item>
+        <item>Vibreer</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Geen</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP of CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Ongespesifiseer</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Geen</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Interne toestelberging</item>
+        <item>Verwyderbare SD-kaart</item>
+        <item>Laat die stelsel besluit</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>Ligging</item>
+        <item>Persoonlik</item>
+        <item>Boodskappe</item>
+        <item>Media</item>
+        <item>Toestel</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>growwe ligging</item>
+        <item>fyn ligging</item>
+        <item>GPS</item>
+        <item>vibreer</item>
+        <item>lees kontakte</item>
+        <item>verander kontakte</item>
+        <item>lees oproeprekord</item>
+        <item>verander oproeprekord</item>
+        <item>lees kalender</item>
+        <item>verander kalender</item>
+        <item>Wi-Fi-skandering</item>
+        <item>kennisgewing</item>
+        <item>sel-skandering</item>
+        <item>bel foon</item>
+        <item>lees SMS</item>
+        <item>skryf SMS</item>
+        <item>ontvang SMS</item>
+        <item>ontvang nood-SMS</item>
+        <item>ontvang MMS</item>
+        <item>ontvang WAP-stootpos</item>
+        <item>stuur SMS</item>
+        <item>lees ICC-SMS</item>
+        <item>skryf ICC-SMS</item>
+        <item>verander instellings</item>
+        <item>teken bo-op</item>
+        <item>kry toegang tot kennisgewings</item>
+        <item>kamera</item>
+        <item>neem oudio op</item>
+        <item>speel oudio</item>
+        <item>lees knipbord</item>
+        <item>verander knipbord</item>
+        <item>mediaknoppies</item>
+        <item>klankfokus</item>
+        <item>meestervolume</item>
+        <item>stemvolume</item>
+        <item>lui-volume</item>
+        <item>mediavolume</item>
+        <item>wekkervolume</item>
+        <item>kennisgewingvolume</item>
+        <item>bluetoothvolume</item>
+        <item>hou wakker</item>
+        <item>monitor ligging</item>
+        <item>monitor hoë kragligging</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Ligging</item>
+        <item>Ligging</item>
+        <item>Ligging</item>
+        <item>Vibreer</item>
+        <item>Lees kontakte</item>
+        <item>Verander kontakte</item>
+        <item>Lees oproeprekord</item>
+        <item>Verander oproeprekord</item>
+        <item>Lees kalender</item>
+        <item>Verander kalender</item>
+        <item>Ligging</item>
+        <item>Plaas kennisgewing</item>
+        <item>Ligging</item>
+        <item>Bel foon</item>
+        <item>Lees SMS/MMS</item>
+        <item>Skryf SMS/MMS</item>
+        <item>Ontvang SMS/MMS</item>
+        <item>Ontvang SMS/MMS</item>
+        <item>Ontvang SMS/MMS</item>
+        <item>Ontvang SMS/MMS</item>
+        <item>Stuur SMS/MMS</item>
+        <item>Lees SMS/MMS</item>
+        <item>Skryf SMS/MMS</item>
+        <item>Verander instellings</item>
+        <item>Teken bo-op</item>
+        <item>Kry toegang tot kennisgewings</item>
+        <item>Kamera</item>
+        <item>Neem oudio op</item>
+        <item>Speel oudio</item>
+        <item>Lees knipbord</item>
+        <item>Verander knipbord</item>
+        <item>Mediaknoppies</item>
+        <item>Oudiofokus</item>
+        <item>Meestervolume</item>
+        <item>Stemvolume</item>
+        <item>Luivolume</item>
+        <item>Mediavolume</item>
+        <item>Wekkervolume</item>
+        <item>Kennisgewingvolume</item>
+        <item>Bluetoothvolume</item>
+        <item>Hou wakker</item>
+        <item>Ligging</item>
+        <item>Ligging</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Kort</item>
+        <item>Medium</item>
+        <item>Lank</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Verstek</item>
+        <item>Sans-serif</item>
+        <item>Sans-serif gekondenseer</item>
+        <item>Serif</item>
+        <item>Monospace</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Baie klein</item>
+        <item>Klein</item>
+        <item>Normaal</item>
+        <item>Groot</item>
+        <item>Baie groot</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Geen</item>
+        <item>Raamwerk</item>
+        <item>Val-skaduwee</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Wit op swart</item>
+        <item>Swart op wit</item>
+        <item>Geel op swart</item>
+        <item>Geel op blou</item>
+        <item>Gepasmaak</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (ontfout)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Gebruik Dalvik</item>
+        <item>Gebruik ART</item>
+        <item>Gebruik ART-ontfoutbou</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Kontroleer nooit</item>
+        <item>Kontroleer net vir DRM-inhoud</item>
+        <item>Kontroleer altyd</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Moet nooit HDCP-kontrole gebruik nie</item>
+        <item>Gebruik HDCP-kontrolering net vir DRM-inhoud</item>
+        <item>Gebruik altyd HDCP-kontrolering</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animasie af</item>
+        <item>Animasieskaal .5x</item>
+        <item>Animasieskaal 1x</item>
+        <item>Animasieskaal 1.5x</item>
+        <item>Animasieskaal 2x</item>
+        <item>Animasieskaal 5x</item>
+        <item>Animasieskaal 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animasie af</item>
+        <item>Animasieskaal .5x</item>
+        <item>Animasieskaal 1x</item>
+        <item>Animasieskaal 1.5x</item>
+        <item>Animasieskaal 2x</item>
+        <item>Animasieskaal 5x</item>
+        <item>Animasieskaal 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Animasie af</item>
+        <item>Animasieskaal 0,5x</item>
+        <item>Animasieskaal 1x</item>
+        <item>Animasieskaal 1,5x</item>
+        <item>Animasieskaal 2x</item>
+        <item>Animasieskaal 5x</item>
+        <item>Animasieskaal 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Geen</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (veilig)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (veilig)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (veilig)</item>
+        <item>1280x720 tvdpi en 1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Geen</item>
+        <item>Logcat</item>
+        <item>Systrace (Grafika)</item>
+        <item>Belstapel op glGetError</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Af</item>
+        <item>Teken nie-reghoekige knipstreek in blou</item>
+        <item>Merk getoetsde tekenopdragte in groen</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Af</item>
+        <item>Op skerm as balke</item>
+        <item>Op skerm as reëls</item>
+        <item>In adb-dop dumpsys gfxinfo</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Af</item>
+        <item>Wys oortrekareas</item>
+        <item>Wys areas vir Deuteranomaly</item>
+        <item>Wys oortrektoonbank</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standaardlimiet</item>
+        <item>Geen agtergrondprosesse</item>
+        <item>Nie meer as 1 proses nie</item>
+        <item>Nie meer as 2 prosesse nie</item>
+        <item>Nie meer as 3 prosesse nie</item>
+        <item>Nie meer as 4 prosesse nie</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec VPN met voorafgedeelde sleutels</item>
+        <item>L2TP/IPSec VPN met sertifikate</item>
+        <item>IPSec VPN met voorafgedeelde sleutels en Xauth-stawing</item>
+        <item>IPSec VPN met sertifikate en Xauth-stawing</item>
+        <item>IPSec VPN met sertifikate en hibriedstawing</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Ontkoppel</item>
+        <item>Inisialiseer tans...</item>
+        <item>Koppel tans…</item>
+        <item>Gekoppel</item>
+        <item>Uittelling</item>
+        <item>Onsuksesvol</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Vra</item>
+        <item>Moet nooit toelaat dat</item>
+        <item>Laat altyd toe</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>normaal</item>
+        <item>matig</item>
+        <item>laag</item>
+        <item>kritiek</item>
+    </string-array>
+    <string-array name="screen_color_setting">
+        <item>Standaard</item>
+        <item>Lewendig</item>
+        <item>Persoonlik</item>
+    </string-array>
+    <string-array name="wifi_countrycode_entries">
+        <item>Verenigde State</item>
+        <item>Kanada, Taiwan</item>
+        <item>Duitsland</item>
+        <item>Europa</item>
+        <item>Japan, Rusland</item>
+        <item>Australia</item>
+        <item>Sjina</item>
+        <item>Korea</item>
+        <item>Turkye</item>
+        <item>Singapoer</item>
+        <item>Brasilië</item>
+    </string-array>
+    <string-array name="profile_entries">
+        <item>Aan</item>
+        <item>Af</item>
+        <item>Geen verstelling</item>
+    </string-array>
+    <string-array name="profile_connection_entries">
+        <item>Deaktiveer</item>
+        <item>Aktiveer</item>
+    </string-array>
+    <string-array name="entries_screentimeout_widget">
+        <item>15s | 1m | 5m</item>
+        <item>30s | 2m | 5m</item>
+    </string-array>
+    <string-array name="data_usage_cycle_length">
+        <item>Daaglikse</item>
+        <item>Weekliks</item>
+        <item>Maandeliks</item>
+    </string-array>
+    <string-array name="data_usage_cycle_weekdays">
+        <item>Maandag</item>
+        <item>Dinsdag</item>
+        <item>Woensdag</item>
+        <item>Donderdag</item>
+        <item>Vrydag</item>
+        <item>Saterdag</item>
+        <item>Sondag</item>
+    </string-array>
+    <string-array name="app_ops_permissions">
+        <item>Toegelaat</item>
+        <item>Ontken</item>
+        <item>Vrae altyd</item>
+    </string-array>
+</resources>

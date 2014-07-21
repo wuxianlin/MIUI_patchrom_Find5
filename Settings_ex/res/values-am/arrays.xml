@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>አሜሪካ</item>
+        <item>አውሮፓ</item>
+        <item>አፍሪካ</item>
+        <item>እስያ</item>
+        <item>አውስትራሊያ</item>
+        <item>ፓስፊክ</item>
+        <item>ሁሉም</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 ሰከንዶች</item>
+        <item>30 ሰከንዶች</item>
+        <item>1</item>
+        <item>"2  ደቂቃዎች"</item>
+        <item>5 ደቂቃዎች</item>
+        <item>10 ደቂቃዎች</item>
+        <item>30 ደቂቃዎች</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>በፍፁም</item>
+        <item>15 ሰከንዶች</item>
+        <item>30 ሰከንዶች</item>
+        <item>1 ደቂቃ</item>
+        <item>2 ደቂቃዎች</item>
+        <item>5 ደቂቃዎች</item>
+        <item>10 ደቂቃዎች</item>
+        <item>30 ደቂቃዎች</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>ወዲያውኑ</item>
+        <item>5 ሰከንዶች</item>
+        <item>15 ሰከንዶች</item>
+        <item>30 ሰከንዶች</item>
+        <item>1 ደቂቃ</item>
+        <item>2 ደቂቃዎች</item>
+        <item>5 ደቂቃዎች</item>
+        <item>10 ደቂቃዎች</item>
+        <item>30 ደቂቃዎች</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>ትንሽ</item>
+        <item>መደበኛ</item>
+        <item>ትልቅ</item>
+        <item>ግዙፍ</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>በጣም ቀርፋፋ</item>
+        <item>አዘግይ</item>
+        <item>መደበኛ</item>
+        <item>ፈጣን</item>
+        <item>የፈጠነ</item>
+        <item>በጣም ፈጣን</item>
+        <item>ፈጣን</item>
+        <item>በጣም ፈጣን</item>
+        <item>እጅግ በጣም ፈጣን</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>በጣም ዝቅተኛ</item>
+        <item>ዝቅ ያለ</item>
+        <item>መደበኛ</item>
+        <item>ከፍ ያለ</item>
+        <item>በጣም ከፍተኛ</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>በመቃኘት ላይ.....</item>
+        <item>በማገናኘት ላይ…</item>
+        <item>በማረጋገጥ ላይ....</item>
+        <item>የIP አድራሻ በማግኘት ላይ...</item>
+        <item>ተገናኝቷል</item>
+        <item>ታግዷል</item>
+        <item>በማለያየት ላይ....</item>
+        <item>ተለያየ</item>
+        <item>አልተሳካም</item>
+        <item>ታግዷል</item>
+        <item>ለጊዜያዊነት ከደካማ ግኑኝነት በመታቀብ ላይ</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>በመቃኘት ላይ.....</item>
+        <item>%1$s በማያያዝ ላይ...</item>
+        <item>በ%1$s በማረጋገጥ ላይ...</item>
+        <item>" ከ%1$s የIP አድራሻ በማግኘት ላይ..."</item>
+        <item>ለ%1$s የተገናኘ</item>
+        <item>ታግዷል</item>
+        <item>ከ%1$s በማለያየት ላይ....</item>
+        <item>ተለያየ</item>
+        <item>አልተሳካም</item>
+        <item>ታግዷል</item>
+        <item>ለጊዜያዊነት ከደካማ ግኑኝነት በመታቀብ ላይ</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>አዝራር ተጫን</item>
+        <item>ፒን ከአቻ መሣሪያ</item>
+        <item>ከዚህ መሣሪያ ፒን</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>ተገናኝቷል</item>
+        <item>የተጋበዘ</item>
+        <item>ስኬታማ አልነበረም</item>
+        <item>የሚገኝ</item>
+        <item>ከክልል ውጪ</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 ደቂቃዎች</item>
+        <item>5 ደቂቃዎች</item>
+        <item>1 ሰዓት</item>
+        <item>በጭራሽ አታቋርጥ</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>ደካማ</item>
+        <item>አግባብ</item>
+        <item>ጥሩ</item>
+        <item>እጅግ በጣም ጥሩ</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>ሁልጊዜ</item>
+        <item>ሲሰካ ብቻ</item>
+        <item>በፍፁም (የውሂብ አጠቃቀም ይጨምራል)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>ሁልጊዜ</item>
+        <item>ሲሰካ ብቻ</item>
+        <item>ፈፅሞ</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>ራስ ሰር</item>
+        <item>5 GHz ብቻ</item>
+        <item>5 GHz ብቻ</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>ጊዜ አጠቃቀም</item>
+        <item>ቆጠራ ጀምር</item>
+        <item>መተግበሪያ ስም</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>ምንም</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>የለም</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>አይለወጤ</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>አንዱም</item>
+        <item>መመሪያ</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>ውጪ</item>
+        <item>አንቃ</item>
+        <item>አንዝር</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>አንዱም</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP ወይም CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>ያልተገለጸ</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>ምንም</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>የውስጥ መሣሪያ ማከማቻ</item>
+        <item>ተወጋጅ SD ካርድ</item>
+        <item>ስርዓቱ ይወስን</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>መገኛ ስፍራ</item>
+        <item>የግል</item>
+        <item>መልዕክት መላኪያ</item>
+        <item>ማህደረ መረጃ</item>
+        <item>መሣሪያ</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>ግምታዊ አካባቢ</item>
+        <item>ትክክለኛ አካባቢ</item>
+        <item>ጂ ፒ ኤስ</item>
+        <item>ንዘር</item>
+        <item>እውቂያዎችን አንብብ</item>
+        <item>ዕውቂያዎችዎን ይቀይሩ</item>
+        <item>የጥሪ ምዝግብ ማስታወሻን ያንብቡ</item>
+        <item>የጥሪ ምዝግብ ማስታወሻን ይቀይሩ</item>
+        <item>የቀን መቁጠሪያ አንብብ</item>
+        <item>የቀን መቁጠሪያን ይቀይሩ</item>
+        <item>የWi-Fi ቅኝት</item>
+        <item>ማሳወቂያ</item>
+        <item>የህዋስ ቅኝት</item>
+        <item>ወደ ስልክ ደውል</item>
+        <item>ኤስ ኤም ኤስን ያንብቡ</item>
+        <item>ኤስ ኤም ኤስ ይጻፉ</item>
+        <item>ኤስ ኤም ኤስ ይቀበሉ</item>
+        <item>አስቸኳይ ኤስ ኤም ኤስ ይቀበሉ</item>
+        <item>ኤም ኤም ኤስ ይቀበሉ</item>
+        <item>የደልብዩ ኤ ፒ ግፊት ይቀበሉ</item>
+        <item>ኤስ ኤም ኤስ ይላኩ</item>
+        <item>የአይ ሲ ሲ ኤስ ኤም ኤስ ያንብቡ</item>
+        <item>የአይ ሲ ሲ ኤስ ኤም ኤስ ይጻፉ</item>
+        <item>ቅንብሮችን ይቀይሩ</item>
+        <item>ከላይ ይሳሉ</item>
+        <item>ማሳወቂያዎችን ድረስ</item>
+        <item>ካሜራ</item>
+        <item>ኦዲዮ ቅረጽ</item>
+        <item>ድምጽ አጫውት</item>
+        <item>ቅንጥብ መለያ አንብብ</item>
+        <item>ቅንጥብ መለያ ቀይር</item>
+        <item>የሚዲያ አዝራሮች</item>
+        <item>የድምጽ ትኩረት</item>
+        <item>ዋናው ድምጽ መቆጣጠሪያ</item>
+        <item>የድምጽ መጠን</item>
+        <item>የጥሪ ድምጽ መጠን</item>
+        <item>የማህደረ መረጃ መጠን</item>
+        <item>የማንቂያ ድምፅ መጠን</item>
+        <item>የማሳወቂያ ድምጽ መጠን</item>
+        <item>የብሉቱዝ ድምፅ መጠን</item>
+        <item>እንደነቃ አቆይ</item>
+        <item>አካባቢን ይቆጣጠሩ</item>
+        <item>የከፍተኛ ኃይል አካባቢ ተከታተል</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>አካባቢ</item>
+        <item>አካባቢ</item>
+        <item>አካባቢ</item>
+        <item>ንዘር</item>
+        <item>እውቂያዎችን አንብብ</item>
+        <item>ዕውቂያዎችዎን ይቀይሩ</item>
+        <item>የጥሪ ምዝግብ ማስታወሻን ያንብቡ</item>
+        <item>የጥሪ ምዝግብ ማስታወሻን ይቀይሩ</item>
+        <item>የቀን መቁጠሪያ አንብብ</item>
+        <item>የቀን መቁጠሪያን ይቀይሩ</item>
+        <item>አካባቢ</item>
+        <item>ማሳወቂያ ለጥፍ</item>
+        <item>አካባቢ</item>
+        <item>ወደ ስልክ ደውል</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ያንብቡ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይጻፉ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይላኩ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ያንብቡ</item>
+        <item>ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይጻፉ</item>
+        <item>ቅንብሮችን ይቀይሩ</item>
+        <item>ከላይ ይሳሉ</item>
+        <item>ማሳወቂያዎችን ይድረሱ</item>
+        <item>ካሜራ</item>
+        <item>ኦዲዮ ቅረጽ</item>
+        <item>ድምጽ አጫውት</item>
+        <item>ቅንጥብ ሰሌዳ አንብብ</item>
+        <item>ቅንጥብ መለያ ቀይር</item>
+        <item>የሚዲያ አዝራሮች</item>
+        <item>የድምጽ ትኩረት</item>
+        <item>ዋናው የድምጽ መቆጣጠሪያ</item>
+        <item>የድምጽ መጠን</item>
+        <item>የጥሪ መጠን</item>
+        <item>የማህደረ መረጃ ክፍልፍል</item>
+        <item>የማንቂያ ድምፅ መጠን</item>
+        <item>የማሳወቂያ ድምጽ መጠን</item>
+        <item>የብሉቱዝ ድምፅ መጠን</item>
+        <item>እንደነቃ አቆይ</item>
+        <item>አካባቢ</item>
+        <item>አካባቢ</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>አጭር</item>
+        <item>መካከለኛ</item>
+        <item>ረጅም</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>ነባሪ</item>
+        <item>ጭረት-አልባ</item>
+        <item>ጭረት-አልባ ተጨምቆ</item>
+        <item>ባለጭረት</item>
+        <item>ወጥ ስፋት</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>በጣም ትንሽ</item>
+        <item>ትንሽ</item>
+        <item>መደበኛ</item>
+        <item>ትልቅ</item>
+        <item>በጣም ትልቅ</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>ምንም የለም</item>
+        <item>ቢጋር</item>
+        <item>ጥላጣል</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>ነጭ በጥቁር ላይ</item>
+        <item>ጥቁር በነጭ ላይ</item>
+        <item>ቢጫ በጥቁር ላይ</item>
+        <item>ቢጫ በሰማያዊ ላይ</item>
+        <item>ብጁ</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (ስህተት አርም)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Dalvik ይጠቀሙ</item>
+        <item>ART ይጠቀሙ</item>
+        <item>ART ስህተት የማረም ግንባታ ይጠቀሙ</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>በፍፁም አትመልከት</item>
+        <item>የDRM ይዘት ብቻ ተመልከት</item>
+        <item>ሁልጊዜ ተመልከት</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>በፍፁም HDCP ምልከታ አትጠቀም</item>
+        <item>"ለDRM ይዘት ብቻ HDCP  ምልከታን ተጠቀም"</item>
+        <item>ሁልጊዜ የHDCP ምልከታ ተጠቀም</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>እነማ ጠፍቷል</item>
+        <item>የእነማ ልኬት ለውጥ.5x</item>
+        <item>የእነማ ልኬት ለውጥ1x</item>
+        <item>የእነማ ልኬት ለውጥ1.5x</item>
+        <item>የእነማ ልኬት ለውጥ2x</item>
+        <item>የእነማ ልኬት ለውጥ5x</item>
+        <item>የእነማ ልኬት ለውጥ10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>እነማ ጠፍቷል</item>
+        <item>የእነማ ልኬት ለውጥ.5x</item>
+        <item>የእነማ ልኬት ለውጥ1x</item>
+        <item>"የእነማ  ልኬት ለውጥ1.5x"</item>
+        <item>የእነማ ልኬት ለውጥ2x</item>
+        <item>የእነማ ልኬት ለውጥ5x</item>
+        <item>የእነማ ልኬት ለውጥ10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>እነማ ጠፍቷል</item>
+        <item>የእነማ ልኬት ለውጥ .5x</item>
+        <item>የእነማ ልኬት ለውጥ 1x</item>
+        <item>የእነማ ልኬት ለውጥ 1.5x</item>
+        <item>የእነማ ልኬት ለውጥ 2x</item>
+        <item>የእነማ ልኬት ለውጥ 5x</item>
+        <item>የእነማ ልኬት ለውጥ 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>ምንም የለም</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 ኤም ዲ ፒ አይ (የተጠበቀ)</item>
+        <item>1280x720 ቲ ቪ ዲ ፒ አይ</item>
+        <item>1280x720 ቲ ቪ ዲ ፒ አይ (የተጠበቀ)</item>
+        <item>1920x1080 ኤክስ ኤች ዲ ፒ አይ</item>
+        <item>1920x1080 ኤክስ ኤች ዲ ፒ አይ (የተጠበቀ)</item>
+        <item>1280x720 ቲ ቪ ዲ ፒ አይ እና 1920x1080 ኤክስ ኤች ዲ ፒ አይ</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>ምንም</item>
+        <item>Logcat</item>
+        <item>Systrace (ግራፊክስ)</item>
+        <item>የጥሪ ቁልል በ glGetError ላይ</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>ጠፍቷል</item>
+        <item>አራት ማእዘን ያልሆነ የቅንጥብ ክልልን በሰማያዊ ይሳሉ</item>
+        <item>የተሞከሩ የስእል ትእዛዞችን በአረንጓዴ ያድምቁ</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>ጠፍቷል</item>
+        <item>ማያ ገጽ ላይ እንደ አሞሌዎች</item>
+        <item>ማያ ገጽ ላይ እንደ መስመሮች</item>
+        <item>በ adb shell dumpsys gfxinfo ውስጥ</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>ጠፍቷል</item>
+        <item>ስዕሉ አልፎ የፈሰሰባቸው አካባቢዎችን አሳይ</item>
+        <item>ቀይ እና አረንጓዴ የማይለይባቸው ቦታዎች አሳይ</item>
+        <item>የአልፎ ፍሰት ቆጣሪውን አሳይ</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>መደበኛ ወሰኖች</item>
+        <item>ምንም የዳራ ሂደቶች የሉም</item>
+        <item>"ቢበዛ 1  ሂደት"</item>
+        <item>"ቢበዛ 2  ሂደቶች"</item>
+        <item>"ቢበዛ 3  ሂደቶች"</item>
+        <item>"ቢበዛ 4  ሂደቶች"</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec VPN ከቅድመ-ተጋሪ ቁልፎች ጋር</item>
+        <item>የL2TP/IPSec VPN ከምስክሮችጋር</item>
+        <item>የIPSec VPN በቅድመ ተጋሪ ቁልፎችእና በXauth ማረጋገጥ</item>
+        <item>የIPSec VPN በምስክር እና በXauth ማረጋገጥ</item>
+        <item>"የIPSec VPN በዕውቅና ማረጋገጫ  እና በድቀላ ማረጋገጥ"</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>ተለያየ</item>
+        <item>እየጀመረ ነው…</item>
+        <item>በማገናኘት ላይ…</item>
+        <item>ተገናኝቷል</item>
+        <item>ጊዜው አልቋል</item>
+        <item>ስኬታማ አልነበረም</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>ጠይቅ</item>
+        <item>በጭራሽ አትፍቀድ</item>
+        <item>ሁልጊዜ ፍቀድ</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>መደበኛ</item>
+        <item>መጠነኛ</item>
+        <item>ዝቅተኛ</item>
+        <item>አሳሳቢ</item>
+    </string-array>
+</resources>

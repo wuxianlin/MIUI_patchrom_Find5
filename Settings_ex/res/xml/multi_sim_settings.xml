@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:persistent="false" android:title="@string/sel_sub_title" android:key="config_sub" android:summary="@string/sel_sub_summary">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.SetSubscription" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:persistent="false" android:title="@string/tune_away_title" android:key="tune_away" />
+    <ListPreference android:persistent="false" android:title="@string/priority_sub_title" android:key="priority_subscription" />
+    <PreferenceCategory android:title="@string/multi_sim_settings_group_summary" android:key="multi_sim_settings">
+        <ListPreference android:persistent="false" android:title="@string/voice_title" android:key="voice" />
+        <ListPreference android:persistent="false" android:title="@string/data_title" android:key="data" />
+        <ListPreference android:persistent="false" android:title="@string/sms_title" android:key="sms" />
+    </PreferenceCategory>
+</PreferenceScreen>

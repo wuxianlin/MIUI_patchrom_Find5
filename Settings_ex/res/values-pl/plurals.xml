@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d sekund</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekundy</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d razy</item>
+        <item quantity="one">raz</item>
+        <item quantity="few">%d razy</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Od zostania programistą dzieli Cię już tylko tyle kroków: %1$d.</item>
+        <item quantity="one">Od zostania programistą dzieli Cię już tylko %1$d krok.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Hasło musi zawierać litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Hasło musi zawierać małe litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną małą literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Hasło musi zawierać wielkie litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną wielką literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Hasło musi zawierać cyfry (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną cyfrę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Hasło musi zawierać symbole specjalne (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jeden symbol specjalny.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Hasło musi zawierać znaki inne niż litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jeden znak niebędący literą.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Aplikacje, które mogą odczytywać powiadomienia: %d</item>
+        <item quantity="one">%d aplikacja może odczytywać powiadomienia</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Nieprawidłowy kod PIN karty SIM. Masz jeszcze %d prób(y).</item>
+        <item quantity="one">Nieprawidłowy kod PIN karty SIM. Masz jeszcze %d próbę, zanim będziesz musiał skontaktować się z operatorem, by odblokował Twoje urządzenie.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Znalezione drukarki: %1$s</item>
+        <item quantity="one">Znaleziono %1$s drukarkę</item>
+    </plurals>
+</resources>

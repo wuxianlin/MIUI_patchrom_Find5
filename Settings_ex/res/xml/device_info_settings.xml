@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/about_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/system_update_settings_list_item_title" android:key="system_update_settings" android:summary="@string/system_update_settings_list_item_summary">
+        <intent android:targetPackage="com.cyngn.fota" android:action="android.settings.SYSTEM_UPDATE_SETTINGS" android:targetClass="com.cyngn.fota.SystemUpdateActivity" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/additional_system_update_settings_list_item_title" android:key="additional_system_update_settings">
+        <intent android:targetPackage="@string/additional_system_update" android:action="android.intent.action.MAIN" android:targetClass="@string/additional_system_update_menu" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/device_status" android:key="status_info" android:summary="@string/device_status_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.deviceinfo.Status" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/cmupdate_settings_title" android:key="cm_updates" android:summary="@string/cmupdate_settings_summary">
+        <intent android:targetPackage="com.cyanogenmod.updater" android:action="android.intent.action.MAIN" android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/changelog_title" android:key="changelog" android:fragment="com.android.settings.cyanogenmod.ChangeLog" />
+    <PreferenceScreen android:title="@string/contributor_cloud_title" android:key="contributor_cloud" android:fragment="com.android.settings.cyanogenmod.ContributorsCloud" />
+    <PreferenceScreen android:title="@string/legal_information" android:key="container">
+        <PreferenceScreen android:title="@string/copyright_title" android:key="copyright">
+            <intent android:action="android.settings.COPYRIGHT" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/license_title" android:key="license">
+            <intent android:action="android.settings.LICENSE" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/cmlicense_title" android:key="cmlicense">
+            <intent android:action="android.settings.CMLICENSE" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/terms_title" android:key="terms">
+            <intent android:action="android.settings.TERMS" />
+        </PreferenceScreen>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_safetylegal_title" android:key="safetylegal">
+        <intent android:action="android.settings.SAFETY" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/regulatory_information" android:key="regulatory_info">
+        <intent android:action="android.settings.SHOW_REGULATORY_INFO" />
+    </PreferenceScreen>
+    <Preference android:title="@string/model_number" android:key="device_model" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/mod_version" android:key="mod_version" android:summary="@string/mod_version_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/firmware_version" android:key="firmware_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/fcc_equipment_id" android:key="fcc_equipment_id" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/baseband_version" android:key="baseband_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/kernel_version" android:key="kernel_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/cpu_info" android:key="device_cpu" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/mem_info" android:key="device_memory" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/build_date" android:key="build_date" android:summary="@string/build_date_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/build_number" android:key="build_number" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
+    <Preference android:title="@string/selinux_status" android:key="selinux_status" android:summary="@string/selinux_status_enforcing" style="?android:preferenceInformationStyle" />
+</PreferenceScreen>

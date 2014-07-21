@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="screen_color_setting">
+        <item>پێوانەیی</item>
+        <item>زیرەکی</item>
+        <item>دەستکرد</item>
+    </string-array>
+    <string-array name="wifi_countrycode_entries">
+        <item>ئەمریکا</item>
+        <item>کەنەدا،تایوان</item>
+        <item>ئەلمانیا</item>
+        <item>ئەوروپا</item>
+        <item>ژاپۆن, ڕووسیا</item>
+        <item>ئوسترالیا</item>
+        <item>چین</item>
+        <item>کۆڕیا</item>
+        <item>تورکیا</item>
+        <item>سینگاپوور</item>
+        <item>به‌ڕازیل</item>
+    </string-array>
+    <string-array name="profile_entries">
+        <item>کردنەوه</item>
+        <item>کوژانەوه</item>
+        <item>زیادەڕەوی نیە</item>
+    </string-array>
+    <string-array name="profile_connection_entries">
+        <item>ناچالاککردن</item>
+        <item>چالاککردن</item>
+    </string-array>
+    <string-array name="entries_screentimeout_widget">
+        <item>15s | 1m | 5m</item>
+        <item>30s | 2m | 5m</item>
+    </string-array>
+    <string-array name="data_usage_cycle_weekdays">
+        <item>یەکشەممە</item>
+        <item>دووشەممە</item>
+        <item>سێشەممە</item>
+        <item>چوارشەممە</item>
+        <item>پێنچ شەممە</item>
+        <item>هەینی</item>
+        <item>شەممە</item>
+    </string-array>
+    <string-array name="app_ops_permissions">
+        <item>ڕێپێدراوه</item>
+        <item>نکوڵی کرا</item>
+        <item>هەمیشه پرسیارکردن</item>
+    </string-array>
+</resources>

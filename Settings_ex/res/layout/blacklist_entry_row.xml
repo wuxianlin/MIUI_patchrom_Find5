@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="5.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <TextView android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/textAppearanceMedium" />
+        <TextView android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+    <com.android.settings.blacklist.ToggleImageView android:id="@id/block_calls" android:clickable="true" android:layout_width="@*android:dimen/app_icon_size" android:layout_height="@*android:dimen/app_icon_size" android:src="@drawable/ic_blacklist_calls" android:scaleType="centerInside" android:contentDescription="@null" />
+    <com.android.settings.blacklist.ToggleImageView android:id="@id/block_messages" android:clickable="true" android:layout_width="@*android:dimen/app_icon_size" android:layout_height="@*android:dimen/app_icon_size" android:src="@drawable/ic_blacklist_messages" android:scaleType="centerInside" android:contentDescription="@null" />
+</LinearLayout>

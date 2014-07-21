@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d sekunder</item>
+        <item quantity="one">%d sekund</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d gånger</item>
+        <item quantity="one">en gång</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Du är nu %1$d steg från att bli utvecklare.</item>
+        <item quantity="one">Du är nu %1$d steg från att bli utvecklare.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Lösenord måste innehålla minst %d bokstäver.</item>
+        <item quantity="one">Lösenord måste innehålla minst en bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Lösenord måste innehålla minst %d små bokstäver.</item>
+        <item quantity="one">Lösenordet måste innehålla minst en liten bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Lösenord måste innehålla minst %d stora bokstäver.</item>
+        <item quantity="one">Lösenord måste innehålla minst en stor bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Lösenord måste innehålla minst %d siffror.</item>
+        <item quantity="one">Lösenord måste innehålla minst en siffra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Lösenordet måste innehålla minst %d specialsymboler.</item>
+        <item quantity="one">Lösenord måste innehålla minst en specialsymbol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Lösenordet måste innehålla minst %d tecken som inte är bokstäver.</item>
+        <item quantity="one">Lösenordet måste innehålla minst ett tecken som inte är en bokstav.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d appar kan läsa meddelanden</item>
+        <item quantity="one">%d app kan läsa meddelanden</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Du angav fel pinkod för SIM-kortet. %d försök återstår.</item>
+        <item quantity="one">Du angav fel pinkod för SIM-kortet. %d försök återstår innan du måste kontakta operatören för att låsa upp enheten.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s skrivare hittades</item>
+        <item quantity="one">%1$s skrivare hittades</item>
+    </plurals>
+</resources>

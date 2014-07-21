@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/profile_name_title" android:key="profile_general_section" />
+    <PreferenceCategory android:title="@string/profile_connectionoverrides_title" android:key="profile_connectionoverrides" />
+    <PreferenceCategory android:title="@string/profile_volumeoverrides_title" android:key="profile_volumeoverrides" />
+    <PreferenceCategory android:title="@string/profile_system_settings_title" android:key="profile_system_settings" />
+    <PreferenceCategory android:title="@string/profile_appgroups_title" android:key="profile_appgroups" />
+</PreferenceScreen>

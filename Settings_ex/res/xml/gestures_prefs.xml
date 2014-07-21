@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/enable_subcat_title">
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/enable_spen_title_head" android:key="enable_stylus_gestures" android:summary="@string/enable_spen_summary_head" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/gestures_subcat_title">
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_left_spen_title_head" android:key="gestures_left" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_right_spen_title_head" android:key="gestures_right" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_up_spen_title_head" android:key="gestures_up" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_down_spen_title_head" android:key="gestures_down" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_long_spen_title_head" android:key="gestures_long" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+        <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_double_spen_title_head" android:key="gestures_double" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

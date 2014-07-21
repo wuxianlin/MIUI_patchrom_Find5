@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/power_menu_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_reboot_title" android:key="power_menu_reboot_enabled" android:defaultValue="true" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_screenshot_title" android:key="power_menu_screenshot_enabled" android:defaultValue="false" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_expanded_desktop" android:key="power_menu_expanded_desktop_enabled" android:defaultValue="false" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_profiles_title" android:key="power_menu_profiles_enabled" android:defaultValue="true" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_airplane_title" android:key="power_menu_airplane_enabled" android:defaultValue="true" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_user_title" android:key="power_menu_user_enabled" android:defaultValue="false" />
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/power_menu_sound_title" android:key="power_menu_silent_enabled" android:defaultValue="true" />
+</PreferenceScreen>

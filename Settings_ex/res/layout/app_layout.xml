@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/app_info" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/packageinfo" />
+    <TextView android:textColor="@color/holo_red_dark" android:gravity="center" android:id="@id/developer_warning" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/developer_warning" />
+</merge>

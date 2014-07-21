@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/app_security_title" android:key="app_security">
+        <ListPreference android:entries="@array/sms_security_check_limit_entries" android:title="@string/sms_security_check_limit_title" android:key="sms_security_check_limit" android:defaultValue="30" android:dialogTitle="@string/sms_security_check_limit_title" android:entryValues="@array/sms_security_check_limit_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>i-America</item>
+        <item>i-Europe</item>
+        <item>i-Afrika</item>
+        <item>i-Asia</item>
+        <item>i-Australia</item>
+        <item>Iphasifiki</item>
+        <item>Konke</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 amasekhondi</item>
+        <item>30 amasekhondi</item>
+        <item>1 iminithi</item>
+        <item>2 amaminithi</item>
+        <item>amaminithii angu-5</item>
+        <item>10 amaminithi</item>
+        <item>30 amaminithi</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Akusoze</item>
+        <item>15 amasekhondi</item>
+        <item>30 amasekhondi</item>
+        <item>1 iminithi</item>
+        <item>2 amaminithi</item>
+        <item>5 amaminithi</item>
+        <item>10 amaminithi</item>
+        <item>30 amaminithi</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Ngokushesha</item>
+        <item>5 amasekhondi</item>
+        <item>15 amasekhondi</item>
+        <item>30 amasekhondi</item>
+        <item>1 iminithi</item>
+        <item>2 amaminithi</item>
+        <item>5 amaminithi</item>
+        <item>10 amaminithi</item>
+        <item>30 amaminithi</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Ncane</item>
+        <item>Jwayelekile</item>
+        <item>Okukhulu</item>
+        <item>Nkulu kakhulu</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Phansi kakhulu</item>
+        <item>Phansi</item>
+        <item>Jwayelekile</item>
+        <item>Sheshayo</item>
+        <item>Ngokushesha</item>
+        <item>Kushesha kakhulu</item>
+        <item>Esheshisayo</item>
+        <item>Esheshisa kakhulu</item>
+        <item>Esheshisa kakhulukhulu</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Phansi kakhulu</item>
+        <item>Phansi</item>
+        <item>Jwayelekile</item>
+        <item>Phezulu</item>
+        <item>Phezulu kakhulu</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Iyathwebula...</item>
+        <item>Iyaxhuma kwi-inthanethi...</item>
+        <item>Iyaqinisekisa...</item>
+        <item>Ithola ikheli le-IP...</item>
+        <item>Ixhunyiwe kwi-inthanethi</item>
+        <item>Kumiswe okwesikhashana</item>
+        <item>Inqamula uxhumano kwi-inthanethi...</item>
+        <item>Ayixhunyiwe</item>
+        <item>Akuphumelelanga</item>
+        <item>Uvinjelwe</item>
+        <item>Okwesikhashana ivikela ukuxhumana okungaqinile</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Iyathwebula...</item>
+        <item>Ixhuma ku-%1$s...</item>
+        <item>Iqinisekisa nge %1$s...</item>
+        <item>Ithola ikheli le-IP kusuka %1$s...</item>
+        <item>Ixhumeke ku-%1$s</item>
+        <item>Kumiswe okwesikhashana</item>
+        <item>Inqamula kusuka %1$s…</item>
+        <item>Ayixhunyiwe kwi-inthanethi</item>
+        <item>Akuphumelelanga</item>
+        <item>Uvinjelwe</item>
+        <item>Okwesikhashana ivikela ukuxhumana okungaqinile</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>I-PEAP</item>
+        <item>i-TLS</item>
+        <item>i-TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Cindezela inkinobho</item>
+        <item>Iphinikhodi kusuka kudivaysisi yabangani</item>
+        <item>Iphinilkhodi kusuka kuledivaysi</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Ixhunyiwe kwi-inthanethi</item>
+        <item>Menyiwe</item>
+        <item>Akuphumelelanga</item>
+        <item>Tholakalayo</item>
+        <item>Ikude nebanga</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 amaminithi</item>
+        <item>amaminithii angu-5</item>
+        <item>1 ihora</item>
+        <item>Ayiphelelwa isikhathi</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Akukuhle</item>
+        <item>Kulungile</item>
+        <item>Kuhle</item>
+        <item>Kuhle kakhulu</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Njalo</item>
+        <item>Uma ixhunyiwe kuphela</item>
+        <item>Akusoze (yenyusa ukusetshenziswa kwedatha)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Njalo</item>
+        <item>Uma ixhunyiwe kuphela</item>
+        <item>Akusoze</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Okuzenzakalelayo</item>
+        <item>i-5 GHz kuphela</item>
+        <item>i-2.4 GHz kuphela</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Isikhathi sokusetshenziswa</item>
+        <item>Qalisa ukubala</item>
+        <item>Igama lohlelo lokusebenza</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>I-PEAP</item>
+        <item>I-TLS</item>
+        <item>I-TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Lutho</item>
+        <item>I-MSCHAPV2</item>
+        <item>I-GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Lutho</item>
+        <item>I-PAP</item>
+        <item>I-MSCHAP</item>
+        <item>I-MSCHAPV2</item>
+        <item>I-GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>i-DHCP</item>
+        <item>Isibalo</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Lutho</item>
+        <item>Ngokulawulwa</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Valiwe</item>
+        <item>Isaziso</item>
+        <item>Dlidliza</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Lutho</item>
+        <item>i-PAP</item>
+        <item>i-CHAP</item>
+        <item>i-PAP noma i-CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>i-LTE</item>
+        <item>eHRPD</item>
+        <item>(okungacacisiwe)</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Lutho</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Isitoreji sedivaysi yangaphakathi</item>
+        <item>Khipha ikhadi le-SD</item>
+        <item>Vumela isistimu inqume</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>Indawo</item>
+        <item>Okomuntu siqu</item>
+        <item>Imilayezo</item>
+        <item>Abezindaba</item>
+        <item>Idivayisi</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>indawo emaholoholo</item>
+        <item>indawo elungile</item>
+        <item>I-GPS</item>
+        <item>dlidliza</item>
+        <item>funda oxhumana nabo</item>
+        <item>shintsha oxhumana nabo</item>
+        <item>funda irekhodi lwamakholi</item>
+        <item>shintsha irekhodi lwamakholi</item>
+        <item>funda ikhalenda</item>
+        <item>shintsha ikhalenda</item>
+        <item>isikeni se-Wi-Fi</item>
+        <item>isaziso</item>
+        <item>ukuskena iseli</item>
+        <item>shayela ifoni</item>
+        <item>funda i-SMS</item>
+        <item>bhala i-SMS</item>
+        <item>thola i-SMS</item>
+        <item>thola i-SMS yezimo eziphuthumayo</item>
+        <item>thola i-MMS</item>
+        <item>thola ukuphushwa kwe-WAP</item>
+        <item>Thumela i-SMS</item>
+        <item>Funda i-ICC SMS</item>
+        <item>bhala i-ICC SMS</item>
+        <item>shintsha izilungiselelo</item>
+        <item>dweba ngaphezulu</item>
+        <item>finyelela kuzaziso</item>
+        <item>ikhamera</item>
+        <item>qopha umsindo</item>
+        <item>dlala umsindo</item>
+        <item>funda ibhodi lokunamathisela</item>
+        <item>shintsha ibhodi lokunamathisela</item>
+        <item>izinkinobho zabezindaba</item>
+        <item>ukugxila komsindo</item>
+        <item>ivolumu kangqo</item>
+        <item>ivolumu yezwi</item>
+        <item>ivolumu yokukhala</item>
+        <item>ivolumu yabezindaba</item>
+        <item>ivolumu ye-alamu</item>
+        <item>ivolumu yesaziso</item>
+        <item>ivolumu ye-bluetooth</item>
+        <item>gcina kuphapheme</item>
+        <item>ngamela indawo</item>
+        <item>yongamela indawo yamandla aphezulu</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Indawo</item>
+        <item>Indawo</item>
+        <item>Indawo</item>
+        <item>Dlidliza</item>
+        <item>Funda oxhumana nabo</item>
+        <item>Shintsha oxhumana nabo</item>
+        <item>Funda irekhodi lwamakholi</item>
+        <item>Shintsha irekhodi lwamakholi</item>
+        <item>Funda ikhalenda</item>
+        <item>Shintsha ikhalenda</item>
+        <item>Indawo</item>
+        <item>Isaziso sokuthunyelwe</item>
+        <item>Indawo</item>
+        <item>Shayela ifoni</item>
+        <item>Funda i-SMS/MMS</item>
+        <item>Bhala i-SMS/MMS</item>
+        <item>Thola i-SMS/MMS</item>
+        <item>Thola i-SMS/MMS</item>
+        <item>Thola i-SMS/MMS</item>
+        <item>Thola i-SMS/MMS</item>
+        <item>Thumela i-SMS/MMS</item>
+        <item>Funda i-SMS/MMS</item>
+        <item>Bhala i-SMS/MMS</item>
+        <item>Shintsha izilungiselelo</item>
+        <item>Dweba ngaphezulu</item>
+        <item>Finyelela kuzaziso</item>
+        <item>Ikhamera</item>
+        <item>Qopha umsindo</item>
+        <item>Dlala umsindo</item>
+        <item>Funda ibhodi lokunamathisela</item>
+        <item>Shintsha ibhodi lokunamathisela</item>
+        <item>Izinkinobho zabezindaba</item>
+        <item>Ukugxila komsindo</item>
+        <item>Ivolumu kangqo</item>
+        <item>Ivolumu yezwi</item>
+        <item>Ivolumu yokukhala</item>
+        <item>Ivolumu yabezindaba</item>
+        <item>Ivolumu ye-alamu</item>
+        <item>Ivolumu yesaziso</item>
+        <item>Ivolumu ye-Bluetooth</item>
+        <item>Gcina kuphapheme</item>
+        <item>Indawo</item>
+        <item>Indawo</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Kufushane</item>
+        <item>Okulingene</item>
+        <item>Kude</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Okuzenzakalelayo</item>
+        <item>I-Sans Serif</item>
+        <item>I-Sans-serif ejiyisiwe</item>
+        <item>I-Serif</item>
+        <item>I-Monospace</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Kuncane kakhulu</item>
+        <item>Kuncane</item>
+        <item>Jwayelekile</item>
+        <item>Kukhulu</item>
+        <item>Kukhulu kakhulu</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Lutho</item>
+        <item>Uhlaka</item>
+        <item>Isithunzi sefu</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Okumhlophe kokumnyama</item>
+        <item>Okumnyama kokumhlophe</item>
+        <item>Okuliphuzi kokumnyama</item>
+        <item>Okuliphuzi kokuluhlaza</item>
+        <item>Ngokwezifiso</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>I-Dalvik</item>
+        <item>UBUCIKO</item>
+        <item>UBUCIKO (ukulungisa iphutha)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Sebenzisa i-Dalvik</item>
+        <item>Sebenzisa UBUCIKO</item>
+        <item>Sebenzisa ukwakha kokulungisa iphutha LOBUCIKO</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Akusoze kuhlole</item>
+        <item>Hlola okuqukethwe kwe-DRM kuphela</item>
+        <item>Hlola njalo</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Ungasoze wasebenzisa ukuhlola kwe-HDCP</item>
+        <item>Sebenzisa ukuhlola kwe-HDCP kokuqukethwe i-DRM kuphela</item>
+        <item>Sebenzisa njalo ukuhlola kwe-HDPC</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Isithombe esinyakazayo sivliwe</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-05x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-1x</item>
+        <item>Isilinganiso sesithombe esinyakazayo</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-2x</item>
+        <item>Isilinganiso sesithombe esinyakazayo</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Isithombe esinyakazayo sivaliwe</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-.5x</item>
+        <item>Isilinganiso sesithombe ngu-1x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-1.5x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-2x</item>
+        <item>Isilinganisi sesithombe esinyakazayo 5x</item>
+        <item>Isilinganiso sesithombe esinyakazayo</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Isithombe esinyakazayo sivaliwe</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-05x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-1x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-1.5x</item>
+        <item>Isilinganiso sesithombe esinyakazayo ngu-2x</item>
+        <item>Isilinganisi sesithombe esinyakazayo 5x</item>
+        <item>Isilinganiso sesithombe esinyakazayo 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Akunalutho</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (kuphephile)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (kuphephile)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (kuphephile)</item>
+        <item>1280x720 tvdpi ne-1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Akunalutho</item>
+        <item>i-Logcat</item>
+        <item>i-Systrace (izithombe)</item>
+        <item>Isitaki socingo ku-glGetError</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Valiwe</item>
+        <item>Dweba indawo yesiqeshana engesiyena unxantathu ngokuphuzi okwesibhakabhaka</item>
+        <item>Beka obala iziqondiso ezihloliwe zokudwebela ngokuphuzi</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Valiwe</item>
+        <item>Kusikrini njengamabha</item>
+        <item>Kusikrini njengemigqa</item>
+        <item>Ku-adb shell dumpsys gfxinfo</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Valiwe</item>
+        <item>Bonisa izindawo zokukhipha okungaphezulu</item>
+        <item>Bonisa izindawo ze-Deuteranomaly</item>
+        <item>Bonisa ikhawunda yokukhipha okuningi</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Isilanganiso esivamile</item>
+        <item>Azikho izinqubo zesizinda</item>
+        <item>Inqubo engezansi kweyodwa ngokwesilinganiso</item>
+        <item>Izinqubo ezingaba ngu-2 ngokwesilinganiso esiphazulu</item>
+        <item>Izinqubo okungenani ezingu-3</item>
+        <item>Izinguquko ezingingadluli ezingu-4</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>i-L2TP/IPSec VPN nokhiye okwabeliswaniwa ngabo</item>
+        <item>i-L2TP/IPSec VPN ngezitifiketi</item>
+        <item>i-IPSec VPN nokhiye ababelanwe ngabo nokufakazela ubuqiniso be-Xauth</item>
+        <item>i-IPSec VPN kanye nezitifiketi nokufakazela ubuqiniso be-Xauth</item>
+        <item>i-IPSec VPN nezitifiketi nokufakazela ubuqiniso nge-hybrid</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Ayixhunyiwe</item>
+        <item>Iyaqalisa...</item>
+        <item>Iyaxhuma...</item>
+        <item>Ixhunyiwe kwi-inthanethi</item>
+        <item>Isikhathi siphelile</item>
+        <item>Akuphumelelanga</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Buza</item>
+        <item>Ungavumeli</item>
+        <item>Vumela njalo?</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>jwayelekile</item>
+        <item>maphakathi</item>
+        <item>phansi</item>
+        <item>bucayi</item>
+    </string-array>
+</resources>

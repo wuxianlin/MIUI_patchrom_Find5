@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title_general" android:key="pref_general_settings">
+        <ListPreference android:persistent="false" android:entries="@array/quick_pulldown_entries" android:title="@string/title_quick_pulldown" android:key="quick_pulldown" android:entryValues="@array/quick_pulldown_values" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_collapse_panel" android:key="qs_collapse_panel" android:summary="@string/summary_collapse_panel" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_qs_small_icons" android:key="qs_small_icons" android:summary="@string/summary_qs_small_icons" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_static_tiles" android:key="static_tiles">
+        <PreferenceScreen android:title="@string/tile_picker_title" android:key="tile_picker" android:summary="@string/tile_picker_summary" android:fragment="com.android.settings.quicksettings.QuickSettingsTiles" />
+        <MultiSelectListPreference android:entries="@array/entries_ring_widget" android:title="@string/pref_ring_mode_title" android:key="pref_ring_mode" android:summary="@string/pref_ring_mode_summary" android:dialogTitle="@string/pref_ring_mode_title" android:entryValues="@array/values_ring_widget" />
+        <ListPreference android:entries="@array/entries_network_widget" android:title="@string/pref_network_mode_title" android:key="pref_network_mode" android:dialogTitle="@string/pref_network_mode_title" android:entryValues="@array/values_network_widget" />
+        <ListPreference android:entries="@array/entries_screentimeout_widget" android:title="@string/pref_screentimeout_mode_title" android:key="pref_screentimeout_mode" android:dialogTitle="@string/pref_screentimeout_mode_title" android:entryValues="@array/values_screentimeout_widget" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_dynamic_tiles" android:key="pref_dynamic_tiles">
+        <Preference android:title="@string/dynamic_tiles_note_title" android:selectable="false" android:summary="@string/dynamic_tiles_note_summary" style="?android:preferenceInformationStyle" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_alarm" android:key="qs_dyanmic_alarm" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_bugreport" android:key="qs_dyanmic_bugreport" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_dock_battery" android:key="qs_dyanmic_dock_battery" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_ime" android:key="qs_dyanmic_ime" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_usbtether" android:key="qs_dyanmic_usbtether" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_wifi" android:key="qs_dyanmic_wifi" android:defaultValue="true" />
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/title_dynamic_equalizer" android:key="qs_dynamic_equalizer" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

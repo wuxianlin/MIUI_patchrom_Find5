@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Щоб стати розробником, залишилося лише стільки кроків: %1$d.</item>
+        <item quantity="one">Щоб стати розробником, залишився лише %1$d крок.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Пароль має містити принаймні стільки літер: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 літеру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Пароль має містити принаймні стільки малих літер: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 малу літеру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Пароль має містити принаймні стільки великих літер: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 велику літеру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Пароль має містити принаймні стільки цифр: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 цифру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Пароль має містити принаймні стільки спеціальних символів: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 спеціальний символ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Пароль має містити принаймні стільки небуквених символів: %d.</item>
+        <item quantity="one">Пароль має містити принаймні 1 небуквений символ.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Програми, що можуть читати сповіщення: %d</item>
+        <item quantity="one">Програми, що можуть читати сповіщення: %d</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Неправильний PIN-код SIM-карти. У вас залишилося стільки спроб: %d.</item>
+        <item quantity="one">Неправильний PIN-код SIM-карти. У вас залишилась %d спроба. Після цього потрібно буде зв’язатися з оператором, щоб розблокувати пристрій.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Знайдено принтерів: %1$s</item>
+        <item quantity="one">Знайдено принтерів: %1$s</item>
+    </plurals>
+</resources>

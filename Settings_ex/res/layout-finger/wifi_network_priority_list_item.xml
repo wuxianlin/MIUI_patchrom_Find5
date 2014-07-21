@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="64.0dip" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@*android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="64.0dip" android:ignoreGravity="@id/icon"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/grabber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_grabber" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:paddingStart="9.0dip" android:paddingEnd="9.0dip" android:layout_toStartOf="@id/icon" android:layout_toEndOf="@id/grabber" />
+    </RelativeLayout>
+</LinearLayout>

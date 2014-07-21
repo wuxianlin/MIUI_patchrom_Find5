@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d秒</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d回</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">デベロッパーになるまであと%1$dステップです。</item>
+        <item quantity="one">デベロッパーになるまであと%1$dステップです。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">パスワードには英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">パスワードには小文字の英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには小文字の英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">パスワードには大文字の英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには大文字の英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">パスワードには数字が%d個以上必要です。</item>
+        <item quantity="one">パスワードには数字が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">パスワードには記号が%d個以上必要です。</item>
+        <item quantity="one">パスワードには記号が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">パスワードには記号または数字が%d個以上必要です。</item>
+        <item quantity="one">パスワードには記号または数字が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d個のアプリが通知を読み取ることができます</item>
+        <item quantity="one">%d個のアプリが通知を読み取ることができます</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">SIM PINコードが無効です。入力できるのはあと%d回です。</item>
+        <item quantity="one">SIM PINコードが無効です。入力できるのはあと%d回です。この回数を超えると、お使いの端末をロック解除するのに携帯通信会社にお問い合わせいただく必要があります。</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s台のプリンタが見つかりました</item>
+        <item quantity="one">%1$s台のプリンタが見つかりました</item>
+    </plurals>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">%d segundu</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d vegaes</item>
+        <item quantity="one">una vegada</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Agora tas a %1$d pasos de ser un desendolcador</item>
+        <item quantity="one">Agora tas a %1$d pasu de ser un desendolcador</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">La contraseña tien de tener polo menos %d lletres.</item>
+        <item quantity="one">La contraseña tien de tener polo menos una lletra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">La contraseña tien de tener polo menos %d lletres minúscules.</item>
+        <item quantity="one">La contraseña tien de tener polo menos una lletra minúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">La contraseña tien de tener polo menos %d lletres mayúscules.</item>
+        <item quantity="one">La contraseña tien de tener polo menos una lletra mayúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">La contraseña tien de tener polo menos %d díxitos numbéricos.</item>
+        <item quantity="one">La contraseña tien de tener polo menos un díxitu numbéricu.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">La contraseña tien de tener polo menos %d símbolos especiales.</item>
+        <item quantity="one">La contraseña tien de tener polo menos un símbolu especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">La contraseña tien de tener polo menos %d caráuteres non alfabéticos.</item>
+        <item quantity="one">La contraseña tien de tener polo menos un caráuter non alfabéticu.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplicaciones puen lleer notificaciones.</item>
+        <item quantity="one">%d aplicación pue lleer notificaciones.</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Códigu PIN de la tarxeta SIM incorreutu. Queden %d intentos.</item>
+        <item quantity="one">Códigu PIN de la tarxeta SIM incorreutu. Queda %d intentu pa tener que ponete en contautu col operador pa desbloquiar el preséu.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Atopáronse %1$s imprentadores</item>
+        <item quantity="one">Atopóse %1$s imprentadora</item>
+    </plurals>
+</resources>

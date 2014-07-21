@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/start_time" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:orientation="vertical" android:paddingTop="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/start_time_title" android:paddingStart="16.0dip" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/start_time_text" android:paddingBottom="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:background="@*android:drawable/divider_horizontal_dark" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/end_time" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:orientation="vertical" android:paddingTop="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/end_time_title" android:paddingStart="16.0dip" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/end_time_text" android:paddingBottom="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

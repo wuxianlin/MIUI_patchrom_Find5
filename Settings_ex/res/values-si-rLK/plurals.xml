@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">ඔබට දැන් වර්ධකයකු වීමට ඇත්තේ පියවර %1$d කි.</item>
+        <item quantity="one">ඔබට දැන් වර්ධකයකු වීමට ඇත්තේ පියවර %1$d කි.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් අකුරු %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">මුරපදයෙහි අවම වශයෙන් අකුරු 1 ක් වත් තිබිය යුතුය.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් කුඩා අකුරු %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">මුරපදයෙහි අවම වශයෙන් කුඩා අකුරු 1 ක් වත් තිබිය යුතුය.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් කැපිටල් අකුරු %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">මුරපදයෙහි අවම වශයෙන් කැපිටල් අකුරු 1 ක් වත් තිබිය යුතුය.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් සංඛ්‍යාත්මක ඉලක්කම් %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">මුරපදයෙහි අවම වශයෙන් සංඛ්‍යාත්මක ඉලක්කම් 1 ක් වත් තිබිය යුතුය.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් විශේෂ සංකේත %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">රහස්පදය සඳහා අඩුතරමේ එක් විශේෂ සලකුණක් වත් අඩංගු විය යුතුය.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">මුරපදයෙහි අවම වශයෙන් අකුරක් නොවන අක්ෂර %d ක් වත් තිබිය යුතුය.</item>
+        <item quantity="one">මුරපදයෙහි අවම වශයෙන් අකුරක් නොවන අක්ෂර 1 ක් වත් තිබිය යුතුය.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">යෙදුම් %d කට දැනුම්දීම් කියවිය හැක</item>
+        <item quantity="one">යෙදුම් %d කට දැනුම්දීම් කියවිය හැක</item>
+    </plurals>
+</resources>

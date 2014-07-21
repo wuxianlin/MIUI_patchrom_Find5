@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d másodperc</item>
+        <item quantity="one">%d másodperc</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d alkalommal</item>
+        <item quantity="one">egyszer</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">%1$d lépésre van attól, hogy fejlesztő legyen.</item>
+        <item quantity="one">%1$d lépésre van attól, hogy fejlesztő legyen.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d betűt.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1 betűt.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d kisbetűt.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1 kisbetűt.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d nagybetűt.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1 nagybetűt.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d számot.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1 számot.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d speciális karaktert.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1 speciális karaktert.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">A jelszónak tartalmaznia kell legalább %d, betűktől eltérő karaktert.</item>
+        <item quantity="one">A jelszónak tartalmaznia kell legalább 1, betűktől eltérő karaktert.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d alkalmazás tudja olvasni az értesítéseket</item>
+        <item quantity="one">%d alkalmazás tudja olvasni az értesítéseket</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Helytelen PIN kód a SIM kártyához; még %d próbálkozása van.</item>
+        <item quantity="one">Helytelen PIN kód a SIM kártyához; még %d próbálkozása van, mielőtt fel kellene vennie a kapcsolatot szolgáltatójával az eszköz feloldásához.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s nyomtató észlelve</item>
+        <item quantity="one">%1$s nyomtató észlelve</item>
+    </plurals>
+</resources>

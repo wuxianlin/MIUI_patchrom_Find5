@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d sekondes</item>
+        <item quantity="one">%d sekonde</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d keer</item>
+        <item quantity="one">een keer</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">"Jy het nou %1$d stappe oor voor jy 'n ontwikkelaar is."</item>
+        <item quantity="one">"Jy het nou %1$d stap oor voor jy 'n ontwikkelaar is."</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Wagwoord moet ten minste %d letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Wagwoord moet ten minste %d onderkas-letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 onderkas-letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Wagwoord moet ten minste %d bokas-letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 bokas-letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Wagwoord moet ten minste %d syfers bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 syfer bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Wagwoord moet ten minste %d spesiale simbole bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 spesiale simbool bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Wagwoord moet ten minste %d nieletter-karakters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 nieletter-karakter bevat.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d programme kan kennisgewings lees</item>
+        <item quantity="one">%d program kan kennisgewings lees</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Verkeerde SIM PIN-kode, jy het %d oorblywende pogings.</item>
+        <item quantity="one">Verkeerde SIM PIN-kode, jy het %d oorblywende poging voordat jy jou diensverskaffer sal moet kontak om jou toestel te ontsluit.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s drukkers gekry</item>
+        <item quantity="one">%1$s drukker gekry</item>
+    </plurals>
+</resources>

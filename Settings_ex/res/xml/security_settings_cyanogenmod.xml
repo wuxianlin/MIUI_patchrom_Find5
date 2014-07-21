@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/privacy_settings_cyanogenmod_category" android:key="cmprivacy">
+        <PreferenceScreen android:title="@string/anonymous_statistics_title" android:key="cmstats" android:summary="@string/anonymous_statistics_summary" android:fragment="com.android.settings.cmstats.AnonymousStats" />
+    </PreferenceCategory>
+</PreferenceScreen>

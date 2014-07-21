@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/voice_wakeup_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:title="@string/voice_wakeup_retrain_title" android:key="retrain" />
+    <Preference android:persistent="false" android:title="@string/voice_wakeup_activity_title" android:key="voice_wakeup_launch_intent" />
+</PreferenceScreen>

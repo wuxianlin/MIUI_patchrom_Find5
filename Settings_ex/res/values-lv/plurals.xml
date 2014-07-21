@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Lai jūs kļūtu par izstrādātāju, atlikušas %1$d darbības.</item>
+        <item quantity="one">Lai jūs kļūtu par izstrādātāju, atlikusi %1$d darbība.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parolē ir jābūt vismaz %d burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d mazajiem burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 mazajam burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d lielajiem burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 lielajam burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parolē ir jābūt vismaz %d cipariem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 ciparam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parolē ir jābūt vismaz %d īpašajiem simboliem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 īpašajam simbolam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parolē ir jābūt vismaz %d rakstzīmēm, kas nav burti.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 rakstzīmei, kas nav burts.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d lietotnēs var lasīt paziņojumus.</item>
+        <item quantity="one">%d lietotnē var lasīt paziņojumus.</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Nepareizs SIM kartes PIN kods. Varat mēģināt vēl %d reizi(-es).</item>
+        <item quantity="one">Nepareizs SIM kartes PIN kods. Varat mēģināt vēl %d reizi. Kļūdas gadījumā būs jāsazinās ar mobilo sakaru operatoru, lai tas atbloķētu jūsu ierīci.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Atrasti %1$s printeri</item>
+        <item quantity="one">Atrasts %1$s printeris</item>
+    </plurals>
+</resources>

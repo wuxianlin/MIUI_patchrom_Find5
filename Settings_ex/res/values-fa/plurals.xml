@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">شما در حال حاضر، %1$d قدم تا برنامه‌نویس شدن فاصله دارید.</item>
+        <item quantity="one">شما در حال حاضر، %1$d قدم تا برنامه‌نویس شدن فاصله دارید.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">‏گذرواژه باید دارای حداقل %d حرف باشد.</item>
+        <item quantity="one">گذرواژه باید دارای حداقل 1 حرف باشد.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">‏گذروازه باید دارای حداقل %d حرف کوچک باشد.</item>
+        <item quantity="one">گذرواژه باید دارای حداقل 1 حرف کوچک باشد.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">‏گذرواژه باید دارای حداقل %d حرف بزرگ باشد.</item>
+        <item quantity="one">گذرواژه باید دارای حداقل 1 حرف بزرگ باشد.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">‏گذرواژه باید دارای حداقل %d رقم باشد.</item>
+        <item quantity="one">گذرواژه باید دارای حداقل 1 رقم باشد.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">‏گذرواژه باید دارای حداقل %d نماد ویژه باشد.</item>
+        <item quantity="one">گذرواژه باید دارای حداقل 1 نماد ویژه باشد.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">‏گذرواژه باید دارای حداقل %d نویسه غیرحرفی باشد.</item>
+        <item quantity="one">گذرواژه باید حداقل دارای 1 نویسه غیرحرفی باشد.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">‏%d برنامه‌‌ می‌توانند اعلان‌ها را بخوانند</item>
+        <item quantity="one">‏%d برنامه می‌تواند اعلان‌ها را بخواند</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">کد پین سیم کارت اشتباه است، %d بار دیگر می‌توانید تلاش کنید.</item>
+        <item quantity="one">کد پین سیم کارت اشتباه است، %d بار دیگر می‌توانید تلاش کنید و پس از آن برای گشودن قفل دستگاهتان باید با شرکت مخابراتی تماس بگیرید.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s چاپگر یافت شد</item>
+        <item quantity="one">%1$s چاپگر یافت شد</item>
+    </plurals>
+</resources>

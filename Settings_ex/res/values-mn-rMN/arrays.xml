@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>Америк</item>
+        <item>Европ</item>
+        <item>Африк</item>
+        <item>Ази</item>
+        <item>Австрали</item>
+        <item>Номхон далай</item>
+        <item>Бүгд</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>30 минут</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Хэзээ ч үгүй</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>30 минут</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Шууд</item>
+        <item>5 секунд</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>30 минут</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Жижиг</item>
+        <item>Энгийн</item>
+        <item>Том</item>
+        <item>Том</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Маш удаан</item>
+        <item>Удаан</item>
+        <item>Энгийн</item>
+        <item>Хурдан</item>
+        <item>Илүү хурдан</item>
+        <item>Маш хурдан</item>
+        <item>Түргэн</item>
+        <item>Маш түргэн</item>
+        <item>Хамгийн хурдан</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Маш нам</item>
+        <item>Бага</item>
+        <item>Энгийн</item>
+        <item>Их</item>
+        <item>Маш өндөр</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Скан хийж байна…</item>
+        <item>Холбогдож байна...</item>
+        <item>Гэрчлэж байна</item>
+        <item>IP хаягийг авч байна…</item>
+        <item>Холбогдсон</item>
+        <item>Түр хаасан</item>
+        <item>Салгаж байна…</item>
+        <item>Салгагдсан</item>
+        <item>Амжилтгүй</item>
+        <item>Хориглогдсон</item>
+        <item>Муу холболтоос түр зайлсхийж байна</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Скан хийж байна…</item>
+        <item>%1$s руу холбогдож байна…</item>
+        <item>%1$s-тай гэрчилж байна…</item>
+        <item>%1$s-с IP хаягийг авч байна…</item>
+        <item>%1$s руу холбогдсон</item>
+        <item>Түр хаасан</item>
+        <item>%1$s-с салгагдаж байна…</item>
+        <item>Салгагдсан</item>
+        <item>Амжилтгүй</item>
+        <item>Хориглогдсон</item>
+        <item>Муу холболтоос түр зайлсхийж байна</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Товчлуур</item>
+        <item>Түнш төхөөрөмжийн PIN</item>
+        <item>Энэ төхөөрөмжөөс PIN</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Холбогдсон</item>
+        <item>Уригдсан</item>
+        <item>Амжилтгүй</item>
+        <item>Холбогдсон</item>
+        <item>Хүрээнээс гарсан</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>1 цаг</item>
+        <item>Хэзээ ч завсарлахгүй</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Муу</item>
+        <item>Боломжийн</item>
+        <item>Сайн</item>
+        <item>Маш сайн</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Байнга</item>
+        <item>Зөвхөн залгасан үед</item>
+        <item>Хэзээ ч үгүй (дата ашиглалтыг нэмэгдүүлдэг)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Байнга</item>
+        <item>Зөвхөн залгасан үед</item>
+        <item>Хэзээ ч үгүй</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Автомат</item>
+        <item>Зөвхөн 5 GHz</item>
+        <item>Зөвхөн 2.4 GHz</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Ашиглалтын цаг</item>
+        <item>Тооллогыг эхлүүлэх</item>
+        <item>Апп нэр</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Байхгүй</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Байхгүй</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Статик</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Байхгүй</item>
+        <item>Гараар</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Хаах</item>
+        <item>Сэрэмжлүүлэг</item>
+        <item>Чичиргээ</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Байхгүй</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP буюу CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Тодорхойлоогүй</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>None</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Дотоод төхөөрөмжийн сан</item>
+        <item>Авагддаг SD карт</item>
+        <item>Системээр шийдүүлэх</item>
+    </string-array>
+    <string-array name="app_ops_categories">
+        <item>Байршил</item>
+        <item>Хувийн</item>
+        <item>Зурвас</item>
+        <item>Медиа</item>
+        <item>Төхөөрөмж</item>
+    </string-array>
+    <string-array name="app_ops_summaries">
+        <item>бүдүүн байршил</item>
+        <item>сайн байршил</item>
+        <item>GPS</item>
+        <item>чичиргээ</item>
+        <item>харилцагчдыг унших</item>
+        <item>харилцагчдыг өөрчлөх</item>
+        <item>дуудлагын жагсаалтыг унших</item>
+        <item>дуудлагын жагсаалтыг өөрчлөх</item>
+        <item>календарь унших</item>
+        <item>календарийг өөрчлөх</item>
+        <item>wi-fi скан</item>
+        <item>мэдэгдэл</item>
+        <item>үүрэн скан</item>
+        <item>утас руу залгах</item>
+        <item>SMS унших</item>
+        <item>SMS бичих</item>
+        <item>SMS хүлээн авах</item>
+        <item>яаралтай SMS хүлээж авах</item>
+        <item>MMS хүлээн авах</item>
+        <item>WAP хүлээн авах</item>
+        <item>SMS илгээх</item>
+        <item>ICC SMS унших</item>
+        <item>ICC SMS бичих</item>
+        <item>тохиргоог өөрчлөх</item>
+        <item>дээр нь нээх</item>
+        <item>мэдэгдэлд хандах</item>
+        <item>камера</item>
+        <item>аудио бичих</item>
+        <item>аудио тоглуулах</item>
+        <item>түр санах ойг унших</item>
+        <item>түр санах ойг өөрчлөх</item>
+        <item>медиа товч</item>
+        <item>аудио фокус</item>
+        <item>үндсэн дууны хэмжээ</item>
+        <item>хоолойн дууны хэмжээ</item>
+        <item>хонхны дууны хэмжээ</item>
+        <item>медиа дууны хэмжээ</item>
+        <item>сэрүүлгийн дууны хэмжээ</item>
+        <item>мэдэгдлийн дууны хэмжээ</item>
+        <item>блютүүтийн хэмжээ</item>
+        <item>сэрүүн байлгах</item>
+        <item>байршлыг хянах</item>
+        <item>өндөр чадалтай байршлуудыг хянах</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Байршил</item>
+        <item>Байршил</item>
+        <item>Байршил</item>
+        <item>Чичиргээ</item>
+        <item>Харилцагчдыг унших</item>
+        <item>Харилцагчдыг өөрчлөх</item>
+        <item>Дуудлагын жагсаалтыг унших</item>
+        <item>Дуудлагын жагсаалтыг өөрчлөх</item>
+        <item>Календарь унших</item>
+        <item>Календарийг өөрчлөх</item>
+        <item>Байршил</item>
+        <item>Пост мэдэгдэл</item>
+        <item>Байршил</item>
+        <item>Утас руу залгах</item>
+        <item>SMS/MMS унших</item>
+        <item>SMS/MMS бичих</item>
+        <item>SMS/MMS хүлээн авах</item>
+        <item>SMS/MMS хүлээн авах</item>
+        <item>SMS/MMS хүлээн авах</item>
+        <item>SMS/MMS хүлээн авах</item>
+        <item>SMS/MMS илгээх</item>
+        <item>SMS/MMS унших</item>
+        <item>SMS/MMS бичих</item>
+        <item>Тохиргоог өөрчлөх</item>
+        <item>Дээр нь нээх</item>
+        <item>Хандалтын мэдэгдэл</item>
+        <item>Камер</item>
+        <item>Аудио бичих</item>
+        <item>Аудио тоглуулах</item>
+        <item>Түр санах ойг унших</item>
+        <item>Түр санах ойг өөрчлөх</item>
+        <item>Медиа товч</item>
+        <item>Аудио фокус</item>
+        <item>Үндсэн дууны хэмжээ</item>
+        <item>Хоолойн дууны хэмжээ</item>
+        <item>Хонхны дууны хэмжээ</item>
+        <item>Медиа дууны хэмжээ</item>
+        <item>Сэрүүлгийн дууны хэмжээ</item>
+        <item>Мэдэгдлийн дууны хэмжээ</item>
+        <item>Блютүүтийн хэмжээ</item>
+        <item>Сэрүүн байлгах</item>
+        <item>Байршил</item>
+        <item>Байршил</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Богино</item>
+        <item>Дундаж</item>
+        <item>Урт</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Үндсэн</item>
+        <item>Sans Serif</item>
+        <item>Sans-serif condensed</item>
+        <item>Serif</item>
+        <item>Monospace</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Маш жижиг</item>
+        <item>Жижиг</item>
+        <item>Энгийн</item>
+        <item>Том</item>
+        <item>Маш том</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Хоосон</item>
+        <item>Гадна хүрээ</item>
+        <item>Сүүдэр тусгах</item>
+    </string-array>
+    <string-array name="captioning_opacity_selector_titles">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Хар дээр цагаан</item>
+        <item>Цагаан дээр хар</item>
+        <item>Хар дээр шар</item>
+        <item>Цэнхэр дээр шар</item>
+        <item>Тааруулсан</item>
+    </string-array>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (дебаг)</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>Dalvik ашиглах</item>
+        <item>ART ашиглах</item>
+        <item>ART дебаг ашиглах</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Хэзээ ч шалгахгүй</item>
+        <item>Зөвхөн DRM контентыг шалгах</item>
+        <item>Байнга шалгах</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>HDCP шалгахыг хэзээ ч ашиглахгүй</item>
+        <item>HDCP шалгахыг зөвхөн DRM контентэд ашиглах</item>
+        <item>Байнга HDCP шалгахыг ашиглах</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Дүрс амилуулалт идэвхгүй</item>
+        <item>Дүрс амилуулах далайц .5x</item>
+        <item>Дүрс амилуулах далайц 1x</item>
+        <item>Дүрс амилуулах далайц 1.5x</item>
+        <item>Дүрс амилуулалтын далайц 2x</item>
+        <item>Дүрс амилуулалтын далайц 5x</item>
+        <item>Дүрс амилуулалтын далайц 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Дүрс амилуулалт идэвхгүй</item>
+        <item>Дүрс амилуулах далайц .5x</item>
+        <item>Дүрс амилуулах далайц 1x</item>
+        <item>Дүрс амилуулах далайц 1.5x</item>
+        <item>Дүрс амилуулалтын далайц 2x</item>
+        <item>Дүрс амилуулалтын далайц 5x</item>
+        <item>Дүрс амилуулалтын далайц 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Дүрс амилуулалт идэвхгүй</item>
+        <item>Дүрс амилуулах далайц .5x</item>
+        <item>Дүрс амилуулах далайц 1x</item>
+        <item>Дүрс амилуулах далайц 1.5x</item>
+        <item>Дүрс амилуулалтын далайц 2x</item>
+        <item>Дүрс амилуулалтын далайц 5x</item>
+        <item>Дүрс амилуулалтын далайц 10x</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Байхгүй</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (найдвартай)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (найдвартай)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (найдвартай)</item>
+        <item>1280x720 tvdpi болон 1920x1080 xhdpi</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Алийг нь ч биш</item>
+        <item>Logcat</item>
+        <item>Systrace (График)</item>
+        <item>Стекийг glGetError дээр дуудах</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Идэвхгүй</item>
+        <item>Тэгш өнцөгт бус клипийн бүсийг цэнхэрээр зурах</item>
+        <item>Шалгасан зурах командуудыг ногоон өнгөөр тэмдэглэх</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Идэвхгүй</item>
+        <item>Дэлгэц дээр савхаар</item>
+        <item>Дэлгэц дээр шулуунаар</item>
+        <item>adb суурь доторх dumpsys gfxinfo</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Идэвхгүй</item>
+        <item>Давхар дүрслэлтэй хэсгийг харуулах</item>
+        <item>Өнгө үл ялгагчид зориулсан бүсүүдийг харуулах</item>
+        <item>Давхар дүрслэлийн тоологчийг харуулах</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Стандарт хязгаар</item>
+        <item>Далд процесс байхгүй</item>
+        <item>Хамгийн ихдээ 1 процесс</item>
+        <item>Хамгийн ихдээ 2 процесс</item>
+        <item>Хамгийн ихдээ 3 процесс</item>
+        <item>Хамгийн ихдээ 4 процесс</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>Урьдчилан хуваалцсан L2TP/IPSec VPN түлхүүртэй</item>
+        <item>Сертификаттай L2TP/IPSec VPN</item>
+        <item>Урьдчилан хуваалцсан түлхүүртэй IPSec VPN болон Xauth гэрчлэлт</item>
+        <item>Сертификат болон Xauth гэрчлэл бүхий IPSec VPN</item>
+        <item>Сертификат болон холимог гэрчлэл бүхий IPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Салгагдсан</item>
+        <item>Эхлүүлж байна…</item>
+        <item>Холбогдож байна...</item>
+        <item>Холбогдсон</item>
+        <item>Завсарлага</item>
+        <item>Амжилтгүй</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Асуух</item>
+        <item>Хэзээ ч зөвшөөрөхгүй</item>
+        <item>Байнга зөвшөөрөх</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>энгийн</item>
+        <item>дунд зэргийн</item>
+        <item>бага</item>
+        <item>эгзэгтэй</item>
+    </string-array>
+</resources>

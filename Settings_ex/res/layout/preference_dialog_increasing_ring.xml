@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@*android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <CheckBox android:textAppearance="?android:textAppearanceSmall" android:id="@id/increasing_ring" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkbox_increasing_ring" />
+        <TextView android:id="@id/increasing_ring_min_volume_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/increasing_ring_min_volume_title" />
+        <SeekBar android:id="@*android:id/seekbar" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="14.0dip" android:paddingEnd="14.0dip" />
+        <TextView android:id="@id/increasing_ring_volume_notice" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/increasing_ring_volume_notice" />
+        <TextView android:id="@id/increasing_ring_interval_title" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/increasing_ring_interval_title" />
+        <Spinner android:entries="@array/increasing_ring_interval_entries" android:id="@id/increasing_ring_interval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/increasing_ring_interval_title" />
+    </LinearLayout>
+</ScrollView>

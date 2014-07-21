@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="maximum_user_dictionary_word_length">48</integer>
+    <integer name="minimum_hue_value">0</integer>
+    <integer name="maximum_hue_value">360</integer>
+    <integer name="default_hue_value">180</integer>
+    <integer name="minimum_saturation_value">0</integer>
+    <integer name="maximum_saturation_value">360</integer>
+    <integer name="default_saturation_value">180</integer>
+    <integer name="minimum_intensity_value">0</integer>
+    <integer name="maximum_intensity_value">400</integer>
+    <integer name="default_intensity_value">200</integer>
+    <integer name="minimum_contrast_value">0</integer>
+    <integer name="default_contrast_value">180</integer>
+    <integer name="maximum_contrast_value">360</integer>
+    <integer name="keyguard_appwidget_picker_cols">1</integer>
+    <integer name="preference_scrollbar_style">33554432</integer>
+</resources>

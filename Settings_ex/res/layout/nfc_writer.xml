@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/profile_nfc_text" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" style="?android:attr/textAppearanceMedium" />
+        <ImageView android:layout_gravity="center" android:id="@id/nfc_writer_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nfc_writer" />
+        <TextView android:layout_gravity="center" android:id="@id/touch_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/profile_write_touch_tag" style="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+</RelativeLayout>

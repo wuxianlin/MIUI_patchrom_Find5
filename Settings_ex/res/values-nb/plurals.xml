@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d sekunder</item>
+        <item quantity="one">%d sekund(er)</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d ganger</item>
+        <item quantity="one">en gang</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Du er nå %1$d trinn fra å bli en utvikler.</item>
+        <item quantity="one">Du er nå %1$d trinn fra å bli en utvikler.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Passordet må inneholde minst %d bokstaver</item>
+        <item quantity="one">Passordet må inneholde minst én bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Passordet må inneholde minst %d små bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst én liten bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Passordet må inneholde minst %d store bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst én stor bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Passordet må inneholde minst %d sifre.</item>
+        <item quantity="one">Passordet må inneholde minst ett siffer.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Passordet må inneholde minst %d spesialtegn.</item>
+        <item quantity="one">Passordet må inneholde minst ett spesialtegn.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Passordet må inneholde minst %d tegn som ikke er bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst ett tegn som ikke er en bokstav.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d apper kan lese varsler</item>
+        <item quantity="one">%d app kan lese varsler</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Feil PIN-kode for SIM-kortet. Du har %d forsøk igjen.</item>
+        <item quantity="one">Feil PIN-kode for SIM-kortet. Du har %d forsøk igjen før du må kontakte operatøren din for å låse opp enheten.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s skrivere ble funnet</item>
+        <item quantity="one">%1$s skriver ble funnet</item>
+    </plurals>
+</resources>

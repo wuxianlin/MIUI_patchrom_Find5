@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">დეველოპერობამდე რამდენიმე ნაბიჯი დაგრჩათ %1$d.</item>
+        <item quantity="one">დეველოპერობამდე %1$d ნაბიჯი დაგრჩათ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ მცირე %d ასოს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ მცირე 1 ასოს.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ მცირე %d ქვედა რეგისტრის ასოს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ მცირე 1 ქვედა რეგისტრის ასოს.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ მცირე %d ზედა რეგისტრის ასოს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ მცირე 1 ზედა რეგისტრის ასოს.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ მცირე %d ციფრულ ნიშანს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ ცოტა 1 ციფრს.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ ცოტა %d სპეციალურ სიმბოლოს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ მცირე 1 სპეციალურ სიმბოლოს.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">პაროლი უნდა შეიცავდეს სულ მცირე %d არაანბანურ სიმბოლოს.</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს სულ მცირე 1 არაანბანურ სიმბოლოს.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d აპს შეუძლია შეტყობინებების წაკითხვა</item>
+        <item quantity="one">შეტყობინებების წაკითხვა შეუძლია %d აპლიკაციას</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">არასწორი SIM-ის PIN კოდი. თქვენ დაგრჩათ %d მცდელობა.</item>
+        <item quantity="one">SIM-ის არასწორი PIN კოდი. თქვენ დაგრჩათ %d მცდელობა, სანამ მოგიწევთ თქვენი მოწყობილობის განსაბლოკად ოპერატორთან დაკავშირება.</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">ნაპოვნია %1$s პრინტერი</item>
+        <item quantity="one">ნაპოვნია %1$s პრინტერი</item>
+    </plurals>
+</resources>

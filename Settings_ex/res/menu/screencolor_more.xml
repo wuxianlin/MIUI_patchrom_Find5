@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/restore_preview" android:title="@string/restore_preview" />
+    <item android:id="@id/selectnewfile_menu" android:title="@string/selectnewfile_menu" />
+    <item android:id="@id/selectfile_menu" android:title="@string/selectfile_menu" />
+    <item android:id="@id/restore_default_str" android:title="@string/restore_default_str" />
+</menu>

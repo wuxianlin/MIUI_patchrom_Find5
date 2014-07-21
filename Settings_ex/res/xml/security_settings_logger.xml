@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/logger_title" android:key="logger" android:summary="@string/logger_summary">
+        <intent android:targetPackage="com.cyngn.logger" android:targetClass="com.cyngn.logger.ui.LoggerPreferenceActivity" />
+    </Preference>
+</PreferenceScreen>

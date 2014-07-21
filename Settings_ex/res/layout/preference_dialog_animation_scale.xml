@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/scale" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.android.settings.IntervalSeekBar android:id="@id/scale_seekbar" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/container" settings:min="0.0" settings:max="2.0" settings:defaultValue="1.0" settings:digits="2" />
+</RelativeLayout>

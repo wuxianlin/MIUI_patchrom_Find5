@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Танд одоо хөгжүүлэгч болоход %1$d алхам дутуу байна.</item>
+        <item quantity="one">Танд одоо хөгжүүлэгч болоход %1$d алхам дутуу байна.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Нууц үгэнд дор хаяж %d үсэг орсон байх ёстой</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 үсэг орсон байх ёстой</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Нууц үгэнд дор хаяж %d жижиг үсэг орсон байх ёстой.</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 жижиг үсэг орсон байх ёстой.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Нууц үгэнд дор хаяж %d том үсэг орсон байх ёстой.</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 том үсэг орсон байх ёстой.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Нууц үгэнд дор хаяж %d цифр орсон байх ёстой</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 цифр орсон байх ёстой</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Нууц үгэнд дор хаяж %d тусгай тэмдэгт орсон байх ёстой.</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 тусгай тэмдэгт орсон байх ёстой.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Нууц үгэнд дор хаяж %d үсэг биш тэмдэгт орсон байх ёстой.</item>
+        <item quantity="one">Нууц үгэнд дор хаяж 1 үсэг биш тэмдэгт орсон байх ёстой.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d апп-ууд мэдэгдлийг уншиж чадна</item>
+        <item quantity="one">%d апп мэдэгдлийг уншиж чадна</item>
+    </plurals>
+</resources>
