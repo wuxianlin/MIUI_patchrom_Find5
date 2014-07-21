@@ -45,9 +45,6 @@ public class StockSettings extends PreferenceActivity{
 
     private static final String ADVANCED_REBOOT = "advanced_reboot";
 
-    private static final String SELECT_RUNTIME_KEY = "select_runtime";
-    private static final String SELECT_RUNTIME_PROPERTY = "persist.sys.dalvik.vm.lib";
-
     private CheckBoxPreference mAdvancedReboot;
 
     public void onCreate(Bundle savedInstanceState) {
