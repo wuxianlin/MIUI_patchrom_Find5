@@ -42,11 +42,11 @@
         <PreferenceScreen android:title="@string/wifi_display_settings_title" android:key="wifi_display" android:fragment="com.android.settings_ex.wfd.WifiDisplaySettings" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/category_rom">
-        <Preference android:title="@string/author_title" android:key="author" android:summary="@string/author_summary">
-            <intent android:action="android.intent.action.VIEW" android:data="http://weibo.com/wuxianlin000000" />
+        <Preference android:title="@string/author_title" android:key="author" android:summary="Click to visit my github">
+            <intent android:action="android.intent.action.VIEW" android:data="https://github.com/wuxianlin" />
         </Preference>
         <Preference android:title="@string/rom_title" android:key="rom" android:summary="@string/rom_summary">
-            <intent android:action="android.intent.action.VIEW" android:data="http://www.miui.com/getrom-81.html" />
+            <intent android:action="android.intent.action.VIEW" android:data="http://en.miui.com/download-81.html" />
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
