@@ -2752,4 +2752,15 @@ PIN 碼可能不正確。"</string>
     <string name="user_image_take_photo">拍攝相片</string>
     <string name="user_image_choose_photo">從圖片庫選擇相片</string>
     <string name="regulatory_info_text" />
+    <string name="gestures_settings_header_title">手勢</string>
+    <string name="oclick_panel_title">O-Click 設置</string>
+    <string name="oclick_summary">O-Click 設置</string>
+    <string name="stock_settings">原廠設置</string>
+    <string name="category_rom">關於 ROM</string>
+    <string name="author_title">作者：wuxianlin</string>
+    <string name="author_summary">微博：wuxianlin000000</string>
+    <string name="rom_title">ROM 下載</string>
+    <string name="rom_summary">請選擇合作開發版</string>
+    <string name="dolby_title">杜比音效</string>
+    <string name="dolby_summary">杜比數字+</string>
 </resources>

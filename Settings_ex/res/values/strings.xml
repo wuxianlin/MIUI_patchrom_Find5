@@ -3110,4 +3110,15 @@ Any user can accept updated app permissions on behalf of all other users."</stri
     <string name="user_image_take_photo">Take photo</string>
     <string name="user_image_choose_photo">Choose photo from Gallery</string>
     <string name="regulatory_info_text" />
+    <string name="gestures_settings_header_title">Gestures</string>
+    <string name="oclick_panel_title">O-Click settings</string>
+    <string name="oclick_summary">O-Click settings</string>
+    <string name="stock_settings">Stock Settings</string>
+    <string name="category_rom">About ROM</string>
+    <string name="author_title">author：wuxianlin</string>
+    <string name="author_summary">weibo：wuxianlin000000</string>
+    <string name="rom_title">ROM download</string>
+    <string name="rom_summary">Please choose ”Ported ROM“</string>
+    <string name="dolby_title">Dolby</string>
+    <string name="dolby_summary">Dolby Digital Plus</string>
 </resources>
