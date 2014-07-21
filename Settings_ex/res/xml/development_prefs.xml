@@ -4,15 +4,15 @@
     <PreferenceScreen android:persistent="false" android:title="@string/development_tools_title" android:key="development_tools">
         <intent android:targetPackage="com.android.development" android:action="android.settings.development.LAUNCH_TOOLS" android:targetClass="com.android.development.Development" />
     </PreferenceScreen>
-    <com.android.settings.BugreportPreference android:title="@*android:string/bugreport_title" android:key="bugreport" android:dialogTitle="@*android:string/bugreport_title" />
+    <com.android.settings_ex.BugreportPreference android:title="@*android:string/bugreport_title" android:key="bugreport" android:dialogTitle="@*android:string/bugreport_title" />
     <CheckBoxPreference android:title="@string/advanced_reboot_title" android:key="advanced_reboot" android:summary="@string/advanced_reboot_summary" />
     <PreferenceScreen android:persistent="false" android:title="@string/local_backup_password_title" android:key="local_backup_password" android:summary="@string/local_backup_password_summary_none">
-        <intent android:targetPackage="com.android.settings" android:action="android.settings.privacy.SET_FULL_BACKUP_PASSWORD" android:targetClass="com.android.settings.SetFullBackupPassword" />
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.settings.privacy.SET_FULL_BACKUP_PASSWORD" android:targetClass="com.android.settings_ex.SetFullBackupPassword" />
     </PreferenceScreen>
     <CheckBoxPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" />
     <ListPreference android:entries="@array/hdcp_checking_titles" android:title="@string/hdcp_checking_title" android:key="hdcp_checking" android:dialogTitle="@string/hdcp_checking_dialog_title" android:entryValues="@array/hdcp_checking_values" />
     <CheckBoxPreference android:title="@string/bt_hci_snoop_log" android:key="bt_hci_snoop_log" android:summary="@string/bt_hci_snoop_log_summary" />
-    <PreferenceScreen android:title="@string/process_stats_summary_title" android:key="proc_stats" android:summary="@string/process_stats_summary" android:fragment="com.android.settings.applications.ProcessStatsUi" />
+    <PreferenceScreen android:title="@string/process_stats_summary_title" android:key="proc_stats" android:summary="@string/process_stats_summary" android:fragment="com.android.settings_ex.applications.ProcessStatsUi" />
     <ListPreference android:persistent="false" android:entries="@array/root_access_entries" android:title="@string/root_access" android:key="root_access" android:entryValues="@array/root_access_values" />
     <CheckBoxPreference android:title="@string/enable_quickboot_title" android:key="enable_quickboot" android:summary="@string/enable_quickboot_summary" />
     <CheckBoxPreference android:title="@string/update_recovery_title" android:key="update_recovery" android:summary="@string/update_recovery_summary" />
@@ -20,7 +20,7 @@
         <CheckBoxPreference android:title="@string/enable_adb" android:key="enable_adb" android:summary="@string/enable_adb_summary" />
         <CheckBoxPreference android:title="@string/adb_notify" android:key="adb_notify" android:summary="@string/adb_notify_summary" android:dependency="enable_adb" />
         <CheckBoxPreference android:title="@string/adb_over_network" android:key="adb_over_network" android:summary="@string/adb_over_network_summary" android:dependency="enable_adb" />
-        <com.android.settings.HostnamePreference android:persistent="false" android:selectAllOnFocus="true" android:title="@string/device_hostname" android:key="device_hostname" android:dialogTitle="@string/device_hostname" android:positiveButtonText="@string/wifi_save" android:negativeButtonText="@string/wifi_cancel" android:inputType="textNoSuggestions" android:imeOptions="actionDone" />
+        <com.android.settings_ex.HostnamePreference android:persistent="false" android:selectAllOnFocus="true" android:title="@string/device_hostname" android:key="device_hostname" android:dialogTitle="@string/device_hostname" android:positiveButtonText="@string/wifi_save" android:negativeButtonText="@string/wifi_cancel" android:inputType="textNoSuggestions" android:imeOptions="actionDone" />
         <Preference android:title="@string/clear_adb_keys" android:key="clear_adb_keys" />
         <CheckBoxPreference android:title="@string/enable_terminal_title" android:key="enable_terminal" android:summary="@string/enable_terminal_summary" />
         <CheckBoxPreference android:title="@string/bugreport_in_power" android:key="bugreport_in_power" android:summary="@string/bugreport_in_power_summary" />
@@ -35,15 +35,15 @@
     <PreferenceCategory android:title="@string/debug_input_category" android:key="debug_input_category">
         <CheckBoxPreference android:title="@string/show_touches" android:key="show_touches" android:summary="@string/show_touches_summary" />
         <CheckBoxPreference android:title="@string/pointer_location" android:key="pointer_location" android:summary="@string/pointer_location_summary" />
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/edge_gesture_service_title" android:key="edge_service_for_gestures" android:summary="@string/edge_gesture_service_summary" android:defaultValue="1" />
+        <com.android.settings_ex.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/edge_gesture_service_title" android:key="edge_service_for_gestures" android:summary="@string/edge_gesture_service_summary" android:defaultValue="1" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_drawing_category" android:key="debug_drawing_category">
         <CheckBoxPreference android:title="@string/show_screen_updates" android:key="show_screen_updates" android:summary="@string/show_screen_updates_summary" />
         <CheckBoxPreference android:title="@string/debug_layout" android:key="debug_layout" android:summary="@string/debug_layout_summary" />
         <CheckBoxPreference android:title="@string/force_rtl_layout_all_locales" android:key="force_rtl_layout_all_locales" android:summary="@string/force_rtl_layout_all_locales_summary" />
-        <com.android.settings.AnimationScalePreference android:persistent="false" android:title="@string/window_animation_scale_title" android:key="window_animation_scale" android:dialogTitle="@string/window_animation_scale_title" />
-        <com.android.settings.AnimationScalePreference android:persistent="false" android:title="@string/transition_animation_scale_title" android:key="transition_animation_scale" android:dialogTitle="@string/transition_animation_scale_title" />
-        <com.android.settings.AnimationScalePreference android:persistent="false" android:title="@string/animator_duration_scale_title" android:key="animator_duration_scale" android:dialogTitle="@string/animator_duration_scale_title" />
+        <com.android.settings_ex.AnimationScalePreference android:persistent="false" android:title="@string/window_animation_scale_title" android:key="window_animation_scale" android:dialogTitle="@string/window_animation_scale_title" />
+        <com.android.settings_ex.AnimationScalePreference android:persistent="false" android:title="@string/transition_animation_scale_title" android:key="transition_animation_scale" android:dialogTitle="@string/transition_animation_scale_title" />
+        <com.android.settings_ex.AnimationScalePreference android:persistent="false" android:title="@string/animator_duration_scale_title" android:key="animator_duration_scale" android:dialogTitle="@string/animator_duration_scale_title" />
         <ListPreference android:persistent="false" android:entries="@array/overlay_display_devices_entries" android:title="@string/overlay_display_devices_title" android:key="overlay_display_devices" android:entryValues="@array/overlay_display_devices_values" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_hw_drawing_category" android:key="debug_hw_drawing_category">

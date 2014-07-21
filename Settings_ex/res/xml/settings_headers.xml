@@ -2,55 +2,55 @@
 <preference-headers
   xmlns:android="http://schemas.android.com/apk/res/android">
     <header android:id="@id/wireless_section" android:title="@string/header_category_wireless_networks" />
-    <header android:icon="@drawable/ic_settings_wireless" android:id="@id/wifi_settings" android:title="@string/wifi_settings_title" android:fragment="com.android.settings.wifi.WifiSettings" />
-    <header android:icon="@drawable/ic_settings_bluetooth2" android:id="@id/bluetooth_settings" android:title="@string/bluetooth_settings_title" android:fragment="com.android.settings.bluetooth.BluetoothSettings" />
+    <header android:icon="@drawable/ic_settings_wireless" android:id="@id/wifi_settings" android:title="@string/wifi_settings_title" android:fragment="com.android.settings_ex.wifi.WifiSettings" />
+    <header android:icon="@drawable/ic_settings_bluetooth2" android:id="@id/bluetooth_settings" android:title="@string/bluetooth_settings_title" android:fragment="com.android.settings_ex.bluetooth.BluetoothSettings" />
     <header android:icon="@drawable/ic_settings_mobilenetworks" android:id="@id/mobile_network_settings" android:title="@string/network_settings_title" android:dependency="toggle_airplane">
         <intent android:action="android.settings.DATA_ROAMING_SETTINGS" />
     </header>
-    <header android:icon="@drawable/ic_settings_data_usage" android:id="@id/data_usage_settings" android:title="@string/data_usage_summary_title" android:fragment="com.android.settings.DataUsageSummary" />
-    <header android:id="@id/operator_settings" android:fragment="com.android.settings.WirelessSettings">
-        <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
+    <header android:icon="@drawable/ic_settings_data_usage" android:id="@id/data_usage_settings" android:title="@string/data_usage_summary_title" android:fragment="com.android.settings_ex.DataUsageSummary" />
+    <header android:id="@id/operator_settings" android:fragment="com.android.settings_ex.WirelessSettings">
+        <intent android:action="com.android.settings_ex.OPERATOR_APPLICATION_SETTING" />
     </header>
     <header android:icon="@drawable/ic_settings_sim" android:id="@id/multi_sim_settings" android:title="@string/multi_sim_settings_title">
-        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.MultiSimSettings" />
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.MultiSimSettings" />
     </header>
-    <header android:icon="@drawable/empty_icon" android:id="@id/wireless_settings" android:title="@string/radio_controls_title" android:fragment="com.android.settings.WirelessSettings" android:breadCrumbTitle="@string/wireless_networks_settings_title" />
+    <header android:icon="@drawable/empty_icon" android:id="@id/wireless_settings" android:title="@string/radio_controls_title" android:fragment="com.android.settings_ex.WirelessSettings" android:breadCrumbTitle="@string/wireless_networks_settings_title" />
     <header android:id="@id/interface_section" android:title="@string/header_category_interface" />
-    <header android:icon="@drawable/ic_settings_home" android:id="@id/home_settings" android:title="@string/home_settings" android:fragment="com.android.settings.HomeSettings" />
-    <header android:icon="@drawable/ic_settings_lockscreen" android:id="@id/lock_screen_settings" android:title="@string/lock_screen_title" android:fragment="com.android.settings.cyanogenmod.LockscreenInterface" />
-    <header android:icon="@drawable/prd_ic_themepacks" android:id="@id/theme_settings" android:title="@string/themes_settings_title" android:fragment="com.android.settings.ThemeSettings" android:breadCrumbTitle="@string/themes_settings_title" />
-    <header android:icon="@drawable/ic_settings_system" android:id="@id/system_settings" android:title="@string/system_settings_title" android:fragment="com.android.settings.cyanogenmod.SystemUiSettings" />
+    <header android:icon="@drawable/ic_settings_home" android:id="@id/home_settings" android:title="@string/home_settings" android:fragment="com.android.settings_ex.HomeSettings" />
+    <header android:icon="@drawable/ic_settings_lockscreen" android:id="@id/lock_screen_settings" android:title="@string/lock_screen_title" android:fragment="com.android.settings_ex.cyanogenmod.LockscreenInterface" />
+    <header android:icon="@drawable/prd_ic_themepacks" android:id="@id/theme_settings" android:title="@string/themes_settings_title" android:fragment="com.android.settings_ex.ThemeSettings" android:breadCrumbTitle="@string/themes_settings_title" />
+    <header android:icon="@drawable/ic_settings_system" android:id="@id/system_settings" android:title="@string/system_settings_title" android:fragment="com.android.settings_ex.cyanogenmod.SystemUiSettings" />
     <header android:id="@id/device_section" android:title="@string/header_category_device" />
-    <header android:icon="@drawable/ic_settings_sound" android:id="@id/sound_settings" android:title="@string/sound_settings" android:fragment="com.android.settings.SoundSettings" />
-    <header android:icon="@drawable/ic_settings_display" android:id="@id/display_settings" android:title="@string/display_settings" android:fragment="com.android.settings.DisplaySettings" />
-    <header android:icon="@drawable/ic_settings_buttons" android:id="@id/button_settings" android:title="@string/button_settings" android:fragment="com.android.settings.cyanogenmod.ButtonSettings" />
-    <header android:icon="@drawable/ic_settings_storage" android:id="@id/storage_settings" android:title="@string/storage_settings" android:fragment="com.android.settings.deviceinfo.Memory" />
-    <header android:icon="@drawable/ic_settings_battery" android:id="@id/battery_settings" android:title="@string/power_usage_summary_title" android:fragment="com.android.settings.fuelgauge.PowerUsageSummary" />
-    <header android:icon="@drawable/ic_settings_applications" android:id="@id/application_settings" android:title="@string/applications_settings" android:fragment="com.android.settings.applications.ManageApplications" />
-    <header android:icon="@drawable/ic_settings_multiuser" android:id="@id/user_settings" android:title="@string/user_settings_title" android:fragment="com.android.settings.users.UserSettings" />
-    <header android:icon="@drawable/ic_settings_nfc_payment" android:id="@id/nfc_payment_settings" android:title="@string/nfc_payment_settings_title" android:fragment="com.android.settings.nfc.PaymentSettings" />
-    <header android:id="@id/manufacturer_settings" android:fragment="com.android.settings.WirelessSettings">
-        <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+    <header android:icon="@drawable/ic_settings_sound" android:id="@id/sound_settings" android:title="@string/sound_settings" android:fragment="com.android.settings_ex.SoundSettings" />
+    <header android:icon="@drawable/ic_settings_display" android:id="@id/display_settings" android:title="@string/display_settings" android:fragment="com.android.settings_ex.DisplaySettings" />
+    <header android:icon="@drawable/ic_settings_buttons" android:id="@id/button_settings" android:title="@string/button_settings" android:fragment="com.android.settings_ex.cyanogenmod.ButtonSettings" />
+    <header android:icon="@drawable/ic_settings_storage" android:id="@id/storage_settings" android:title="@string/storage_settings" android:fragment="com.android.settings_ex.deviceinfo.Memory" />
+    <header android:icon="@drawable/ic_settings_battery" android:id="@id/battery_settings" android:title="@string/power_usage_summary_title" android:fragment="com.android.settings_ex.fuelgauge.PowerUsageSummary" />
+    <header android:icon="@drawable/ic_settings_applications" android:id="@id/application_settings" android:title="@string/applications_settings" android:fragment="com.android.settings_ex.applications.ManageApplications" />
+    <header android:icon="@drawable/ic_settings_multiuser" android:id="@id/user_settings" android:title="@string/user_settings_title" android:fragment="com.android.settings_ex.users.UserSettings" />
+    <header android:icon="@drawable/ic_settings_nfc_payment" android:id="@id/nfc_payment_settings" android:title="@string/nfc_payment_settings_title" android:fragment="com.android.settings_ex.nfc.PaymentSettings" />
+    <header android:id="@id/manufacturer_settings" android:fragment="com.android.settings_ex.WirelessSettings">
+        <intent android:action="com.android.settings_ex.MANUFACTURER_APPLICATION_SETTING" />
     </header>
-    <header android:icon="@drawable/empty_icon" android:id="@id/more_device_settings" android:title="@string/more_device_controls_title" android:fragment="com.android.settings.cyanogenmod.MoreDeviceSettings" android:breadCrumbTitle="@string/more_device_settings_title" />
+    <header android:icon="@drawable/empty_icon" android:id="@id/more_device_settings" android:title="@string/more_device_controls_title" android:fragment="com.android.settings_ex.cyanogenmod.MoreDeviceSettings" android:breadCrumbTitle="@string/more_device_settings_title" />
     <header android:id="@id/personal_section" android:title="@string/header_category_personal" />
-    <header android:icon="@drawable/ic_settings_profiles" android:id="@id/profiles_settings" android:title="@string/profiles_settings_title" android:fragment="com.android.settings.profiles.ProfilesSettings" />
-    <header android:icon="@drawable/ic_settings_location" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings.location.LocationSettings" />
-    <header android:icon="@drawable/ic_voice_wakeup" android:id="@id/voice_wakeup_settings" android:title="@string/voice_wakeup_settings_title" android:fragment="com.android.settings.voicewakeup.VoiceWakeupSettings" />
-    <header android:icon="@drawable/ic_settings_security" android:id="@id/security_settings" android:title="@string/security_settings_title" android:fragment="com.android.settings.SecuritySettings" />
-    <header android:icon="@drawable/ic_settings_privacy" android:id="@id/privacy_settings_cyanogenmod" android:title="@string/privacy_settings_cyanogenmod_title" android:fragment="com.android.settings.cyanogenmod.PrivacySettings" />
-    <header android:icon="@drawable/ic_settings_language" android:id="@id/language_settings" android:title="@string/language_settings" android:fragment="com.android.settings.inputmethod.InputMethodAndLanguageSettings" />
-    <header android:icon="@drawable/ic_settings_backup" android:id="@id/privacy_settings" android:title="@string/privacy_settings" android:fragment="com.android.settings.PrivacySettings" />
+    <header android:icon="@drawable/ic_settings_profiles" android:id="@id/profiles_settings" android:title="@string/profiles_settings_title" android:fragment="com.android.settings_ex.profiles.ProfilesSettings" />
+    <header android:icon="@drawable/ic_settings_location" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings_ex.location.LocationSettings" />
+    <header android:icon="@drawable/ic_voice_wakeup" android:id="@id/voice_wakeup_settings" android:title="@string/voice_wakeup_settings_title" android:fragment="com.android.settings_ex.voicewakeup.VoiceWakeupSettings" />
+    <header android:icon="@drawable/ic_settings_security" android:id="@id/security_settings" android:title="@string/security_settings_title" android:fragment="com.android.settings_ex.SecuritySettings" />
+    <header android:icon="@drawable/ic_settings_privacy" android:id="@id/privacy_settings_cyanogenmod" android:title="@string/privacy_settings_cyanogenmod_title" android:fragment="com.android.settings_ex.cyanogenmod.PrivacySettings" />
+    <header android:icon="@drawable/ic_settings_language" android:id="@id/language_settings" android:title="@string/language_settings" android:fragment="com.android.settings_ex.inputmethod.InputMethodAndLanguageSettings" />
+    <header android:icon="@drawable/ic_settings_backup" android:id="@id/privacy_settings" android:title="@string/privacy_settings" android:fragment="com.android.settings_ex.PrivacySettings" />
     <header android:id="@id/account_settings" android:title="@string/account_settings" />
     <header android:icon="@drawable/ic_menu_add_dark" android:id="@id/account_add" android:title="@string/add_account_label">
         <intent android:action="android.settings.ADD_ACCOUNT_SETTINGS" />
     </header>
     <header android:id="@id/system_section" android:title="@string/header_category_system" />
-    <header android:icon="@drawable/ic_settings_date_time" android:id="@id/date_time_settings" android:title="@string/date_and_time_settings_title" android:fragment="com.android.settings.DateTimeSettings" />
-    <header android:icon="@drawable/ic_settings_accessibility" android:id="@id/accessibility_settings" android:title="@string/accessibility_settings" android:fragment="com.android.settings.accessibility.AccessibilitySettings" />
-    <header android:icon="@*android:drawable/ic_print" android:id="@id/print_settings" android:title="@string/print_settings" android:fragment="com.android.settings.print.PrintSettingsFragment" />
-    <header android:icon="@drawable/ic_settings_development" android:id="@id/development_settings" android:title="@string/development_settings_title" android:fragment="com.android.settings.DevelopmentSettings" />
-    <header android:icon="@drawable/ic_action_permission" android:id="@id/superuser" android:title="@string/superuser" android:fragment="com.android.settings.cyanogenmod.superuser.PolicyNativeFragment" />
-    <header android:icon="@drawable/ic_settings_performance" android:id="@id/performance_settings" android:title="@string/performance_settings_title" android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" />
-    <header android:icon="@drawable/ic_settings_about" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.settings.DeviceInfoSettings" />
+    <header android:icon="@drawable/ic_settings_date_time" android:id="@id/date_time_settings" android:title="@string/date_and_time_settings_title" android:fragment="com.android.settings_ex.DateTimeSettings" />
+    <header android:icon="@drawable/ic_settings_accessibility" android:id="@id/accessibility_settings" android:title="@string/accessibility_settings" android:fragment="com.android.settings_ex.accessibility.AccessibilitySettings" />
+    <header android:icon="@*android:drawable/ic_print" android:id="@id/print_settings" android:title="@string/print_settings" android:fragment="com.android.settings_ex.print.PrintSettingsFragment" />
+    <header android:icon="@drawable/ic_settings_development" android:id="@id/development_settings" android:title="@string/development_settings_title" android:fragment="com.android.settings_ex.DevelopmentSettings" />
+    <header android:icon="@drawable/ic_action_permission" android:id="@id/superuser" android:title="@string/superuser" android:fragment="com.android.settings_ex.cyanogenmod.superuser.PolicyNativeFragment" />
+    <header android:icon="@drawable/ic_settings_performance" android:id="@id/performance_settings" android:title="@string/performance_settings_title" android:fragment="com.android.settings_ex.cyanogenmod.PerformanceSettings" />
+    <header android:icon="@drawable/ic_settings_about" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.settings_ex.DeviceInfoSettings" />
 </preference-headers>

@@ -2,7 +2,7 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/enable_subcat_title">
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/enable_spen_title_head" android:key="enable_stylus_gestures" android:summary="@string/enable_spen_summary_head" />
+        <com.android.settings_ex.cyanogenmod.SystemSettingCheckBoxPreference android:title="@string/enable_spen_title_head" android:key="enable_stylus_gestures" android:summary="@string/enable_spen_summary_head" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/gestures_subcat_title">
         <ListPreference android:persistent="false" android:entries="@array/gestures_entries" android:title="@string/gestures_left_spen_title_head" android:key="gestures_left" android:dependency="enable_stylus_gestures" android:entryValues="@array/gestures_values" />

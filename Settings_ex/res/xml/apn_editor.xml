@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/apn_edit"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <EditTextPreference android:singleLine="true" android:title="@string/apn_name" android:key="apn_name" android:dialogTitle="@string/apn_name" android:inputType="text" />
     <EditTextPreference android:singleLine="true" android:title="@string/apn_apn" android:key="apn_apn" android:dialogTitle="@string/apn_apn" android:inputType="textEmailAddress" />
     <EditTextPreference android:singleLine="true" android:title="@string/apn_http_proxy" android:key="apn_http_proxy" android:dialogTitle="@string/apn_http_proxy" android:inputType="textUri" />

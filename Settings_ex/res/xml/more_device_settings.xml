@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/more_device_settings_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <PreferenceCategory android:title="@string/display_calibration_title" android:key="display_calibration_category">
-        <com.android.settings.hardware.DisplayColor android:persistent="false" android:title="@string/color_calibration_title" android:key="color_calibration" android:summary="@string/color_calibration_summary" android:dialogTitle="@string/color_calibration_title" />
-        <com.android.settings.hardware.DisplayGamma android:persistent="false" android:title="@string/gamma_tuning_title_head" android:key="gamma_tuning" android:summary="@string/gamma_tuning_summary_head" android:dialogTitle="@string/gamma_tuning_title_head" />
+        <com.android.settings_ex.hardware.DisplayColor android:persistent="false" android:title="@string/color_calibration_title" android:key="color_calibration" android:summary="@string/color_calibration_summary" android:dialogTitle="@string/color_calibration_title" />
+        <com.android.settings_ex.hardware.DisplayGamma android:persistent="false" android:title="@string/gamma_tuning_title_head" android:key="gamma_tuning" android:summary="@string/gamma_tuning_summary_head" android:dialogTitle="@string/gamma_tuning_title_head" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sensors_motors_title" android:key="sensors_motors_category">
-        <com.android.settings.hardware.VibratorIntensity android:persistent="false" android:title="@string/vibrator_intensity_title" android:key="vibration_intensity" android:dialogTitle="@string/vibrator_intensity_title" />
+        <com.android.settings_ex.hardware.VibratorIntensity android:persistent="false" android:title="@string/vibrator_intensity_title" android:key="vibration_intensity" android:dialogTitle="@string/vibrator_intensity_title" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -8,13 +8,13 @@
         <intent android:targetPackage="@string/additional_system_update" android:action="android.intent.action.MAIN" android:targetClass="@string/additional_system_update_menu" />
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/device_status" android:key="status_info" android:summary="@string/device_status_summary">
-        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.deviceinfo.Status" />
+        <intent android:targetPackage="com.android.settings_ex" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings_ex.deviceinfo.Status" />
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/cmupdate_settings_title" android:key="cm_updates" android:summary="@string/cmupdate_settings_summary">
         <intent android:targetPackage="com.cyanogenmod.updater" android:action="android.intent.action.MAIN" android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="@string/changelog_title" android:key="changelog" android:fragment="com.android.settings.cyanogenmod.ChangeLog" />
-    <PreferenceScreen android:title="@string/contributor_cloud_title" android:key="contributor_cloud" android:fragment="com.android.settings.cyanogenmod.ContributorsCloud" />
+    <PreferenceScreen android:title="@string/changelog_title" android:key="changelog" android:fragment="com.android.settings_ex.cyanogenmod.ChangeLog" />
+    <PreferenceScreen android:title="@string/contributor_cloud_title" android:key="contributor_cloud" android:fragment="com.android.settings_ex.cyanogenmod.ContributorsCloud" />
     <PreferenceScreen android:title="@string/legal_information" android:key="container">
         <PreferenceScreen android:title="@string/copyright_title" android:key="copyright">
             <intent android:action="android.settings.COPYRIGHT" />

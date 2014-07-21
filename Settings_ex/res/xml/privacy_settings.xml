@@ -9,5 +9,5 @@
         <CheckBoxPreference android:persistent="false" android:title="@string/auto_restore_title" android:key="auto_restore" android:summary="@string/auto_restore_summary" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/personal_data_section_title" />
-    <PreferenceScreen android:title="@string/master_clear_title" android:summary="@string/master_clear_summary" android:fragment="com.android.settings.MasterClear" />
+    <PreferenceScreen android:title="@string/master_clear_title" android:summary="@string/master_clear_summary" android:fragment="com.android.settings_ex.MasterClear" />
 </PreferenceScreen>

@@ -8,6 +8,6 @@
         <CheckBoxPreference android:persistent="false" android:title="@string/lockpattern_settings_enable_dots_title" android:key="visibledots" />
         <ListPreference android:persistent="false" android:entries="@array/lock_after_timeout_entries" android:title="@string/lock_after_timeout" android:key="lock_after_timeout" android:summary="@string/lock_after_timeout_summary" android:entryValues="@array/lock_after_timeout_values" />
         <CheckBoxPreference android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" android:key="power_button_instantly_locks" />
-        <PreferenceScreen android:title="@string/owner_info_settings_title" android:key="owner_info_settings" android:summary="@string/owner_info_settings_summary" android:fragment="com.android.settings.OwnerInfoSettings" />
+        <PreferenceScreen android:title="@string/owner_info_settings_title" android:key="owner_info_settings" android:summary="@string/owner_info_settings_summary" android:fragment="com.android.settings_ex.OwnerInfoSettings" />
     </PreferenceCategory>
 </PreferenceScreen>
