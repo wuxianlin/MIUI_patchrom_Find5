@@ -73,7 +73,7 @@
     <permission android:name="android.permission.REPORT_SUPERUSER" android:protectionLevel="signature" />
     <permission-group android:label="@string/superuser" android:icon="@drawable/ic_action_permission" android:name="android.permission-group.SUPERUSER" android:priority="10000" android:description="@string/superuser_description_more" />
     <permission android:label="@string/superuser_description" android:icon="@drawable/ic_action_permission" android:name="android.permission.ACCESS_SUPERUSER" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.SUPERUSER" android:description="@string/superuser_description_more" android:logo="@drawable/ic_action_permission" />
-    <application android:theme="@style/Theme.Settings" android:label="@string/settings_label" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:supportsRtl="true" android:requiredForAllUsers="true">
+    <application android:theme="@miui:style/V5.Theme" android:label="@string/stock_settings" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:supportsRtl="true" android:requiredForAllUsers="true">
         <uses-library android:name="org.cyanogenmod.hardware" android:required="false" />
         <activity android:label="@string/screencolor" android:name=".ScreenColorSettings" android:screenOrientation="nosensor" android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:label="@string/custom_screencolor" android:name=".CustomScreenColor" android:screenOrientation="nosensor" android:configChanges="keyboardHidden|orientation|screenSize" />

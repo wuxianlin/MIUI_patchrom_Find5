@@ -1,9 +1,10 @@
 version: 1.5.2
-apkFileName: Settings.apk
+apkFileName: Settings_ex.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
+  - 6
 sdkInfo:
   minSdkVersion: '19'
   targetSdkVersion: '19'
