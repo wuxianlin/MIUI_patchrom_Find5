@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_settings">"Stock Settings"</string>
+    <string name="advanced_reboot_title">Advanced reboot</string>
+    <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery or bootloader</string>
+    <string name="select_runtime_title">Select runtime</string>
+    <string name="select_runtime_dialog_title">Select runtime</string>
+    <string name="select_runtime_warning_message">Reboot to change runtime from %1$s to %2$s?</string>
+</resources>
+

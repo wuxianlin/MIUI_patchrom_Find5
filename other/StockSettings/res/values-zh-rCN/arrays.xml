@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART（调试）</item>
+    </string-array>
+    <string-array name="select_runtime_summaries">
+        <item>使用 Dalvik</item>
+        <item>使用 ART</item>
+        <item>使用 ART 调试版本</item>
+    </string-array>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_settings">"原厂设置"</string>
+    <string name="advanced_reboot_title">高级重启</string>
+    <string name="advanced_reboot_summary">设备已解锁时，在电源菜单的重启选项下加入重启至恢复模式与引导程序的选项</string>
+    <string name="select_runtime_title">选择运行环境</string>
+    <string name="select_runtime_dialog_title">选择运行环境</string>
+    <string name="select_runtime_warning_message">要重新启动以将运行环境从“%1$s”改为“%2$s”吗？</string>
+</resources>
+
