@@ -55,7 +55,7 @@ local-pre-zip-misc:
 
 	@echo Replace app and priv-app
 	cp other/app/* $(ZIP_DIR)/system/app/
-	#cp other/priv-app/* $(ZIP_DIR)/system/priv-app/
+	cp other/priv-app/* $(ZIP_DIR)/system/priv-app/
 
 	@echo Replace custom lib
 	cp -rf other/lib/* $(ZIP_DIR)/system/lib/
