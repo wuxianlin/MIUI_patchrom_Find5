@@ -1812,40 +1812,56 @@
 .end method
 
 .method public onResume()V
-    .locals 4
+    .locals 5
 
     .prologue
+    const/4 v0, 0x0
+
     .line 208
     invoke-super {p0}, Lcom/android/settings_ex/RestrictedSettingsFragment;->onResume()V
 
     .line 209
     invoke-virtual {p0}, Lcom/android/settings_ex/DeviceInfoSettings;->getActivity()Landroid/app/Activity;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "development"
+    const-string v2, "development"
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    move-result-object v1
 
-    move-result-object v0
+    const-string v2, "show"
 
-    const-string v1, "show"
+    sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    sget-object v2, Landroid/os/Build;->TYPE:Ljava/lang/String;
+    const-string v4, "eng"
 
-    const-string v3, "eng"
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v3
 
-    move-result v2
+    if-nez v3, :cond_0
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
+
+    const-string v4, "userdebug"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     const/4 v0, -0x1
 
@@ -1861,7 +1877,7 @@
     return-void
 
     .line 209
-    :cond_0
+    :cond_2
     const/4 v0, 0x7
 
     goto :goto_0

@@ -1685,19 +1685,35 @@
     .prologue
     .line 585
     .local p1, target:Ljava/util/List;,"Ljava/util/List<Landroid/preference/PreferenceActivity$Header;>;"
-    iget-object v10, p0, Lcom/android/settings_ex/Settings;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iget-object v11, p0, Lcom/android/settings_ex/Settings;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
-    const-string v11, "show"
+    const-string v12, "show"
 
-    sget-object v12, Landroid/os/Build;->TYPE:Ljava/lang/String;
+    sget-object v10, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v13, "eng"
 
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v10, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v10
 
-    invoke-interface {v10, v11, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    if-nez v10, :cond_0
+
+    sget-object v10, Landroid/os/Build;->TYPE:Ljava/lang/String;
+
+    const-string v13, "userdebug"
+
+    invoke-virtual {v10, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_6
+
+    :cond_0
+    const/4 v10, 0x1
+
+    :goto_0
+    invoke-interface {v11, v12, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v8
 
@@ -1722,13 +1738,13 @@
     invoke-virtual {v10}, Ljava/util/HashMap;->clear()V
 
     .line 592
-    :cond_0
-    :goto_0
+    :cond_1
+    :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v10
 
-    if-ge v4, v10, :cond_1b
+    if-ge v4, v10, :cond_1d
 
     .line 593
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1747,36 +1763,36 @@
     .local v5, id:I
     const v10, 0x7f0d02b8
 
-    if-eq v5, v10, :cond_1
+    if-eq v5, v10, :cond_2
 
     const v10, 0x7f0d02c9
 
-    if-ne v5, v10, :cond_5
+    if-ne v5, v10, :cond_7
 
     .line 597
-    :cond_1
+    :cond_2
     invoke-static {p0, p1, v2}, Lcom/android/settings_ex/Utils;->updateHeaderToSpecificActivityFromMetaDataOrRemove(Landroid/content/Context;Ljava/util/List;Landroid/preference/PreferenceActivity$Header;)Z
 
     .line 689
-    :cond_2
-    :goto_1
+    :cond_3
+    :goto_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v10
 
-    if-ge v4, v10, :cond_3
+    if-ge v4, v10, :cond_4
 
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
-    if-ne v10, v2, :cond_3
+    if-ne v10, v2, :cond_4
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v10
 
-    if-eqz v10, :cond_3
+    if-eqz v10, :cond_4
 
     iget-object v10, p0, Lcom/android/settings_ex/Settings;->SETTINGS_FOR_RESTRICTED:[I
 
@@ -1784,41 +1800,41 @@
 
     move-result v10
 
-    if-nez v10, :cond_3
+    if-nez v10, :cond_4
 
     .line 692
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 696
-    :cond_3
+    :cond_4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v10
 
-    if-ge v4, v10, :cond_0
+    if-ge v4, v10, :cond_1
 
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
-    if-ne v10, v2, :cond_0
+    if-ne v10, v2, :cond_1
 
     .line 698
     iget-object v10, p0, Lcom/android/settings_ex/Settings;->mFirstHeader:Landroid/preference/PreferenceActivity$Header;
 
-    if-nez v10, :cond_4
+    if-nez v10, :cond_5
 
     invoke-static {v2}, Lcom/android/settings_ex/Settings$HeaderAdapter;->getHeaderType(Landroid/preference/PreferenceActivity$Header;)I
 
     move-result v10
 
-    if-eqz v10, :cond_4
+    if-eqz v10, :cond_5
 
     .line 700
     iput-object v2, p0, Lcom/android/settings_ex/Settings;->mFirstHeader:Landroid/preference/PreferenceActivity$Header;
 
     .line 702
-    :cond_4
+    :cond_5
     iget-object v10, p0, Lcom/android/settings_ex/Settings;->mHeaderIndexMap:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1834,13 +1850,28 @@
     .line 703
     add-int/lit8 v4, v4, 0x1
 
+    goto :goto_1
+
+    .end local v2           #header:Landroid/preference/PreferenceActivity$Header;
+    .end local v4           #i:I
+    .end local v5           #id:I
+    .end local v8           #showDev:Z
+    .end local v9           #um:Landroid/os/UserManager;
+    :cond_6
+    const/4 v10, 0x0
+
     goto :goto_0
 
     .line 598
-    :cond_5
+    .restart local v2       #header:Landroid/preference/PreferenceActivity$Header;
+    .restart local v4       #i:I
+    .restart local v5       #id:I
+    .restart local v8       #showDev:Z
+    .restart local v9       #um:Landroid/os/UserManager;
+    :cond_7
     const v10, 0x7f0d02b4
 
-    if-ne v5, v10, :cond_6
+    if-ne v5, v10, :cond_8
 
     .line 600
     invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1853,18 +1884,18 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 601
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 603
-    :cond_6
+    :cond_8
     const v10, 0x7f0d02b5
 
-    if-ne v5, v10, :cond_7
+    if-ne v5, v10, :cond_9
 
     .line 605
     invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1877,36 +1908,36 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 606
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 608
-    :cond_7
+    :cond_9
     const v10, 0x7f0d02b6
 
-    if-ne v5, v10, :cond_8
+    if-ne v5, v10, :cond_a
 
     .line 610
     invoke-static {p0}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_2
+    if-eqz v10, :cond_3
 
     .line 611
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 613
-    :cond_8
+    :cond_a
     const v10, 0x7f0d02b7
 
-    if-ne v5, v10, :cond_9
+    if-ne v5, v10, :cond_b
 
     .line 615
     const-string v10, "network_management"
@@ -1926,43 +1957,43 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 619
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 621
     :catch_0
     move-exception v10
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 624
     .end local v6           #netManager:Landroid/os/INetworkManagementService;
-    :cond_9
+    :cond_b
     const v10, 0x7f0d02c5
 
-    if-ne v5, v10, :cond_a
+    if-ne v5, v10, :cond_c
 
     .line 627
     iget-boolean v10, p0, Lcom/android/settings_ex/Settings;->mBatteryPresent:Z
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 628
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 630
-    :cond_a
+    :cond_c
     const v10, 0x7f0d02c2
 
-    if-ne v5, v10, :cond_d
+    if-ne v5, v10, :cond_f
 
     .line 631
     invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getResources()Landroid/content/res/Resources;
@@ -1977,7 +2008,7 @@
 
     move-result v10
 
-    if-nez v10, :cond_b
+    if-nez v10, :cond_d
 
     const v10, 0x111002d
 
@@ -1985,36 +2016,36 @@
 
     move-result v10
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_e
 
-    :cond_b
+    :cond_d
     const/4 v1, 0x1
 
     .line 635
     .local v1, hasLed:Z
-    :goto_2
-    if-eqz v1, :cond_2
+    :goto_3
+    if-eqz v1, :cond_3
 
     .line 636
     const v10, 0x7f080127
 
     iput v10, v2, Landroid/preference/PreferenceActivity$Header;->titleRes:I
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 632
     .end local v1           #hasLed:Z
-    :cond_c
+    :cond_e
     const/4 v1, 0x0
 
-    goto :goto_2
+    goto :goto_3
 
     .line 638
     .end local v7           #res:Landroid/content/res/Resources;
-    :cond_d
+    :cond_f
     const v10, 0x7f0d02d2
 
-    if-ne v5, v10, :cond_e
+    if-ne v5, v10, :cond_10
 
     .line 639
     add-int/lit8 v3, v4, 0x1
@@ -2026,56 +2057,56 @@
     move-result v4
 
     .line 641
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .end local v3           #headerIndex:I
-    :cond_e
+    :cond_10
     const v10, 0x7f0d02bc
 
-    if-ne v5, v10, :cond_f
+    if-ne v5, v10, :cond_11
 
     .line 642
     invoke-direct {p0, v2}, Lcom/android/settings_ex/Settings;->updateHomeSettingHeaders(Landroid/preference/PreferenceActivity$Header;)Z
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 643
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 645
-    :cond_f
+    :cond_11
     const v10, 0x7f0d02c7
 
-    if-ne v5, v10, :cond_11
+    if-ne v5, v10, :cond_13
 
     .line 646
     invoke-static {}, Landroid/os/UserManager;->supportsMultipleUsers()Z
 
     move-result v10
 
-    if-eqz v10, :cond_10
+    if-eqz v10, :cond_12
 
     invoke-static {}, Lcom/android/settings_ex/Utils;->isMonkeyRunning()Z
 
     move-result v10
 
-    if-eqz v10, :cond_2
+    if-eqz v10, :cond_3
 
     .line 649
-    :cond_10
+    :cond_12
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 651
-    :cond_11
+    :cond_13
     const v10, 0x7f0d02c8
 
-    if-ne v5, v10, :cond_14
+    if-ne v5, v10, :cond_16
 
     .line 652
     invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2088,28 +2119,28 @@
 
     move-result v10
 
-    if-nez v10, :cond_12
+    if-nez v10, :cond_14
 
     .line 653
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 656
-    :cond_12
+    :cond_14
     invoke-static {p0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
     .line 657
     .local v0, adapter:Landroid/nfc/NfcAdapter;
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_15
 
     invoke-virtual {v0}, Landroid/nfc/NfcAdapter;->isEnabled()Z
 
     move-result v10
 
-    if-eqz v10, :cond_13
+    if-eqz v10, :cond_15
 
     invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -2121,39 +2152,39 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 660
-    :cond_13
+    :cond_15
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 663
     .end local v0           #adapter:Landroid/nfc/NfcAdapter;
-    :cond_14
+    :cond_16
     const v10, 0x7f0d02d8
 
-    if-eq v5, v10, :cond_15
+    if-eq v5, v10, :cond_17
 
     const v10, 0x7f0d02da
 
-    if-ne v5, v10, :cond_16
+    if-ne v5, v10, :cond_18
 
     .line 665
-    :cond_15
-    if-nez v8, :cond_2
+    :cond_17
+    if-nez v8, :cond_3
 
     .line 666
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 668
-    :cond_16
+    :cond_18
     const v10, 0x7f0d02d3
 
-    if-ne v5, v10, :cond_17
+    if-ne v5, v10, :cond_19
 
     .line 669
     const-string v10, "no_modify_accounts"
@@ -2162,36 +2193,36 @@
 
     move-result v10
 
-    if-eqz v10, :cond_2
+    if-eqz v10, :cond_3
 
     .line 670
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 672
-    :cond_17
+    :cond_19
     const v10, 0x7f0d02d9
 
-    if-ne v5, v10, :cond_18
+    if-ne v5, v10, :cond_1a
 
     .line 673
     invoke-static {}, Lcom/android/settings_ex/DevelopmentSettings;->isRootForAppsEnabled()Z
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 674
     invoke-interface {p1, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 676
-    :cond_18
+    :cond_1a
     const v10, 0x7f0d02b9
 
-    if-ne v5, v10, :cond_19
+    if-ne v5, v10, :cond_1b
 
     .line 677
     invoke-static {}, Landroid/telephony/MSimTelephonyManager;->getDefault()Landroid/telephony/MSimTelephonyManager;
@@ -2202,18 +2233,18 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 678
     invoke-interface {p1, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 679
-    :cond_19
+    :cond_1b
     const v10, 0x7f0d02cd
 
-    if-ne v5, v10, :cond_1a
+    if-ne v5, v10, :cond_1c
 
     .line 680
     const-string v10, "com.cyanogenmod.voicewakeup"
@@ -2222,35 +2253,35 @@
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 681
     invoke-interface {p1, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 683
-    :cond_1a
+    :cond_1c
     const v10, 0x7f0d02ca
 
-    if-ne v5, v10, :cond_2
+    if-ne v5, v10, :cond_3
 
     .line 684
     invoke-static {}, Lcom/android/settings_ex/cyanogenmod/MoreDeviceSettings;->hasItems()Z
 
     move-result v10
 
-    if-nez v10, :cond_2
+    if-nez v10, :cond_3
 
     .line 685
     invoke-interface {p1, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 706
     .end local v2           #header:Landroid/preference/PreferenceActivity$Header;
     .end local v5           #id:I
-    :cond_1b
+    :cond_1d
     return-void
 .end method
 

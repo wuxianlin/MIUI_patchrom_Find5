@@ -42,33 +42,49 @@
 
 # virtual methods
 .method protected isInDeveloperMode()Z
-    .locals 5
+    .locals 6
 
     .prologue
+    const/4 v1, 0x0
+
     .line 52
     invoke-virtual {p0}, Lcom/android/settings_ex/LocalePicker;->getActivity()Landroid/app/Activity;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, "development"
+    const-string v3, "development"
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v3, v1}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    move-result-object v2
 
-    move-result-object v1
+    const-string v3, "show"
 
-    const-string v2, "show"
+    sget-object v4, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
+    const-string v5, "eng"
 
-    const-string v4, "eng"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v3
+    if-nez v4, :cond_0
 
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    sget-object v4, Landroid/os/Build;->TYPE:Ljava/lang/String;
+
+    const-string v5, "userdebug"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
