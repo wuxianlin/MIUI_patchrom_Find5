@@ -1,0 +1,47 @@
+From bd97e855ca01a3982de1f46ca9ed455a4c1954f9 Mon Sep 17 00:00:00 2001
+From: wangxiaoli <276792882@qq.com>
+Date: Fri, 27 Jun 2014 09:21:07 +0800
+Subject: [PATCH 1/2] fix phone
+
+---
+ Phone/smali/com/android/phone/PhoneGlobals.smali |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/Phone/smali/com/android/phone/PhoneGlobals.smali
++++ b/Phone/smali/com/android/phone/PhoneGlobals.smali
+@@ -927,7 +927,7 @@
+ 
+     const/4 v3, 0x0
+ 
+-    invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/IccCard;->registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
++    invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/IccCard;->registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+ 
+     :cond_9
+     return-void
+-- 
+1.7.9.5
+
+
+From e06a611fdcc8ad286bced3dcd10150113665ef6d Mon Sep 17 00:00:00 2001
+From: wangxiaoli <276792882@qq.com>
+Date: Fri, 27 Jun 2014 09:24:41 +0800
+Subject: [PATCH 2/2] fix phone
+
+---
+ Phone/smali/com/android/phone/PhoneGlobals.smali |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/Phone/smali/com/android/phone/PhoneGlobals.smali
++++ b/Phone/smali/com/android/phone/PhoneGlobals.smali
+@@ -1960,7 +1960,7 @@
+ 
+     const/4 v3, 0x3
+ 
+-    invoke-interface {v0, v2, v3, v4}, Lcom/android/internal/telephony/IccCard;->registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
++    invoke-interface {v0, v2, v3, v4}, Lcom/android/internal/telephony/IccCard;->registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+ 
+     :cond_5
+     iget-object v0, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+-- 
+1.7.9.5
+

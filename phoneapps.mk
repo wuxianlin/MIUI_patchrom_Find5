@@ -11,7 +11,6 @@ private-phone-apps := ApplicationsProvider \
 					  com.qualcomm.location \
 					  ConfigPanel \
 					  DocumentsUI \
-					  DSPManager \
 					  Galaxy4 \
                                           HoloSpiralWallpaper \
 					  HTMLViewer \
