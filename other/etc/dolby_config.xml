@@ -1,0 +1,2127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+    <SpeakerCoefficients24000>
+                 <byte> 01 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 61 </byte> 
+                 <byte> C2 </byte> 
+                 <byte> F0 </byte> 
+                 <byte> FE </byte> 
+                 <byte> B7 </byte> 
+                 <byte> FC </byte> 
+                 <byte> EA </byte> 
+                 <byte> 74 </byte> 
+                 <byte> 8B </byte> 
+                 <byte> 1E </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 61 </byte> 
+                 <byte> C2 </byte> 
+                 <byte> F0 </byte> 
+                 <byte> FE </byte> 
+                 <byte> B7 </byte> 
+                 <byte> FC </byte> 
+                 <byte> EA </byte> 
+                 <byte> 74 </byte> 
+                 <byte> 8B </byte> 
+                 <byte> 1E </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+    </SpeakerCoefficients24000>
+    <SpeakerCoefficients32000>
+                 <byte> 01 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 20 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 91 </byte> 
+                 <byte> 9A </byte> 
+                 <byte> 56 </byte> 
+                 <byte> F2 </byte> 
+                 <byte> AC </byte> 
+                 <byte> DB </byte> 
+                 <byte> 3B </byte> 
+                 <byte> F0 </byte> 
+                 <byte> CA </byte> 
+                 <byte> 22 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 91 </byte> 
+                 <byte> 9A </byte> 
+                 <byte> 56 </byte> 
+                 <byte> F2 </byte> 
+                 <byte> AC </byte> 
+                 <byte> DB </byte> 
+                 <byte> 3B </byte> 
+                 <byte> F0 </byte> 
+                 <byte> CA </byte> 
+                 <byte> 22 </byte> 
+                 <byte> 00 </byte> 
+                 <byte> 00 </byte> 
+    </SpeakerCoefficients32000>
+    <SpeakerCoefficients44100>
+        <byte>  03 </byte>  <byte>  00 </byte>  <byte>  14 </byte>  <byte>  00 </byte>  <byte>  97 </byte>
+        <byte>  C1 </byte>  <byte>  EC </byte>  <byte>  FF </byte>  <byte>  35 </byte>  <byte>  FD </byte>
+        <byte>  AC </byte>  <byte>  73 </byte>  <byte>  BC </byte>  <byte>  0E </byte>  <byte>  00 </byte>
+        <byte>  00 </byte>  <byte>  3A </byte>  <byte>  D0 </byte>  <byte>  0B </byte>  <byte>  04 </byte>
+        <byte>  AF </byte>  <byte>  00 </byte>  <byte>  D9 </byte>  <byte>  5B </byte>  <byte>  FD </byte>
+        <byte>  1B </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  BE </byte>
+        <byte>  01 </byte>  <byte>  01 </byte>  <byte>  D9 </byte>  <byte>  02 </byte>  <byte>  77 </byte>
+        <byte>  7B </byte>  <byte>  9C </byte>  <byte>  0A </byte>  <byte>  00 </byte>  <byte>  00 </byte>
+        <byte>  97 </byte>  <byte>  C1 </byte>  <byte>  EC </byte>  <byte>  FF </byte>  <byte>  35 </byte>
+        <byte>  FD </byte>  <byte>  AC </byte>  <byte>  77 </byte>  <byte>  BC </byte>  <byte>  0E </byte>
+        <byte>  00 </byte>  <byte>  00 </byte>  <byte>  3A </byte>  <byte>  D0 </byte>  <byte>  0B </byte>
+        <byte>  04 </byte>  <byte>  AF </byte>  <byte>  00 </byte>  <byte>  D9 </byte>  <byte>  5B </byte>
+        <byte>  FD </byte>  <byte>  1B </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  00 </byte>
+        <byte>  BE </byte>  <byte>  01 </byte>  <byte>  01 </byte>  <byte>  D9 </byte>  <byte>  02 </byte>
+        <byte>  77 </byte>  <byte>  7B </byte>  <byte>  9C </byte>  <byte>  0A </byte>  <byte>  00 </byte>
+        <byte>  00 </byte>
+    </SpeakerCoefficients44100>
+    <SpeakerCoefficients48000>
+        <byte>  03 </byte>  <byte>  00 </byte>  <byte>  14 </byte>  <byte>  00 </byte>  <byte>  97 </byte>
+        <byte>  C1 </byte>  <byte>  EC </byte>  <byte>  FF </byte>  <byte>  35 </byte>  <byte>  FD </byte>
+        <byte>  AC </byte>  <byte>  73 </byte>  <byte>  BC </byte>  <byte>  0E </byte>  <byte>  00 </byte>
+        <byte>  00 </byte>  <byte>  3A </byte>  <byte>  D0 </byte>  <byte>  0B </byte>  <byte>  04 </byte>
+        <byte>  AF </byte>  <byte>  00 </byte>  <byte>  D9 </byte>  <byte>  5B </byte>  <byte>  FD </byte>
+        <byte>  1B </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  BE </byte>
+        <byte>  01 </byte>  <byte>  01 </byte>  <byte>  D9 </byte>  <byte>  02 </byte>  <byte>  77 </byte>
+        <byte>  7B </byte>  <byte>  9C </byte>  <byte>  0A </byte>  <byte>  00 </byte>  <byte>  00 </byte>
+        <byte>  97 </byte>  <byte>  C1 </byte>  <byte>  EC </byte>  <byte>  FF </byte>  <byte>  35 </byte>
+        <byte>  FD </byte>  <byte>  AC </byte>  <byte>  77 </byte>  <byte>  BC </byte>  <byte>  0E </byte>
+        <byte>  00 </byte>  <byte>  00 </byte>  <byte>  3A </byte>  <byte>  D0 </byte>  <byte>  0B </byte>
+        <byte>  04 </byte>  <byte>  AF </byte>  <byte>  00 </byte>  <byte>  D9 </byte>  <byte>  5B </byte>
+        <byte>  FD </byte>  <byte>  1B </byte>  <byte>  00 </byte>  <byte>  00 </byte>  <byte>  00 </byte>
+        <byte>  BE </byte>  <byte>  01 </byte>  <byte>  01 </byte>  <byte>  D9 </byte>  <byte>  02 </byte>
+        <byte>  77 </byte>  <byte>  7B </byte>  <byte>  9C </byte>  <byte>  0A </byte>  <byte>  00 </byte>
+        <byte>  00 </byte>
+    </SpeakerCoefficients48000>
+    <Presets>
+             <DolbyMobilePreset qName = "default"  qNum = "movie 0"   qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 2 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 32 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 32 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 40 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+            <DolbyMobilePreset qName = "news"  qNum = "movie 1"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > -4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset> 
+
+
+            <DolbyMobilePreset qName = "sports"  qNum = "movie 2"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 20 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset> 
+
+            <DolbyMobilePreset qName = "drama"  qNum = "movie 3"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 20 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset> 
+
+
+            <DolbyMobilePreset qName = "music video"  qNum = "movie 4"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 2 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > -12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset> 
+
+
+
+            <DolbyMobilePreset qName = "movie"  qNum = "movie 5"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > -12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset> 
+
+
+             <DolbyMobilePreset qName = "comedy"  qNum = "movie 6"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 10 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 2 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+            <DolbyMobilePreset qName = "Musical"  qNum = "movie 7"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 8 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Animated"  qNum = "movie 8"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_IN_MATRIX" > 4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 8 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+             <DolbyMobilePreset qName = "variety show"  qNum = "movie 9"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" >0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > -4 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+             <DolbyMobilePreset qName = "speaker on"  qNum = "movie 0"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MOVIE" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings> 
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 2 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 40 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+
+
+            <DolbyMobilePreset qName = "Default"  qNum = "music 0"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>  
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 2 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 2 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 40 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+            <DolbyMobilePreset qName = "rock"  qNum = "music 1"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+             <DolbyMobilePreset qName = "jazz"  qNum = "music 2"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+             <DolbyMobilePreset qName = "pop"  qNum = "music 3"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+            
+             <DolbyMobilePreset qName = "classical"  qNum = "music 4"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+             <DolbyMobilePreset qName = "R B"  qNum = "music 5"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Hip Hop"  qNum = "music 6"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+            <DolbyMobilePreset qName = "Blues"  qNum = "music 7"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 2 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+
+            <DolbyMobilePreset qName = "Electronic"  qNum = "music 8"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Contry"  qNum = "music 9"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > -4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+            <DolbyMobilePreset qName = "Urban"  qNum = "music 10"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+            <DolbyMobilePreset qName = "Podcast"  qNum = "music 11"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Dance"  qNum = "music 12"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > -16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Latin American"  qNum = "music 13"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Jungle"  qNum = "music 14"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > -20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 16 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+
+            <DolbyMobilePreset qName = "Metal"  qNum = "music 15"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value> 
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > -12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 14 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+ 
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value> 
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+
+
+            <DolbyMobilePreset qName = "Flat"  qNum = "music 16"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                             <value> 
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                             <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 1 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+                            </value>
+                    </entrySet>
+ 
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value> 
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 18 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 6 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+ 
+            <DolbyMobilePreset qName = "Speaker on"  qNum = "music 17"  qResult = "false"  qCategory = "DolbyMobilePreset.Category.MUSIC" >
+                <allSettings>
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.HEADPHONES</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_DEPTH" > 1 </DolbyMobileSettings> 
+ 
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_BUNDLE"  s2 = "TDAS_MSR_MAX_PROFILE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ROOM" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_BRIGHT" > 2 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_LEVEL" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_DEPTH" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > 20 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 4 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 24 </DolbyMobileSettings> 
+ 
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 5 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 3 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 1 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+ 
+                    <entrySet>
+                        <key>DolbyMobileEndpoint.SPEAKERS</key>
+                            <value>
+                            <DolbyMobileSettings s1 = "TDAS_MSR"  s2 = "MSR_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_HFE"  s2 = "HFE_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_M2S"  s2 = "M2S_ENABLE" > 0</DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SSE"  s2 = "SSE_ENABLE" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_ENABLE" > 1 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB1" > 12 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_SEQ"  s2 = "SPKEQ_CHGAIN_DB2" > 12 </DolbyMobileSettings>
+
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_NBANDS" > 7 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND1" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND2" > -48 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND3" > 40 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND4" > -8 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND5" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND6" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_BAND7" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_PREAMP" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_GEQ"  s2 = "GEQ_MAXBOOST" > 48 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_ENABLE" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_CUTOFF" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_BOOST" > 0 </DolbyMobileSettings>
+                            <DolbyMobileSettings s1 = "TDAS_NB"  s2 = "NB_LEVEL" > 0 </DolbyMobileSettings>
+ 
+                            <DolbyMobileSettings s1 = "TDAS_SLC"  s2 = "SLC_ENABLE" > 0 </DolbyMobileSettings>
+                            </value>
+                    </entrySet>
+                </allSettings>
+            </DolbyMobilePreset>
+    </Presets>
+</Configuration>
