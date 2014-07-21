@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="stocksettings">Stock Settings</string>
+    <string name="power_cell">Mobile signal</string>
+</resources>

@@ -106,7 +106,7 @@ fi
 if [ $2 = "$BUILD_OUT/services" ]
 then
     #cp -rf overlay/services/smali/* $BUILD_OUT/services/smali
-    rm -rf $BUILD_OUT/services/smali/com/android/server/ThemeService*
+    #rm -rf $BUILD_OUT/services/smali/com/android/server/ThemeService*
     rm $BUILD_OUT/services/smali/com/android/server/am/ActivityManagerService\$13\$1.smali
 fi
 
