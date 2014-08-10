@@ -42,10 +42,47 @@
 
     .prologue
     .line 4457
+    iget-object v1, p0, Landroid/media/AudioService$7;->this$0:Landroid/media/AudioService;
+
+    #getter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
+    invoke-static {v1}, Landroid/media/AudioService;->access$300(Landroid/media/AudioService;)Landroid/content/Context;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    .line 4458
+    iget-object v1, p0, Landroid/media/AudioService$7;->this$0:Landroid/media/AudioService;
+
     iget-object v2, p0, Landroid/media/AudioService$7;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mContext:Landroid/content/Context;
     invoke-static {v2}, Landroid/media/AudioService;->access$8800(Landroid/media/AudioService;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/content/pm/ThemeUtils;->createUiContext(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v2
+
+    #setter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
+    invoke-static {v1, v2}, Landroid/media/AudioService;->access$302(Landroid/media/AudioService;Landroid/content/Context;)Landroid/content/Context;
+
+    .line 4461
+    :cond_0
+    iget-object v1, p0, Landroid/media/AudioService$7;->this$0:Landroid/media/AudioService;
+
+    #getter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
+    invoke-static {v1}, Landroid/media/AudioService;->access$300(Landroid/media/AudioService;)Landroid/content/Context;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Landroid/media/AudioService$7;->this$0:Landroid/media/AudioService;
+
+    #getter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
+    invoke-static {v1}, Landroid/media/AudioService;->access$300(Landroid/media/AudioService;)Landroid/content/Context;
 
     move-result-object v0
 

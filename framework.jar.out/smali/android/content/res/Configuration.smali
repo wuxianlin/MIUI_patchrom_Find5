@@ -2016,9 +2016,11 @@
 .end method
 
 .method public setToDefaults()V
-    .locals 2
+    .locals 3
 
     .prologue
+    const/4 v2, 0x0
+
     const/4 v1, 0x0
 
     const/high16 v0, 0x3f80
@@ -2029,9 +2031,7 @@
 
     iput v1, p0, Landroid/content/res/Configuration;->mcc:I
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iput-object v2, p0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     iput-boolean v1, p0, Landroid/content/res/Configuration;->userSetLocale:Z
 
@@ -2068,6 +2068,8 @@
     iput v1, p0, Landroid/content/res/Configuration;->densityDpi:I
 
     iput v1, p0, Landroid/content/res/Configuration;->seq:I
+
+    iput-object v2, p0, Landroid/content/res/Configuration;->customTheme:Landroid/content/res/CustomTheme;
 
     invoke-static {p0}, Landroid/content/res/Injector$ConfigurationHook;->setToDefaults(Landroid/content/res/Configuration;)V
 
