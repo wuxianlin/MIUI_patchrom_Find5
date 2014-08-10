@@ -4153,6 +4153,8 @@
 
     .line 1443
     :cond_e
+    iput v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLongPressOnMenuBehavior:I
+
     return-void
 
     .end local v1           #hasAppSwitch:Z
