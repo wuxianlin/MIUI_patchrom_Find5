@@ -56,6 +56,7 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
+    rm -rf $BUILD_OUT/framework/smali/android/provider/Telephony\$Intents.smali
     cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
 fi
 
@@ -73,6 +74,10 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/cdma/CdmaConnection\$Injector.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/gsm/GSMPhone\$2.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/uicc/SpnOverride\$Injector.smali
+    rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/CallManager\$2.smali
 fi
 
 if [ $2 = "$BUILD_OUT/telephony-common" ]
@@ -89,5 +94,20 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
+fi
+
+if [ $2 = "$BUILD_OUT/services" ]
+then
+    #cp -rf overlay/services/smali/* $BUILD_OUT/services/smali
+    #rm -rf $BUILD_OUT/services/smali/com/android/server/ThemeService*
+    rm $BUILD_OUT/services/smali/com/android/server/am/ActivityManagerService\$13\$1.smali
+fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/GlobalActions\$3\$1\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/GlobalActions\$3\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/PhoneWindowManager\$13\$1.smali
+    rm $BUILD_OUT/android.policy/smali/com/android/internal/policy/impl/PhoneWindowManager\$21\$1.smali
 fi
 
