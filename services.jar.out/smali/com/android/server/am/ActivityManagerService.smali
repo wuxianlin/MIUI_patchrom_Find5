@@ -6458,6 +6458,14 @@
 
     .line 13792
     .restart local v14       #queue:Lcom/android/server/am/BroadcastQueue;
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v34
+
+    move-object/from16 v2, v15
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/am/Injector$ActivityManagerServiceHook;->adjustMediaButtonReceivers(Lcom/android/server/am/ActivityManagerService;Ljava/util/List;Landroid/content/Intent;)V
+
     new-instance v13, Lcom/android/server/am/BroadcastRecord;
 
     const/16 v41, 0x0
