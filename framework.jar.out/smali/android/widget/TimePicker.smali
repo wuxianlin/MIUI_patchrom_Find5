@@ -273,6 +273,14 @@
     .line 204
     iget-object v8, p0, Landroid/widget/TimePicker;->mMinuteSpinner:Landroid/widget/NumberPicker;
 
+    new-instance v9, Landroid/widget/TimePicker$OnMinuteChangeListener;
+
+    invoke-direct {v9, p0}, Landroid/widget/TimePicker$OnMinuteChangeListener;-><init>(Landroid/widget/TimePicker;)V
+
+    invoke-virtual {v8, v9}, Landroid/widget/NumberPicker;->setOnValueChangedListener(Landroid/widget/NumberPicker$OnValueChangeListener;)V
+
+    iget-object v8, p0, Landroid/widget/TimePicker;->mMinuteSpinner:Landroid/widget/NumberPicker;
+
     const v9, 0x10202ea
 
     invoke-virtual {v8, v9}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;

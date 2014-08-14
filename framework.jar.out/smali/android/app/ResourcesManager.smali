@@ -1564,6 +1564,8 @@
 
     .line 395
     :cond_4
+    invoke-static {v1, p1}, Landroid/app/Injector$ActivityThreadHook;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
+
     iget-object v12, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     if-eqz v12, :cond_5
@@ -2373,14 +2375,13 @@
 
     .line 238
     :cond_7
-    new-instance v8, Landroid/content/res/Resources;
-
-    .end local v8           #r:Landroid/content/res/Resources;
-    move-object/from16 v12, p6
-
-    move-object/from16 v13, p7
-
-    invoke-direct/range {v8 .. v13}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;Landroid/os/IBinder;)V
+    move-object/from16 v0, p6
+  
+    move-object/from16 v1, p7
+ 
+    invoke-static {v9, v10, v11, v0, v1}, Landroid/app/Injector$ActivityThreadHook;->createResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;Landroid/os/IBinder;)Landroid/content/res/Resources;
+ 
+    move-result-object v8
 
     .line 239
     .restart local v8       #r:Landroid/content/res/Resources;

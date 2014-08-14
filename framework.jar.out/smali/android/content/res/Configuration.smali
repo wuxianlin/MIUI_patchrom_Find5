@@ -1236,7 +1236,11 @@
 
     .line 1094
     :cond_14
-    return v0
+    invoke-static {p0, p1, v0}, Landroid/content/res/Injector$ConfigurationHook;->diff(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
+    return v2
 .end method
 
 .method public equals(Landroid/content/res/Configuration;)Z
@@ -2003,6 +2007,8 @@
 
     .line 668
     :cond_1
+    invoke-static {p0, p1}, Landroid/content/res/Injector$ConfigurationHook;->setTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
@@ -2062,7 +2068,7 @@
 
     iput-object v2, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
-    invoke-static {p0, p1}, Landroid/content/res/Injector$ConfigurationHook;->setTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+    invoke-static {p0}, Landroid/content/res/Injector$ConfigurationHook;->setToDefaults(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -2457,6 +2463,10 @@
 
     .line 806
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {p0, v2}, Landroid/content/res/Injector$ConfigurationHook;->toString(Landroid/content/res/Configuration;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -3553,7 +3563,11 @@
 
     .line 981
     :cond_1b
-    return v0
+    invoke-static {p0, p1, v0}, Landroid/content/res/Injector$ConfigurationHook;->updateFrom(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
+    return v2
 
     .line 864
     .end local v1           #deltaScreenLayoutDir:I
@@ -3680,7 +3694,7 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    invoke-static {p0}, Landroid/content/res/Injector$ConfigurationHook;->setToDefaults(Landroid/content/res/Configuration;)V
+    invoke-static {p0, p1, p2}, Landroid/content/res/Injector$ConfigurationHook;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
 
     return-void
 

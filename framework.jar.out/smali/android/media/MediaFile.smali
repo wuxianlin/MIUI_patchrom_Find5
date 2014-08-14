@@ -12,6 +12,8 @@
 
 
 # static fields
+.field public static final FILE_TYPE_3G2B:I = 0xd2
+
 .field public static final FILE_TYPE_3GPA:I = 0x12d
 
 .field public static final FILE_TYPE_3GPP:I = 0x17
@@ -25,8 +27,6 @@
 .field public static final FILE_TYPE_AMR:I = 0x4
 
 .field public static final FILE_TYPE_APE:I = 0x132
-
-.field public static final FILE_TYPE_APE:I = 0x3e9
 
 .field public static final FILE_TYPE_ASF:I = 0x1a
 
@@ -43,6 +43,8 @@
 .field public static final FILE_TYPE_DTS:I = 0x12c
 
 .field public static final FILE_TYPE_EC3:I = 0x131
+
+.field public static final FILE_TYPE_F4V:I = 0xd1
 
 .field public static final FILE_TYPE_FL:I = 0x33
 
@@ -72,7 +74,7 @@
 
 .field public static final FILE_TYPE_MKV:I = 0x1b
 
-.field public static final FILE_TYPE_MOV:I = 0xca
+.field public static final FILE_TYPE_MOV:I = 0xcd
 
 .field public static final FILE_TYPE_MP2PS:I = 0xc8
 
@@ -100,6 +102,10 @@
 
 .field public static final FILE_TYPE_QCP:I = 0x12f
 
+.field public static final FILE_TYPE_RM:I = 0xce
+
+.field public static final FILE_TYPE_RMVB:I = 0xcf
+
 .field public static final FILE_TYPE_RV:I = 0xcb
 
 .field public static final FILE_TYPE_SMF:I = 0xc
@@ -107,6 +113,8 @@
 .field public static final FILE_TYPE_TEXT:I = 0x64
 
 .field public static final FILE_TYPE_VC1:I = 0xcc
+
+.field public static final FILE_TYPE_VOB:I = 0xd0
 
 .field public static final FILE_TYPE_WAV:I = 0x3
 
@@ -158,7 +166,7 @@
 
 .field private static final LAST_VIDEO_FILE_TYPE:I = 0x1e
 
-.field private static final LAST_VIDEO_FILE_TYPE2:I = 0xcc
+.field private static final LAST_VIDEO_FILE_TYPE2:I = 0xd2
 
 .field private static final sFileTypeMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -1558,7 +1566,7 @@
 
     if-lt p0, v0, :cond_2
 
-    const/16 v0, 0xcc
+    const/16 v0, 0xd2
 
     if-gt p0, v0, :cond_2
 

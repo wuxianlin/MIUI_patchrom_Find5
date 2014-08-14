@@ -2894,19 +2894,11 @@
 .end method
 
 .method public getSimOperator()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
     .prologue
     .line 992
-    const-string v0, "gsm.sim.operator.numeric"
-
-    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefaultSubscription()I
-
-    move-result v1
-
-    const-string v2, ""
-
-    invoke-static {v0, v1, v2}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Landroid/telephony/Injector$TelephonyManagerHook;->getSimOperator(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result-object v0
 
