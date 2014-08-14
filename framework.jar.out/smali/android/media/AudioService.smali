@@ -5234,12 +5234,17 @@
     if-eqz v9, :cond_0
 
     .line 1870
+    .end local v7           #inTouchSoundsGroup:Z
+    .end local v10           #version:Ljava/lang/String;
+    :goto_2
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_0
 
     .line 1824
     .restart local v1       #element:Ljava/lang/String;
+    .restart local v7       #inTouchSoundsGroup:Z
+    .restart local v10       #version:Ljava/lang/String;
     :cond_4
     :try_start_1
     const-string v11, "group"
@@ -5404,9 +5409,7 @@
     if-eqz v9, :cond_0
 
     .line 1870
-    invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
-
-    goto/16 :goto_0
+    goto :goto_2
 
     .line 1846
     .end local v0           #e:Landroid/content/res/Resources$NotFoundException;
@@ -5468,16 +5471,12 @@
     const-string v12, "XML parser exception reading touch sound assets"
 
     invoke-static {v11, v12, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     .line 1869
     if-eqz v9, :cond_0
 
     .line 1870
-    invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
-
-    goto/16 :goto_0
+    goto/16 :goto_2
 
     .line 1866
     .end local v0           #e:Lorg/xmlpull/v1/XmlPullParserException;
@@ -5486,22 +5485,19 @@
 
     .line 1867
     .local v0, e:Ljava/io/IOException;
-    :try_start_7
     const-string v11, "AudioService"
 
     const-string v12, "I/O exception reading touch sound assets"
 
     invoke-static {v11, v12, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     .line 1869
     if-eqz v9, :cond_0
 
     .line 1870
-    invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
-
-    goto/16 :goto_0
+    goto/16 :goto_2
 
     .line 1869
     .end local v0           #e:Ljava/io/IOException;
