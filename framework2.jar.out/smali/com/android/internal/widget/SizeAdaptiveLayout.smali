@@ -476,6 +476,10 @@
 
     const/high16 v4, -0x100
 
+    invoke-static {v4}, Lcom/android/internal/widget/Injector$SizeAdaptiveLayoutHook;->getModestyPanelBackgroundColor(I)I
+
+    move-result v4
+
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
     goto :goto_0

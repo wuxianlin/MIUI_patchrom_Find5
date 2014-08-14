@@ -22,6 +22,8 @@
 
 .field public contactRingtoneUri:Landroid/net/Uri;
 
+.field public extra:Lmiui/telephony/ExtraCallerInfo;
+
 .field public geoDescription:Ljava/lang/String;
 
 .field public isCachedPhotoCurrent:Z
@@ -80,16 +82,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsEmergency:Z
 
-    .line 144
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsVoiceMail:Z
 
-    .line 145
+    new-instance v0, Lmiui/telephony/ExtraCallerInfo;
+
+    invoke-direct {v0}, Lmiui/telephony/ExtraCallerInfo;-><init>()V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/CallerInfo;->extra:Lmiui/telephony/ExtraCallerInfo;
+
     return-void
 .end method
 
@@ -308,9 +312,11 @@
 
     .line 182
     :cond_1
+    invoke-static {p1}, Lcom/android/internal/telephony/CallerInfo$Injector;->setContactRef(Landroid/net/Uri;)V
+
     const-string v3, "number"
 
-    invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-static {p2, v3}, Lcom/android/internal/telephony/CallerInfo$Injector;->getColumnIndex(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v0
 
@@ -328,7 +334,7 @@
     :cond_2
     const-string v3, "normalized_number"
 
-    invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-static {p2, v3}, Lcom/android/internal/telephony/CallerInfo$Injector;->getColumnIndex(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v0
 
@@ -346,39 +352,33 @@
     :cond_3
     const-string v3, "label"
 
-    invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-static {p2, v3}, Lcom/android/internal/telephony/CallerInfo$Injector;->getColumnIndex(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 195
     if-eq v0, v9, :cond_4
 
-    .line 196
     const-string v3, "type"
 
-    invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-static {p2, v3}, Lcom/android/internal/telephony/CallerInfo$Injector;->getColumnIndex(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 197
     .local v2, typeColumnIndex:I
     if-eq v2, v9, :cond_4
 
-    .line 198
     invoke-interface {p2, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
     iput v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberType:I
 
-    .line 199
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberLabel:Ljava/lang/String;
 
-    .line 200
     iget v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberType:I
 
     iget-object v6, v1, Lcom/android/internal/telephony/CallerInfo;->numberLabel:Ljava/lang/String;
@@ -490,19 +490,21 @@
     :goto_2
     iput-boolean v3, v1, Lcom/android/internal/telephony/CallerInfo;->shouldSendToVoicemail:Z
 
-    .line 233
     iput-boolean v4, v1, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
 
-    .line 235
+    invoke-static {p0, v1, p2}, Lmiui/telephony/ExtraCallerInfo;->getExtraCallerInfo(Landroid/content/Context;Lcom/android/internal/telephony/CallerInfo;Landroid/database/Cursor;)Lmiui/telephony/ExtraCallerInfo;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->extra:Lmiui/telephony/ExtraCallerInfo;
+
     .end local v0           #columnIndex:I
     :cond_6
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
-    .line 238
     :cond_7
     iput-boolean v5, v1, Lcom/android/internal/telephony/CallerInfo;->needUpdate:Z
 
-    .line 239
     iget-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->name:Ljava/lang/String;
 
     invoke-static {v3}, Lcom/android/internal/telephony/CallerInfo;->normalize(Ljava/lang/String;)Ljava/lang/String;

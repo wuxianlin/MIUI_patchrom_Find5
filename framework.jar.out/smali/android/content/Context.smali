@@ -124,6 +124,8 @@
 
 .field public static final SEARCH_SERVICE:Ljava/lang/String; = "search"
 
+.field public static final SECURITY_SERVICE:Ljava/lang/String; = "security"
+
 .field public static final SENSOR_SERVICE:Ljava/lang/String; = "sensor"
 
 .field public static final SERIAL_SERVICE:Ljava/lang/String; = "serial"
@@ -175,6 +177,25 @@
 
 # virtual methods
 .method public abstract bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+.end method
+
+.method public bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;II)Z
+    .locals 1
+    .parameter "service"
+    .parameter "conn"
+    .parameter "flags"
+    .parameter "userHandle"
+
+    .prologue
+    new-instance v0, Landroid/os/UserHandle;
+
+    invoke-direct {v0, p4}, Landroid/os/UserHandle;-><init>(I)V
+
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z

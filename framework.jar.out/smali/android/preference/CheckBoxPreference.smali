@@ -112,20 +112,18 @@
 
     move-object v1, v0
 
-    .line 63
     check-cast v1, Landroid/widget/Checkable;
 
     iget-boolean v2, p0, Landroid/preference/CheckBoxPreference;->mChecked:Z
 
     invoke-interface {v1, v2}, Landroid/widget/Checkable;->setChecked(Z)V
 
-    .line 64
     invoke-virtual {p0, v0}, Landroid/preference/CheckBoxPreference;->sendAccessibilityEvent(Landroid/view/View;)V
 
-    .line 67
     :cond_0
     invoke-virtual {p0, p1}, Landroid/preference/CheckBoxPreference;->syncSummaryView(Landroid/view/View;)V
 
-    .line 68
+    invoke-static {p0, v0}, Landroid/preference/Injector$CheckBoxPreferenceHook;->after_onBindView(Landroid/preference/CheckBoxPreference;Landroid/view/View;)V
+
     return-void
 .end method

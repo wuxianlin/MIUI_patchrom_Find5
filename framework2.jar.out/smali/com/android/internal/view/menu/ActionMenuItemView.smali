@@ -32,6 +32,8 @@
 
 .field private mSavedPaddingLeft:I
 
+.field mSavedPaddingRight:I
+
 .field private mTitle:Ljava/lang/CharSequence;
 
 
@@ -174,6 +176,14 @@
 
     iget-object v3, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
 
+    invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->isForceShowText()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-object v3, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->showsTextAsAction()Z
 
     move-result v3
@@ -249,6 +259,15 @@
     return v0
 .end method
 
+.method getIcon()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
 .method public getItemData()Lcom/android/internal/view/menu/MenuItemImpl;
     .locals 1
 
@@ -257,6 +276,15 @@
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
 
     return-object v0
+.end method
+
+.method getSavedPaddingLeft()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mSavedPaddingLeft:I
+
+    return v0
 .end method
 
 .method public hasText()Z
@@ -577,14 +605,21 @@
 
     const/high16 v11, 0x4000
 
-    .line 255
+    invoke-static {p0, p1, p2}, Lcom/android/internal/view/menu/Injector$ActionMenuItemViewHook;->before_onMeasure(Lcom/android/internal/view/menu/ActionMenuItemView;II)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_miui
+
+    return-void
+
+    :cond_miui
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v7
 
     if-ne v7, v12, :cond_0
 
-    .line 257
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v7
@@ -938,13 +973,12 @@
     .parameter "b"
 
     .prologue
-    .line 94
     iput p1, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mSavedPaddingLeft:I
 
-    .line 95
+    iput p3, p0, Lcom/android/internal/view/menu/ActionMenuItemView;->mSavedPaddingRight:I
+
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 96
     return-void
 .end method
 
@@ -986,4 +1020,28 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method superOnMeasure(II)V
+    .locals 0
+    .parameter "widthMeasureSpec"
+    .parameter "heightMeasureSpec"
+
+    .prologue
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
+
+    return-void
+.end method
+
+.method superSetPadding(IIII)V
+    .locals 0
+    .parameter "l"
+    .parameter "t"
+    .parameter "r"
+    .parameter "b"
+
+    .prologue
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    return-void
 .end method

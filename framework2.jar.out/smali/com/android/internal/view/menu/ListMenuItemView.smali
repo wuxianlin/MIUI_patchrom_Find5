@@ -161,12 +161,10 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
-    .line 256
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
-    invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
+    invoke-static {p0, v1}, Lcom/android/internal/view/menu/Injector$ListMenuItemViewHook;->addCheckBox(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/CheckBox;)V
 
-    .line 257
     return-void
 .end method
 
@@ -225,12 +223,10 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
-    .line 248
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
-    invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
+    invoke-static {p0, v1}, Lcom/android/internal/view/menu/Injector$ListMenuItemViewHook;->addRadioButton(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/RadioButton;)V
 
-    .line 249
     return-void
 .end method
 
@@ -242,6 +238,15 @@
     .prologue
     .line 122
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    return-object v0
+.end method
+
+.method getTitleView()Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -533,6 +538,14 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
+    iget-object v4, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    invoke-virtual {v4}, Lcom/android/internal/view/menu/MenuItemImpl;->isChecked()Z
+
+    move-result v4
+
+    invoke-static {p0, v4}, Lcom/android/internal/view/menu/Injector$ListMenuItemViewHook;->checkTextColor(Lcom/android/internal/view/menu/ListMenuItemView;Z)V
+
     .line 152
     if-eqz p1, :cond_6
 
@@ -631,37 +644,31 @@
 
     if-eqz v1, :cond_1
 
-    .line 171
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
     if-nez v1, :cond_0
 
-    .line 172
     invoke-direct {p0}, Lcom/android/internal/view/menu/ListMenuItemView;->insertRadioButton()V
 
-    .line 174
     :cond_0
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
-    .line 182
     .local v0, compoundButton:Landroid/widget/CompoundButton;
     :goto_0
     invoke-virtual {v0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 183
+    invoke-static {p0, p1}, Lcom/android/internal/view/menu/Injector$ListMenuItemViewHook;->after_setChecked(Lcom/android/internal/view/menu/ListMenuItemView;Z)V
+
     return-void
 
-    .line 176
     .end local v0           #compoundButton:Landroid/widget/CompoundButton;
     :cond_1
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
     if-nez v1, :cond_2
 
-    .line 177
     invoke-direct {p0}, Lcom/android/internal/view/menu/ListMenuItemView;->insertCheckBox()V
 
-    .line 179
     :cond_2
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 

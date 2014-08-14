@@ -108,6 +108,8 @@
 
 .field private mParseError:I
 
+.field private mParseFlags:I
+
 .field private mParseInstrumentationArgs:Landroid/content/pm/PackageParser$ParsePackageItemArgs;
 
 .field private mParseProviderArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -249,18 +251,18 @@
     .parameter "archiveSourcePath"
 
     .prologue
-    .line 253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/content/pm/PackageParser;->mParseError:I
 
-    .line 254
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/content/pm/PackageParser;->mParseFlags:I
+
     iput-object p1, p0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
 
-    .line 255
     return-void
 .end method
 
@@ -8695,20 +8697,25 @@
 
     move-result v7
 
-    .line 3736
     .local v7, priority:I
+    move-object/from16 v0, p0
+
+    iget v13, v0, Landroid/content/pm/PackageParser;->mParseFlags:I
+
+    invoke-static {v13, v7}, Landroid/content/pm/Injector$PackageParserHook;->checkPriority(II)I
+
+    move-result v7
+
     move-object/from16 v0, p5
 
     invoke-virtual {v0, v7}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
 
-    .line 3738
     const/4 v13, 0x0
 
     invoke-virtual {v8, v13}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v11
 
-    .line 3740
     .local v11, v:Landroid/util/TypedValue;
     if-eqz v11, :cond_0
 
@@ -14657,13 +14664,13 @@
     .local v15, providerExportedDefault:Z
     move-object/from16 v0, p1
 
-    iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    move/from16 v1, p5
 
-    iget v2, v2, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+    invoke-static {v0, v1}, Landroid/content/pm/Injector$PackageParserHook;->providerShouldExport(Landroid/content/pm/PackageParser$Package;I)Z
 
-    const/16 v3, 0x11
+    move-result v2
 
-    if-ge v2, v3, :cond_3
+    if-eqz v2, :cond_3
 
     .line 3169
     const/4 v15, 0x1
@@ -17671,20 +17678,27 @@
     .parameter "requiresSeparator"
 
     .prologue
-    .line 1131
+    const/4 v5, 0x0
+
+    invoke-static {p0}, Landroid/content/pm/Injector$PackageParserHook;->before_validateName(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_miui
+
+    return-object v5
+
+    :cond_miui
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 1132
     .local v0, N:I
     const/4 v3, 0x0
 
-    .line 1133
     .local v3, hasSep:Z
     const/4 v2, 0x1
 
-    .line 1134
     .local v2, front:Z
     const/4 v4, 0x0
 
@@ -18147,11 +18161,19 @@
 
     move-result-object v11
 
-    .line 1003
     .local v11, localCerts:[Ljava/security/cert/Certificate;
     if-nez v11, :cond_5
 
-    .line 1004
+    move-object/from16 v0, p1
+
+    iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    invoke-static {v10, v15}, Landroid/content/pm/Injector$PackageParserHook;->acceptNoCertificatesPackage(Ljava/util/jar/JarEntry;Ljava/lang/String;)Z
+
+    move-result v15
+
+    if-nez v15, :cond_3
+
     const-string v15, "PackageParser"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -18839,14 +18861,18 @@
     .parameter "trustedOverlay"
 
     .prologue
-    .line 543
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/content/pm/PackageParser;->mParseError:I
 
-    .line 545
+    move/from16 v0, p4
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/content/pm/PackageParser;->mParseFlags:I
+
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v3

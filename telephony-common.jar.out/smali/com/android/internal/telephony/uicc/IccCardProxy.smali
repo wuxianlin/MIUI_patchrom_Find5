@@ -3652,22 +3652,24 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 340
     :cond_0
-    iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/IccCardProxy;->mRadioOn:Z
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccCardProxy;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
+
+    iget-boolean v1, p0, Lcom/android/internal/telephony/uicc/IccCardProxy;->mRadioOn:Z
+
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/uicc/Injector$IccCardProxyHook;->isUiccCardReady(Lcom/android/internal/telephony/uicc/UiccCard;Z)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 341
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->ABSENT:Lcom/android/internal/telephony/IccCardConstants$State;
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/IccCardProxy;->setExternalState(Lcom/android/internal/telephony/IccCardConstants$State;)V
 
-    .line 383
     :goto_0
     return-void
 
-    .line 343
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NOT_READY:Lcom/android/internal/telephony/IccCardConstants$State;
 

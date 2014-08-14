@@ -607,27 +607,51 @@
 .end method
 
 .method public onCreate()V
-    .locals 0
+    .locals 3
 
     .prologue
-    .line 93
+    :try_start_0
+    invoke-virtual {p0}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/res/MiuiResources;
+
+    invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/content/res/MiuiResources;->initMiuiFontScale(Landroid/content/res/Configuration;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    .local v0, e:Ljava/lang/Exception;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
 .end method
 
 .method public onLowMemory()V
     .locals 3
 
     .prologue
-    .line 114
     invoke-direct {p0}, Landroid/app/Application;->collectComponentCallbacks()[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 115
     .local v0, callbacks:[Ljava/lang/Object;
     if-eqz v0, :cond_0
 
-    .line 116
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -636,19 +660,16 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 117
     aget-object v2, v0, v1
 
     check-cast v2, Landroid/content/ComponentCallbacks;
 
     invoke-interface {v2}, Landroid/content/ComponentCallbacks;->onLowMemory()V
 
-    .line 116
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 120
     .end local v1           #i:I
     :cond_0
     return-void
@@ -658,6 +679,7 @@
     .locals 0
 
     .prologue
+    .line 93
     .line 102
     return-void
 .end method

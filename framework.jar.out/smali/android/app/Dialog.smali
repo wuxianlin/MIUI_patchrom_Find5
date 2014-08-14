@@ -190,41 +190,35 @@
 
     iput-object v2, p0, Landroid/app/Dialog;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 166
     iget-object v2, p0, Landroid/app/Dialog;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/internal/policy/PolicyManager;->makeNewWindow(Landroid/content/Context;)Landroid/view/Window;
 
     move-result-object v1
 
-    .line 167
     .local v1, w:Landroid/view/Window;
     iput-object v1, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
 
-    .line 168
     invoke-virtual {v1, p0}, Landroid/view/Window;->setCallback(Landroid/view/Window$Callback;)V
 
-    .line 169
     iget-object v2, p0, Landroid/app/Dialog;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-virtual {v1, v2, v5, v5}, Landroid/view/Window;->setWindowManager(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 170
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setGravity(I)V
 
-    .line 171
     new-instance v2, Landroid/app/Dialog$ListenersHandler;
 
     invoke-direct {v2, p0}, Landroid/app/Dialog$ListenersHandler;-><init>(Landroid/app/Dialog;)V
 
     iput-object v2, p0, Landroid/app/Dialog;->mListenersHandler:Landroid/os/Handler;
 
-    .line 172
+    invoke-static {p0}, Landroid/app/Injector$DialogHook;->after_Dialog(Landroid/app/Dialog;)V
+
     return-void
 
-    .line 162
     .end local v1           #w:Landroid/view/Window;
     :cond_1
     iput-object p1, p0, Landroid/app/Dialog;->mContext:Landroid/content/Context;
@@ -542,6 +536,8 @@
     iget-object v1, p0, Landroid/app/Dialog;->mDecor:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
+
+    invoke-static {p0}, Landroid/app/Injector$DialogHook;->onWindowHide(Landroid/app/Dialog;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -954,6 +950,32 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public getMiuiActionBar()Lmiui/v5/app/MiuiActionBar;
+    .locals 2
+
+    .prologue
+    invoke-virtual {p0}, Landroid/app/Dialog;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    .local v0, bar:Landroid/app/ActionBar;
+    instance-of v1, v0, Lmiui/v5/app/MiuiActionBar;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lmiui/v5/app/MiuiActionBar;
+
+    .end local v0           #bar:Landroid/app/ActionBar;
+    :goto_0
+    return-object v0
+
+    .restart local v0       #bar:Landroid/app/ActionBar;
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public final getOwnerActivity()Landroid/app/Activity;
@@ -2326,21 +2348,18 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setDefaultIcon(I)V
 
-    .line 271
     iget-object v3, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
 
     iget v4, v0, Landroid/content/pm/ApplicationInfo;->logo:I
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setDefaultLogo(I)V
 
-    .line 272
-    new-instance v3, Lcom/android/internal/app/ActionBarImpl;
+    invoke-static {p0}, Landroid/app/Injector$DialogHook;->createActionBarImpl(Landroid/app/Dialog;)Lcom/android/internal/app/ActionBarImpl;
 
-    invoke-direct {v3, p0}, Lcom/android/internal/app/ActionBarImpl;-><init>(Landroid/app/Dialog;)V
+    move-result-object v3
 
     iput-object v3, p0, Landroid/app/Dialog;->mActionBar:Lcom/android/internal/app/ActionBarImpl;
 
-    .line 275
     .end local v0           #info:Landroid/content/pm/ApplicationInfo;
     :cond_4
     iget-object v3, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
@@ -2386,19 +2405,18 @@
 
     invoke-interface {v3, v4, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 287
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Landroid/app/Dialog;->mShowing:Z
 
-    .line 289
     invoke-direct {p0}, Landroid/app/Dialog;->sendShowMessage()V
+
+    invoke-static {p0}, Landroid/app/Injector$DialogHook;->after_show(Landroid/app/Dialog;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 290
     :catchall_0
     move-exception v3
 

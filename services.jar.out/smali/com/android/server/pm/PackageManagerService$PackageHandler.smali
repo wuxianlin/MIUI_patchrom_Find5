@@ -175,20 +175,32 @@
     .parameter "msg"
 
     .prologue
-    .line 682
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$PackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
+
+    move-object/from16 v0, p1
+
+    invoke-static {v3, v0}, Lcom/android/server/pm/Injector$PackageManagerServiceHook$PackageHandler;->before_doHandleMessage(Lcom/android/server/pm/PackageManagerService;Landroid/os/Message;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_miui
+
+    return-void
+
+    :cond_miui
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 1113
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 684
     :pswitch_1
     move-object/from16 v0, p1
 

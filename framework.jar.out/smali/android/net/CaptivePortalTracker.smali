@@ -28,7 +28,7 @@
 
 .field private static final DEFAULT_SERVER:Ljava/lang/String; = "clients3.google.com"
 
-.field private static final DELAYED_CHECK_INTERVAL_MS:I = 0x2710
+.field private static final DELAYED_CHECK_INTERVAL_MS:I = 0x1f4
 
 .field public static final EXTRA_BSSID:Ljava/lang/String; = "extra_bssid"
 

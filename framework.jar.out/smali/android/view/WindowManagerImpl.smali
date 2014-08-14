@@ -6,6 +6,10 @@
 .implements Landroid/view/WindowManager;
 
 
+# static fields
+.field private static sWindowManager:Landroid/view/WindowManagerImpl;
+
+
 # instance fields
 .field private final mDisplay:Landroid/view/Display;
 
@@ -161,4 +165,34 @@
 
     .line 75
     return-void
+.end method
+
+.method public static getDefault()Landroid/view/WindowManager;
+    .locals 3
+
+    .prologue
+    sget-object v0, Landroid/view/WindowManagerImpl;->sWindowManager:Landroid/view/WindowManagerImpl;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/view/WindowManagerImpl;
+
+    invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/hardware/display/DisplayManagerGlobal;->getRealDisplay(I)Landroid/view/Display;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/view/WindowManagerImpl;-><init>(Landroid/view/Display;)V
+
+    sput-object v0, Landroid/view/WindowManagerImpl;->sWindowManager:Landroid/view/WindowManagerImpl;
+
+    :cond_0
+    sget-object v0, Landroid/view/WindowManagerImpl;->sWindowManager:Landroid/view/WindowManagerImpl;
+
+    return-object v0
 .end method

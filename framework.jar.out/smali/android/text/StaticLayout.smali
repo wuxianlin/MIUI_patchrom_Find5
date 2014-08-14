@@ -1140,6 +1140,19 @@
     goto/16 :goto_3
 .end method
 
+.method static callIsIdeographic(CZ)Z
+    .locals 1
+    .parameter "c"
+    .parameter "includeNonStarters"
+
+    .prologue
+    invoke-static {p0, p1}, Landroid/text/StaticLayout;->isIdeographic(CZ)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method private static final isIdeographic(CZ)Z
     .locals 3
     .parameter "c"
@@ -1288,7 +1301,9 @@
     if-le p0, v2, :cond_0
 
     :cond_a
-    move v0, v1
+    invoke-static {p0, p1}, Landroid/text/Injector$StaticLayoutHook;->isChineseIdeographic(CZ)Z
+
+    move-result v0
 
     .line 582
     goto :goto_0
@@ -2040,17 +2055,16 @@
     .parameter "ellipsize"
 
     .prologue
-    .line 164
+    invoke-static {}, Landroid/text/Injector$StaticLayoutHook;->before_generate()V
+
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Landroid/text/StaticLayout;->mLineCount:I
 
-    .line 166
     const/4 v13, 0x0
 
-    .line 167
     .local v13, v:I
     const/high16 v5, 0x3f80
 
@@ -2717,6 +2731,32 @@
 
     .line 359
     :cond_f
+    move/from16 v0, v95
+
+    move-object/from16 v1, v27
+
+    move/from16 v2, v109
+
+    move/from16 v3, v123
+
+    move/from16 v4, v29
+
+    invoke-static {v0, v1, v2, v3, v4}, Landroid/text/Injector$StaticLayoutHook;->validateCJKCharAsSpace(C[CIII)C
+
+    move-result v95
+
+    if-nez v108, :cond_miui_0
+
+    const/16 v5, 0x20
+
+    move/from16 v0, v95
+
+    if-ne v0, v5, :cond_miui_1
+
+    :cond_miui_0
+    const/16 v108, 0x1
+
+    :goto_miui
     if-nez v108, :cond_12
 
     const/16 v5, 0x2f
@@ -3162,20 +3202,22 @@
 
     goto/16 :goto_9
 
-    .line 343
     :cond_20
     const/16 v108, 0x0
 
     goto/16 :goto_a
 
-    .line 359
     .restart local v108       #isSpaceOrTab:Z
+    :cond_miui_1
+    const/16 v108, 0x0
+
+    goto/16 :goto_miui
+
     :cond_21
     const/16 v107, 0x0
 
     goto/16 :goto_b
 
-    .line 382
     :cond_22
     add-int/lit8 v5, v109, 0x1
 

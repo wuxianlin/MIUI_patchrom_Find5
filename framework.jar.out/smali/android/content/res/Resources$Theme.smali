@@ -151,8 +151,13 @@
 
     invoke-static/range {v0 .. v6}, Landroid/content/res/AssetManager;->applyStyle(IIII[I[I[I)Z
 
-    .line 1382
-    return-object v7
+    iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, v7}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -202,16 +207,18 @@
 
     invoke-static/range {v0 .. v6}, Landroid/content/res/AssetManager;->applyStyle(IIII[I[I[I)Z
 
-    .line 1448
     iput-object p2, v7, Landroid/content/res/TypedArray;->mRsrcs:[I
 
-    .line 1449
     iput-object v9, v7, Landroid/content/res/TypedArray;->mXml:Landroid/content/res/XmlBlock$Parser;
 
-    .line 1480
-    return-object v7
+    iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
 
-    .line 1443
+    invoke-virtual {v0, v7}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    return-object v0
+
     :cond_0
     const/4 v3, 0x0
 
@@ -256,8 +263,13 @@
 
     invoke-static/range {v0 .. v6}, Landroid/content/res/AssetManager;->applyStyle(IIII[I[I[I)Z
 
-    .line 1325
-    return-object v7
+    iget-object v0, p0, Landroid/content/res/Resources$Theme;->this$0:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, v7}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public resolveAttribute(ILandroid/util/TypedValue;Z)Z

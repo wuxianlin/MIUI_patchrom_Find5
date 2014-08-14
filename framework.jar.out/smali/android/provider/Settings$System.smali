@@ -202,6 +202,8 @@
 
 .field public static final ENABLE_STYLUS_GESTURES:Ljava/lang/String; = "enable_stylus_gestures"
 
+.field public static final EMERGENCY_TONE:Ljava/lang/String; = "emergency_tone"
+
 .field public static final END_BUTTON_BEHAVIOR:Ljava/lang/String; = "end_button_behavior"
 
 .field public static final END_BUTTON_BEHAVIOR_DEFAULT:I = 0x2
@@ -3233,6 +3235,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$Injector;->putSecureStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+
+    move-result v0
+
     .line 1172
     :goto_0
     return v0
@@ -3290,6 +3296,10 @@
     move-result-object v2
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$Injector;->putGlobalStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+
+    move-result v0
 
     goto :goto_0
 

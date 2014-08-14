@@ -1799,7 +1799,7 @@
 
     if-eqz v4, :cond_1
 
-    const-class v4, Landroid/accounts/GrantCredentialsPermissionActivity;
+    const-class v4, Lmiui/accounts/MiuiGrantCredentialsPermissionActivity;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -4004,7 +4004,7 @@
 
     iget v5, v2, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->uid:I
 
-    invoke-virtual {v3, v5, p2}, Landroid/content/pm/PackageManager;->checkSignatures(II)I
+    invoke-static {v3, v5, p2, p1}, Lcom/android/server/accounts/Injector$AccountManagerServiceHook;->checkSignatures(Landroid/content/pm/PackageManager;IILjava/lang/String;)I
 
     move-result v3
 
@@ -4669,27 +4669,24 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1469
     const-string v1, "account"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1470
     const-string v1, "authTokenType"
 
     invoke-virtual {v0, v1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1471
     const-string v1, "response"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1472
     const-string v1, "uid"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1474
+    invoke-static {v0}, Lcom/android/server/accounts/Injector$AccountManagerServiceHook;->useMiuiGrantCredentialsPermissionActivity(Landroid/content/Intent;)V
+
     return-object v0
 .end method
 
@@ -8821,6 +8818,15 @@
     throw v0
 .end method
 
+.method getAccountAuthenticatorCache()Lcom/android/server/accounts/IAccountAuthenticatorCache;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mAuthenticatorCache:Lcom/android/server/accounts/IAccountAuthenticatorCache;
+
+    return-object v0
+.end method
+
 .method public getAccounts(I)[Landroid/accounts/Account;
     .locals 7
     .parameter "userId"
@@ -10310,6 +10316,15 @@
     invoke-static {v4, v5}, Lcom/android/server/accounts/AccountManagerService;->restoreCallingIdentity(J)V
 
     throw v8
+.end method
+
+.method getPackageManager()Landroid/content/pm/PackageManager;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    return-object v0
 .end method
 
 .method public getPassword(Landroid/accounts/Account;)Ljava/lang/String;

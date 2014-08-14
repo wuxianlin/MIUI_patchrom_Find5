@@ -30,7 +30,7 @@
 
 .field private mCurUiMode:I
 
-.field private final mDefaultUiModeType:I
+.field private mDefaultUiModeType:I
 
 .field private final mDeskModeKeepsScreenOn:Z
 
@@ -339,6 +339,8 @@
     iget-object v2, p0, Lcom/android/server/UiModeManagerService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/TwilightService;->registerListener(Lcom/android/server/TwilightService$TwilightListener;Landroid/os/Handler;)V
+
+    invoke-static {p0, p1}, Lcom/android/server/Injector$UiModeManagerServiceHook;->registerUIModeScaleChangedOjbserver(Lcom/android/server/UiModeManagerService;Landroid/content/Context;)V
 
     .line 193
     return-void
@@ -2029,6 +2031,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method setDefaultUiModeType(I)V
+    .locals 0
+    .parameter "type"
+
+    .prologue
+    iput p1, p0, Lcom/android/server/UiModeManagerService;->mDefaultUiModeType:I
+
+    return-void
 .end method
 
 .method public setNightMode(I)V

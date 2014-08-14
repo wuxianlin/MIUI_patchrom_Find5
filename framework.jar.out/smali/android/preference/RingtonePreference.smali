@@ -387,6 +387,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
+    invoke-static {p1}, Landroid/preference/Injector$RingtonePreferenceHook;->after_onPrepareRingtonePickerIntent(Landroid/content/Intent;)V
+
     .line 196
     return-void
 .end method

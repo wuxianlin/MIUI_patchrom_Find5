@@ -32,6 +32,8 @@
 
 .field public static final DISPATCH_NOT_HANDLED:I = 0x0
 
+.field public static final DISPATCH_NO_METHOD:I = 0x63
+
 .field public static final HIDE_IMPLICIT_ONLY:I = 0x1
 
 .field public static final HIDE_NOT_ALWAYS:I = 0x2
@@ -517,6 +519,18 @@
     throw v2
 .end method
 
+.method public static getInstance(Landroid/content/Context;)Landroid/view/inputmethod/InputMethodManager;
+    .locals 1
+    .parameter "context"
+
+    .prologue
+    invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->getInstance()Landroid/view/inputmethod/InputMethodManager;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private notifyInputConnectionFinished()V
     .locals 2
 
@@ -964,6 +978,45 @@
     .end local v8           #msg:Landroid/os/Message;
     .end local v9           #p:Landroid/view/inputmethod/InputMethodManager$PendingEvent;
     :cond_2
+    iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mCurMethod:Lcom/android/internal/view/IInputMethodSession;
+
+    if-nez v1, :cond_miui
+
+    const-string v1, "InputMethodManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "dispatch input event="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " while method is null"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v1, 0x63
+
+    monitor-exit v10
+
+    goto :goto_0
+
+    :cond_miui
     monitor-exit v10
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -4323,6 +4376,8 @@
 
     .line 1194
     :cond_7
+    invoke-static {p0, v11}, Landroid/view/inputmethod/Injector$InputMethodManagerHook;->handleBindLose(Landroid/view/inputmethod/InputMethodManager;Lcom/android/internal/view/InputBindResult;)V
+
     iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mCurMethod:Lcom/android/internal/view/IInputMethodSession;
 
     if-eqz v1, :cond_8

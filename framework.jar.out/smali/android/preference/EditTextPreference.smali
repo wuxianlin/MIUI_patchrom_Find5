@@ -188,6 +188,8 @@
 
     .line 119
     :cond_1
+    invoke-static {p0, p1}, Landroid/preference/Injector$EditTextPreferenceHook;->after_onBindDialogView(Landroid/preference/EditTextPreference;Landroid/view/View;)V
+
     return-void
 .end method
 

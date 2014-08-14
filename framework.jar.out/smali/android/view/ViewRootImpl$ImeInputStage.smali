@@ -117,36 +117,39 @@
 
     move-result v2
 
-    .line 3692
     .local v2, result:I
+    const/16 v4, 0x63
+
+    if-ne v2, v4, :cond_miui
+
+    const/4 v3, 0x0
+
+    return v3
+
+    :cond_miui
     if-ne v2, v3, :cond_0
 
-    .line 3701
     .end local v0           #event:Landroid/view/InputEvent;
     .end local v1           #imm:Landroid/view/inputmethod/InputMethodManager;
     .end local v2           #result:I
     :goto_0
     return v3
 
-    .line 3694
     .restart local v0       #event:Landroid/view/InputEvent;
     .restart local v1       #imm:Landroid/view/inputmethod/InputMethodManager;
     .restart local v2       #result:I
     :cond_0
     if-nez v2, :cond_1
 
-    .line 3695
     const/4 v3, 0x2
 
     goto :goto_0
 
-    .line 3697
     :cond_1
     const/4 v3, 0x3
 
     goto :goto_0
 
-    .line 3701
     .end local v0           #event:Landroid/view/InputEvent;
     .end local v1           #imm:Landroid/view/inputmethod/InputMethodManager;
     .end local v2           #result:I

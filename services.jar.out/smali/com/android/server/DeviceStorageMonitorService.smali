@@ -1290,15 +1290,8 @@
     .line 371
     new-instance v2, Landroid/content/Intent;
 
-    invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
+    const-string v0, "miui.intent.action.GARBAGE_CLEANUP"
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "android.settings.INTERNAL_STORAGE_SETTINGS"
-
-    :goto_0
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 374
@@ -1412,10 +1405,6 @@
     .end local v8           #mNotificationMgr:Landroid/app/NotificationManager;
     .end local v9           #notification:Landroid/app/Notification;
     .end local v10           #title:Ljava/lang/CharSequence;
-    :cond_0
-    const-string v0, "android.intent.action.MANAGE_PACKAGE_STORAGE"
-
-    goto :goto_0
 .end method
 
 

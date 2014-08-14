@@ -12,7 +12,9 @@
 
 
 # instance fields
-.field private final mHandler:Landroid/os/Handler;
+.field mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
+
+.field final mHandler:Landroid/os/Handler;
 
 .field private final mProc:Lcom/android/server/am/ProcessRecord;
 
@@ -266,6 +268,62 @@
     goto/16 :goto_0
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/AppErrorResult;Lcom/android/server/am/ProcessRecord;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    .locals 4
+    .parameter "context"
+    .parameter "service"
+    .parameter "result"
+    .parameter "app"
+    .parameter "crashInfo"
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/AppErrorDialog;-><init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/AppErrorResult;Lcom/android/server/am/ProcessRecord;)V
+
+    iput-object p5, p0, Lcom/android/server/am/AppErrorDialog;->mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
+
+    const/4 v0, -0x2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/internal/R$string;->report:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " MIUI"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/am/AppErrorDialog;->mHandler:Landroid/os/Handler;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/am/AppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
+
+    return-void
+.end method
+
 .method static synthetic access$000(Lcom/android/server/am/AppErrorDialog;)Lcom/android/server/am/ActivityManagerService;
     .locals 1
     .parameter "x0"
@@ -297,4 +355,41 @@
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method sendFcReport(Landroid/os/Message;)V
+    .locals 5
+    .parameter "msg"
+
+    .prologue
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lcom/android/server/am/AppErrorDialog;->mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/am/AppErrorDialog;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
+
+    iget-object v3, p0, Lcom/android/server/am/AppErrorDialog;->mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
+
+    iget v4, p1, Landroid/os/Message;->what:I
+
+    if-ne v4, v0, :cond_1
+
+    :goto_0
+    invoke-static {v1, v2, v3, v0}, Lcom/android/server/am/MiuiErrorReport;->sendFcErrorReport(Landroid/content/Context;Lcom/android/server/am/ProcessRecord;Landroid/app/ApplicationErrorReport$CrashInfo;Z)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -271,31 +271,26 @@
 
     sub-long v2, p1, v5
 
-    .line 229
     .local v2, seconds:J
     const-wide/16 v5, 0x3e8
 
     div-long/2addr v2, v5
 
-    .line 230
     iget-object v5, p0, Landroid/widget/Chronometer;->mRecycle:Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v2, v3}, Landroid/text/format/DateUtils;->formatElapsedTime(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {p0, v5, v2, v3}, Landroid/widget/Injector$ChronometerHook;->formatElapsedTime(Landroid/widget/Chronometer;Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 232
     .local v4, text:Ljava/lang/String;
     iget-object v5, p0, Landroid/widget/Chronometer;->mFormat:Ljava/lang/String;
 
     if-eqz v5, :cond_2
 
-    .line 233
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
 
-    .line 234
     .local v1, loc:Ljava/util/Locale;
     iget-object v5, p0, Landroid/widget/Chronometer;->mFormatter:Ljava/util/Formatter;
 

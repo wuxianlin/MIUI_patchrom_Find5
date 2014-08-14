@@ -1640,7 +1640,7 @@
 
     .line 3881
     .local v7, didRead:I
-    if-ltz v7, :cond_0
+    if-ltz v7, :cond_2
 
     move-object/from16 v0, p0
 

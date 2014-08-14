@@ -184,6 +184,8 @@
 
 .field private static final UNKNOWN:I = 0xa
 
+.field private static final WAPI_EVENT_PREFIX_STR:Ljava/lang/String; = "WAPI:"
+
 .field private static final WPA_EVENT_PREFIX_STR:Ljava/lang/String; = "WPA:"
 
 .field private static final WPA_RECV_ERROR_STR:Ljava/lang/String; = "recv error"

@@ -296,12 +296,16 @@
     .parameter "url"
 
     .prologue
-    .line 208
+    invoke-static {p0, p1}, Landroid/net/Injector$ProxyHook;->getPreferredHttpHost(Landroid/content/Context;Ljava/lang/String;)Lorg/apache/http/HttpHost;
+
+    move-result-object v0
+
+    return-object v0
+
     invoke-static {p0, p1}, Landroid/net/Proxy;->getProxy(Landroid/content/Context;Ljava/lang/String;)Ljava/net/Proxy;
 
     move-result-object v0
 
-    .line 209
     .local v0, prefProxy:Ljava/net/Proxy;
     sget-object v2, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 

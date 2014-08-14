@@ -847,6 +847,8 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
+    invoke-static/range {p1 .. p1}, Lcom/android/server/Injector$ConnectivityServiceHook;->before_ConnectivityService(Landroid/content/Context;)V
+
     .line 462
     const-string v2, "ConnectivityService starting up"
 
@@ -3820,7 +3822,11 @@
     .line 1049
     .end local v1           #tracker:Landroid/net/NetworkStateTracker;
     :cond_0
-    return-object v0
+    invoke-static {p0, p2, v0}, Lcom/android/server/Injector$ConnectivityServiceHook;->transferNetworkInfo(Lcom/android/server/ConnectivityService;ILandroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method private getNetworkStateUnchecked(I)Landroid/net/NetworkState;
@@ -11343,16 +11349,19 @@
 
     move-result v10
 
-    .line 1495
     .local v10, usedNetworkType:I
+    iget v12, p1, Lcom/android/server/ConnectivityService$FeatureUser;->mUid:I
+
+    iget v13, p1, Lcom/android/server/ConnectivityService$FeatureUser;->mPid:I
+
+    invoke-static {v12, v13, v10}, Lcom/android/server/Injector$ConnectivityServiceHook;->stopUsingNetworkFeature(III)V
+
     iget-object v12, p0, Lcom/android/server/ConnectivityService;->mNetTrackers:[Landroid/net/NetworkStateTracker;
 
     aget-object v8, v12, v10
 
-    .line 1496
     if-nez v8, :cond_4
 
-    .line 1498
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -14516,6 +14525,15 @@
     throw v7
 .end method
 
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
 .method public getGlobalProxy()Landroid/net/ProxyProperties;
     .locals 2
 
@@ -14919,6 +14937,15 @@
 
     .line 5006
     :cond_0
+    return-object v0
+.end method
+
+.method getNetTrackers()[Landroid/net/NetworkStateTracker;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetTrackers:[Landroid/net/NetworkStateTracker;
+
     return-object v0
 .end method
 
@@ -17797,17 +17824,16 @@
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1347
     :cond_c
     monitor-exit p0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 1349
+    :try_start_9
+    invoke-static/range {v20 .. v20}, Lcom/android/server/Injector$ConnectivityServiceHook;->startUsingNetworkFeature(I)V
+
     if-ltz v13, :cond_d
 
-    .line 1350
-    :try_start_9
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;

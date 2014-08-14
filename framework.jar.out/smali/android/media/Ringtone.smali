@@ -1020,6 +1020,29 @@
     goto :goto_0
 .end method
 
+.method public setUri(Landroid/net/Uri;Landroid/net/Uri;)V
+    .locals 3
+    .parameter "uri"
+    .parameter "defaultUri"
+
+    .prologue
+    invoke-virtual {p0, p1}, Landroid/media/Ringtone;->setUri(Landroid/net/Uri;)V
+
+    iget-object v0, p0, Landroid/media/Ringtone;->mContext:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+
+    iget v2, p0, Landroid/media/Ringtone;->mStreamType:I
+
+    invoke-static {v0, v1, p2, v2}, Landroid/media/Injector$RingtoneHook;->tryToGetEffectiveLocalPlayer(Landroid/content/Context;Landroid/media/MediaPlayer;Landroid/net/Uri;I)Landroid/media/MediaPlayer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+
+    return-void
+.end method
+
 .method public stop()V
     .locals 4
 

@@ -70,6 +70,38 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/service/notification/StatusBarNotification;IIILjava/lang/CharSequence;)V
+    .locals 7
+    .parameter "notification"
+    .parameter "iconId"
+    .parameter "iconLevel"
+    .parameter "number"
+    .parameter "contentDescription"
+
+    .prologue
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
+
+    move-result-object v2
+
+    move-object v0, p0
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    move-object v6, p5
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Ljava/lang/String;Landroid/os/UserHandle;IIILjava/lang/CharSequence;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/lang/String;Landroid/os/UserHandle;IIILjava/lang/CharSequence;)V
     .locals 1
     .parameter "iconPackage"

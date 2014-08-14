@@ -633,6 +633,41 @@
     return-void
 .end method
 
+.method public setDuration(II)V
+    .locals 1
+    .parameter "i"
+    .parameter "duration"
+
+    .prologue
+    iget-object v0, p0, Landroid/graphics/drawable/AnimationDrawable;->mAnimationState:Landroid/graphics/drawable/AnimationDrawable$AnimationState;
+
+    #getter for: Landroid/graphics/drawable/AnimationDrawable$AnimationState;->mDurations:[I
+    invoke-static {v0}, Landroid/graphics/drawable/AnimationDrawable$AnimationState;->access$000(Landroid/graphics/drawable/AnimationDrawable$AnimationState;)[I
+
+    move-result-object v0
+
+    aput p2, v0, p1
+
+    return-void
+.end method
+
+.method public setFrame(ILandroid/graphics/drawable/Drawable;)V
+    .locals 1
+    .parameter "index"
+    .parameter "drawable"
+
+    .prologue
+    iget-object v0, p0, Landroid/graphics/drawable/AnimationDrawable;->mAnimationState:Landroid/graphics/drawable/AnimationDrawable$AnimationState;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable$AnimationState;->getChildren()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
 .method public setOneShot(Z)V
     .locals 1
     .parameter "oneShot"

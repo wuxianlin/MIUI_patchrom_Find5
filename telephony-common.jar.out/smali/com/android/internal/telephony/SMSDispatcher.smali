@@ -86,6 +86,19 @@
 
 .field protected mImsSMSDispatcher:Lcom/android/internal/telephony/ImsSMSDispatcher;
 
+.field public mIsSynchronizedSending:Z
+
+.field public mPendingMessagesList:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mPendingTrackerCount:I
 
 .field protected mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -105,6 +118,8 @@
 .field protected mSmsSendDisabled:Z
 
 .field protected mSmsUseExpectMore:Z
+
+.field public mSyncronousSending:Z
 
 .field protected final mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -143,45 +158,38 @@
 
     const/4 v2, 0x0
 
-    .line 182
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 89
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPremiumSmsRule:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 164
     iput-boolean v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSmsCapable:Z
 
-    .line 169
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mRemainingMessages:I
 
-    .line 267
+    iput-boolean v2, p0, Lcom/android/internal/telephony/SMSDispatcher;->mIsSynchronizedSending:Z
+
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->deliveryPendingList:Ljava/util/ArrayList;
 
-    .line 183
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
-    .line 184
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher;->mImsSMSDispatcher:Lcom/android/internal/telephony/ImsSMSDispatcher;
 
-    .line 185
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
-    .line 186
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -293,6 +301,10 @@
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSmsUseExpectMore:Z
+
+    iput-boolean v2, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSyncronousSending:Z
+
+    invoke-static {p0}, Lcom/android/internal/telephony/Injector$SMSDispatcherHook;->initSynchronousSending(Lcom/android/internal/telephony/SMSDispatcher;)V
 
     .line 201
     const-string v0, "SMSDispatcher"
@@ -2113,6 +2125,10 @@
 
     const/4 v10, -0x1
 
+    const/4 v7, 0x0
+
+    iput-boolean v7, p0, Lcom/android/internal/telephony/SMSDispatcher;->mIsSynchronizedSending:Z
+
     .line 344
     iget-object v6, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2219,13 +2235,14 @@
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 444
     .end local v3           #sendNext:Landroid/content/Intent;
     :cond_3
     :goto_1
+    invoke-static {p0}, Lcom/android/internal/telephony/Injector$SMSDispatcherHook;->processNextPendingMessageIfSynchronous(Lcom/android/internal/telephony/SMSDispatcher;)V
+
+    :cond_miui
     return-void
 
-    .line 350
     :cond_4
     const-string v7, "SMSDispatcher"
 
@@ -2415,17 +2432,14 @@
 
     goto/16 :goto_1
 
-    .line 419
     .end local v2           #retryMsg:Landroid/os/Message;
     :cond_9
     iget-object v7, v6, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_miui
 
-    .line 420
     const/4 v0, 0x1
 
-    .line 422
     .local v0, error:I
     iget-object v7, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 

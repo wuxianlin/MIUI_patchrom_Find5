@@ -39,20 +39,20 @@
     .parameter "msg"
 
     .prologue
-    .line 107
+    iget-object v3, p0, Lcom/android/server/am/AppNotRespondingDialog$1;->this$0:Lcom/android/server/am/AppNotRespondingDialog;
+
+    invoke-static {v3}, Lcom/android/server/am/Injector$AppNotRespondingDialogHook;->sendAnrErrorReport(Lcom/android/server/am/AppNotRespondingDialog;)V
+
     const/4 v1, 0x0
 
-    .line 108
     .local v1, appErrorIntent:Landroid/content/Intent;
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 134
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 136
     :try_start_0
     iget-object v3, p0, Lcom/android/server/am/AppNotRespondingDialog$1;->this$0:Lcom/android/server/am/AppNotRespondingDialog;
 

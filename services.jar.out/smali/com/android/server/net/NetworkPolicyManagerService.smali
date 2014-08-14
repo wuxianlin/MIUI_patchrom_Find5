@@ -997,18 +997,19 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2094
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2095
     const-string v1, "android.net.NETWORK_TEMPLATE"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2096
-    return-object v0
+    invoke-static {p0}, Lcom/android/server/net/Injector$NetworkPolicyManagerServiceHook;->buildViewDataUsageIntent(Landroid/net/NetworkTemplate;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    return-object v1
 .end method
 
 .method private cancelNotification(Ljava/lang/String;)V
@@ -1319,12 +1320,19 @@
     .parameter "totalBytes"
 
     .prologue
-    .line 732
+    invoke-static/range {p0 .. p2}, Lcom/android/server/net/Injector$NetworkPolicyManagerServiceHook;->before_enqueueNotification(Lcom/android/server/net/NetworkPolicyManagerService;Landroid/net/NetworkPolicy;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_miui
+
+    return-void
+
+    :cond_miui
     invoke-direct/range {p0 .. p2}, Lcom/android/server/net/NetworkPolicyManagerService;->buildNotificationTag(Landroid/net/NetworkPolicy;I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 733
     .local v4, tag:Ljava/lang/String;
     new-instance v10, Landroid/app/Notification$Builder;
 
@@ -1675,35 +1683,24 @@
 
     packed-switch v1, :pswitch_data_2
 
-    .line 811
     const/16 v16, 0x0
 
-    .line 815
     .restart local v16       #title:Ljava/lang/CharSequence;
     :goto_3
-    const/4 v1, 0x1
-
-    invoke-virtual {v10, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
-
-    .line 816
     const v1, 0x1080078
 
     invoke-virtual {v10, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 817
     move-object/from16 v0, v16
 
     invoke-virtual {v10, v0}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 818
     move-object/from16 v0, v16
 
     invoke-virtual {v10, v0}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 819
     invoke-virtual {v10, v9}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 821
     move-object/from16 v0, p1
 
     iget-object v1, v0, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
@@ -2373,15 +2370,7 @@
 
     .line 2036
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkStats:Landroid/net/INetworkStatsService;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    invoke-interface/range {v0 .. v5}, Landroid/net/INetworkStatsService;->getNetworkTotalBytes(Landroid/net/NetworkTemplate;JJ)J
+    invoke-static/range {p0 .. p5}, Lcom/android/server/net/Injector$NetworkPolicyManagerServiceHook;->getNetworkTotalBytes(Lcom/android/server/net/NetworkPolicyManagerService;Landroid/net/NetworkTemplate;JJ)J
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -5865,6 +5854,19 @@
     return-void
 .end method
 
+.method callBuildNotificationTag(Landroid/net/NetworkPolicy;I)Ljava/lang/String;
+    .locals 1
+    .parameter "policy"
+    .parameter "type"
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->buildNotificationTag(Landroid/net/NetworkPolicy;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method protected dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 17
     .parameter "fd"
@@ -6308,6 +6310,33 @@
     goto/16 :goto_2
 .end method
 
+.method getActiveNotifs()Ljava/util/HashSet;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
+
+    return-object v0
+.end method
+
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
 .method public getNetworkPolicies()[Landroid/net/NetworkPolicy;
     .locals 3
 
@@ -6413,6 +6442,15 @@
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v2
+.end method
+
+.method getNetworkStats()Landroid/net/INetworkStatsService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkStats:Landroid/net/INetworkStatsService;
+
+    return-object v0
 .end method
 
 .method public getRestrictBackground()Z
