@@ -53,6 +53,12 @@ local-pre-zip-misc:
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 
+	@echo Replace custom lib
+	cp -rf other/lib/* $(ZIP_DIR)/system/lib/
+
+	@echo Replace custom bin
+	cp other/bin/* $(ZIP_DIR)/system/bin/
+
 	@echo Delete some unneeded files
 	rm -rf $(ZIP_DIR)/system/etc/.has_su_daemon
 	rm -rf $(ZIP_DIR)/system/etc/install-cm-recovery.sh
