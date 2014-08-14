@@ -62,6 +62,9 @@ local-pre-zip-misc:
 	@echo Replace custom etc
 	cp other/etc/* $(ZIP_DIR)/system/etc/
 
+	@echo Replace custom xbin
+	cp other/xbin/* $(ZIP_DIR)/system/xbin/
+
 	@echo Delete some unneeded files
 	rm -rf $(ZIP_DIR)/system/etc/.has_su_daemon
 	rm -rf $(ZIP_DIR)/system/etc/install-cm-recovery.sh
