@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Medium" android:id="@id/webviewchromium_color_picker_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" android:layout_marginStart="@dimen/webviewchromium_color_picker_gradient_margin" android:layout_marginEnd="@dimen/webviewchromium_color_picker_gradient_margin" />
+    <FrameLayout android:id="@id/webview_chromium_color_picker_gradient_border" android:background="@drawable/webviewchromium_color_picker_border" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="3.0dip" android:layout_below="@id/webviewchromium_color_picker_text" android:layout_marginStart="@dimen/webviewchromium_color_picker_gradient_margin" android:layout_marginEnd="@dimen/webviewchromium_color_picker_gradient_margin">
+        <View android:id="@id/webviewchromium_color_picker_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <SeekBar android:id="@id/webviewchromium_color_picker_seek_bar" android:layout_width="fill_parent" android:layout_height="75.0dip" android:progressDrawable="@color/transparent" android:thumb="@drawable/webviewchromium_color_picker_advanced_select_handle" android:layout_below="@id/webviewchromium_color_picker_text" android:translationY="25.0dip" />
+</RelativeLayout>
