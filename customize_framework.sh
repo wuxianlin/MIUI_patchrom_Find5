@@ -57,6 +57,7 @@ then
             rm -rf "$file"
     done
     rm -rf $BUILD_OUT/framework/smali/android/provider/Telephony\$Intents.smali
+    cp -rf overlay/framework/smali/* $BUILD_OUT/framework/smali
     cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
     #fix wrong ids
     sed -i -e 's/111003c/1110046/' $BUILD_OUT/framework/smali/android/net/sip/SipManager.smali
