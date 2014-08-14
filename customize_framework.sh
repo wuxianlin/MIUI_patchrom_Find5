@@ -58,6 +58,8 @@ then
     done
     rm -rf $BUILD_OUT/framework/smali/android/provider/Telephony\$Intents.smali
     cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
+    #fix wrong ids
+    sed -i -e 's/111003c/1110046/' $BUILD_OUT/framework/smali/android/net/sip/SipManager.smali
 fi
 
 if [ $2 = "$BUILD_OUT/framework2" ]
@@ -78,6 +80,10 @@ then
     rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/gsm/GSMPhone\$2.smali
     rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/uicc/SpnOverride\$Injector.smali
     rm -rf $BUILD_OUT/framework2/smali/com/android/internal/telephony/CallManager\$2.smali
+    #fix wrong ids
+    sed -i -e 's/1040452/1040512/' $BUILD_OUT/framework2/smali/com/android/internal/telephony/uicc/Injector\$UiccCardHook.smali
+    sed -i -e 's/1110042/111004c/' $BUILD_OUT/framework2/smali/com/google/android/mms/pdu/PduParser.smali
+    sed -i -e 's/10400af/104016e/' $BUILD_OUT/framework2/smali/com/google/android/mms/util/SqliteWrapper.smali
 fi
 
 if [ $2 = "$BUILD_OUT/telephony-common" ]
