@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="stocksettings">附加設置</string>
+    <string name="power_cell">移動信號</string>
+</resources>

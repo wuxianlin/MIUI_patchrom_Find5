@@ -1,0 +1,31 @@
+From e01cc2a25160c051f5d1c16e49d4fa4e11e6319d Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Sun, 13 Jul 2014 00:01:12 +0800
+Subject: [PATCH] new Settings
+
+---
+ Settings/res/xml/settings_headers.xml |    3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -15,7 +15,6 @@
+     </header>
+     <header android:icon="@drawable/ic_settings_data_usage" android:id="@id/data_usage_settings" android:title="@string/data_usage_summary_title" android:fragment="com.android.settings.DataUsageSummary" />
+     <header android:icon="@drawable/ic_application_settings" android:id="@id/restrict_background_data" android:title="@string/restrict_background_data_title" android:fragment="com.android.settings.WirelessSettings" />
+-    <header android:icon="@drawable/ic_settings_nfc_payment" android:id="@id/nfc_payment_settings" android:title="@string/nfc_payment_settings_title" android:fragment="com.android.settings.nfc.PaymentSettings" />
+     <header android:id="@id/operator_settings" android:fragment="com.android.settings.WirelessSettings">
+         <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
+     </header>
+@@ -56,7 +55,7 @@
+     <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
+         <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
+     </header>
+-    <header android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+     <header android:id="@id/system_section" android:title="@string/header_category_system" />
+-- 
+1.7.9.5
+

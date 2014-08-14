@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="has_led">true</bool>
+    <bool name="has_volume_wake">true</bool>
+    <bool name="disable_move_to_sd">false</bool>
+    <bool name="mass_storage_enable">true</bool>
+    <bool name="enable_erase_application">true</bool>
+    <bool name="has_button_light">true</bool>
+    <bool name="emulated_available_internal_memroy">true</bool>
+    <bool name="has_internal_sdcard">true</bool>
+    <bool name="led_freq_enable">true</bool>
+    <bool name="hdmi_3d_display_enable">true</bool>
+</resources>
