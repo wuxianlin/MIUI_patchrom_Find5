@@ -190,7 +190,7 @@
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarView$ExpandedActionViewMenuPresenter;->this$0:Lcom/android/internal/widget/ActionBarView;
 
     #getter for: Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
-    invoke-static {v3}, Lcom/android/internal/widget/ActionBarView;->access$1000(Lcom/android/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
+    invoke-static {v3}, Lcom/android/internal/widget/ActionBarView;->access$1000(Lcom/android/internal/widget/ActionBarView;)Landroid/view/ViewGroup;
 
     move-result-object v3
 
@@ -329,11 +329,11 @@
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarView$ExpandedActionViewMenuPresenter;->this$0:Lcom/android/internal/widget/ActionBarView;
 
     #getter for: Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
-    invoke-static {v3}, Lcom/android/internal/widget/ActionBarView;->access$1000(Lcom/android/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
+    invoke-static {v3}, Lcom/android/internal/widget/ActionBarView;->access$1000(Lcom/android/internal/widget/ActionBarView;)Landroid/view/ViewGroup;
 
     move-result-object v3
 
-    invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v3, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_3
 .end method
@@ -487,7 +487,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 1641
     :cond_2
