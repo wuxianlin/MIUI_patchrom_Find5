@@ -845,13 +845,9 @@
     .line 1283
     iget-object v3, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_7
 
     move v2, v4
-
-    invoke-static {p0, v2, p1}, Landroid/content/res/Injector$ConfigurationHook;->compareTo(Landroid/content/res/Configuration;ILandroid/content/res/Configuration;)I
-
-    move-result v2
 
     goto/16 :goto_0
 
@@ -862,6 +858,11 @@
     iget-object v4, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
 
     invoke-virtual {v3, v4}, Landroid/content/res/ThemeConfig;->compareTo(Landroid/content/res/ThemeConfig;)I
+
+    move-result v2
+
+    :cond_7
+    invoke-static {p0, v2, p1}, Landroid/content/res/Injector$ConfigurationHook;->compareTo(Landroid/content/res/Configuration;ILandroid/content/res/Configuration;)I
 
     move-result v2
 
