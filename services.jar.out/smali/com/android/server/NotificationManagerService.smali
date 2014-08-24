@@ -5145,6 +5145,14 @@
     iget v3, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
     .restart local v3       #ledOffMS:I
+    invoke-static {p0, v6}, Lcom/android/server/Injector$NotificationManagerServiceHook;->updateNotificationLight(Lcom/android/server/NotificationManagerService;Landroid/app/Notification;)V
+
+    iget v2, v6, Landroid/app/Notification;->ledARGB:I
+
+    iget v4, v6, Landroid/app/Notification;->ledOnMS:I
+
+    iget v3, v6, Landroid/app/Notification;->ledOffMS:I
+
     goto :goto_5
 
     .line 2510
@@ -6771,14 +6779,6 @@
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
-
-    invoke-static {p0, v3}, Lcom/android/server/Injector$NotificationManagerServiceHook;->updateNotificationLight(Lcom/android/server/NotificationManagerService;Landroid/app/Notification;)V
-
-    iget v0, v3, Landroid/app/Notification;->ledARGB:I
-
-    iget v2, v3, Landroid/app/Notification;->ledOnMS:I
-
-    iget v1, v3, Landroid/app/Notification;->ledOffMS:I
 
     :cond_4
     const-string v6, "  "
