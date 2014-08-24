@@ -20,7 +20,7 @@ local-miui-removed-apps :=
 
 local-miui-removed-priv-apps := MediaProvider
 
-local-miui-modified-apps := MiuiHome Settings
+local-miui-modified-apps := Phone MiuiHome Settings TelephonyProvider
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -53,6 +53,10 @@ local-pre-zip-misc:
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 
+	@echo Replace app and priv-app
+	cp other/app/* $(ZIP_DIR)/system/app/
+	#cp other/priv-app/* $(ZIP_DIR)/system/priv-app/
+
 	@echo Replace custom lib
 	cp -rf other/lib/* $(ZIP_DIR)/system/lib/
 
@@ -62,8 +66,14 @@ local-pre-zip-misc:
 	@echo Replace custom etc
 	cp other/etc/* $(ZIP_DIR)/system/etc/
 
+	@echo Replace custom framework
+	cp other/framework/* $(ZIP_DIR)/system/framework/
+
 	@echo Replace custom xbin
 	cp other/xbin/* $(ZIP_DIR)/system/xbin/
+
+	@echo Replace custom vendor
+	#cp -rf other/vendor/* $(ZIP_DIR)/system/vendor/
 
 	@echo Delete some unneeded files
 	rm -rf $(ZIP_DIR)/system/etc/.has_su_daemon
