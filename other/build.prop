@@ -27,7 +27,7 @@ ro.build.product=find5
 ro.product.model=Find 5
 ro.product.device=find5
 # Do not try to parse ro.build.description or .fingerprint
-ro.build.description=cm_find5-user 4.4.4 KTU84Q 097d80c613 test-keys
+ro.build.description=cm_find5-userdebug 4.4.4 KTU84Q 097d80c613 test-keys
 ro.build.fingerprint=OPPO/cm_find5/find5:4.4.4/KTU84Q/097d80c613:userdebug/test-keys
 ro.build.characteristics=default
 ro.cm.device=find5
