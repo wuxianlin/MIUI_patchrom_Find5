@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">Avant %d secundas</item>
+        <item quantity="one">Avant 1 secunda</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">Avant %d minutas</item>
+        <item quantity="one">Avant 1 minuta</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">Avant %d uras</item>
+        <item quantity="one">Avant 1 ura</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Ultims %d dis</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">Avant %d dis</item>
+        <item quantity="one">ier</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">en %d secundas</item>
+        <item quantity="one">en 1 secunda</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">en %d minutas</item>
+        <item quantity="one">en 1 minuta</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">en %d uras</item>
+        <item quantity="one">en 1 ura</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">en %d dis</item>
+        <item quantity="one">damaun</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">avant %d secundas</item>
+        <item quantity="one">avant 1 secunda</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">avant %d minutas</item>
+        <item quantity="one">avant 1 minuta</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">Avant %d uras</item>
+        <item quantity="one">avant 1 ura</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">Avant %d dis</item>
+        <item quantity="one">ier</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">en %d secundas</item>
+        <item quantity="one">en 1 secunda</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">en %d minutas</item>
+        <item quantity="one">en 1 minuta</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">en %d uras</item>
+        <item quantity="one">en 1 ura</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">en %d dis</item>
+        <item quantity="one">damaun</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Raits WLAN disponiblas</item>
+        <item quantity="one">Rait WLAN disponibla</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Raits WLAN avertas disponiblas</item>
+        <item quantity="one">Rait WLAN averta disponibla</item>
+    </plurals>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="webviewchromium_AutofillPopupWindow" parent="@style/Widget.ListPopupWindow">
+        <item name="popupBackground">@drawable/webviewchromium_autofill_popup_background</item>
+    </style>
+    <style name="webviewchromium_SelectPopupDialog">
+        <item name="webviewchromium_select_dialog_multichoice">@layout/select_dialog_multichoice</item>
+        <item name="webviewchromium_select_dialog_singlechoice">@layout/webview_select_singlechoice</item>
+    </style>
+</resources>

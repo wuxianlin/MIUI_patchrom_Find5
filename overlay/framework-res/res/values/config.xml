@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_enableNetworkLocationOverlay">true</bool>
+    <bool name="config_enableFusedLocationOverlay">true</bool>
+    <string-array name="config_locationProviderPackageNames">
+        <item>com.android.location.fused</item>
+        <item>com.google.android.location</item>
+        <item>com.baidu.map.location</item>
+        <item>com.amap.android.location</item>
+    </string-array>
+    <string name="config_networkLocationProviderPackageName">com.qualcomm.location</string>
+    <string name="config_fusedLocationProviderPackageName">com.qualcomm.location</string>
+    <style name="TextAppearance.Toast" parent="@style/TextAppearance">
+        <item name="textSize">14.0sp</item>
+        <item name="fontFamily">miui</item>
+    </style>
+    <style name="Theme.ExpandedMenu" parent="@style/Theme.Holo">
+        <item name="listViewStyle">@style/Widget.ListView.Menu</item>
+        <item name="windowAnimationStyle">@style/Animation.DropDownUp</item>
+        <item name="background">@null</item>
+        <item name="itemTextAppearance">?textAppearanceLarge</item>
+    </style>
+</resources>

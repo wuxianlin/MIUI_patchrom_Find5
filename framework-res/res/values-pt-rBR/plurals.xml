@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="tethered_clients_connected">
+        <item quantity="other">%d dispositivos conectados</item>
+        <item quantity="one">%d dispositivo conectado</item>
+    </plurals>
+</resources>

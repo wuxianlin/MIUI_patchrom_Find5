@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:interpolator="@interpolator/linear"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:duration="@integer/config_shortAnimTime" android:zAdjustment="bottom" android:fromXDelta="0.0%" android:toXDelta="-35.000004%" />
+    <scale android:duration="@integer/config_shortAnimTime" android:pivotX="50.0%" android:pivotY="50.0%" android:fromXScale="0.8" android:toXScale="1.0" android:fromYScale="0.8" android:toYScale="1.0" />
+    <translate android:duration="@integer/config_shortAnimTime" android:startOffset="@integer/config_shortAnimTime" android:zAdjustment="top" android:fromXDelta="-35.000004%" android:toXDelta="35.000004%" />
+    <alpha android:duration="@integer/config_shortAnimTime" android:fromAlpha="0.6" android:toAlpha="1.0" />
+</set>
