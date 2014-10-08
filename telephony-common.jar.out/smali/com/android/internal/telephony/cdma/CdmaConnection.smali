@@ -1090,22 +1090,14 @@
 
     invoke-interface {v1, p1, v2}, Lcom/android/internal/telephony/CommandsInterface;->sendDtmf(CLandroid/os/Message;)V
 
-    .line 656
     :goto_0
     return v0
 
-    .line 640
     :cond_0
     const/16 v1, 0x2c
 
     if-ne p1, v1, :cond_1
 
-    .line 641
-    sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->PAUSE:Lcom/android/internal/telephony/Connection$PostDialState;
-
-    invoke-direct {p0, v1}, Lcom/android/internal/telephony/cdma/CdmaConnection;->setPostDialState(Lcom/android/internal/telephony/Connection$PostDialState;)V
-
-    .line 646
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/CdmaConnection;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CdmaConnection;->mHandler:Landroid/os/Handler;
@@ -1986,18 +1978,19 @@
 
     move-result-object v1
 
-    .line 669
     .local v1, subStr:Ljava/lang/String;
-    if-eqz v1, :cond_1
+    invoke-static {v1}, Lcom/android/internal/telephony/cdma/CdmaConnection$Injector;->nullifyString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 670
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
     const/16 v3, 0x3b
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
-    .line 671
     .local v2, wIndex:I
     const/16 v3, 0x2c
 

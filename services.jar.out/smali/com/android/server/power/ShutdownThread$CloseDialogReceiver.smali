@@ -57,12 +57,12 @@
     .parameter "unused"
 
     .prologue
-    .line 280
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 281
+    invoke-static {p1}, Lcom/android/server/power/Injector$ShutdownThreadHook;->onDismiss(Landroid/content/DialogInterface;)V
+
     return-void
 .end method
 

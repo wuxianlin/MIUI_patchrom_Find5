@@ -2134,6 +2134,19 @@
     return-void
 .end method
 
+.method public setStatus(ILandroid/os/IBinder;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+    .parameter "what"
+    .parameter "token"
+    .parameter "action"
+    .parameter "ext"
+
+    .prologue
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/Injector$StatusBarManagerServiceHook;->setStatus(Lcom/android/server/StatusBarManagerService;ILandroid/os/IBinder;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method public setSystemUiVisibility(II)V
     .locals 5
     .parameter "vis"

@@ -88,6 +88,8 @@
 
 .field public static final TYPE_STRING:I = 0x3
 
+.field public static miui_font_scale:F
+
 
 # instance fields
 .field public assetCookie:I
@@ -117,6 +119,10 @@
     const/4 v4, 0x1
 
     const/4 v3, 0x0
+
+    const/high16 v0, 0x3f80
+
+    sput v0, Landroid/util/TypedValue;->miui_font_scale:F
 
     .line 191
     new-array v0, v6, [F
@@ -231,9 +237,9 @@
 
     .line 329
     :pswitch_2
-    iget v0, p2, Landroid/util/DisplayMetrics;->scaledDensity:F
+    invoke-static {p0, p1, p2}, Landroid/util/Injector$TypedValueHook;->miuiScale(IFLandroid/util/DisplayMetrics;)F
 
-    mul-float/2addr p1, v0
+    move-result p1
 
     goto :goto_0
 

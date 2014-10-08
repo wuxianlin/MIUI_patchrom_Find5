@@ -5684,6 +5684,14 @@
     :cond_24
     move-object/from16 v0, v32
 
+    iget-object v3, v0, Lcom/android/server/am/BroadcastRecord;->curApp:Lcom/android/server/am/ProcessRecord;
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v3, Lcom/android/server/am/ProcessRecord;->startedViaBroadcast:Z
+
+    move-object/from16 v0, v32
+
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/am/BroadcastQueue;->mPendingBroadcast:Lcom/android/server/am/BroadcastRecord;

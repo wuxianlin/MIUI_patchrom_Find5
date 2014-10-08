@@ -703,10 +703,41 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1076
     return-void
 
-    .line 1052
+    :catch_miui
+    move-exception v2
+
+    .local v2, e:Ljava/net/SocketException;
+    const-string v7, "NetworkManagementService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "get interface by name error: "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v2}, Ljava/net/SocketException;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_miui
+
+    .end local v2           #e:Ljava/net/SocketException;
     :cond_1
     iget-object v8, p0, Lcom/android/server/NetworkManagementService;->mCachedAddressForNat:Ljava/util/HashMap;
 

@@ -729,6 +729,10 @@
     .line 169
     invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
 
+    iget-object v3, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
+
+    invoke-static {p0, v3}, Landroid/app/Injector$ProgressDialogHook;->updateSpinnerStyleProgressDialog(Landroid/app/ProgressDialog;Landroid/widget/TextView;)V
+
     goto :goto_0
 .end method
 

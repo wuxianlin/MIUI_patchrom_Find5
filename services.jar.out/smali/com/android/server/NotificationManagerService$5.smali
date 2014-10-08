@@ -304,7 +304,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/android/server/Injector$NotificationManagerServiceHook;->getApplicationEnabledSetting(Landroid/content/pm/PackageManager;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 

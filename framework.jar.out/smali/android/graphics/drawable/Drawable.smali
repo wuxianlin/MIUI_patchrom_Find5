@@ -32,6 +32,8 @@
 
 .field private mChangingConfigurations:I
 
+.field mId:I
+
 .field private mLayoutDirection:I
 
 .field private mLevel:I
@@ -62,36 +64,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     sget-object v0, Landroid/util/StateSet;->WILD_CARD:[I
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mStateSet:[I
 
-    .line 122
     iput v1, p0, Landroid/graphics/drawable/Drawable;->mLevel:I
 
-    .line 123
     iput v1, p0, Landroid/graphics/drawable/Drawable;->mChangingConfigurations:I
 
-    .line 124
     sget-object v0, Landroid/graphics/drawable/Drawable;->ZERO_BOUNDS_RECT:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mBounds:Landroid/graphics/Rect;
 
-    .line 125
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mCallback:Ljava/lang/ref/WeakReference;
 
-    .line 126
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/drawable/Drawable;->mVisible:Z
 
-    .line 1001
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/graphics/drawable/Drawable;->mId:I
+
     return-void
 .end method
 
@@ -1090,6 +1088,15 @@
     return-object p0
 .end method
 
+.method public getId()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Landroid/graphics/drawable/Drawable;->mId:I
+
+    return v0
+.end method
+
 .method public getIntrinsicHeight()I
     .locals 1
 
@@ -1572,6 +1579,16 @@
 
     .prologue
     .line 258
+    return-void
+.end method
+
+.method public setId(I)V
+    .locals 0
+    .parameter "id"
+
+    .prologue
+    iput p1, p0, Landroid/graphics/drawable/Drawable;->mId:I
+
     return-void
 .end method
 

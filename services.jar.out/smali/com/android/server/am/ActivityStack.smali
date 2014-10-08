@@ -191,117 +191,92 @@
 
     const/4 v1, 0x0
 
-    .line 333
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mTaskHistory:Ljava/util/ArrayList;
 
-    .line 154
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mValidateAppTokens:Ljava/util/ArrayList;
 
-    .line 161
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mLRUActivities:Ljava/util/ArrayList;
 
-    .line 167
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mNoAnimActivities:Ljava/util/ArrayList;
 
-    .line 173
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mPausingActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 180
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mLastPausedActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 187
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mLastNoHistoryActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 192
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mResumedActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 199
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mLastStartedActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 207
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mTranslucentActivityWaiting:Lcom/android/server/am/ActivityRecord;
 
-    .line 208
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mUndrawnActivitiesBelowTopTranslucent:Ljava/util/ArrayList;
 
-    .line 217
     iput-wide v3, p0, Lcom/android/server/am/ActivityStack;->mLaunchStartTime:J
 
-    .line 218
     iput-wide v3, p0, Lcom/android/server/am/ActivityStack;->mFullyDrawnStartTime:J
 
-    .line 224
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mLastScreenshotActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 225
     iput-object v1, p0, Lcom/android/server/am/ActivityStack;->mLastScreenshotBitmap:Landroid/graphics/Bitmap;
 
-    .line 227
     iput v2, p0, Lcom/android/server/am/ActivityStack;->mThumbnailWidth:I
 
-    .line 228
     iput v2, p0, Lcom/android/server/am/ActivityStack;->mThumbnailHeight:I
 
-    .line 334
     new-instance v0, Lcom/android/server/am/ActivityStack$ActivityStackHandler;
 
     invoke-direct {v0, p0, p3}, Lcom/android/server/am/ActivityStack$ActivityStackHandler;-><init>(Lcom/android/server/am/ActivityStack;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mHandler:Landroid/os/Handler;
 
-    .line 335
     iput-object p1, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 336
     iget-object v0, p1, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 337
     iget-object v0, p1, Lcom/android/server/am/ActivityManagerService;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 338
     iput-object p2, p0, Lcom/android/server/am/ActivityStack;->mContext:Landroid/content/Context;
 
-    .line 339
     iput p4, p0, Lcom/android/server/am/ActivityStack;->mStackId:I
 
-    .line 340
     iget v0, p1, Lcom/android/server/am/ActivityManagerService;->mCurrentUserId:I
 
     iput v0, p0, Lcom/android/server/am/ActivityStack;->mCurrentUser:I
 
-    .line 341
     iget-object v0, p1, Lcom/android/server/am/ActivityManagerService;->mPowerManager:Lcom/android/server/power/PowerManagerService;
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStack;->mPowerManager:Lcom/android/server/power/PowerManagerService;
 
-    .line 342
+    invoke-static {p0, p1}, Lcom/android/server/am/Injector$ActivityStackHook;->after_ActivityStack(Lcom/android/server/am/ActivityStack;Lcom/android/server/am/ActivityManagerService;)V
+
     return-void
 .end method
 
@@ -2954,36 +2929,32 @@
     :goto_1
     if-ltz v1, :cond_4
 
-    .line 2780
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/am/ActivityRecord;
 
-    .line 2781
     .local v4, r:Lcom/android/server/am/ActivityRecord;
-    iget-boolean v6, v4, Lcom/android/server/am/ActivityRecord;->finishing:Z
+    invoke-static {p3, v4}, Lcom/android/server/am/Injector$ActivityStackHook;->destroyHomeOrFinishing(Ljava/lang/String;Lcom/android/server/am/ActivityRecord;)Z
+
+    move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 2779
     :cond_0
     :goto_2
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 2784
     :cond_1
     iget-boolean v6, v4, Lcom/android/server/am/ActivityRecord;->fullscreen:Z
 
     if-eqz v6, :cond_2
 
-    .line 2785
     const/4 v3, 0x1
 
-    .line 2787
     :cond_2
     if-eqz p1, :cond_3
 
@@ -4297,6 +4268,17 @@
 
     .line 3295
     :cond_7
+    invoke-static {p1, v0}, Lcom/android/server/am/Injector$ActivityStackHook;->needRestartActivity(Lcom/android/server/am/ActivityRecord;I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_miui_0
+
+    const/4 v5, 0x1
+
+    return v5
+
+    :cond_miui_0
     iget v5, p1, Lcom/android/server/am/ActivityRecord;->configChangeFlags:I
 
     or-int/2addr v5, v0
@@ -9783,6 +9765,10 @@
 
     move-result v0
 
+    invoke-static {p0, v0}, Lcom/android/server/am/Injector$ActivityStackHook;->setForegroundProcess(Lcom/android/server/am/ActivityStack;Z)Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -11943,14 +11929,14 @@
     .parameter "options"
 
     .prologue
-    .line 1730
+    invoke-static {}, Lcom/android/server/am/Injector$ActivityStackHook;->before_startActivityLocked()V
+
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     move-object/from16 v18, v0
 
-    .line 1731
     .local v18, rTask:Lcom/android/server/am/TaskRecord;
     move-object/from16 v0, v18
 

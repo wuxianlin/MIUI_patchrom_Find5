@@ -104,13 +104,13 @@
 
     .line 174
     .local v4, title:Ljava/lang/CharSequence;
-    new-instance v2, Landroid/app/Dialog;
+    new-instance v2, Landroid/app/PreferenceDialog;
 
     invoke-virtual {v1}, Landroid/content/Context;->getThemeResId()I
 
     move-result v5
 
-    invoke-direct {v2, v1, v5}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v2, v1, v5}, Landroid/app/PreferenceDialog;-><init>(Landroid/content/Context;I)V
 
     iput-object v2, p0, Landroid/preference/PreferenceScreen;->mDialog:Landroid/app/Dialog;
 
@@ -172,20 +172,24 @@
     .parameter "listView"
 
     .prologue
-    .line 144
     invoke-virtual {p1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 145
+    invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->getRootAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/preference/Injector$PreferenceScreenHook;->addHeaderView(Landroid/widget/ListView;Landroid/widget/ListAdapter;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->getRootAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 147
+    invoke-static {p1}, Landroid/preference/Injector$PreferenceScreenHook;->bind(Landroid/widget/ListView;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->onAttachedToActivity()V
 
-    .line 148
     return-void
 .end method
 

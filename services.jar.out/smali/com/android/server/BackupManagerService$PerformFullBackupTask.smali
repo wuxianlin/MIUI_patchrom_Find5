@@ -1556,13 +1556,12 @@
 
     invoke-virtual {v5, v8}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 3107
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
 
-    .line 3108
+    invoke-static {p2}, Lcom/android/server/BackupManagerService$Injector;->resetManifestFileModifiedTime(Ljava/io/File;)V
+
     return-void
 
-    .line 3093
     .end local v5           #outstream:Ljava/io/FileOutputStream;
     .restart local v3       #installerName:Ljava/lang/String;
     :cond_1
@@ -1885,25 +1884,10 @@
 
     check-cast v21, Landroid/content/pm/PackageInfo;
 
-    .line 2753
     .restart local v21       #pkg:Landroid/content/pm/PackageInfo;
-    move-object/from16 v0, v21
+    sget-boolean v23, Lcom/android/server/BackupManagerService$Injector;->FALSE:Z
 
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    move-object/from16 v23, v0
-
-    move-object/from16 v0, v23
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move/from16 v23, v0
-
-    const v24, 0x8000
-
-    and-int v23, v23, v24
-
-    if-eqz v23, :cond_3
+    if-nez v23, :cond_3
 
     move-object/from16 v0, v21
 
@@ -1919,7 +1903,6 @@
 
     if-eqz v23, :cond_4
 
-    .line 2755
     :cond_3
     move-object/from16 v0, v20
 
@@ -1927,13 +1910,11 @@
 
     goto :goto_3
 
-    .line 2757
     :cond_4
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_3
 
-    .line 2763
     .end local v21           #pkg:Landroid/content/pm/PackageInfo;
     :cond_5
     const/4 v13, 0x0
@@ -1947,7 +1928,6 @@
 
     if-ge v13, v0, :cond_7
 
-    .line 2764
     move-object/from16 v0, v20
 
     invoke-interface {v0, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1956,7 +1936,7 @@
 
     check-cast v21, Landroid/content/pm/PackageInfo;
 
-    .line 2765
+    .line 2753
     .restart local v21       #pkg:Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v21
 
@@ -1992,20 +1972,18 @@
 
     if-nez v23, :cond_6
 
-    .line 2770
+    .line 2764
     move-object/from16 v0, v20
 
     invoke-interface {v0, v13}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     goto :goto_4
 
-    .line 2772
     :cond_6
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_4
 
-    .line 2776
     .end local v21           #pkg:Landroid/content/pm/PackageInfo;
     :cond_7
     new-instance v18, Ljava/io/FileOutputStream;
@@ -2026,15 +2004,13 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 2777
     .local v18, ofstream:Ljava/io/FileOutputStream;
     const/16 v19, 0x0
 
-    .line 2779
     .local v19, out:Ljava/io/OutputStream;
     const/16 v21, 0x0
 
-    .line 2781
+    .line 2765
     .restart local v21       #pkg:Landroid/content/pm/PackageInfo;
     :try_start_1
     move-object/from16 v0, p0

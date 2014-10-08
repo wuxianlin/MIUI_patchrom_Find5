@@ -731,6 +731,10 @@
 
     const v8, 0xea60
 
+    invoke-static {p0, p1}, Landroid/net/http/Injector$AndroidHttpClientHook;->before_newInstance(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p0
+
     .line 117
     new-instance v1, Lorg/apache/http/params/BasicHttpParams;
 

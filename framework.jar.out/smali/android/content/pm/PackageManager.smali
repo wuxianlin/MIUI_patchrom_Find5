@@ -16,6 +16,8 @@
 
 .field public static final ACTION_REQUEST_PERMISSION:Ljava/lang/String; = "android.content.pm.action.REQUEST_PERMISSION"
 
+.field public static final COMPONENT_ENABLED_STATE_ACCESS_CONTROL:I = -0x80000000
+
 .field public static final COMPONENT_ENABLED_STATE_DEFAULT:I = 0x0
 
 .field public static final COMPONENT_ENABLED_STATE_DISABLED:I = 0x2
@@ -194,6 +196,10 @@
 
 .field public static final GET_URI_PERMISSION_PATTERNS:I = 0x800
 
+.field public static final HAS_ACTIVITY:I = 0x20000
+
+.field public static final HAS_ACTIVITY_OR_SERVICES:I = 0x40000
+
 .field public static final INSTALL_ALLOW_DOWNGRADE:I = 0x80
 
 .field public static final INSTALL_ALLOW_TEST:I = 0x4
@@ -207,6 +213,8 @@
 .field public static final INSTALL_FAILED_CONFLICTING_PROVIDER:I = -0xd
 
 .field public static final INSTALL_FAILED_CONTAINER_ERROR:I = -0x12
+
+.field public static final INSTALL_FAILED_CONTAIN_VIRUS:I = -0x19
 
 .field public static final INSTALL_FAILED_CPU_ABI_INCOMPATIBLE:I = -0x10
 
@@ -242,6 +250,8 @@
 
 .field public static final INSTALL_FAILED_SHARED_USER_INCOMPATIBLE:I = -0x8
 
+.field public static final INSTALL_FAILED_SYSTEM_INCOMPATIBLE:I = -0x1a
+
 .field public static final INSTALL_FAILED_TEST_ONLY:I = -0xf
 
 .field public static final INSTALL_FAILED_THEME_AAPT_ERROR:I = -0x190
@@ -267,6 +277,8 @@
 .field public static final INSTALL_FORWARD_LOCK:I = 0x1
 
 .field public static final INSTALL_FROM_ADB:I = 0x20
+
+.field public static final INSTALL_FROM_XIAOMI:I = 0x100
 
 .field public static final INSTALL_INTERNAL:I = 0x10
 
@@ -996,6 +1008,24 @@
             Landroid/content/pm/PackageManager$NameNotFoundException;
         }
     .end annotation
+.end method
+
+.method public getUsers()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/content/pm/UserInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public abstract getVerifierDeviceIdentity()Landroid/content/pm/VerifierDeviceIdentity;

@@ -9468,6 +9468,10 @@
 
     .line 536
     .local v1, plmn:Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/android/internal/telephony/Injector$ServiceStateTrackerHook;->getSpn(Lcom/android/internal/telephony/ServiceStateTracker;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->mCurPlmn:Ljava/lang/String;
 
     invoke-static {v1, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z

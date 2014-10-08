@@ -72,6 +72,8 @@
 
 .field public static final APP_PERFORMANCE_PROFILES_ENABLED:Ljava/lang/String; = "app_perf_profiles_enabled"
 
+.field public static final ASSISTED_GPS_ENABLED:Ljava/lang/String; = "assisted_gps_enabled"
+
 .field public static final BACKGROUND_DATA:Ljava/lang/String; = "background_data"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -2966,3 +2968,23 @@
 
     throw v0
 .end method
+
+.field public static final CONTACTS_PREAUTH_URI_EXPIRATION:Ljava/lang/String; = "contacts_preauth_uri_expiration"
+
+.field public static final DEFAULT_INSTALL_LOCATION:Ljava/lang/String; = "default_install_location"
+
+.field public static final DOWNLOAD_RECOMMENDED_MAX_BYTES_OVER_MOBILE:Ljava/lang/String; = "download_manager_recommended_max_bytes_over_mobile"
+
+.field public static final MOBILE_DATA:Ljava/lang/String; = "mobile_data"
+
+.field public static final SCREENSAVER_COMPONENT:Ljava/lang/String; = "screensaver_components"
+
+.field public static final SEND_ACTION_APP_ERROR:Ljava/lang/String; = "send_action_app_error"
+
+.field public static final SET_INSTALL_LOCATION:Ljava/lang/String; = "set_install_location"
+
+.field public static final SYS_STORAGE_THRESHOLD_PERCENTAGE:Ljava/lang/String; = "sys_storage_threshold_percentage"
+
+.field public static final WIFI_SAVED_STATE:Ljava/lang/String; = "wifi_saved_state"
+
+.field public static final WIFI_WATCHDOG_POOR_NETWORK_TEST_ENABLED:Ljava/lang/String; = "wifi_watchdog_poor_network_test_enabled"

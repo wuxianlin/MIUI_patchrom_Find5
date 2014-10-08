@@ -659,9 +659,25 @@
 
     move-result v2
 
+    iget v3, p0, Landroid/widget/QuickContactBadge;->mPaddingLeft:I
+
+    sub-int/2addr v2, v3
+
+    iget v3, p0, Landroid/widget/QuickContactBadge;->mPaddingRight:I
+
+    sub-int/2addr v2, v3
+
     invoke-virtual {p0}, Landroid/widget/QuickContactBadge;->getHeight()I
 
     move-result v3
+
+    iget v0, p0, Landroid/widget/QuickContactBadge;->mPaddingTop:I
+
+    sub-int/2addr v3, v0
+
+    iget v0, p0, Landroid/widget/QuickContactBadge;->mPaddingBottom:I
+
+    sub-int/2addr v3, v0
 
     invoke-virtual {v1, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 

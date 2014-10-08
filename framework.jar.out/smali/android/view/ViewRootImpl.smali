@@ -400,6 +400,8 @@
 
 .field mSeq:I
 
+.field mSkipResizedMsg:Z
+
 .field mSoftInputMode:I
 
 .field mStopped:Z
@@ -527,157 +529,130 @@
 
     const/4 v2, 0x0
 
-    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
+    iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpLocation:[I
 
-    .line 141
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpValue:Landroid/util/TypedValue;
 
-    .line 147
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 161
     iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mAppVisible:Z
 
-    .line 162
     iput v3, p0, Landroid/view/ViewRootImpl;->mOrigWindowType:I
 
-    .line 166
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mStopped:Z
 
-    .line 168
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mLastInCompatMode:Z
 
-    .line 181
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mCurrentDirty:Landroid/graphics/Rect;
 
-    .line 230
-    const-string/jumbo v0, "pq"
+    const-string v0, "pq"
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingInputEventQueueLengthCounterName:Ljava/lang/String;
 
-    .line 235
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChanged:Z
 
-    .line 236
     iput v2, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChangesFlag:I
 
-    .line 240
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0}, Landroid/view/Surface;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mSurface:Landroid/view/Surface;
 
-    .line 250
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingOverscanInsets:Landroid/graphics/Rect;
 
-    .line 251
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingVisibleInsets:Landroid/graphics/Rect;
 
-    .line 252
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingContentInsets:Landroid/graphics/Rect;
 
-    .line 253
     new-instance v0, Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
     invoke-direct {v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastGivenInsets:Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
-    .line 256
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mFitSystemWindowsInsets:Landroid/graphics/Rect;
 
-    .line 258
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastConfiguration:Landroid/content/res/Configuration;
 
-    .line 259
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingConfiguration:Landroid/content/res/Configuration;
 
-    .line 279
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mDragPoint:Landroid/graphics/PointF;
 
-    .line 280
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastTouchPoint:Landroid/graphics/PointF;
 
-    .line 289
     iput-wide v5, p0, Landroid/view/ViewRootImpl;->mFpsStartTime:J
 
-    .line 290
     iput-wide v5, p0, Landroid/view/ViewRootImpl;->mFpsPrevTime:J
 
-    .line 293
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mDisplayLists:Ljava/util/ArrayList;
 
-    .line 313
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mInLayout:Z
 
-    .line 314
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLayoutRequesters:Ljava/util/ArrayList;
 
-    .line 315
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mHandlingLayoutInLayoutRequest:Z
 
-    .line 325
     invoke-static {}, Landroid/view/InputEventConsistencyVerifier;->isInstrumentationEnabled()Z
 
     move-result v0
@@ -3942,6 +3917,18 @@
 
     .line 2105
     return-object v4
+.end method
+
+.method public static getWindowSession(Landroid/os/Looper;)Landroid/view/IWindowSession;
+    .locals 1
+    .parameter "mainLooper"
+
+    .prologue
+    invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowSession()Landroid/view/IWindowSession;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private handleDragEvent(Landroid/view/DragEvent;)V
@@ -10250,6 +10237,24 @@
     return-void
 .end method
 
+.method createInputChannelAnyWay()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/view/InputChannel;
+
+    invoke-direct {v0}, Landroid/view/InputChannel;-><init>()V
+
+    iput-object v0, p0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
+
+    :cond_0
+    return-void
+.end method
+
 .method public debug()V
     .locals 1
 
@@ -10482,6 +10487,26 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
+.end method
+
+.method discardInputChannelBySetting()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
+
+    :cond_0
+    return-void
 .end method
 
 .method public dispatchAppVisibility(Z)V
@@ -15128,11 +15153,13 @@
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 495
     :cond_6
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewRootImpl;->createInputChannelAnyWay()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     :try_start_1
     move-object/from16 v0, p0
 
@@ -15753,6 +15780,8 @@
 
     .line 572
     :cond_d
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewRootImpl;->discardInputChannelBySetting()V
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
@@ -16099,6 +16128,17 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public skipNextResizedMsg()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    return-void
 .end method
 
 .method public startActionModeForChild(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;

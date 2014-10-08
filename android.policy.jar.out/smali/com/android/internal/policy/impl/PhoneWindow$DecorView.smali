@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/internal/view/RootViewSurfaceTaker;
+.implements Lcom/miui/internal/v5/widget/ActionBarView$ActionBarViewHolder;
 
 
 # annotations
@@ -12,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x12
+    accessFlags = 0x10
     name = "DecorView"
 .end annotation
 
@@ -1856,6 +1857,73 @@
     return v0
 .end method
 
+.method public getActionBarView()Lcom/miui/internal/v5/widget/ActionBarView;
+    .locals 2
+
+    .prologue
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
+
+    invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindow;->getActionBarView()Lcom/android/internal/widget/ActionBarView;
+
+    move-result-object v0
+
+    .local v0, abv:Lcom/android/internal/widget/ActionBarView;
+    instance-of v1, v0, Lcom/miui/internal/v5/widget/ActionBarView;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lcom/miui/internal/v5/widget/ActionBarView;
+
+    .end local v0           #abv:Lcom/android/internal/widget/ActionBarView;
+    :goto_0
+    return-object v0
+
+    .restart local v0       #abv:Lcom/android/internal/widget/ActionBarView;
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method miuiCreateActionModeCallbackWrapper(Landroid/view/ActionMode$Callback;)Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;
+    .locals 1
+    .parameter "callback"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    instance-of v0, p1, Lmiui/v5/view/SearchActionMode$Callback;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$SearchActionModeCallbackWrapper;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$SearchActionModeCallbackWrapper;-><init>(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/ActionMode$Callback;)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;-><init>(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/ActionMode$Callback;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;-><init>(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/ActionMode$Callback;)V
+
+    goto :goto_0
+.end method
+
 .method protected onAttachedToWindow()V
     .locals 3
 
@@ -3281,27 +3349,22 @@
 
     const/4 v7, 0x0
 
-    .line 2628
     iget-object v5, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionMode:Landroid/view/ActionMode;
 
     if-eqz v5, :cond_0
 
-    .line 2629
     iget-object v5, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionMode:Landroid/view/ActionMode;
 
     invoke-virtual {v5}, Landroid/view/ActionMode;->finish()V
 
-    .line 2632
     :cond_0
-    new-instance v4, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->miuiCreateActionModeCallbackWrapper(Landroid/view/ActionMode$Callback;)Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;
 
-    invoke-direct {v4, p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView$ActionModeCallbackWrapper;-><init>(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/ActionMode$Callback;)V
+    move-result-object v4
 
-    .line 2633
     .local v4, wrappedCallback:Landroid/view/ActionMode$Callback;
     const/4 v2, 0x0
 
-    .line 2634
     .local v2, mode:Landroid/view/ActionMode;
     iget-object v5, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 

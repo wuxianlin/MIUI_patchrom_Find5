@@ -388,43 +388,15 @@
 .end method
 
 .method public loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-    .locals 4
+    .locals 1
     .parameter "pm"
 
     .prologue
-    .line 147
-    iget v1, p0, Landroid/content/pm/PackageItemInfo;->icon:I
-
-    if-eqz v1, :cond_0
-
-    .line 148
-    iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
-
-    iget v2, p0, Landroid/content/pm/PackageItemInfo;->icon:I
-
-    invoke-virtual {p0}, Landroid/content/pm/PackageItemInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v1, v2, v3}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1}, Landroid/content/pm/Injector$PackageItemInfoHook;->loadIcon(Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 149
-    .local v0, dr:Landroid/graphics/drawable/Drawable;
-    if-eqz v0, :cond_0
-
-    .line 153
-    .end local v0           #dr:Landroid/graphics/drawable/Drawable;
-    :goto_0
     return-object v0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/pm/PackageItemInfo;->loadDefaultIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 .method public loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;

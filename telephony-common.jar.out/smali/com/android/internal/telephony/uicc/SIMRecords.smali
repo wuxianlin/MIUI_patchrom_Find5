@@ -949,39 +949,29 @@
 
     const/4 v2, 0x0
 
-    .line 190
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccRecords;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 76
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mCphsInfo:[B
 
-    .line 77
     iput-boolean v4, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mCspPlmnEnabled:Z
 
-    .line 79
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mEfMWIS:[B
 
-    .line 80
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mEfCPHS_MWI:[B
 
-    .line 81
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mEfCff:[B
 
-    .line 82
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mEfCfis:[B
 
-    .line 87
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mSpdiNetworks:Ljava/util/ArrayList;
 
-    .line 89
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mPnnHomeName:Ljava/lang/String;
 
-    .line 192
-    new-instance v0, Lcom/android/internal/telephony/uicc/AdnRecordCache;
+    new-instance v0, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    invoke-direct {v0, v1}, Lcom/android/internal/telephony/uicc/AdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
+    invoke-direct {v0, v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
@@ -5059,7 +5049,7 @@
 
     array-length v4, v11
 
-    invoke-static {v11, v2, v4}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v11, v2, v4}, Lcom/android/internal/telephony/uicc/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v2
 

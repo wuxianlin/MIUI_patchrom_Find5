@@ -420,6 +420,18 @@
     return-void
 .end method
 
+.method public setType(I)V
+    .locals 1
+    .parameter "type"
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Toast$TN;->mParams:Landroid/view/WindowManager$LayoutParams;
+
+    iput p1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    return-void
+.end method
+
 .method public show()V
     .locals 2
 

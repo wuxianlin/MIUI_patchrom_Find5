@@ -2513,6 +2513,8 @@
 
     if-lez v17, :cond_10
 
+    invoke-static/range {p0 .. p0}, Landroid/preference/Injector$PreferenceActivityHook;->setListViewPadding(Landroid/preference/PreferenceActivity;)V
+
     .line 609
     new-instance v17, Landroid/preference/PreferenceActivity$HeaderAdapter;
 

@@ -313,21 +313,15 @@
 
     iput-object v2, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
-    .line 987
     iget-object v2, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
-    .line 988
     .local v1, listView:Landroid/widget/ListView;
-    invoke-virtual {v1, p1}, Landroid/widget/ListView;->setTextDirection(I)V
+    invoke-static {v1, p1, p2}, Landroid/widget/Injector$SpinnerHook;->setListViewRtl(Landroid/widget/ListView;II)V
 
-    .line 989
-    invoke-virtual {v1, p2}, Landroid/widget/ListView;->setTextAlignment(I)V
-
-    .line 990
     iget-object v2, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V

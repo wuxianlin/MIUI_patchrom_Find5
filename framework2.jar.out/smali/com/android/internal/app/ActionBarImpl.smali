@@ -637,11 +637,11 @@
 
     .line 250
     :cond_0
-    new-instance v0, Lcom/android/internal/widget/ScrollingTabContainerView;
-
     iget-object v1, p0, Lcom/android/internal/app/ActionBarImpl;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/android/internal/widget/ScrollingTabContainerView;-><init>(Landroid/content/Context;)V
+    invoke-static {v1}, Lcom/android/internal/app/Injector$ActionBarImplHook;->createScrollingTabContainerView(Landroid/content/Context;)Lcom/android/internal/widget/ScrollingTabContainerView;
+
+    move-result-object v0
 
     .line 252
     .local v0, tabScroller:Lcom/android/internal/widget/ScrollingTabContainerView;
@@ -979,27 +979,31 @@
 
     const/4 v2, 0x0
 
-    .line 218
+    invoke-static {p0, p1}, Lcom/android/internal/app/Injector$ActionBarImplHook;->setHasEmbeddedTabs(Lcom/android/internal/app/ActionBarImpl;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_miui
+
+    return-void
+
+    :cond_miui
     iput-boolean p1, p0, Lcom/android/internal/app/ActionBarImpl;->mHasEmbeddedTabs:Z
 
-    .line 220
     iget-boolean v3, p0, Lcom/android/internal/app/ActionBarImpl;->mHasEmbeddedTabs:Z
 
     if-nez v3, :cond_1
 
-    .line 221
     iget-object v3, p0, Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/ActionBarView;->setEmbeddedTabView(Lcom/android/internal/widget/ScrollingTabContainerView;)V
 
-    .line 222
     iget-object v3, p0, Lcom/android/internal/app/ActionBarImpl;->mContainerView:Lcom/android/internal/widget/ActionBarContainer;
 
     iget-object v4, p0, Lcom/android/internal/app/ActionBarImpl;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/ActionBarContainer;->setTabContainer(Lcom/android/internal/widget/ScrollingTabContainerView;)V
 
-    .line 227
     :goto_0
     invoke-virtual {p0}, Lcom/android/internal/app/ActionBarImpl;->getNavigationMode()I
 
@@ -1337,22 +1341,6 @@
 
     .line 795
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lcom/android/internal/widget/ActionBarView;->hasEmbeddedTabs()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lcom/android/internal/widget/ActionBarView;->isCollapsed()Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
@@ -2025,6 +2013,60 @@
     return-void
 .end method
 
+.method protected getActionBarOverlayLayout()Lcom/android/internal/widget/ActionBarOverlayLayout;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mOverlayLayout:Lcom/android/internal/widget/ActionBarOverlayLayout;
+
+    return-object v0
+.end method
+
+.method protected getActionView()Lcom/android/internal/widget/ActionBarView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
+
+    return-object v0
+.end method
+
+.method protected getContainerView()Lcom/android/internal/widget/ActionBarContainer;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mContainerView:Lcom/android/internal/widget/ActionBarContainer;
+
+    return-object v0
+.end method
+
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method protected getContextDisplayMode()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/app/ActionBarImpl;->mContextDisplayMode:I
+
+    return v0
+.end method
+
+.method protected getContextView()Lcom/android/internal/widget/ActionBarContextView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mContextView:Lcom/android/internal/widget/ActionBarContextView;
+
+    return-object v0
+.end method
+
 .method public getCustomView()Landroid/view/View;
     .locals 1
 
@@ -2049,6 +2091,15 @@
     invoke-virtual {v0}, Lcom/android/internal/widget/ActionBarView;->getDisplayOptions()I
 
     move-result v0
+
+    return v0
+.end method
+
+.method getHasEmbeddedTabsFiled()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/app/ActionBarImpl;->mHasEmbeddedTabs:Z
 
     return v0
 .end method
@@ -2203,6 +2254,15 @@
     return-object v0
 .end method
 
+.method protected getSplitView()Lcom/android/internal/widget/ActionBarContainer;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mSplitView:Lcom/android/internal/widget/ActionBarContainer;
+
+    return-object v0
+.end method
+
 .method public getSubtitle()Ljava/lang/CharSequence;
     .locals 1
 
@@ -2246,6 +2306,15 @@
     move-result v0
 
     return v0
+.end method
+
+.method protected getTabScrollView()Lcom/android/internal/widget/ScrollingTabContainerView;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
+
+    return-object v0
 .end method
 
 .method public getThemedContext()Landroid/content/Context;
@@ -3144,6 +3213,16 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method setHasEmbeddedTabsField(Z)V
+    .locals 0
+    .parameter "hasEmbeddedTabs"
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/app/ActionBarImpl;->mHasEmbeddedTabs:Z
+
+    return-void
 .end method
 
 .method public setHomeActionContentDescription(I)V

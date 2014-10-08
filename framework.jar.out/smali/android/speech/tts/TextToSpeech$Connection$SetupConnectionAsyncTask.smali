@@ -127,6 +127,8 @@
 
     .line 1489
     .local v0, defaultLanguage:[Ljava/lang/String;
+    if-eqz v0, :cond_miui
+
     iget-object v2, p0, Landroid/speech/tts/TextToSpeech$Connection$SetupConnectionAsyncTask;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     iget-object v2, v2, Landroid/speech/tts/TextToSpeech$Connection;->this$0:Landroid/speech/tts/TextToSpeech;
@@ -180,7 +182,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1493
+    :cond_miui
     const-string v2, "TextToSpeech"
 
     new-instance v4, Ljava/lang/StringBuilder;

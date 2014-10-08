@@ -5557,7 +5557,7 @@
     .line 5028
     iget v0, p0, Landroid/content/Intent;->mFlags:I
 
-    and-int/lit8 v0, v0, 0x30
+    and-int/lit8 v0, v0, 0x10
 
     const/16 v1, 0x10
 

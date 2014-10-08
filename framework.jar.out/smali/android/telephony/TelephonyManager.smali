@@ -1988,6 +1988,15 @@
     goto :goto_0
 .end method
 
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/telephony/TelephonyManager;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
 .method public getCurrentPhoneType()I
     .locals 3
 

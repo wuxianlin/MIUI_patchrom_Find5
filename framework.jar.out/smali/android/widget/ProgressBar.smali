@@ -321,25 +321,20 @@
 
     invoke-virtual {p0, v5}, Landroid/widget/ProgressBar;->setSecondaryProgress(I)V
 
-    .line 294
     const/4 v5, 0x7
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 295
     if-eqz v1, :cond_2
 
-    .line 296
-    invoke-direct {p0, v1}, Landroid/widget/ProgressBar;->tileifyIndeterminate(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v1}, Landroid/widget/ProgressBar;->tileifyIndeterminate(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 297
     invoke-virtual {p0, v1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 300
     :cond_2
     const/4 v5, 0x6
 
@@ -1046,7 +1041,7 @@
     goto :goto_4
 .end method
 
-.method private tileifyIndeterminate(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+.method protected tileifyIndeterminate(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 8
     .parameter "drawable"
 
@@ -1404,6 +1399,17 @@
 
     .line 1086
     return-void
+.end method
+
+.method public getBgDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method getCurrentDrawable()Landroid/graphics/drawable/Drawable;

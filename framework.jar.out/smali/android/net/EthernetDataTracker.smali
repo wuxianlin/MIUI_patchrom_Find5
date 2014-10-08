@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field private mCsHandler:Landroid/os/Handler;
+.field protected mCsHandler:Landroid/os/Handler;
 
 .field private mDefaultGatewayAddr:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method protected constructor <init>()V
     .locals 5
 
     .prologue
@@ -210,9 +210,9 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/net/EthernetDataTracker;
+    new-instance v0, Landroid/net/UsbShareNetStateTracker;
 
-    invoke-direct {v0}, Landroid/net/EthernetDataTracker;-><init>()V
+    invoke-direct {v0}, Landroid/net/UsbShareNetStateTracker;-><init>()V
 
     sput-object v0, Landroid/net/EthernetDataTracker;->sInstance:Landroid/net/EthernetDataTracker;
 

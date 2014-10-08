@@ -42,7 +42,7 @@
 
 .field static final MAX_EXT_CALLED_PARTY_LENGTH:I = 0xa
 
-.field static final MAX_NUMBER_SIZE_BYTES:I = 0xb
+.field static final MAX_NUMBER_SIZE_BYTES:I = 0xff
 
 
 # instance fields
@@ -370,35 +370,29 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/AdnRecord;->mAlphaTag:Ljava/lang/String;
 
-    .line 326
     array-length v3, p1
 
     add-int/lit8 v1, v3, -0xe
 
-    .line 328
     .local v1, footerOffset:I
     aget-byte v3, p1, v1
 
     and-int/lit16 v2, v3, 0xff
 
-    .line 330
     .local v2, numberLength:I
-    const/16 v3, 0xb
+    const/16 v3, 0xff
 
     if-le v2, v3, :cond_0
 
-    .line 332
     const-string v3, ""
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/AdnRecord;->mNumber:Ljava/lang/String;
 
-    .line 359
     .end local v1           #footerOffset:I
     .end local v2           #numberLength:I
     :goto_0
     return-void
 
-    .line 343
     .restart local v1       #footerOffset:I
     .restart local v2       #numberLength:I
     :cond_0

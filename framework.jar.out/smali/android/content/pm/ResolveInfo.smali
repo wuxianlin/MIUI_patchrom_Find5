@@ -872,77 +872,15 @@
 .end method
 
 .method public loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-    .locals 6
+    .locals 1
     .parameter "pm"
 
     .prologue
-    .line 191
-    iget-object v3, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
+    invoke-static {p0, p1}, Landroid/content/pm/Injector$ResolveInfoHook;->loadIcon(Landroid/content/pm/ResolveInfo;Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
-    if-eqz v3, :cond_1
+    move-result-object v0
 
-    iget v3, p0, Landroid/content/pm/ResolveInfo;->icon:I
-
-    if-eqz v3, :cond_1
-
-    .line 192
-    iget-object v3, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
-
-    iget v4, p0, Landroid/content/pm/ResolveInfo;->icon:I
-
-    const/4 v5, 0x0
-
-    invoke-virtual {p1, v3, v4, v5}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    .line 193
-    .local v2, dr:Landroid/graphics/drawable/Drawable;
-    if-eqz v2, :cond_1
-
-    .line 205
-    .end local v2           #dr:Landroid/graphics/drawable/Drawable;
-    :cond_0
-    :goto_0
-    return-object v2
-
-    .line 197
-    :cond_1
-    invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
-
-    move-result-object v1
-
-    .line 198
-    .local v1, ci:Landroid/content/pm/ComponentInfo;
-    iget-object v0, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    .line 199
-    .local v0, ai:Landroid/content/pm/ApplicationInfo;
-    iget v3, p0, Landroid/content/pm/ResolveInfo;->icon:I
-
-    if-eqz v3, :cond_2
-
-    .line 200
-    iget-object v3, v1, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    iget v4, p0, Landroid/content/pm/ResolveInfo;->icon:I
-
-    invoke-virtual {p1, v3, v4, v0}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    .line 201
-    .restart local v2       #dr:Landroid/graphics/drawable/Drawable;
-    if-nez v2, :cond_0
-
-    .line 205
-    .end local v2           #dr:Landroid/graphics/drawable/Drawable;
-    :cond_2
-    invoke-virtual {v1, p1}, Landroid/content/pm/ComponentInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    goto :goto_0
+    return-object v0
 .end method
 
 .method public loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;

@@ -454,6 +454,18 @@
     return-void
 .end method
 
+.method public setType(I)V
+    .locals 1
+    .parameter "type"
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Toast;->mTN:Landroid/widget/Toast$TN;
+
+    invoke-virtual {v0, p1}, Landroid/widget/Toast$TN;->setType(I)V
+
+    return-void
+.end method
+
 .method public setView(Landroid/view/View;)V
     .locals 0
     .parameter "view"
