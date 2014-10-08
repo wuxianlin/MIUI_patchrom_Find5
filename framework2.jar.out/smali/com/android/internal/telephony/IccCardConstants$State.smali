@@ -32,6 +32,8 @@
 
 .field public static final enum DETECTED:Lcom/android/internal/telephony/IccCardConstants$State;
 
+.field public static final NETWORK_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
+
 .field public static final enum NOT_READY:Lcom/android/internal/telephony/IccCardConstants$State;
 
 .field public static final enum PERM_DISABLED:Lcom/android/internal/telephony/IccCardConstants$State;
@@ -218,6 +220,10 @@
     aput-object v2, v0, v1
 
     sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->$VALUES:[Lcom/android/internal/telephony/IccCardConstants$State;
+
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    sput-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
 
     return-void
 .end method
