@@ -19337,50 +19337,9 @@
     .locals 1
 
     .prologue
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mUiContext:Landroid/content/Context;
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/server/am/ActivityManagerService;->mBooted:Z
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Landroid/content/pm/ThemeUtils;->createUiContext(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mUiContext:Landroid/content/Context;
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mUiContext:Landroid/content/Context;
-
-    :goto_0
-    monitor-exit p0
 
     return-object v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 .method private handleAppCrashLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
