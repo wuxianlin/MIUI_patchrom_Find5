@@ -4106,11 +4106,6 @@
     .line 204
     invoke-static {p0, v4}, Lcom/android/internal/telephony/MccTable;->setTimezoneFromMccIfNeeded(Landroid/content/Context;I)V
 
-    .line 205
-    invoke-static {p0, v4}, Lcom/android/internal/telephony/MccTable;->getLocaleFromMcc(Landroid/content/Context;I)Ljava/util/Locale;
-
-    move-result-object v3
-
     .line 207
     :cond_2
     if-eqz p2, :cond_3
