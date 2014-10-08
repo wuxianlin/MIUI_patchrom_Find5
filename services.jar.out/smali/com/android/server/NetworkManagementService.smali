@@ -675,8 +675,14 @@
     .local v7, internalNetworkInterface:Ljava/net/NetworkInterface;
     if-eqz v3, :cond_1
 
+    const/4 v7, 0x0
+
+    .local v7, internalNetworkInterface:Ljava/net/NetworkInterface;
+    :try_start_miui
     .line 1049
     invoke-static {p2}, Ljava/net/NetworkInterface;->getByName(Ljava/lang/String;)Ljava/net/NetworkInterface;
+    :try_end_miui
+    .catch Ljava/net/SocketException; {:try_start_miui .. :try_end_miui} :catch_miui
 
     move-result-object v7
 
@@ -687,6 +693,7 @@
 
     .line 1056
     :goto_0
+    :goto_miui
     if-nez v7, :cond_2
 
     .line 1057
@@ -709,31 +716,31 @@
     move-exception v2
 
     .local v2, e:Ljava/net/SocketException;
-    const-string v7, "NetworkManagementService"
+    const-string v8, "NetworkManagementService"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "get interface by name error: "
+    const-string v10, "get interface by name error: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v2}, Ljava/net/SocketException;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/net/SocketException;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_miui
 
