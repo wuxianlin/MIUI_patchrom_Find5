@@ -841,6 +841,10 @@
 
     move-result-object v11
 
+    iget-object v1, p3, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+
+    invoke-static {v11, v1}, Landroid/app/Injector$ActivityThreadHook;->setResourcesPackageName(Landroid/content/res/Resources;Ljava/lang/String;)V
+
     :cond_4
     :goto_0
     iput-object v11, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;

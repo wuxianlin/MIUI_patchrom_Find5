@@ -26,7 +26,11 @@
 
 .field public static final COMPONENT_ENABLED_STATE_DISABLED_USER:I = 0x3
 
+.field public static final COMPONENT_ENABLED_STATE_DISABLE_AUTOSTART:I = 0x40000000
+
 .field public static final COMPONENT_ENABLED_STATE_ENABLED:I = 0x1
+
+.field public static final COMPONENT_ENABLED_STATE_SHOW_FLOATING_WINDOW:I = 0x8000000
 
 .field public static final COMPONENT_PROTECTED_STATUS:Z = false
 
