@@ -1512,6 +1512,8 @@
     .line 365
     sget-object v2, Lcom/android/internal/os/ZygoteInit;->mResources:Landroid/content/res/Resources;
 
+    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->preloadMiuiResources()V
+
     invoke-virtual {v2}, Landroid/content/res/Resources;->finishPreloading()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
