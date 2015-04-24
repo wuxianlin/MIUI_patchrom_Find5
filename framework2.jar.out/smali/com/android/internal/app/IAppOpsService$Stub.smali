@@ -601,7 +601,7 @@
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 197
-    invoke-virtual {p0}, Lcom/android/internal/app/IAppOpsService$Stub;->resetCounters()V
+    #invoke-virtual {p0}, Lcom/android/internal/app/IAppOpsService$Stub;->resetCounters()V
 
     .line 198
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -627,10 +627,10 @@
 
     .line 208
     .local v1, "_arg1":Ljava/lang/String;
-    invoke-virtual {p0, v0, v1}, Lcom/android/internal/app/IAppOpsService$Stub;->getPrivacyGuardSettingForPackage(ILjava/lang/String;)Z
+    #invoke-virtual {p0, v0, v1}, Lcom/android/internal/app/IAppOpsService$Stub;->getPrivacyGuardSettingForPackage(ILjava/lang/String;)Z
 
-    move-result v4
-
+    #move-result v4
+    const/4 v4, 0x1
     .line 209
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
