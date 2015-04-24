@@ -1398,11 +1398,13 @@
 .end method
 
 .method public setFlags(II)V
-    .locals 4
+    .locals 5
     .param p1, "flags"    # I
     .param p2, "mask"    # I
 
     .prologue
+    const/high16 v4, 0x4000000
+
     .line 748
     and-int v1, p1, p2
 
@@ -1441,11 +1443,11 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    and-int v1, p2, v3
+    and-int v1, p2, v4
 
     if-eqz v1, :cond_miui_0
 
-    and-int v1, p1, v3
+    and-int v1, p1, v4
 
     if-nez v1, :cond_miui_0
 

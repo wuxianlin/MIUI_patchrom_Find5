@@ -19082,7 +19082,7 @@
     if-eqz v22, :cond_5
 
     .line 573
-    new-instance v31, Landroid/content/res/Resources;
+    new-instance v31, Landroid/content/res/MiuiResources;
 
     const/4 v3, 0x0
 
@@ -19090,7 +19090,7 @@
 
     move-object/from16 v1, p3
 
-    invoke-direct {v0, v2, v1, v3}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    invoke-direct {v0, v2, v1, v3}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 

@@ -1171,6 +1171,10 @@
     if-eqz v5, :cond_7
 
     .line 333
+    const/4 v12, 0x1
+
+    iput v12, p0, Landroid/accounts/ChooseTypeAndAccountActivity;->mPendingRequest:I
+
     invoke-virtual {p0, v5}, Landroid/accounts/ChooseTypeAndAccountActivity;->runAddAccountForAuthenticator(Ljava/lang/String;)V
 
     goto :goto_1

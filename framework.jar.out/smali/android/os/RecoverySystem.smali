@@ -216,6 +216,10 @@
 
     .line 358
     .local v1, "intent":Landroid/content/Intent;
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
     sget-object v2, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     const-string v3, "android.permission.MASTER_CLEAR"
