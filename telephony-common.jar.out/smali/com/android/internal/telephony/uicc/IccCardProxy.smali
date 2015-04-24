@@ -2812,6 +2812,18 @@
     throw v1
 .end method
 
+.method public registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccCardProxy;->registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    return-void
+.end method
+
 .method public registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
     .locals 6
     .param p1, "h"    # Landroid/os/Handler;
@@ -3315,6 +3327,27 @@
     throw v1
 .end method
 
+.method public supplyNetworkDepersonalization(Ljava/lang/String;Landroid/os/Message;)V
+    .locals 1
+    .param p1, "pin"    # Ljava/lang/String;
+    .param p2, "onComplete"    # Landroid/os/Message;
+
+    .prologue
+    sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_NETWORK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->ordinal()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0, p2}, Lcom/android/internal/telephony/uicc/IccCardProxy;->supplyDepersonalization(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+
+    return-void
+.end method
+
 .method public supplyPin(Ljava/lang/String;Landroid/os/Message;)V
     .locals 3
     .param p1, "pin"    # Ljava/lang/String;
@@ -3657,6 +3690,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method public unregisterForNetworkLocked(Landroid/os/Handler;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+
+    .prologue
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/IccCardProxy;->unregisterForPersoLocked(Landroid/os/Handler;)V
+
+    return-void
 .end method
 
 .method public unregisterForPersoLocked(Landroid/os/Handler;)V
