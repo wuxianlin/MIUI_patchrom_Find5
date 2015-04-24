@@ -1552,7 +1552,7 @@
 
     const/4 v7, 0x1
 
-    invoke-virtual {v3, v4, v5, v7}, Landroid/app/AppOpsManager;->setPrivacyGuardSettingForPackage(ILjava/lang/String;Z)V
+    #invoke-virtual {v3, v4, v5, v7}, Landroid/app/AppOpsManager;->setPrivacyGuardSettingForPackage(ILjava/lang/String;Z)V
 
     .line 985
     .end local v48    # "privacyGuard":Z

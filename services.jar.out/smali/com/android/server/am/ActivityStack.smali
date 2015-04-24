@@ -1965,10 +1965,10 @@
 
     iget-object v5, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/server/AppOpsService;->getPrivacyGuardSettingForPackage(ILjava/lang/String;)Z
+    #invoke-virtual {v3, v4, v5}, Lcom/android/server/AppOpsService;->getPrivacyGuardSettingForPackage(ILjava/lang/String;)Z
 
-    move-result v1
-
+    #move-result v1
+    const/4 v1, 0x1
     .line 1715
     .local v1, "privacy":Z
     if-eqz v2, :cond_2
