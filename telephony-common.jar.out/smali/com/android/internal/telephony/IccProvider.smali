@@ -4,7 +4,7 @@
 
 
 # static fields
-.field protected static final ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
+.field public static final ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
 
 .field private static final ADN:I = 0x1
 

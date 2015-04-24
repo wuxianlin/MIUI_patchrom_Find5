@@ -1349,6 +1349,35 @@
 
 
 # virtual methods
+.method public checkAndNotifyDeviceId(Landroid/os/Message;)V
+    .locals 2
+    .param p1, "msg"    # Landroid/os/Message;
+
+    .prologue
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/internal/telephony/PhoneBase;->getDeviceId()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget v1, p1, Landroid/os/Message;->arg1:I
+
+    invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/PhoneBase;->checkAndNotifyDeviceId(Ljava/lang/String;I)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x9
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method public acceptCall(I)V
     .locals 3
     .param p1, "callType"    # I

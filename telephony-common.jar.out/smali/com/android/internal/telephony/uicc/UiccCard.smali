@@ -366,6 +366,213 @@
 .end method
 
 .method private onIccSwap(Z)V
+    .locals 14
+    .param p1, "isAdded"    # Z
+
+    .prologue
+    const/4 v3, 0x1
+
+    .local v3, "isHotSwapSupported":Z
+    const/4 v5, 0x0
+
+    .local v5, "needReboot":Z
+    iget-object v11, p0, Lcom/android/internal/telephony/uicc/UiccCard;->mLock:Ljava/lang/Object;
+
+    monitor-enter v11
+
+    :try_start_0
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    .local v7, "r":Landroid/content/res/Resources;
+    const-string v9, ""
+
+    .local v9, "title":Ljava/lang/String;
+    const/4 v4, 0x0
+
+    .local v4, "listener":Landroid/content/DialogInterface$OnClickListener;
+    const v6, 0x104000a
+
+    .local v6, "positiveButtonText":I
+    if-eqz v3, :cond_5
+
+    if-eqz p1, :cond_4
+
+    const v10, 0x1040554
+
+    invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    :goto_0
+    if-eqz v5, :cond_0
+
+    sget v6, Landroid/miui/R$string;->sim_added_reboot_confirm:I
+
+    new-instance v4, Lcom/android/internal/telephony/uicc/UiccCard$1;
+
+    .end local v4    # "listener":Landroid/content/DialogInterface$OnClickListener;
+    invoke-direct {v4, p0}, Lcom/android/internal/telephony/uicc/UiccCard$1;-><init>(Lcom/android/internal/telephony/uicc/UiccCard;)V
+
+    .restart local v4    # "listener":Landroid/content/DialogInterface$OnClickListener;
+    :cond_0
+    new-instance v10, Landroid/app/AlertDialog$Builder;
+
+    iget-object v12, p0, Lcom/android/internal/telephony/uicc/UiccCard;->mContext:Landroid/content/Context;
+
+    sget v13, Lmiui/R$style;->Theme_Light_Dialog_Alert:I
+
+    invoke-direct {v10, v12, v13}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+
+    invoke-virtual {v10, v9}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v6, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    .local v0, "builder":Landroid/app/AlertDialog$Builder;
+    if-eqz v5, :cond_1
+
+    const/high16 v10, 0x1040000
+
+    const/4 v12, 0x0
+
+    invoke-virtual {v0, v10, v12}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v1
+
+    .local v1, "dialog":Landroid/app/AlertDialog;
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v10
+
+    const/16 v12, 0x7d3
+
+    invoke-virtual {v10, v12}, Landroid/view/Window;->setType(I)V
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+
+    :cond_2
+    if-nez v5, :cond_3
+
+    new-instance v8, Ljava/util/Timer;
+
+    invoke-direct {v8}, Ljava/util/Timer;-><init>()V
+
+    .local v8, "t":Ljava/util/Timer;
+    new-instance v10, Lcom/android/internal/telephony/uicc/UiccCard$TimeTask;
+
+    invoke-direct {v10, p0, v1, v8}, Lcom/android/internal/telephony/uicc/UiccCard$TimeTask;-><init>(Lcom/android/internal/telephony/uicc/UiccCard;Landroid/app/AlertDialog;Ljava/util/Timer;)V
+
+    const-wide/16 v12, 0x2710
+
+    invoke-virtual {v8, v10, v12, v13}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v10, "android.intent.action.SIM_HOT_SWAP"
+
+    invoke-direct {v2, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .local v2, "intent":Landroid/content/Intent;
+    const/high16 v10, 0x20000000
+
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const-string v10, "is_sim_added"
+
+    invoke-virtual {v2, v10, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "Broadcasting intent ACTION_SIM_HOT_SWAP  isAdded: "
+
+    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {p0, v10}, Lcom/android/internal/telephony/uicc/UiccCard;->log(Ljava/lang/String;)V
+
+    const-string v10, "android.permission.READ_PHONE_STATE"
+
+    const/4 v12, -0x1
+
+    invoke-static {v2, v10, v12}, Landroid/app/ActivityManagerNative;->broadcastStickyIntent(Landroid/content/Intent;Ljava/lang/String;I)V
+
+    .end local v2    # "intent":Landroid/content/Intent;
+    .end local v8    # "t":Ljava/util/Timer;
+    :cond_3
+    monitor-exit v11
+
+    return-void
+
+    .end local v0    # "builder":Landroid/app/AlertDialog$Builder;
+    .end local v1    # "dialog":Landroid/app/AlertDialog;
+    :cond_4
+    const v10, 0x104054f
+
+    invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    goto :goto_0
+
+    :cond_5
+    if-eqz p1, :cond_6
+
+    sget v10, Landroid/miui/R$string;->sim_added_reboot_title:I
+
+    invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    :goto_1
+    move v5, p1
+
+    goto/16 :goto_0
+
+    :cond_6
+    const v10, 0x104054f
+
+    invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    goto :goto_1
+
+    .end local v4    # "listener":Landroid/content/DialogInterface$OnClickListener;
+    .end local v6    # "positiveButtonText":I
+    .end local v7    # "r":Landroid/content/res/Resources;
+    .end local v9    # "title":Ljava/lang/String;
+    :catchall_0
+    move-exception v10
+
+    monitor-exit v11
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v10
+.end method
+
+.method private onIccSwap_aosp(Z)V
     .locals 11
     .param p1, "isAdded"    # Z
 
