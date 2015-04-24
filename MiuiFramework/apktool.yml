@@ -1,0 +1,11 @@
+version: 2.0.0-RC4
+apkFileName: MiuiFramework.apk
+isFrameworkApk: true
+usesFramework:
+  ids:
+  - 1
+  - 8
+  - 9
+packageInfo:
+  rename-manifest-package: com.miui.framework
+compressionType: false
