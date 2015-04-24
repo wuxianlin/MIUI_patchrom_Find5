@@ -8959,7 +8959,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15, v2}, Lcom/android/server/BackupManagerService;->startConfirmationUi(ILjava/lang/String;)Z
+    invoke-static {v0, v15, v2}, Lcom/android/server/BackupManagerService$Injector;->startConfirmationUi(Lcom/android/server/BackupManagerService;ILjava/lang/String;)Z
 
     move-result v2
 
@@ -9058,7 +9058,7 @@
     .line 5561
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15, v1}, Lcom/android/server/BackupManagerService;->startConfirmationTimeout(ILcom/android/server/BackupManagerService$FullParams;)V
+    invoke-static {v0, v15, v1}, Lcom/android/server/BackupManagerService$Injector;->startConfirmationTimeout(Lcom/android/server/BackupManagerService;ILcom/android/server/BackupManagerService$FullParams;)V
 
     .line 5564
     const-string v2, "BackupManagerService"

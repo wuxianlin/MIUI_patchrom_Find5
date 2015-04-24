@@ -2329,7 +2329,7 @@
     iput-object v0, v7, Landroid/net/wifi/p2p/WifiP2pConfig;->deviceAddress:Ljava/lang/String;
 
     .line 701
-    const/4 v0, 0x0
+    const/16 v0, 0xf
 
     iput v0, v7, Landroid/net/wifi/p2p/WifiP2pConfig;->groupOwnerIntent:I
 

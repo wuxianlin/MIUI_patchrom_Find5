@@ -4913,7 +4913,7 @@
 .end method
 
 .method private updateLightsLocked()V
-    .locals 10
+    .locals 11
 
     .prologue
     .line 2505
@@ -4992,6 +4992,7 @@
     if-nez v0, :cond_9
 
     .line 2533
+    :cond_miui_0
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v8}, Lcom/android/server/LightsService$Light;->turnOff()V
@@ -5027,12 +5028,26 @@
 
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mScreenOn:Z
 
-    if-eqz v8, :cond_7
+    #if-eqz v8, :cond_7
+    if-nez v8, :cond_miui_0
+
+    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v9, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+
+    iget-object v9, v9, Lcom/android/server/NotificationManagerService$NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
+
+    const-string v10, "_led"
+
+    invoke-static {v8, v9, v10}, Lmiui/util/NotificationFilterHelper;->isAllowed(Landroid/content/Context;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;)Z
+
+    move-result v8
+
+    #if-nez v8, :cond_7
 
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mDreaming:Z
 
     if-nez v8, :cond_7
-
     .line 2525
     :cond_6
     const/4 v0, 0x0
