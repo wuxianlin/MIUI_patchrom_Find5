@@ -1535,6 +1535,78 @@
     return-void
 .end method
 
+.method private prepareContext(Landroid/content/Context;)Landroid/content/Context;
+    .locals 6
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    iget-object v2, p0, Landroid/widget/RemoteViews;->mPackage:Ljava/lang/String;
+
+    .local v2, "packageName":Ljava/lang/String;
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x4
+
+    :try_start_0
+    iget-object v4, p0, Landroid/widget/RemoteViews;->mUser:Landroid/os/UserHandle;
+
+    invoke-virtual {p1, v2, v3, v4}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .local v0, "c":Landroid/content/Context;
+    :goto_0
+    return-object v0
+
+    .end local v0    # "c":Landroid/content/Context;
+    :catch_0
+    move-exception v1
+
+    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    const-string v3, "RemoteViews"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Package name "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " not found"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-object v0, p1
+
+    .restart local v0    # "c":Landroid/content/Context;
+    goto :goto_0
+
+    .end local v0    # "c":Landroid/content/Context;
+    .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    :cond_0
+    move-object v0, p1
+
+    .restart local v0    # "c":Landroid/content/Context;
+    goto :goto_0
+.end method
+
 .method private prepareContext(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
     .locals 6
     .param p1, "context"    # Landroid/content/Context;

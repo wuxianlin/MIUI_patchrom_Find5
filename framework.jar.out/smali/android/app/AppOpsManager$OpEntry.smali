@@ -61,6 +61,37 @@
     return-void
 .end method
 
+.method public constructor <init>(IIJJI)V
+    .locals 0
+    .param p1, "op"    # I
+    .param p2, "mode"    # I
+    .param p3, "time"    # J
+    .param p5, "rejectTime"    # J
+    .param p7, "duration"    # I
+
+    .prologue
+    .line 906
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 907
+    iput p1, p0, Landroid/app/AppOpsManager$OpEntry;->mOp:I
+
+    .line 908
+    iput p2, p0, Landroid/app/AppOpsManager$OpEntry;->mMode:I
+
+    .line 909
+    iput-wide p3, p0, Landroid/app/AppOpsManager$OpEntry;->mTime:J
+
+    .line 910
+    iput-wide p5, p0, Landroid/app/AppOpsManager$OpEntry;->mRejectTime:J
+
+    .line 911
+    iput p7, p0, Landroid/app/AppOpsManager$OpEntry;->mDuration:I
+
+    .line 912
+    return-void
+.end method
+
 .method public constructor <init>(IIJJIII)V
     .locals 0
     .param p1, "op"    # I
