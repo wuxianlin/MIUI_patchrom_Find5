@@ -10706,6 +10706,19 @@
 
     .line 4893
     :try_start_0
+    const/4 v9, 0x1
+
+    if-ne p2, v9, :cond_miui_0
+
+    iget-object v9, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {p0, v9, v3, v0}, Lcom/android/server/ConnectivityService;->showLogin(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_miui_0
     const-string v9, "CaptivePortal.Notification"
 
     invoke-virtual {v5, v9, p2, v4}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
@@ -11167,7 +11180,7 @@
     goto :goto_1
 .end method
 
-.method private stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;Z)I
+.method private stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
     .locals 14
     .param p1, "u"    # Lcom/android/server/ConnectivityService$FeatureUser;
     .param p2, "ignoreDups"    # Z
@@ -11511,15 +11524,18 @@
 
     invoke-static {v12}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1534
-    invoke-interface {v8}, Landroid/net/NetworkStateTracker;->teardown()Z
+    move-object v12, v8
 
-    .line 1535
+    check-cast v12, Landroid/net/MobileDataStateTracker;
+
+    move/from16 v0, p3
+
+    invoke-virtual {v12, v0}, Landroid/net/MobileDataStateTracker;->teardownMSim(I)Z
+
     const/4 v12, 0x1
 
     goto/16 :goto_0
 
-    .line 1524
     :cond_6
     :try_start_4
     new-instance v12, Ljava/lang/StringBuilder;
@@ -17072,6 +17088,65 @@
     goto :goto_0
 .end method
 
+.method showLogin(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 4
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "ssid"    # Ljava/lang/String;
+
+    .prologue
+    const-string v2, "wifi"
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/net/wifi/WifiManager;
+
+    .local v1, "wifiManager":Landroid/net/wifi/WifiManager;
+    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
+
+    move-result-object v0
+
+    .local v0, "wifiInfo":Landroid/net/wifi/WifiInfo;
+    const-string v2, "com.miui.action.OPEN_WIFI_LOGIN"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v2, "com.android.settings"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v2, "miui.intent.extra.OPEN_WIFI_SSID"
+
+    invoke-virtual {p2, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {p3, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "miui.intent.extra.BSSID"
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_0
+    invoke-virtual {p1, p2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    return-void
+.end method
+
 .method public startLegacyVpn(Lcom/android/internal/net/VpnProfile;)V
     .locals 5
     .param p1, "profile"    # Lcom/android/internal/net/VpnProfile;
@@ -17146,25 +17221,113 @@
 .end method
 
 .method public startUsingNetworkFeature(ILjava/lang/String;Landroid/os/IBinder;)I
+    .locals 2
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+    .param p3, "binder"    # Landroid/os/IBinder;
+
+    .prologue
+    invoke-static {}, Lmiui/telephony/MultiSimManager;->getInstance()Lmiui/telephony/MultiSimManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lmiui/telephony/MultiSimManager;->getPreferredDataSlotId()I
+
+    move-result v0
+
+    .local v0, "slotId":I
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/ConnectivityService;->processUsingNetworkFeature(ILjava/lang/String;Landroid/os/IBinder;I)I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public startUsingNetworkFeatureMSim(ILjava/lang/String;Landroid/os/IBinder;I)I
+    .locals 1
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+    .param p3, "binder"    # Landroid/os/IBinder;
+    .param p4, "slotId"    # I
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/ConnectivityService;->processUsingNetworkFeature(ILjava/lang/String;Landroid/os/IBinder;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public stopUsingNetworkFeature(ILjava/lang/String;)I
+    .locals 2
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+
+    .prologue
+    invoke-static {}, Lmiui/telephony/MultiSimManager;->getInstance()Lmiui/telephony/MultiSimManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lmiui/telephony/MultiSimManager;->getPreferredDataSlotId()I
+
+    move-result v0
+
+    .local v0, "slotId":I
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/server/ConnectivityService;->processStopUsingNetworkFeature(ILjava/lang/String;I)I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public stopUsingNetworkFeatureMSim(ILjava/lang/String;I)I
+    .locals 1
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+    .param p3, "slotId"    # I
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ConnectivityService;->processStopUsingNetworkFeature(ILjava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private processUsingNetworkFeature(ILjava/lang/String;Landroid/os/IBinder;I)I
     .locals 25
     .param p1, "networkType"    # I
     .param p2, "feature"    # Ljava/lang/String;
     .param p3, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1267
+    const/4 v3, -0x1
+
+    move/from16 v0, p4
+
+    if-le v0, v3, :cond_miui_0
+
+    const/4 v3, 0x3
+
+    move/from16 v0, p4
+
+    if-le v0, v3, :cond_miui_1
+
+    :cond_miui_0
+    const/4 v3, 0x3
+
+    return v3
+
+    :cond_miui_1
     const-wide/16 v14, 0x0
 
-    .line 1269
     .local v14, "startTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v14
 
-    .line 1275
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->enforceChangePermission()V
 
-    .line 1277
     :try_start_0
     invoke-static/range {p1 .. p1}, Landroid/net/ConnectivityManager;->isNetworkTypeValid(I)Z
 
@@ -17252,6 +17415,10 @@
     move-object/from16 v3, p3
 
     invoke-direct {v8, v0, v1, v2, v3}, Lcom/android/server/ConnectivityService$FeatureUser;-><init>(Lcom/android/server/ConnectivityService;ILjava/lang/String;Landroid/os/IBinder;)V
+
+    move/from16 v0, p4
+
+    invoke-virtual {v8, v0}, Lcom/android/server/ConnectivityService$FeatureUser;->setSlotId(I)V
 
     .line 1285
     .local v8, "f":Lcom/android/server/ConnectivityService$FeatureUser;
@@ -18355,12 +18522,26 @@
     goto/16 :goto_0
 .end method
 
-.method public stopUsingNetworkFeature(ILjava/lang/String;)I
+.method private processStopUsingNetworkFeature(ILjava/lang/String;I)I
     .locals 8
     .param p1, "networkType"    # I
     .param p2, "feature"    # Ljava/lang/String;
 
     .prologue
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    const/4 v3, -0x1
+
+    if-le p3, v3, :cond_miui_0
+
+    if-le p3, v1, :cond_miui_1
+
+    :cond_miui_0
+    return v1
+
+    :cond_miui_1
     const/4 v6, 0x1
 
     .line 1414
@@ -18419,34 +18600,27 @@
 
     if-eqz v7, :cond_0
 
-    .line 1425
     move-object v3, v5
 
-    .line 1426
     const/4 v0, 0x1
 
-    .line 1430
     .end local v5    # "x":Lcom/android/server/ConnectivityService$FeatureUser;
     :cond_1
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1431
     if-eqz v0, :cond_2
 
     if-eqz v3, :cond_2
 
-    .line 1434
-    invoke-direct {p0, v3, v6}, Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;Z)I
+    invoke-direct {p0, v3, v6, p3}, Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
 
     move-result v6
 
-    .line 1438
     :cond_2
     return v6
 
-    .line 1430
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v6
@@ -18940,4 +19114,18 @@
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->setLockdownTracker(Lcom/android/server/net/LockdownVpnTracker;)V
 
     goto :goto_1
+.end method
+
+.method static synthetic access_stopUsingNetworkFeature(Lcom/android/server/ConnectivityService;Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
+    .locals 1
+    .param p0, "x0"    # Lcom/android/server/ConnectivityService;
+    .param p1, "x1"    # Lcom/android/server/ConnectivityService$FeatureUser;
+    .param p2, "x2"    # Z
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ConnectivityService;->stopUsingNetworkFeature(Lcom/android/server/ConnectivityService$FeatureUser;ZI)I
+
+    move-result v0
+
+    return v0
 .end method

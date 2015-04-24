@@ -134,6 +134,8 @@
 
 .field protected mLooper:Landroid/os/Looper;
 
+.field protected mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
 .field protected final mMmiCompleteRegistrants:Landroid/os/RegistrantList;
 
 .field protected final mMmiRegistrants:Landroid/os/RegistrantList;
@@ -624,6 +626,106 @@
     return-void
 .end method
 
+.method private checkAndNotifyDeviceId(Ljava/lang/String;I)V
+    .locals 6
+    .param p1, "deviceId"    # Ljava/lang/String;
+    .param p2, "retryTimes"    # I
+
+    .prologue
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    const-string v3, "PhoneBase"
+
+    const-string v4, "Get device id failed since it is empty"
+
+    invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v3, "ro.ril.miui.imei"
+
+    const-string v4, ""
+
+    invoke-static {v3, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/16 v3, 0x32
+
+    if-ge p2, v3, :cond_0
+
+    add-int/lit8 v2, p2, 0x1
+
+    .local v2, "times":I
+    mul-int v3, v2, v2
+
+    mul-int/2addr v3, v2
+
+    mul-int/lit16 v3, v3, 0xc8
+
+    int-to-long v0, v3
+
+    .local v0, "delay":J
+    const-wide/16 v3, 0x0
+
+    cmp-long v3, v0, v3
+
+    if-gez v3, :cond_2
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    :cond_2
+    new-instance v3, Lcom/android/internal/telephony/PhoneBase$1;
+
+    invoke-direct {v3, p0, v2}, Lcom/android/internal/telephony/PhoneBase$1;-><init>(Lcom/android/internal/telephony/PhoneBase;I)V
+
+    invoke-virtual {p0, v3, v0, v1}, Lcom/android/internal/telephony/PhoneBase;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto :goto_0
+
+    .end local v0    # "delay":J
+    .end local v2    # "times":I
+    :cond_3
+    const-string v3, "PhoneBase"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Get device id = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneBase;->setDeviceIdSystemProperty(Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
 .method private checkCorrectThread(Landroid/os/Handler;)V
     .locals 2
     .param p1, "h"    # Landroid/os/Handler;
@@ -1048,6 +1150,25 @@
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+.end method
+
+.method private setDeviceIdSystemProperty(Ljava/lang/String;)V
+    .locals 1
+    .param p1, "deviceId"    # Ljava/lang/String;
+
+    .prologue
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "ro.ril.miui.imei"
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method
 
 .method private setPropertiesByCarrier()V
@@ -3027,6 +3148,15 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public getMiuiIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    return-object v0
 .end method
 
 .method public getMsisdn()Ljava/lang/String;

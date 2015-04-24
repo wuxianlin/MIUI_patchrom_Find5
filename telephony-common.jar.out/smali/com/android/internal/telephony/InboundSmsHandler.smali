@@ -931,6 +931,335 @@
     .end packed-switch
 .end method
 
+.method private beforeDispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;)Z
+    .locals 13
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "permission"    # Ljava/lang/String;
+    .param p3, "appOp"    # I
+    .param p4, "resultReceiver"    # Landroid/content/BroadcastReceiver;
+
+    .prologue
+    const-string v10, "InboundSmsHandler"
+
+    const-string v11, "before_dispatchIntent"
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, "action":Ljava/lang/String;
+    const/4 v9, 0x0
+
+    .local v9, "smsBlocked":Z
+    const-string v10, "android.provider.Telephony.SMS_DELIVER"
+
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_1
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v10
+
+    const-string v11, "pdus"
+
+    invoke-virtual {v10, v11}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, [Ljava/lang/Object;
+
+    move-object v0, v10
+
+    check-cast v0, [Ljava/lang/Object;
+
+    move-object v6, v0
+
+    .local v6, "pdusArray":[Ljava/lang/Object;
+    array-length v10, v6
+
+    new-array v5, v10, [[B
+
+    .local v5, "pdus":[[B
+    const/4 v3, 0x0
+
+    .local v3, "i":I
+    :goto_0
+    array-length v10, v6
+
+    if-ge v3, v10, :cond_0
+
+    aget-object v10, v6, v3
+
+    check-cast v10, [B
+
+    move-object v0, v10
+
+    check-cast v0, [B
+
+    move-object v4, v0
+
+    .local v4, "part":[B
+    aput-object v4, v5, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .end local v4    # "part":[B
+    :cond_0
+    invoke-direct {p0, v5}, Lcom/android/internal/telephony/InboundSmsHandler;->checkSmsCmd([[B)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_1
+
+    const-string v10, "InboundSmsHandler"
+
+    const-string v11, "checkSmsCmd is true, intercept this sms."
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v9, 0x1
+
+    .end local v3    # "i":I
+    .end local v5    # "pdus":[[B
+    .end local v6    # "pdusArray":[Ljava/lang/Object;
+    :cond_1
+    :goto_1
+    if-nez v9, :cond_2
+
+    :try_start_1
+    const-string v10, "security"
+
+    invoke-static {v10}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v10
+
+    invoke-static {v10}, Lmiui/security/ISecurityManager$Stub;->asInterface(Landroid/os/IBinder;)Lmiui/security/ISecurityManager;
+
+    move-result-object v8
+
+    .local v8, "securityManager":Lmiui/security/ISecurityManager;
+    invoke-interface {v8, p1}, Lmiui/security/ISecurityManager;->checkSmsBlocked(Landroid/content/Intent;)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result v10
+
+    if-eqz v10, :cond_2
+
+    const/4 v9, 0x1
+
+    .end local v8    # "securityManager":Lmiui/security/ISecurityManager;
+    :cond_2
+    :goto_2
+    if-eqz v9, :cond_3
+
+    :try_start_2
+    move-object/from16 v0, p4
+
+    check-cast v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
+
+    move-object v7, v0
+
+    .local v7, "receiver":Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
+    # getter for: Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhere:Ljava/lang/String;
+    invoke-static {v7}, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->access_mDeleteWhere(Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;)Ljava/lang/String;
+
+    move-result-object v10
+
+    # getter for: Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhereArgs:[Ljava/lang/String;
+    invoke-static {v7}, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->access_mDeleteWhereArgs(Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;)[Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {p0, v10, v11}, Lcom/android/internal/telephony/InboundSmsHandler;->deleteFromRawTable(Ljava/lang/String;[Ljava/lang/String;)V
+
+    const/4 v10, 0x3
+
+    invoke-virtual {p0, v10}, Lcom/android/internal/telephony/InboundSmsHandler;->sendMessage(I)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    const/4 v10, 0x1
+
+    .end local v7    # "receiver":Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
+    :goto_3
+    return v10
+
+    :catch_0
+    move-exception v2
+
+    .local v2, "e":Ljava/lang/Exception;
+    const-string v10, "InboundSmsHandler"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "Exception before InboundSmsDispatcher: "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .end local v2    # "e":Ljava/lang/Exception;
+    :catch_1
+    move-exception v2
+
+    .restart local v2    # "e":Ljava/lang/Exception;
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_2
+
+    .end local v2    # "e":Ljava/lang/Exception;
+    :catch_2
+    move-exception v2
+
+    .restart local v2    # "e":Ljava/lang/Exception;
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+
+    .end local v2    # "e":Ljava/lang/Exception;
+    :cond_3
+    const/4 v10, 0x0
+
+    goto :goto_3
+.end method
+
+.method private checkSmsCmd([[B)Z
+    .locals 8
+    .param p1, "pdus"    # [[B
+
+    .prologue
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz p1, :cond_0
+
+    aget-object v6, p1, v5
+
+    if-nez v6, :cond_2
+
+    :cond_0
+    move v4, v5
+
+    :cond_1
+    :goto_0
+    return v4
+
+    :cond_2
+    aget-object v6, p1, v5
+
+    invoke-static {v6}, Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/telephony/SmsMessage;->getOriginatingAddress()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "address":Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .local v1, "body":Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
+
+    .local v3, "i":I
+    :goto_1
+    array-length v6, p1
+
+    if-ge v3, v6, :cond_3
+
+    :try_start_0
+    aget-object v6, p1, v3
+
+    invoke-static {v6}, Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/telephony/SmsMessage;->getDisplayMessageBody()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v2
+
+    .local v2, "ex":Ljava/lang/NullPointerException;
+    const-string v6, "InboundSmsHandler"
+
+    const-string v7, "NPE in checkSmsCmd: "
+
+    invoke-static {v6, v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_2
+
+    .end local v2    # "ex":Ljava/lang/NullPointerException;
+    :cond_3
+    iget-object v6, p0, Lcom/android/internal/telephony/InboundSmsHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v0, v7}, Lcom/miui/internal/provider/MiCloudSmsCmd;->checkSmsCmd(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    iget-object v6, p0, Lcom/android/internal/telephony/InboundSmsHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v5, v0, v7}, Lcom/miui/internal/provider/MiCloudSmsCmd;->checkAndDispatchActivationSms(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    move v4, v5
+
+    goto :goto_0
+.end method
+
 .method static isCurrentFormat3gpp2()Z
     .locals 2
 
@@ -1074,12 +1403,20 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 786
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/InboundSmsHandler;->beforeDispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;)Z
+
+    move-result v0
+
+    .local v0, "handled":Z
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     const/high16 v0, 0x8000000
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 787
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/InboundSmsHandler;->getHandler()Landroid/os/Handler;

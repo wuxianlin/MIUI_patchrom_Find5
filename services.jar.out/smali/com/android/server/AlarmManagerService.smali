@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/server/AlarmManagerService$ResultReceiver;,
+        Lcom/android/server/AlarmManagerService$Injector;,
         Lcom/android/server/AlarmManagerService$UninstallReceiver;,
         Lcom/android/server/AlarmManagerService$ClockReceiver;,
         Lcom/android/server/AlarmManagerService$QuickBootReceiver;,
@@ -4369,6 +4370,28 @@
 
     .line 576
     :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
+
+    move/from16 v4, p1
+
+    move-wide/from16 v5, p2
+
+    move-wide/from16 v7, p4
+
+    move-wide/from16 v9, p6
+
+    move-object/from16 v11, p8
+
+    move/from16 v12, p9
+
+    move-object/from16 v13, p10
+
+    invoke-static/range {v3 .. v13}, Lcom/android/server/ExtraAlarmManagerService;->recalculateWindowLength(Landroid/content/Context;IJJJLandroid/app/PendingIntent;ZLandroid/os/WorkSource;)J
+
+    move-result-wide p4
+
     const-wide/32 v7, 0x2932e00
 
     cmp-long v7, p4, v7

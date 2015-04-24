@@ -86,6 +86,38 @@
     goto :goto_0
 .end method
 
+.method public setButtonLightEnabled(Z)V
+    .locals 2
+    .param p1, "on"    # Z
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/LightsService$1;->this$0:Lcom/android/server/LightsService;
+
+    # getter for: Lcom/android/server/LightsService;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/LightsService;->access$300(Lcom/android/server/LightsService;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "android.permission.HARDWARE_TEST"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/SecurityException;
+
+    const-string v1, "Requires FLASHLIGHT permission"
+
+    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    return-void
+.end method
+
 .method public setFlashlightEnabled(Z)V
     .locals 4
     .param p1, "on"    # Z

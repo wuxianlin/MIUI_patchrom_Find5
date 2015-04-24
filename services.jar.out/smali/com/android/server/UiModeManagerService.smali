@@ -30,7 +30,7 @@
 
 .field private mCurUiMode:I
 
-.field private final mDefaultUiModeType:I
+.field private mDefaultUiModeType:I
 
 .field private final mDeskModeKeepsScreenOn:Z
 
@@ -339,6 +339,10 @@
     iget-object v2, p0, Lcom/android/server/UiModeManagerService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/TwilightService;->registerListener(Lcom/android/server/TwilightService$TwilightListener;Landroid/os/Handler;)V
+
+    iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mLock:Ljava/lang/Object;
+
+    invoke-static {p0, p1, v0}, Lcom/android/server/UiModeManagerService;->registUIModeScaleChangeObserver(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 193
     return-void
@@ -731,6 +735,41 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method private static registUIModeScaleChangeObserver(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Ljava/lang/Object;)V
+    .locals 4
+    .param p0, "service"    # Lcom/android/server/UiModeManagerService;
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "lock"    # Ljava/lang/Object;
+
+    .prologue
+    const/4 v3, 0x0
+
+    new-instance v0, Lcom/android/server/UiModeManagerService$UIModeScaleChangeObserver;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {v0, v1, p0, p1, p2}, Lcom/android/server/UiModeManagerService$UIModeScaleChangeObserver;-><init>(Landroid/os/Handler;Lcom/android/server/UiModeManagerService;Landroid/content/Context;Ljava/lang/Object;)V
+
+    .local v0, "uiModeScaleChangedObserver":Landroid/database/ContentObserver;
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "ui_mode_scale"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    invoke-virtual {v0, v3}, Landroid/database/ContentObserver;->onChange(Z)V
+
+    return-void
 .end method
 
 .method private sendConfigurationAndStartDreamOrDockAppLocked(Ljava/lang/String;)V
@@ -2216,3 +2255,35 @@
 
     throw v0
 .end method
+
+.method static synthetic access_mSystemReady(Lcom/android/server/UiModeManagerService;)Z
+    .locals 1
+    .param p0, "x0"    # Lcom/android/server/UiModeManagerService;
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/server/UiModeManagerService;->mSystemReady:Z
+
+    return v0
+.end method
+
+.method static synthetic access_mDefaultUiModeType(Lcom/android/server/UiModeManagerService;I)I
+    .locals 0
+    .param p0, "x0"    # Lcom/android/server/UiModeManagerService;
+    .param p1, "x1"    # I
+
+    .prologue
+    iput p1, p0, Lcom/android/server/UiModeManagerService;->mDefaultUiModeType:I
+
+    return p1
+.end method
+
+.method static synthetic access_updateConfigurationLocked(Lcom/android/server/UiModeManagerService;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/android/server/UiModeManagerService;
+
+    .prologue
+    invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->updateConfigurationLocked()V
+
+    return-void
+.end method
+

@@ -1296,7 +1296,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "android.settings.INTERNAL_STORAGE_SETTINGS"
+    const-string v0, "miui.intent.action.GARBAGE_CLEANUP"
 
     :goto_0
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V

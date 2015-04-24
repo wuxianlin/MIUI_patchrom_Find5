@@ -1665,6 +1665,8 @@
 
     const/4 v5, 0x0
 
+    invoke-direct {p0}, Lcom/android/server/power/PowerManagerService;->checkIfBootAnimationFinished()V
+
     .line 1393
     iget-wide v6, p0, Lcom/android/server/power/PowerManagerService;->mLastWakeTime:J
 
@@ -4302,6 +4304,12 @@
     .end local v2    # "screenAutoBrightnessAdjustment":F
     .end local v3    # "screenBrightness":I
     :cond_4
+    invoke-direct {p0}, Lcom/android/server/power/PowerManagerService;->getDesiredScreenPowerStateLocked()I
+
+    move-result v6
+
+    invoke-static {v6}, Lcom/android/server/power/ButtonLightController;->turnOffButtonLight(I)V
+
     return-void
 
     .restart local v1    # "newScreenState":I
@@ -5867,6 +5875,8 @@
     const/4 v0, 0x1
 
     const/4 v1, 0x0
+
+    invoke-static {}, Lcom/android/server/power/ButtonLightController;->setButtonLightTimeout()V
 
     .line 1133
     iget-wide v2, p0, Lcom/android/server/power/PowerManagerService;->mLastSleepTime:J
@@ -9934,16 +9944,34 @@
 
     iput v2, v0, Lcom/android/server/power/PowerManagerService;->mDirty:I
 
-    .line 594
     invoke-direct/range {p0 .. p0}, Lcom/android/server/power/PowerManagerService;->updatePowerStateLocked()V
 
-    .line 595
     monitor-exit v18
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 596
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/power/PowerManagerService;->mHandler:Lcom/android/server/power/PowerManagerService$PowerManagerHandler;
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/power/PowerManagerService;->mLightsService:Lcom/android/server/LightsService;
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v4, v5}, Lcom/android/server/LightsService;->getLight(I)Lcom/android/server/LightsService$Light;
+
+    move-result-object v4
+
+    invoke-static {v2, v3, v4}, Lcom/android/server/power/ButtonLightController;->setButtonLight(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/LightsService$Light;)V
+
     return-void
 
-    .line 595
     .end local v14    # "filter":Landroid/content/IntentFilter;
     .end local v15    # "pm":Landroid/os/PowerManager;
     .end local v16    # "resolver":Landroid/content/ContentResolver;
@@ -9951,9 +9979,10 @@
     :catchall_0
     move-exception v2
 
+    :try_start_1
     monitor-exit v18
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v2
 .end method

@@ -419,55 +419,12 @@
 .end method
 
 .method private getEncryptionStatus()I
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 2594
-    const-string v1, "ro.crypto.state"
+    const/4 v0, 0x0
 
-    const-string v2, "unsupported"
-
-    invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2595
-    .local v0, "status":Ljava/lang/String;
-    const-string v1, "encrypted"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 2596
-    const/4 v1, 0x3
-
-    .line 2600
-    :goto_0
-    return v1
-
-    .line 2597
-    :cond_0
-    const-string v1, "unencrypted"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 2598
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    .line 2600
-    :cond_1
-    const/4 v1, 0x0
-
-    goto :goto_0
+    return v0
 .end method
 
 .method private getIPowerManager()Landroid/os/IPowerManager;

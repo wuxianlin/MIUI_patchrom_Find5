@@ -3,6 +3,14 @@
 .source "MiniThumbFile.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/media/MiniThumbFile$Injector;
+    }
+.end annotation
+
+
 # static fields
 .field public static final BYTES_PER_MINTHUMB:I = 0x2710
 
@@ -1407,6 +1415,10 @@
 
     move-result-wide v1
 
+    invoke-static {p1, p2}, Landroid/media/MiniThumbFile$Injector;->getPosition(J)J
+
+    move-result-wide v1
+
     .line 305
     .local v1, "pos":J
     cmp-long v0, v1, v9
@@ -1423,34 +1435,29 @@
 
     return-wide v3
 
-    .line 307
     .restart local v1    # "pos":J
     :cond_1
     const-wide/16 v3, 0x2710
 
     mul-long/2addr v1, v3
 
-    .line 309
     const/4 v7, 0x0
 
-    .line 311
     .local v7, "lock":Ljava/nio/channels/FileLock;
     :try_start_1
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 312
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
-    const/16 v3, 0x9
+    const/16 v3, 0x11
 
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 314
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mChannel:Ljava/nio/channels/FileChannel;
 
-    const-wide/16 v3, 0x9
+    const-wide/16 v3, 0x11
 
     const/4 v5, 0x1
 
@@ -2111,6 +2118,10 @@
 
     move-result-wide v1
 
+    invoke-static {p2, p3}, Landroid/media/MiniThumbFile$Injector;->getPosition(J)J
+    
+    move-result-wide v1
+
     .line 348
     .local v1, "pos":J
     const-wide/16 v3, 0x0
@@ -2154,49 +2165,45 @@
 
     goto :goto_0
 
-    .line 380
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 358
     :cond_2
     :try_start_4
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 359
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 360
+    iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p2, p3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p4, p5}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 361
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     array-length v3, p1
 
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 362
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 363
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 365
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mChannel:Ljava/nio/channels/FileChannel;
 
     const-wide/16 v3, 0x2710

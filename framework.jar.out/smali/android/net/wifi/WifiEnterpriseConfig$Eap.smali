@@ -33,8 +33,7 @@
     .locals 3
 
     .prologue
-    .line 230
-    const/4 v0, 0x4
+    const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -59,6 +58,18 @@
     const/4 v1, 0x3
 
     const-string v2, "PWD"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, "SIM"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "AKA"
 
     aput-object v2, v0, v1
 

@@ -28,6 +28,8 @@
 
 .field mPid:I
 
+.field mSlotId:I
+
 .field mUid:I
 
 .field final synthetic this$0:Lcom/android/server/ConnectivityService;
@@ -102,6 +104,13 @@
     goto :goto_0
 .end method
 
+.method setSlotId(I)V
+    .locals 0
+    .prologue
+    iput p1, p0, Lcom/android/server/ConnectivityService$FeatureUser;->mSlotId:I
+
+    return-void
+.end method
 
 # virtual methods
 .method public binderDied()V

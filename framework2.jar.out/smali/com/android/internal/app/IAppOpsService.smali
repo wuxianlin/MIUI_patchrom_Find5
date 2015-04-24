@@ -23,6 +23,14 @@
     .end annotation
 .end method
 
+.method public abstract checkOperationInternal(IILjava/lang/String;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract checkPackage(ILjava/lang/String;)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -86,6 +94,14 @@
 .end method
 
 .method public abstract getToken(Landroid/os/IBinder;)Landroid/os/IBinder;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract registerCallback(Lcom/android/internal/app/IOpsCallback;)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

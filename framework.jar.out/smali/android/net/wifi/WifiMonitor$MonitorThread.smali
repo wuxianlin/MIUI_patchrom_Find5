@@ -111,6 +111,29 @@
 
     .line 585
     :cond_1
+    const-string v6, "WAPI:"
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_miui_0
+
+    const-string v6, "pre-shared key may be incorrect"
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v6
+
+    if-lez v6, :cond_miui_0
+
+    iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->mStateMachine:Lcom/android/internal/util/StateMachine;
+
+    invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
+
+    goto :goto_0
+
+    :cond_miui_0
     const-string v6, "WPS-SUCCESS"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

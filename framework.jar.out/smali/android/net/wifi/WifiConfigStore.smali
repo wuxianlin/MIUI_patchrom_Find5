@@ -88,6 +88,8 @@
     .end annotation
 .end field
 
+.field private mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
 .field private mWifiNative:Landroid/net/wifi/WifiNative;
 
 
@@ -174,6 +176,24 @@
     iput-object v1, p0, Landroid/net/wifi/WifiConfigStore;->mFileObserver:Landroid/net/wifi/WifiConfigStore$WpaConfigFileObserver;
 
     .line 183
+    return-void
+.end method
+
+.method constructor <init>(Landroid/content/Context;Landroid/net/wifi/WifiNative;Landroid/os/Handler;)V
+    .locals 1
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "wn"    # Landroid/net/wifi/WifiNative;
+    .param p3, "handler"    # Landroid/os/Handler;
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Landroid/net/wifi/WifiConfigStore;-><init>(Landroid/content/Context;Landroid/net/wifi/WifiNative;)V
+
+    new-instance v0, Landroid/net/wifi/WifiAutoConnController;
+
+    invoke-direct {v0, p0, p1, p3}, Landroid/net/wifi/WifiAutoConnController;-><init>(Landroid/net/wifi/WifiConfigStore;Landroid/content/Context;Landroid/os/Handler;)V
+
+    iput-object v0, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
     return-void
 .end method
 
@@ -5653,7 +5673,6 @@
     move-result-object v1
 
     .local v1, "i$":Ljava/util/Iterator;
-    :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -5674,6 +5693,16 @@
     iget v3, v0, Landroid/net/wifi/WifiConfiguration;->status:I
 
     if-eq v3, v5, :cond_0
+
+    iget-object v3, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
+    iget-object v4, v0, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Landroid/net/wifi/WifiAutoConnController;->isDisableByUser(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
 
     .line 530
     iget-object v3, p0, Landroid/net/wifi/WifiConfigStore;->mWifiNative:Landroid/net/wifi/WifiNative;
@@ -5717,6 +5746,13 @@
     move-result-object v3
 
     invoke-direct {p0, v3}, Landroid/net/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
+    invoke-virtual {v3, v0}, Landroid/net/wifi/WifiAutoConnController;->disableNetwork(Landroid/net/wifi/WifiConfiguration;)V
 
     goto :goto_0
 
@@ -6697,18 +6733,18 @@
     .locals 1
 
     .prologue
-    .line 206
     const-string v0, "Loading config and enabling all networks"
 
     invoke-direct {p0, v0}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
 
-    .line 207
+    iget-object v0, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiAutoConnController;->loadAndEnableAllNetworks()V
+
     invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->loadConfiguredNetworks()V
 
-    .line 208
     invoke-virtual {p0}, Landroid/net/wifi/WifiConfigStore;->enableAllNetworks()V
 
-    .line 209
     return-void
 .end method
 
@@ -7409,6 +7445,10 @@
 
     const/4 v6, -0x1
 
+    iget-object v4, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
+    invoke-virtual {v4, p1}, Landroid/net/wifi/WifiAutoConnController;->selectNetwork(I)V
+
     .line 321
     if-ne p1, v6, :cond_0
 
@@ -7815,20 +7855,22 @@
 
     goto :goto_0
 
-    .line 388
     :pswitch_1
     iget v1, v0, Landroid/net/wifi/WifiConfiguration;->status:I
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_miui_0
 
-    .line 389
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/net/wifi/WifiConfiguration;->status:I
 
+    :cond_miui_0
+    iget-object v1, p0, Landroid/net/wifi/WifiConfigStore;->mWifiAutoConnController:Landroid/net/wifi/WifiAutoConnController;
+
+    invoke-virtual {v1, v0}, Landroid/net/wifi/WifiAutoConnController;->disConnect(Landroid/net/wifi/WifiConfiguration;)V
+
     goto :goto_0
 
-    .line 382
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

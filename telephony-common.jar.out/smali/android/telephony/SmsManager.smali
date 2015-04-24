@@ -254,6 +254,16 @@
     goto :goto_0
 .end method
 
+.method public static getDefault(I)Landroid/telephony/SmsManager;
+    .locals 1
+    .param p0, "slotId"    # I
+
+    .prologue
+    sget-object v0, Landroid/telephony/SmsManager;->sInstance:Landroid/telephony/SmsManager;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public copyMessageToIcc([B[BI)Z

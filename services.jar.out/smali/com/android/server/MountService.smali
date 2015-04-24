@@ -1752,6 +1752,318 @@
     goto :goto_0
 .end method
 
+.method private doMountCIFS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    .locals 11
+    .param p1, "ip"    # Ljava/lang/String;
+    .param p2, "user"    # Ljava/lang/String;
+    .param p3, "password"    # Ljava/lang/String;
+    .param p4, "remotepath"    # Ljava/lang/String;
+    .param p5, "localpath"    # Ljava/lang/String;
+    .param p6, "options"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v5, 0x0
+
+    .local v5, "rc":I
+    if-eqz p1, :cond_0
+
+    if-nez p5, :cond_1
+
+    :cond_0
+    const-string v6, "MountService"
+
+    const-string v7, "invalid argument"
+
+    invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v6, -0x1
+
+    :goto_0
+    return v6
+
+    :cond_1
+    new-instance v3, Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "unc=\\\\"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, "\\"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, ","
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v3, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .local v3, "extraOption":Ljava/lang/String;
+    if-eqz p2, :cond_4
+
+    new-instance v4, Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, "username="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, ","
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .end local v3    # "extraOption":Ljava/lang/String;
+    .local v4, "extraOption":Ljava/lang/String;
+    :goto_1
+    if-eqz p3, :cond_2
+
+    new-instance v3, Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, "password="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, ","
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v3, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .end local v4    # "extraOption":Ljava/lang/String;
+    .restart local v3    # "extraOption":Ljava/lang/String;
+    move-object v4, v3
+
+    .end local v3    # "extraOption":Ljava/lang/String;
+    .restart local v4    # "extraOption":Ljava/lang/String;
+    :cond_2
+    if-eqz p6, :cond_8
+
+    new-instance v3, Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    move-object/from16 v0, p6
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v3, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .end local v4    # "extraOption":Ljava/lang/String;
+    .restart local v3    # "extraOption":Ljava/lang/String;
+    :goto_2
+    const-string v6, ","
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    add-int/lit8 v7, v7, -0x1
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    :cond_3
+    :try_start_0
+    iget-object v6, p0, Lcom/android/server/MountService;->mConnector:Lcom/android/server/NativeDaemonConnector;
+
+    const-string v7, "cifs"
+
+    const/4 v8, 0x4
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    const-string v10, "mount"
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x1
+
+    const-string v10, "none"
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x2
+
+    aput-object p5, v8, v9
+
+    const/4 v9, 0x3
+
+    aput-object v3, v8, v9
+
+    invoke-virtual {v6, v7, v8}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
+    :try_end_0
+    .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_3
+    move v6, v5
+
+    goto/16 :goto_0
+
+    :cond_4
+    new-instance v4, Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, "username=guest,"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .end local v3    # "extraOption":Ljava/lang/String;
+    .restart local v4    # "extraOption":Ljava/lang/String;
+    goto/16 :goto_1
+
+    .end local v4    # "extraOption":Ljava/lang/String;
+    .restart local v3    # "extraOption":Ljava/lang/String;
+    :catch_0
+    move-exception v2
+
+    .local v2, "e":Lcom/android/server/NativeDaemonConnectorException;
+    invoke-virtual {v2}, Lcom/android/server/NativeDaemonConnectorException;->getCode()I
+
+    move-result v1
+
+    .local v1, "code":I
+    const/16 v6, 0x191
+
+    if-ne v1, v6, :cond_5
+
+    const/4 v5, -0x2
+
+    goto :goto_3
+
+    :cond_5
+    const/16 v6, 0x192
+
+    if-ne v1, v6, :cond_6
+
+    const/4 v5, -0x3
+
+    goto :goto_3
+
+    :cond_6
+    const/16 v6, 0x193
+
+    if-ne v1, v6, :cond_7
+
+    const/4 v5, -0x4
+
+    goto :goto_3
+
+    :cond_7
+    const/4 v5, -0x1
+
+    goto :goto_3
+
+    .end local v1    # "code":I
+    .end local v2    # "e":Lcom/android/server/NativeDaemonConnectorException;
+    .end local v3    # "extraOption":Ljava/lang/String;
+    .restart local v4    # "extraOption":Ljava/lang/String;
+    :cond_8
+    move-object v3, v4
+
+    .end local v4    # "extraOption":Ljava/lang/String;
+    .restart local v3    # "extraOption":Ljava/lang/String;
+    goto :goto_2
+.end method
+
 .method private doMountVolume(Ljava/lang/String;)I
     .locals 10
     .param p1, "path"    # Ljava/lang/String;
@@ -1995,6 +2307,82 @@
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
+.end method
+
+.method private doUnmountCIFS(Ljava/lang/String;)I
+    .locals 9
+    .param p1, "mountPoint"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v3, 0x0
+
+    const/4 v2, -0x1
+
+    if-nez p1, :cond_1
+
+    const-string v3, "MountService"
+
+    const-string v4, "invalid argument"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
+    return v2
+
+    :cond_1
+    :try_start_0
+    iget-object v4, p0, Lcom/android/server/MountService;->mConnector:Lcom/android/server/NativeDaemonConnector;
+
+    const-string v5, "cifs"
+
+    const/4 v6, 0x2
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    const-string v8, "unmount"
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x1
+
+    aput-object p1, v6, v7
+
+    invoke-virtual {v4, v5, v6}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
+    :try_end_0
+    .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    .local v1, "e":Lcom/android/server/NativeDaemonConnectorException;
+    invoke-virtual {v1}, Lcom/android/server/NativeDaemonConnectorException;->getCode()I
+
+    move-result v0
+
+    .local v0, "code":I
+    const/16 v3, 0x194
+
+    if-ne v0, v3, :cond_2
+
+    const/4 v2, -0x5
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v3, 0x195
+
+    if-ne v0, v3, :cond_0
+
+    const/4 v2, -0x7
+
+    goto :goto_0
 .end method
 
 .method private doUnmountVolume(Ljava/lang/String;ZZ)I
@@ -7468,6 +7856,29 @@
     return-void
 .end method
 
+.method public mountCIFS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    .locals 1
+    .param p1, "ip"    # Ljava/lang/String;
+    .param p2, "user"    # Ljava/lang/String;
+    .param p3, "password"    # Ljava/lang/String;
+    .param p4, "remotepath"    # Ljava/lang/String;
+    .param p5, "localpath"    # Ljava/lang/String;
+    .param p6, "options"    # Ljava/lang/String;
+
+    .prologue
+    const-string v0, "android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+
+    invoke-direct {p0, v0}, Lcom/android/server/MountService;->validatePermission(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/android/server/MountService;->waitForReady()V
+
+    invoke-direct/range {p0 .. p6}, Lcom/android/server/MountService;->doMountCIFS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public mountObb(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/storage/IObbActionListener;I)V
     .locals 8
     .param p1, "rawPath"    # Ljava/lang/String;
@@ -8998,6 +9409,24 @@
 
     .line 1450
     return-void
+.end method
+
+.method public unmountCIFS(Ljava/lang/String;)I
+    .locals 1
+    .param p1, "mountPoint"    # Ljava/lang/String;
+
+    .prologue
+    const-string v0, "android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+
+    invoke-direct {p0, v0}, Lcom/android/server/MountService;->validatePermission(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/android/server/MountService;->waitForReady()V
+
+    invoke-direct {p0, p1}, Lcom/android/server/MountService;->doUnmountCIFS(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public unmountObb(Ljava/lang/String;ZLandroid/os/storage/IObbActionListener;I)V

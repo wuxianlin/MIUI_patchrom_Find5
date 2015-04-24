@@ -2976,6 +2976,23 @@
 
     .line 2282
     :cond_14
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/content/SyncManager$SyncHandler;->this$0:Lcom/android/server/content/SyncManager;
+
+    move-object/from16 v36, v0
+
+    move-object/from16 v0, v36
+
+    move-object/from16 v1, v25
+
+    # invokes: Lcom/android/server/content/SyncManager;->isTrafficForbidden(Lcom/android/server/content/SyncOperation;)Z
+    invoke-static {v0, v1}, Lcom/android/server/content/SyncManager;->access_isTrafficForbidden(Lcom/android/server/content/SyncManager;Lcom/android/server/content/SyncOperation;)Z
+
+    move-result v36
+
+    if-nez v36, :cond_9
+
     move-object/from16 v0, v27
 
     move-object/from16 v1, v25

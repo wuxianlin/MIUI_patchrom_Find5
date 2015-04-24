@@ -176,11 +176,11 @@
     .line 6374
     iget-object v0, p0, Landroid/widget/AbsListView$MultiChoiceModeWrapper;->this$0:Landroid/widget/AbsListView;
 
-    invoke-virtual {v0}, Landroid/widget/AbsListView;->getCheckedItemCount()I
+    invoke-static {v0}, Landroid/widget/AbsListViewInjector;->needFinishActionMode(Landroid/widget/AbsListView;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 6375
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V

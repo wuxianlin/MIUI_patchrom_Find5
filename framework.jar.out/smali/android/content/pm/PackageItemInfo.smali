@@ -388,25 +388,21 @@
 .end method
 
 .method public loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-    .locals 4
+    .locals 5
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 147
-    iget v1, p0, Landroid/content/pm/PackageItemInfo;->icon:I
-
-    if-eqz v1, :cond_0
-
-    .line 148
     iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    iget v2, p0, Landroid/content/pm/PackageItemInfo;->icon:I
+    iget-object v2, p0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+
+    iget v3, p0, Landroid/content/pm/PackageItemInfo;->icon:I
 
     invoke-virtual {p0}, Landroid/content/pm/PackageItemInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {p1, v1, v2, v3}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1, v2, v3, v4}, Landroid/app/MiuiThemeHelper;->getDrawable(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

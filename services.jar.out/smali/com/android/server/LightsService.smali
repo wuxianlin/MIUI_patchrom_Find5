@@ -232,3 +232,16 @@
 
     return-object v0
 .end method
+
+.method public setLight(ILcom/android/server/LightsService$Light;)V
+    .locals 1
+    .param p1, "index"    # I
+    .param p2, "light"    # Lcom/android/server/LightsService$Light;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/LightsService;->mLights:[Lcom/android/server/LightsService$Light;
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method

@@ -857,6 +857,8 @@
 
     const/4 v3, -0x1
 
+    invoke-static {p0, p1}, Landroid/database/AbstractCursorInjector;->before_moveToPosition(Landroid/database/AbstractCursor;I)V
+
     .line 197
     invoke-virtual {p0}, Landroid/database/AbstractCursor;->getCount()I
 

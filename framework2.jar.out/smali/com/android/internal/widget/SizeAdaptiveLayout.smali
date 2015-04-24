@@ -322,9 +322,9 @@
     .prologue
     const/4 v8, 0x1
 
-    const/4 v7, 0x0
-
     const/4 v5, -0x1
+
+    const/4 v7, 0x0
 
     const/4 v6, 0x0
 
@@ -402,7 +402,7 @@
 
     new-array v5, v8, [F
 
-    aput v6, v5, v7
+    aput v7, v5, v6
 
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
@@ -417,7 +417,7 @@
 
     new-array v5, v8, [F
 
-    aput v6, v5, v7
+    aput v7, v5, v6
 
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
@@ -474,9 +474,7 @@
     :cond_1
     iget-object v3, p0, Lcom/android/internal/widget/SizeAdaptiveLayout;->mModestyPanel:Landroid/view/View;
 
-    const/high16 v4, -0x1000000
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v3, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
     goto :goto_0
 .end method

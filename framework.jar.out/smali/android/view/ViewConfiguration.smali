@@ -430,7 +430,38 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 313
+    invoke-static {p0}, Landroid/view/ViewConfigurationHelper;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object v0
+
+    .local v0, "cfg":Landroid/view/ViewConfiguration;
+    if-eqz v0, :cond_miui_0
+
+    move-object v1, v0
+
+    :goto_miui_0
+    return-object v1
+
+    :cond_miui_0
+    invoke-static {p0}, Landroid/view/ViewConfigurationHelper;->needMiuiConfiguration(Landroid/content/Context;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_miui_1
+
+    new-instance v0, Landroid/view/ViewConfiguration;
+
+    .end local v0    # "cfg":Landroid/view/ViewConfiguration;
+    invoke-direct {v0, p0}, Landroid/view/ViewConfiguration;-><init>(Landroid/content/Context;)V
+
+    .restart local v0    # "cfg":Landroid/view/ViewConfiguration;
+    invoke-static {p0, v0}, Landroid/view/ViewConfigurationHelper;->put(Landroid/content/Context;Landroid/view/ViewConfiguration;)V
+
+    move-object v1, v0
+
+    goto :goto_miui_0
+
+    :cond_miui_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3

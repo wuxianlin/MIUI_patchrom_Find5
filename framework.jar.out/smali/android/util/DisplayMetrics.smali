@@ -21,6 +21,8 @@
 
 .field public static final DENSITY_MEDIUM:I = 0xa0
 
+.field public static final DENSITY_NXHGITH:I
+
 .field public static final DENSITY_TV:I = 0xd5
 
 .field public static final DENSITY_XHIGH:I = 0x140
@@ -65,7 +67,12 @@
     .locals 1
 
     .prologue
-    .line 112
+    invoke-static {}, Landroid/util/MiuiDisplayMetrics;->getNxhdpiDensity()I
+
+    move-result v0
+
+    sput v0, Landroid/util/DisplayMetrics;->DENSITY_NXHGITH:I
+
     invoke-static {}, Landroid/util/DisplayMetrics;->getDeviceDensity()I
 
     move-result v0

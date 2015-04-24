@@ -77,6 +77,12 @@
 
     aput-object v2, v0, v1
 
+    const/4 v1, 0x4
+
+    const-string v2, "anr"
+
+    aput-object v2, v0, v1
+
     sput-object v0, Lcom/android/internal/telephony/IccProvider;->ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
 
     .line 67

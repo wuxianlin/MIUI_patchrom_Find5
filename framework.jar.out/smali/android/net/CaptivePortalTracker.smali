@@ -802,6 +802,16 @@
 
     iput-object v1, p0, Landroid/net/CaptivePortalTracker;->mUrl:Ljava/lang/String;
 
+    iget-object v1, p0, Landroid/net/CaptivePortalTracker;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Landroid/net/CaptivePortalTracker;->mUrl:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Landroid/net/CaptivePortalTrackerInjector;->getCaptivePortalServer(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroid/net/CaptivePortalTracker;->mUrl:Ljava/lang/String;
+
     .line 377
     new-instance v1, Ljava/lang/StringBuilder;
 

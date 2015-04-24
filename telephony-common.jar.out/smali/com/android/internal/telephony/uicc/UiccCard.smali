@@ -1522,6 +1522,42 @@
     return-object v0
 .end method
 
+.method public getNumApplications()I
+    .locals 5
+
+    .prologue
+    const/4 v2, 0x0
+
+    .local v2, "count":I
+    iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard;->mUiccApplications:[Lcom/android/internal/telephony/uicc/UiccCardApplication;
+
+    .local v1, "arr$":[Lcom/android/internal/telephony/uicc/UiccCardApplication;
+    array-length v4, v1
+
+    .local v4, "len$":I
+    const/4 v3, 0x0
+
+    .local v3, "i$":I
+    :goto_0
+    if-ge v3, v4, :cond_1
+
+    aget-object v0, v1, v3
+
+    .local v0, "a":Lcom/android/internal/telephony/uicc/UiccCardApplication;
+    if-eqz v0, :cond_0
+
+    add-int/lit8 v2, v2, 0x1
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .end local v0    # "a":Lcom/android/internal/telephony/uicc/UiccCardApplication;
+    :cond_1
+    return v2
+.end method
+
 .method public getUniversalPinState()Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
     .locals 2
 

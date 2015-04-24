@@ -1742,6 +1742,38 @@
     goto :goto_0
 .end method
 
+.method public startUsingNetworkFeature(ILjava/lang/String;I)I
+    .locals 3
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+    .param p3, "slotId"    # I
+
+    .prologue
+    :try_start_0
+    iget-object v1, p0, Landroid/net/ConnectivityManager;->mService:Landroid/net/IConnectivityManager;
+
+    new-instance v2, Landroid/os/Binder;
+
+    invoke-direct {v2}, Landroid/os/Binder;-><init>()V
+
+    invoke-interface {v1, p1, p2, v2, p3}, Landroid/net/IConnectivityManager;->startUsingNetworkFeatureMSim(ILjava/lang/String;Landroid/os/IBinder;I)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    :goto_0
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Landroid/os/RemoteException;
+    const/4 v1, -0x1
+
+    goto :goto_0
+.end method
+
 .method public stopUsingNetworkFeature(ILjava/lang/String;)I
     .locals 2
     .param p1, "networkType"    # I
@@ -1767,6 +1799,34 @@
     move-exception v0
 
     .line 770
+    .local v0, "e":Landroid/os/RemoteException;
+    const/4 v1, -0x1
+
+    goto :goto_0
+.end method
+
+.method public stopUsingNetworkFeature(ILjava/lang/String;I)I
+    .locals 2
+    .param p1, "networkType"    # I
+    .param p2, "feature"    # Ljava/lang/String;
+    .param p3, "slotId"    # I
+
+    .prologue
+    :try_start_0
+    iget-object v1, p0, Landroid/net/ConnectivityManager;->mService:Landroid/net/IConnectivityManager;
+
+    invoke-interface {v1, p1, p2, p3}, Landroid/net/IConnectivityManager;->stopUsingNetworkFeatureMSim(ILjava/lang/String;I)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    :goto_0
+    return v1
+
+    :catch_0
+    move-exception v0
+
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 

@@ -86,6 +86,75 @@
     return-void
 .end method
 
+.method private setFrontOfTask_After(ZI)V
+    .locals 5
+    .param p1, "foundFront"    # Z
+    .param p2, "numActivities"    # I
+
+    .prologue
+    const/4 v4, 0x1
+
+    if-nez p1, :cond_1
+
+    if-lez p2, :cond_1
+
+    const/4 v0, 0x0
+
+    .local v0, "activityNdx":I
+    :goto_0
+    if-ge v0, p2, :cond_0
+
+    iget-object v2, p0, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/am/ActivityRecord;
+
+    .local v1, "r":Lcom/android/server/am/ActivityRecord;
+    iget-object v2, v1, Lcom/android/server/am/ActivityRecord;->state:Lcom/android/server/am/ActivityStack$ActivityState;
+
+    sget-object v3, Lcom/android/server/am/ActivityStack$ActivityState;->DESTROYING:Lcom/android/server/am/ActivityStack$ActivityState;
+
+    if-eq v2, v3, :cond_2
+
+    iget-object v2, v1, Lcom/android/server/am/ActivityRecord;->state:Lcom/android/server/am/ActivityStack$ActivityState;
+
+    sget-object v3, Lcom/android/server/am/ActivityStack$ActivityState;->DESTROYED:Lcom/android/server/am/ActivityStack$ActivityState;
+
+    if-eq v2, v3, :cond_2
+
+    iput-boolean v4, v1, Lcom/android/server/am/ActivityRecord;->frontOfTask:Z
+
+    .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
+    :cond_0
+    if-ne v0, p2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/am/ActivityRecord;
+
+    iput-boolean v4, v2, Lcom/android/server/am/ActivityRecord;->frontOfTask:Z
+
+    .end local v0    # "activityNdx":I
+    :cond_1
+    return-void
+
+    .restart local v0    # "activityNdx":I
+    .restart local v1    # "r":Lcom/android/server/am/ActivityRecord;
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
 .method addActivityAtBottom(Lcom/android/server/am/ActivityRecord;)V
@@ -1099,6 +1168,8 @@
     .line 245
     .end local v1    # "r":Lcom/android/server/am/ActivityRecord;
     :cond_2
+    invoke-direct {p0, v1, v2}, Lcom/android/server/am/TaskRecord;->setFrontOfTask_After(ZI)V
+
     return-void
 .end method
 

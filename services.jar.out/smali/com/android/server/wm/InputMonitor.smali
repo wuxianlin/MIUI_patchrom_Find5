@@ -811,6 +811,21 @@
     goto :goto_2
 .end method
 
+.method public notifyBackLidSwitchChanged(JZ)V
+    .locals 1
+    .param p1, "whenNanos"    # J
+    .param p3, "lidOpen"    # Z
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/view/WindowManagerPolicy;->notifyBackLidSwitchChanged(JZ)V
+
+    return-void
+.end method
+
 .method public notifyConfigurationChanged()V
     .locals 2
 

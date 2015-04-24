@@ -486,28 +486,27 @@
     :cond_5
     new-array v6, v13, [Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    .line 190
     .local v6, "localeInfos":[Lcom/android/internal/app/LocalePicker$LocaleInfo;
     const/4 v14, 0x0
 
     :goto_3
     if-ge v14, v13, :cond_6
 
-    .line 191
     aget-object v2, v21, v14
 
     aput-object v2, v6, v14
 
-    .line 190
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_3
 
-    .line 193
     :cond_6
-    invoke-static {v6}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
+    new-instance v2, Landroid/miui/LocaleComparator;
 
-    .line 195
+    invoke-direct {v2}, Landroid/miui/LocaleComparator;-><init>()V
+
+    invoke-static {v6, v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
     const-string v2, "layout_inflater"
 
     move-object/from16 v0, p0

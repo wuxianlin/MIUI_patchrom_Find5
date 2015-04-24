@@ -94,6 +94,8 @@
 
 .field private final mInterpolator:Landroid/view/animation/Interpolator;
 
+.field mIsUsingMiui:Z
+
 .field private final mMaxEffectHeight:I
 
 .field private final mMinWidth:I
@@ -243,14 +245,18 @@
 
     iput v1, p0, Landroid/widget/EdgeEffect;->mMinWidth:I
 
-    .line 151
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v1, p0, Landroid/widget/EdgeEffect;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 152
+    invoke-static {p1}, Lmiui/os/Build;->isUsingMiui(Landroid/content/Context;)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Landroid/widget/EdgeEffect;->mIsUsingMiui:Z
+
     return-void
 .end method
 
@@ -551,10 +557,15 @@
 
     const/4 v4, 0x0
 
-    .line 331
+    iget-boolean v5, p0, Landroid/widget/EdgeEffect;->mIsUsingMiui:Z
+
+    if-eqz v5, :cond_miui_0
+
+    return v4
+
+    :cond_miui_0
     invoke-direct {p0}, Landroid/widget/EdgeEffect;->update()V
 
-    .line 333
     iget-object v5, p0, Landroid/widget/EdgeEffect;->mGlow:Landroid/graphics/drawable/Drawable;
 
     iget v6, p0, Landroid/widget/EdgeEffect;->mGlowAlpha:F

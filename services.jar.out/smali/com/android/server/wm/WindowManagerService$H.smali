@@ -873,6 +873,12 @@
 
     if-nez v2, :cond_9
 
+    move-object/from16 v0, v35
+
+    iget-object v2, v0, Lcom/android/server/wm/AppWindowToken;->startingData:Lcom/android/server/wm/StartingData;
+
+    if-nez v2, :cond_9
+
     .line 7438
     monitor-exit v3
 

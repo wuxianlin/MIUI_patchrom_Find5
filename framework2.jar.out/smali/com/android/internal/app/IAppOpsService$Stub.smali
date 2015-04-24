@@ -689,10 +689,66 @@
     :cond_1
     move v2, v6
 
-    .line 221
     goto :goto_1
 
-    .line 38
+    :sswitch_d
+    const-string v7, "com.android.internal.app.IAppOpsService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/android/internal/app/IOpsCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IOpsCallback;
+
+    move-result-object v0
+
+    .local v0, "_arg0":Lcom/android/internal/app/IOpsCallback;
+    invoke-virtual {p0, v0}, Lcom/android/internal/app/IAppOpsService$Stub;->registerCallback(Lcom/android/internal/app/IOpsCallback;)I
+
+    move-result v4
+
+    .restart local v4    # "_result":I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .end local v0    # "_arg0":Lcom/android/internal/app/IOpsCallback;
+    .end local v4    # "_result":I
+    :sswitch_e
+    const-string v7, "com.android.internal.app.IAppOpsService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .local v0, "_arg0":I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .restart local v1    # "_arg1":I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .restart local v2    # "_arg2":Ljava/lang/String;
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/internal/app/IAppOpsService$Stub;->checkOperationInternal(IILjava/lang/String;)I
+
+    move-result v4
+
+    .restart local v4    # "_result":I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     nop
 
     :sswitch_data_0

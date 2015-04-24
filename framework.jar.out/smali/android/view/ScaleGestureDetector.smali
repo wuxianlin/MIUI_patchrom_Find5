@@ -101,13 +101,15 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;Landroid/os/Handler;)V
-    .locals 3
+    .locals 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "listener"    # Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
     const/4 v2, 0x0
+
+    const/high16 v3, 0x7fc00000    # NaNf
 
     .line 201
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -186,16 +188,19 @@
 
     if-le v1, v2, :cond_0
 
-    .line 213
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
-    .line 215
     :cond_0
+    iput v3, p0, Landroid/view/ScaleGestureDetector;->mTouchUpper:F
+
+    iput v3, p0, Landroid/view/ScaleGestureDetector;->mTouchLower:F
+
+    iput v3, p0, Landroid/view/ScaleGestureDetector;->mTouchHistoryLastAccepted:F
+
     return-void
 
-    .line 168
     .end local v0    # "res":Landroid/content/res/Resources;
     :cond_1
     const/4 v1, 0x0

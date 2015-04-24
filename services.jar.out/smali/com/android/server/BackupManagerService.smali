@@ -35,7 +35,8 @@
         Lcom/android/server/BackupManagerService$RestoreParams;,
         Lcom/android/server/BackupManagerService$RestoreGetSetsParams;,
         Lcom/android/server/BackupManagerService$ProvisionedObserver;,
-        Lcom/android/server/BackupManagerService$BackupRequest;
+        Lcom/android/server/BackupManagerService$BackupRequest;,
+        Lcom/android/server/BackupManagerService$Injector;
     }
 .end annotation
 
@@ -9358,7 +9359,7 @@
     .line 5605
     const-string v6, "fullrest"
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/server/BackupManagerService;->startConfirmationUi(ILjava/lang/String;)Z
+    invoke-static {p0, v5, v6}, Lcom/android/server/BackupManagerService$Injector;->startConfirmationUi(Lcom/android/server/BackupManagerService;ILjava/lang/String;)Z
 
     move-result v6
 
@@ -9450,45 +9451,37 @@
 
     invoke-virtual {v6, v7, v8, v9}, Landroid/os/PowerManager;->userActivity(JZ)V
 
-    .line 5615
-    invoke-virtual {p0, v5, v4}, Lcom/android/server/BackupManagerService;->startConfirmationTimeout(ILcom/android/server/BackupManagerService$FullParams;)V
+    invoke-static {p0, v5, v4}, Lcom/android/server/BackupManagerService$Injector;->startConfirmationTimeout(Lcom/android/server/BackupManagerService;ILcom/android/server/BackupManagerService$FullParams;)V
 
-    .line 5618
     const-string v6, "BackupManagerService"
 
     const-string v7, "Waiting for full restore completion..."
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5619
     invoke-virtual {p0, v4}, Lcom/android/server/BackupManagerService;->waitForCompletion(Lcom/android/server/BackupManagerService$FullParams;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 5622
     :try_start_a
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_3
 
-    .line 5626
     :goto_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5627
     const-string v6, "BackupManagerService"
 
     const-string v7, "Full restore processing complete."
 
     goto/16 :goto_1
 
-    .line 5623
     .end local v4    # "params":Lcom/android/server/BackupManagerService$FullRestoreParams;
     .end local v5    # "token":I
     :catch_0
     move-exception v1
 
-    .line 5624
     .local v1, "e":Ljava/io/IOException;
     const-string v7, "BackupManagerService"
 
@@ -9834,6 +9827,15 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v2
+.end method
+
+.method getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/BackupManagerService;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method public getCurrentTransport()Ljava/lang/String;

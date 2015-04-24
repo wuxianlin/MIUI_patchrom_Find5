@@ -60,6 +60,26 @@
     return-void
 .end method
 
+.method static synthetic access_mDeleteWhere(Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;)Ljava/lang/String;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhere:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access_mDeleteWhereArgs(Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;)[Ljava/lang/String;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhereArgs:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V

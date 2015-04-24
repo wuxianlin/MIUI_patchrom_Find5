@@ -251,14 +251,24 @@
 
     move-result v8
 
-    .line 4612
     .local v8, "extraScroll":I
     :goto_1
     sub-int v31, v15, v17
 
-    add-int v28, v31, v8
+    add-int v31, v31, v8
 
-    .line 4613
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
+
+    move-object/from16 v32, v0
+
+    invoke-virtual/range {v32 .. v32}, Landroid/widget/AbsListView;->getVerticalSpacing()I
+
+    move-result v32
+
+    add-int v28, v31, v32
+
     .local v28, "scrollBy":I
     move-object/from16 v0, p0
 

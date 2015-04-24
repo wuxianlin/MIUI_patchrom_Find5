@@ -159,57 +159,47 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 104
     new-instance v2, Lcom/android/internal/os/RuntimeInit$UncaughtHandler;
 
     invoke-direct {v2, v3}, Lcom/android/internal/os/RuntimeInit$UncaughtHandler;-><init>(Lcom/android/internal/os/RuntimeInit$1;)V
 
     invoke-static {v2}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    .line 109
     new-instance v2, Lcom/android/internal/os/RuntimeInit$1;
 
     invoke-direct {v2}, Lcom/android/internal/os/RuntimeInit$1;-><init>()V
 
     invoke-static {v2}, Lorg/apache/harmony/luni/internal/util/TimezoneGetter;->setInstance(Lorg/apache/harmony/luni/internal/util/TimezoneGetter;)V
 
-    .line 115
     invoke-static {v3}, Ljava/util/TimeZone;->setDefault(Ljava/util/TimeZone;)V
 
-    .line 124
     invoke-static {}, Ljava/util/logging/LogManager;->getLogManager()Ljava/util/logging/LogManager;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/util/logging/LogManager;->reset()V
 
-    .line 125
     new-instance v2, Lcom/android/internal/logging/AndroidConfig;
 
     invoke-direct {v2}, Lcom/android/internal/logging/AndroidConfig;-><init>()V
 
-    .line 130
-    invoke-static {}, Lcom/android/internal/os/RuntimeInit;->getDefaultUserAgent()Ljava/lang/String;
+    invoke-static {}, Landroid/miui/HttpClientUtils;->getDefaultUserAgent()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 131
     .local v1, "userAgent":Ljava/lang/String;
     const-string v2, "http.agent"
 
     invoke-static {v2, v1}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 136
     invoke-static {}, Lcom/android/server/NetworkManagementSocketTagger;->install()V
 
-    .line 144
     const-string v2, "ro.kernel.android.tracing"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 145
     .local v0, "trace":Ljava/lang/String;
     const-string v2, "1"
 

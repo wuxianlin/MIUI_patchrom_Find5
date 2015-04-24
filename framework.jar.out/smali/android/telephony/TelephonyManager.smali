@@ -3784,6 +3784,23 @@
     .local v0, "notifyNow":Ljava/lang/Boolean;
     sget-object v2, Landroid/telephony/TelephonyManager;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
 
+    if-nez v2, :cond_miui_0
+
+    const-string v2, "telephony.registry"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/internal/telephony/ITelephonyRegistry$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephonyRegistry;
+
+    move-result-object v2
+
+    sput-object v2, Landroid/telephony/TelephonyManager;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
+
+    :cond_miui_0
+    sget-object v2, Landroid/telephony/TelephonyManager;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
+
     iget-object v3, p1, Landroid/telephony/PhoneStateListener;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4092,6 +4109,16 @@
     move-exception v0
 
     goto :goto_0
+.end method
+
+.method public setContext(Landroid/content/Context;)V
+    .locals 0
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    iput-object p1, p0, Landroid/telephony/TelephonyManager;->mContext:Landroid/content/Context;
+
+    return-void
 .end method
 
 .method public setRadio(Z)Z

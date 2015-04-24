@@ -662,11 +662,13 @@
 
     if-lt p2, v0, :cond_1
 
-    .line 124
     :cond_0
     invoke-direct {p0, p2}, Landroid/database/sqlite/SQLiteCursor;->fillWindow(I)V
 
-    .line 127
+    iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor;->mWindow:Landroid/database/CursorWindow;
+
+    invoke-static {p0, v0, p1, p2}, Landroid/database/sqlite/SQLiteCursorInjector;->middle_onMove_calib_count(Landroid/database/sqlite/SQLiteCursor;Landroid/database/CursorWindow;II)V
+
     :cond_1
     const/4 v0, 0x1
 

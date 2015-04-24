@@ -304,6 +304,18 @@
 
     if-nez v4, :cond_7
 
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    move-object/from16 v0, v31
+
+    invoke-static {v4, v0}, Lcom/android/server/am/MiuiActivityManagerService;->showAppCrashDialog(Lcom/android/server/am/ActivityManagerService;Ljava/util/HashMap;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
     .line 1131
     new-instance v8, Lcom/android/server/am/AppErrorDialog;
 

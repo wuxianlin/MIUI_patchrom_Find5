@@ -518,6 +518,9 @@
 .method public abstract getMessageWaitingIndicator()Z
 .end method
 
+.method public abstract getMiuiIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+.end method
+
 .method public abstract getMsisdn()Ljava/lang/String;
 .end method
 

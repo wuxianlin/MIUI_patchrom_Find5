@@ -52,6 +52,12 @@
     .line 1188
     iget-object v0, p0, Landroid/app/FragmentManagerImpl$6;->val$finalFragment:Landroid/app/Fragment;
 
+    iget-boolean v0, v0, Landroid/app/Fragment;->mHidden:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/app/FragmentManagerImpl$6;->val$finalFragment:Landroid/app/Fragment;
+
     iget-object v0, v0, Landroid/app/Fragment;->mView:Landroid/view/View;
 
     const/16 v1, 0x8

@@ -115,20 +115,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 1554
+    invoke-static {v0}, Lmiui/content/pm/ExtraPackageManager;->handleIfContainsXiaomiAccountType(Landroid/content/Intent;)Z
+
+    move-result v1
+    if-eqz v1, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
     iget-object v1, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
     iget-object v1, v1, Landroid/accounts/AccountManager$AmsTask;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1566
     :goto_0
     return-void
 
-    .line 1556
     :cond_0
-    const-string/jumbo v1, "retry"
+    const-string v1, "retry"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 

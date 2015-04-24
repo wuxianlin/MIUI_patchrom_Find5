@@ -71,14 +71,37 @@
     .param p2, "b"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 385
+    iget-boolean v2, p1, Landroid/content/pm/ResolveInfo;->system:Z
+
+    iget-boolean v3, p2, Landroid/content/pm/ResolveInfo;->system:Z
+
+    if-eq v2, v3, :cond_miui_0
+
+    iget-boolean v2, p1, Landroid/content/pm/ResolveInfo;->system:Z
+
+    if-eqz v2, :cond_miui_1
+
+    iget-boolean v2, p2, Landroid/content/pm/ResolveInfo;->system:Z
+
+    if-nez v2, :cond_miui_1
+
+    const/4 v2, -0x1
+
+    :goto_miui_0
+    return v2
+
+    :cond_miui_1
+    const/4 v2, 0x1
+
+    goto :goto_miui_0
+
+    :cond_miui_0
     iget-object v2, p0, Landroid/content/pm/ResolveInfo$DisplayNameComparator;->mPM:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v2}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 386
     .local v0, "sa":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 

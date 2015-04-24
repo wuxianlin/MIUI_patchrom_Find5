@@ -35,8 +35,7 @@
     .locals 3
 
     .prologue
-    .line 76
-    const/4 v0, 0x5
+    const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -67,6 +66,18 @@
     const/4 v1, 0x4
 
     const-string v2, "WPA2_PSK"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "WAPI_PSK"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "WAPI_CERT"
 
     aput-object v2, v0, v1
 

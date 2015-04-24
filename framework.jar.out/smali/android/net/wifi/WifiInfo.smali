@@ -54,6 +54,8 @@
 
 .field private mSupplicantState:Landroid/net/wifi/SupplicantState;
 
+.field private mVendorInfo:Ljava/lang/String;
+
 .field private mWifiSsid:Landroid/net/wifi/WifiSsid;
 
 
@@ -245,63 +247,54 @@
     .param p1, "source"    # Landroid/net/wifi/WifiInfo;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     if-eqz p1, :cond_0
 
-    .line 98
     iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
-    .line 99
     iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mBSSID:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mBSSID:Ljava/lang/String;
 
-    .line 100
     iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mWifiSsid:Landroid/net/wifi/WifiSsid;
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mWifiSsid:Landroid/net/wifi/WifiSsid;
 
-    .line 101
     iget v0, p1, Landroid/net/wifi/WifiInfo;->mNetworkId:I
 
     iput v0, p0, Landroid/net/wifi/WifiInfo;->mNetworkId:I
 
-    .line 102
     iget-boolean v0, p1, Landroid/net/wifi/WifiInfo;->mHiddenSSID:Z
 
     iput-boolean v0, p0, Landroid/net/wifi/WifiInfo;->mHiddenSSID:Z
 
-    .line 103
     iget v0, p1, Landroid/net/wifi/WifiInfo;->mRssi:I
 
     iput v0, p0, Landroid/net/wifi/WifiInfo;->mRssi:I
 
-    .line 104
     iget v0, p1, Landroid/net/wifi/WifiInfo;->mLinkSpeed:I
 
     iput v0, p0, Landroid/net/wifi/WifiInfo;->mLinkSpeed:I
 
-    .line 105
     iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
-    .line 106
     iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
 
-    .line 107
     iget-boolean v0, p1, Landroid/net/wifi/WifiInfo;->mMeteredHint:Z
 
     iput-boolean v0, p0, Landroid/net/wifi/WifiInfo;->mMeteredHint:Z
 
-    .line 109
+    iget-object v0, p1, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
+    iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
     :cond_0
     return-void
 .end method
@@ -352,6 +345,17 @@
     iput-boolean p1, p0, Landroid/net/wifi/WifiInfo;->mMeteredHint:Z
 
     return p1
+.end method
+
+.method static synthetic access_mVendorInfo(Landroid/net/wifi/WifiInfo;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .param p0, "x0"    # Landroid/net/wifi/WifiInfo;
+    .param p1, "x1"    # Ljava/lang/String;
+
+    .prologue
+    iput-object p1, p0, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
+    return-object p1
 .end method
 
 .method static synthetic access$402(Landroid/net/wifi/WifiInfo;Landroid/net/wifi/SupplicantState;)Landroid/net/wifi/SupplicantState;
@@ -685,6 +689,15 @@
     return-object v0
 .end method
 
+.method public getVendorInfo()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getWifiSsid()Landroid/net/wifi/WifiSsid;
     .locals 1
 
@@ -833,6 +846,16 @@
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
     .line 272
+    return-void
+.end method
+
+.method public setVendorInfo(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "vendorInfo"    # Ljava/lang/String;
+
+    .prologue
+    iput-object p1, p0, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -1068,6 +1091,10 @@
 
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mVendorInfo:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 339
     iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
