@@ -53,6 +53,8 @@
 
 .field private mPhoneServices:[Lcom/android/internal/telephony/ITelephony;
 
+.field private mPhoneService:Lcom/android/internal/telephony/ITelephony;
+
 .field private final mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
 .field protected mPolicyDataEnabled:Z
