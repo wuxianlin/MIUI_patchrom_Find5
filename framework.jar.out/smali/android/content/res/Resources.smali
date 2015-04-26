@@ -7143,13 +7143,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
 
-    move-result v2
-
-    const/high16 v3, -0x80000000
-
-    and-int v3, v3, v20
-
-    or-int v20, v2, v3
+    move-result v20
 
     .line 1668
     const v2, 0x8000
@@ -7161,7 +7155,13 @@
     .line 1669
     invoke-static/range {v20 .. v20}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
 
-    move-result v20
+    move-result v2
+
+    const/high16 v3, -0x80000000
+
+    and-int v3, v3, v20
+
+    or-int v20, v2, v3
 
     .line 1670
     const v2, 0x8000
@@ -7579,7 +7579,13 @@
     :try_start_2
     invoke-static/range {v20 .. v20}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
 
-    move-result v20
+    move-result v2
+
+    const/high16 v3, -0x80000000
+
+    and-int v3, v3, v20
+
+    or-int v20, v2, v3
 
     goto/16 :goto_0
 
