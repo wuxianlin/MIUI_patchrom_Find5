@@ -1594,17 +1594,6 @@
     return-object p1
 .end method
 
-.method static synthetic access$300(Landroid/media/AudioService;)Landroid/content/Context;
-    .locals 1
-    .param p0, "x0"    # Landroid/media/AudioService;
-
-    .prologue
-    .line 118
-    iget-object v0, p0, Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
 .method static synthetic access$3000(Landroid/media/AudioService;)Z
     .locals 1
     .param p0, "x0"    # Landroid/media/AudioService;
@@ -3315,10 +3304,6 @@
 
     .prologue
     .line 4515
-    iget-object v0, p0, Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
@@ -5668,10 +5653,6 @@
 
     .prologue
     .line 4477
-    iget-object v0, p0, Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
@@ -5704,10 +5685,6 @@
 
     .prologue
     .line 4458
-    iget-object v0, p0, Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
@@ -8520,10 +8497,6 @@
 
     .prologue
     .line 4496
-    iget-object v0, p0, Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     if-eqz v0, :cond_0
