@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <!--whether the device is pad-->
+    <bool name="is_pad">false</bool>
+    <!--whether the device is xiaomi-->
+    <bool name="is_xiaomi">false</bool>
+    <!--whether the device is hongmi-->
+    <bool name="is_hongmi">false</bool>
+    <!--whether the device supports oldman mode-->
+    <bool name="support_oldman_mode">false</bool>
+    <!--whether the device is dual sim card-->
+    <bool name="support_dual_sim_card">false</bool>
+    <!-- whether the device has dual systems-->
+    <bool name="is_dual_system">false</bool>
+    <!-- whether the device has dual sd card-->
+    <bool name="support_dual_sd_card">false</bool>
+    <!--whether the device supports led light-->
+    <bool name="support_led_light">true</bool>
+    <!--whether the device supports button light-->
+    <bool name="support_button_light">true</bool>
+    <!--whether the device supports emulated storage-->
+    <bool name="support_emulated_storage">true</bool>
+    <!--whether the device supports internal sdcard-->
+    <bool name="support_internal_sdcard">true</bool>
+    <!--whether the device is mediatek-->
+    <bool name="is_mediatek">false</bool>
+    <!--whether the device supports erase external storage-->
+    <bool name="support_erase_external_storage">true</bool>
+    <!--whether the device supports headset-->
+    <bool name="support_headset">true</bool>
+    <!--whether the device supports agps-->
+    <bool name="support_agps">true</bool>
+    <!--whether the device support hall sensor-->
+    <bool name="support_hall_sensor">true</bool>
+    <!--whether the device supports agps parameters-->
+    <bool name="support_agps_paras">true</bool>
+    <!--whether the device supports agps roaming-->
+    <bool name="support_agps_roaming">false</bool>
+    <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
+    <string name="vendor">qcom</string>
+</features>
