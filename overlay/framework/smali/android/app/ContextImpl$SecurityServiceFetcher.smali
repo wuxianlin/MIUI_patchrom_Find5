@@ -1,4 +1,4 @@
-.class final Landroid/app/ContextImpl$MiuiServices;
+.class final Landroid/app/ContextImpl$SecurityServiceFetcher;
 .super Landroid/app/ContextImpl$ServiceFetcher;
 .source "ContextImpl.java"
 
