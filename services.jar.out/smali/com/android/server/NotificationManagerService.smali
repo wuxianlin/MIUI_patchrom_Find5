@@ -4992,7 +4992,6 @@
     if-nez v0, :cond_9
 
     .line 2533
-    :cond_miui_0
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v8}, Lcom/android/server/LightsService$Light;->turnOff()V
@@ -5029,7 +5028,7 @@
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mScreenOn:Z
 
     #if-eqz v8, :cond_7
-    if-nez v8, :cond_miui_0
+    if-nez v8, :cond_6
 
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
 
@@ -5043,7 +5042,7 @@
 
     move-result v8
 
-    #if-nez v8, :cond_7
+    if-nez v8, :cond_7
 
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mDreaming:Z
 
@@ -5137,6 +5136,19 @@
     .line 2556
     .local v3, "ledOffMS":I
     :goto_5
+
+    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+
+    iget v9, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
+
+    invoke-static {v8, v6, v9}, Lcom/android/server/NotificationLightController;->updateNotificationLight(Landroid/content/Context;Landroid/app/Notification;I)V
+
+    iget v2, v6, Landroid/app/Notification;->ledARGB:I
+
+    iget v4, v6, Landroid/app/Notification;->ledOnMS:I
+
+    iget v3, v6, Landroid/app/Notification;->ledOffMS:I
+
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
     const/4 v9, 0x1
@@ -6764,18 +6776,6 @@
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
-
-    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
-
-    iget v6, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
-
-    invoke-static {v5, v3, v6}, Lcom/android/server/NotificationLightController;->updateNotificationLight(Landroid/content/Context;Landroid/app/Notification;I)V
-
-    iget v0, v3, Landroid/app/Notification;->ledARGB:I
-
-    iget v2, v3, Landroid/app/Notification;->ledOnMS:I
-
-    iget v1, v3, Landroid/app/Notification;->ledOffMS:I
 
     :cond_4
     const-string v6, "  "
