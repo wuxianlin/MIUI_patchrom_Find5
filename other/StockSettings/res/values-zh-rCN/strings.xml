@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">附加设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="gestures">手势</string>
+    <string name="gestures_settings">快捷手势</string>
+    <string name="double_tap_to_wake_title">双击唤醒</string>
+
+</resources>

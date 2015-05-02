@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StockSettings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="gestures">Gestures</string>
+    <string name="gestures_settings">Gesture</string>
+    <string name="double_tap_to_wake_title">Double-tap to wake</string>
+
+</resources>
