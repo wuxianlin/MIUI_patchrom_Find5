@@ -45,15 +45,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     .prologue
     .line 48
     :try_start_0
-    iget-boolean v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$wipeMedia:Z
-
-    if-eqz v1, :cond_0
-
     .line 49
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
@@ -70,28 +66,18 @@
     invoke-static {v1, v2}, Landroid/os/RecoverySystem;->rebootFactoryReset(Landroid/content/Context;Z)V
 
     .line 54
-    :goto_0
     const-string v1, "MasterClear"
 
     const-string v2, "Still running after master clear?!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 58
-    :goto_1
-    return-void
-
-    .line 52
-    :cond_0
-    iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
-
-    invoke-static {v1}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
-
     .line 55
+    :goto_0
+    return-void
+
     :catch_0
     move-exception v0
 
@@ -103,5 +89,5 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1
+    goto :goto_0
 .end method
