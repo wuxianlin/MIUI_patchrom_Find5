@@ -1,0 +1,30 @@
+From 7fa7e7f7d156e66ee9eab29d32193cdc00bd86ee Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Thu, 14 May 2015 22:43:05 +0800
+Subject: [PATCH] stocksetting
+
+---
+ Settings/res/xml/settings_headers.xml |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -49,7 +49,7 @@
+     <header android:icon="@drawable/ic_key_settings" android:id="@id/key_settings" android:title="@string/key_settings_title" android:fragment="com.android.settings.KeySettings" />
+     <header android:icon="@drawable/ic_led_settings" android:id="@id/led_settings" android:title="@string/led_settings" android:fragment="com.android.settings.LedSettings" />
+     <header android:icon="@drawable/music_ic_headset_settings" android:id="@id/headset_settings" android:title="@string/music_headset_settings" android:fragment="com.android.settings.HeadsetSettings" />
+-    <header android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_other_advanced_settings" android:id="@id/manufacturer_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+     <header android:id="@id/system_section" android:title="@string/system_app_settings" />
+@@ -64,4 +64,4 @@
+     <header android:icon="@drawable/ic_development_settings" android:id="@id/development_settings" android:title="@string/development_settings_title" android:fragment="com.android.settings.DevelopmentSettings" />
+     <header android:icon="@drawable/ic_updater_settings" android:id="@id/updater" android:title="@string/system_update_settings_list_item_title" android:fragment="com.android.updater.ApplyUpdateFragment" />
+     <header android:icon="@drawable/ic_about_settings" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.settings.MiuiDeviceInfoSettings" />
+-</preference-headers>
+\ 文件尾没有 newline 字符
++</preference-headers>
+-- 
+1.7.9.5
+
