@@ -631,6 +631,23 @@
 
     .line 334
     .local v1, "filename":Ljava/lang/String;
+    const-string v2, "/storage/emulated/0"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "/storage/emulated/0"
+
+    const-string v3, "/data/media/0"
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_0
     const-string v2, "RecoverySystem"
 
     new-instance v3, Ljava/lang/StringBuilder;

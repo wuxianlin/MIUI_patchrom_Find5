@@ -5,7 +5,6 @@ private-phone-apps := ApplicationsProvider \
 					  BasicDreams \
 					  Bluetooth \
 					  BluetoothExt \
-					  Camera2 \
 					  CellBroadcastReceiver \
 					  CertInstaller \
 					  com.qualcomm.location \

@@ -1,0 +1,25 @@
+From d051996c16c28ca7bf53c8250ac257b925d64bef Mon Sep 17 00:00:00 2001
+From: ry09iu <ry09iu@gmail.com>
+Date: Sun, 3 May 2015 20:34:44 +0800
+Subject: [PATCH] add menu key
+
+---
+ smali/com/android/systemui/statusbar/phone/NavigationBarView.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/NavigationBarView.smali b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/NavigationBarView.smali
+index d519d7c..7355bf3 100644
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/NavigationBarView.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/NavigationBarView.smali
+@@ -2441,7 +2441,7 @@
+     goto :goto_0
+ 
+     :cond_1
+-    const/4 v0, 0x4
++    const/4 v0, 0x0
+ 
+     goto :goto_1
+ .end method
+-- 
+1.9.1
+

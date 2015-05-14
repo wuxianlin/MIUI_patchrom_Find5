@@ -19,7 +19,7 @@
     <!--whether the device supports button light-->
     <bool name="support_button_light">true</bool>
     <!--whether the device supports emulated storage-->
-    <bool name="support_emulated_storage">true</bool>
+    <bool name="support_emulated_storage">false</bool>
     <!--whether the device supports internal sdcard-->
     <bool name="support_internal_sdcard">true</bool>
     <!--whether the device is mediatek-->

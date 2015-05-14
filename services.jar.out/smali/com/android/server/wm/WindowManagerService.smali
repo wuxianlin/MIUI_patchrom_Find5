@@ -20250,15 +20250,16 @@
 
     .line 7135
     .local v4, "volumeDownState":I
-    if-gtz v1, :cond_1
+    if-lez v1, :cond_miui_0
 
+    if-gtz v4, :cond_1
+
+    :cond_miui_0
     if-gtz v2, :cond_1
 
     if-gtz v0, :cond_1
 
-    if-gtz v3, :cond_1
-
-    if-lez v4, :cond_2
+    if-lez v3, :cond_2
 
     :cond_1
     move v5, v6

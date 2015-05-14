@@ -92,3 +92,9 @@ then
             rm -rf "$file"
     done
 fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    applyPatch "android.policy"
+    appendSmaliPart "android.policy"
+fi

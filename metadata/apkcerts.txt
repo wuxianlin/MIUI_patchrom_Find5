@@ -88,4 +88,6 @@ name="WallpaperCropper.apk" certificate="build/target/product/security/platform.
 name="WAPPushManager.apk" certificate="PRESIGNED" private_key=""
 name="WhisperPush.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="FusedLocation.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="AMAPNetworkLocation.apk" certificate="PRESIGNED" private_key=""
 name="StockSettings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="MiuiCamera.apk" certificate="PRESIGNED" private_key=""

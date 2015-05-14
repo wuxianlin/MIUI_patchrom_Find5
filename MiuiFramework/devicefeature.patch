@@ -1,0 +1,79 @@
+From 5aa577031aafa98efc043f403327363919fa37d3 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Fri, 8 May 2015 18:52:42 +0800
+Subject: [PATCH] support legacy storage
+
+---
+ MiuiFramework/smali/miui/util/FeatureParser.smali |   30 ++++++++++++++-------
+ 1 file changed, 21 insertions(+), 9 deletions(-)
+
+--- a/MiuiFramework/smali/miui/util/FeatureParser.smali
++++ b/MiuiFramework/smali/miui/util/FeatureParser.smali
+@@ -379,7 +379,7 @@
+ 
+     .local v4, "fileName":Ljava/lang/String;
+     :try_start_0
+-    const-string v13, "cancro"
++    const-string v13, "find5"
+ 
+     sget-object v14, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+ 
+@@ -389,17 +389,23 @@
+ 
+     if-eqz v13, :cond_3
+ 
+-    sget-object v13, Lmiui/os/Build;->MODEL:Ljava/lang/String;
++    const-string v13, "sys.storage_legacy"
+ 
+-    const-string v14, "MI 3"
++    const-string v14, ""
+ 
+-    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
++    invoke-static {v13, v14}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
++
++    move-result-object v13
++
++    const-string v14, "1"
++
++    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 
+     move-result v13
+ 
+     if-eqz v13, :cond_2
+ 
+-    const-string v4, "cancro_MI3.xml"
++    const-string v4, "find5_legacy.xml"
+     :try_end_0
+     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
+@@ -530,17 +536,23 @@
+     .end local v11    # "tagName":Ljava/lang/String;
+     .end local v12    # "type":I
+     :cond_2
+-    sget-object v13, Lmiui/os/Build;->MODEL:Ljava/lang/String;
++    const-string v13, "sys.storage_legacy"
+ 
+-    const-string v14, "MI 4"
++    const-string v14, ""
+ 
+-    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
++    invoke-static {v13, v14}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
++
++    move-result-object v13
++
++    const-string v14, "0"
++
++    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 
+     move-result v13
+ 
+     if-eqz v13, :cond_0
+ 
+-    const-string v4, "cancro_MI4.xml"
++    const-string v4, "find5.xml"
+ 
+     goto :goto_0
+ 
+-- 
+1.7.9.5
+

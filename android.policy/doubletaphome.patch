@@ -1,0 +1,57 @@
+From 72345c83bcd8710cd00064fa0b682d20f52c826c Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Tue, 12 May 2015 17:01:47 +0800
+Subject: [PATCH] doubletap home action
+
+---
+ .../policy/impl/BaseMiuiPhoneWindowManager.smali   |   22 +++++++++++++++++++-
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+
+--- a/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
+@@ -1866,6 +1866,15 @@
+ 
+     .end local v7    # "sbm":Landroid/app/StatusBarManager;
+     :cond_d
++    invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setMyhomeKeyAction()Z
++
++    move-result v11
++
++    if-eqz v11, :cond_miui_11
++
++    goto :goto_3
++
++    :cond_miui_11
+     invoke-virtual {p0}, Lcom/android/internal/policy/impl/BaseMiuiPhoneWindowManager;->launchHomeFromHotKey()V
+     :try_end_0
+     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+@@ -1941,7 +1950,7 @@
+ 
+     .local v4, "i":I
+     :goto_5
+-    if-ge v4, v10, :cond_b
++    if-ge v4, v10, :cond_miui_10
+ 
+     sget-object v11, Lcom/android/internal/policy/impl/BaseMiuiPhoneWindowManager;->WINDOW_TYPES_WHERE_HOME_DOESNT_WORK:[I
+ 
+@@ -1969,6 +1978,17 @@
+ 
+     goto/16 :goto_1
+ 
++    :cond_miui_10
++    if-eqz v2, :cond_b
++
++    if-nez v6, :cond_b
++
++    invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->resetMyhomeKeyAction()V
++
++    const-wide/16 v11, -0x1
++
++    goto/16 :goto_1
++
+     :sswitch_data_0
+     .sparse-switch
+         0x3 -> :sswitch_0
+-- 
+1.7.9.5
+

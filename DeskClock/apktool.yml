@@ -1,0 +1,16 @@
+version: 2.0.0-RC4
+apkFileName: DeskClock.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 8
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '19'
+packageInfo:
+  rename-manifest-package: com.android.deskclock
+versionInfo:
+  versionCode: '207'
+  versionName: 2.0.4
+compressionType: false
