@@ -2743,7 +2743,7 @@
 .end method
 
 .method public static lowLevelReboot(Ljava/lang/String;)V
-    .locals 6
+    .locals 4
     .param p0, "reason"    # Ljava/lang/String;
 
     .prologue
@@ -2755,80 +2755,54 @@
 
     .line 2670
     :cond_0
-    const-string v3, "recovery"
+    const-string v1, "sys.powerctl"
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v3, :cond_1
+    const-string v3, "reboot,"
 
-    .line 2679
-    const-string v3, "ctl.start"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "pre-recovery"
+    move-result-object v2
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2680
-    const-wide/32 v0, 0x1d4c0
+    const-wide/16 v1, 0x4e20
 
-    .line 2686
-    .local v0, "duration":J
-    :goto_0
     :try_start_0
-    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2690
-    :goto_1
+    :goto_0
     return-void
 
     .line 2682
-    .end local v0    # "duration":J
-    :cond_1
-    const-string v3, "sys.powerctl"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "reboot,"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2683
-    const-wide/16 v0, 0x4e20
-
-    .restart local v0    # "duration":J
-    goto :goto_0
-
     .line 2687
     :catch_0
-    move-exception v2
+    move-exception v0
 
     .line 2688
-    .local v2, "e":Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public static lowLevelShutdown()V
@@ -8498,33 +8472,16 @@
     .param p3, "wait"    # Z
 
     .prologue
-    const/4 v4, 0x0
-
     .line 2276
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.REBOOT"
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2277
-    const-string v2, "recovery"
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 2278
-    iget-object v2, p0, Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
-
-    const-string v3, "android.permission.RECOVERY"
+    const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2281
-    :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0

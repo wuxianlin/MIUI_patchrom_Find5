@@ -34,12 +34,14 @@ private-phone-apps := ApplicationsProvider \
 					  WAPPushManager
 
 private-phone-priv-apps := BackupRestoreConfirmation \
-					  InputDevices \
 					  DefaultContainerService \
 					  ExternalStorageProvider \
-                                          MediaProvider \
+					  FusedLocation \
+					  InputDevices \
+					  MediaProvider \
 					  ProxyHandler \
-                                          SharedStorageBackup \
+					  SharedStorageBackup \
 					  Shell \
 					  Tag \
+					  VpnDialogs \
 					  WallpaperCropper

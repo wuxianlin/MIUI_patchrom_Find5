@@ -1642,7 +1642,8 @@
     .line 3182
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
 
-    .line 3183
+    invoke-static {p2}, Lcom/android/server/BackupManagerService$Injector;->resetManifestFileModifiedTime(Ljava/io/File;)V
+
     return-void
 
     .line 3168
@@ -2005,7 +2006,7 @@
 
     move/from16 v25, v0
 
-    if-eqz v25, :cond_4
+    #if-eqz v25, :cond_4
 
     :cond_3
     move-object/from16 v0, v22

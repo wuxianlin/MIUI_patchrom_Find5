@@ -42,6 +42,9 @@ if [ $1 = "MiuiSystemUI" ];then
     applyPatch $1 $2
 fi
 
+if [ $1 = "Music" ];then
+    applyPatch $1 $2
+fi
 
 if [ $1 = "SecurityCenter" ];then
     applyPatch $1 $2

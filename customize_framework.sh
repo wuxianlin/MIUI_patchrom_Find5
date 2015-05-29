@@ -74,7 +74,7 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
-    #cp -rf overlay/framework2/smali/* $BUILD_OUT/framework2/smali
+    cp -rf overlay/framework2/smali/* $BUILD_OUT/framework2/smali
 fi
 
 if [ $2 = "$BUILD_OUT/telephony-common" ]
