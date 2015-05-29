@@ -1,0 +1,4 @@
+#!/system/bin/sh
+# call miuimusic.sh and/or userinit.d/* scripts if present in /data/local
+
+touch /data/data/com.miui.player/files/ablum.jpg

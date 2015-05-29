@@ -1,12 +1,12 @@
-From 9e61b929d6d4723fe025147c60c8b7e3e58329df Mon Sep 17 00:00:00 2001
+From fcf89ba05e127bc7dfcd534140a18b64fa8a8c4a Mon Sep 17 00:00:00 2001
 From: wuxianlin <wuxianlinwxl@gmail.com>
-Date: Tue, 12 May 2015 01:28:39 +0800
-Subject: [PATCH] Force Navbar
+Date: Fri, 15 May 2015 13:37:26 +0800
+Subject: [PATCH] force navbar
 
 ---
- .../PhoneStatusBar$DevForceNavbarObserver.smali    |  127 ++++++++++++++++++++
- .../systemui/statusbar/phone/PhoneStatusBar.smali  |  121 +++++++++++++++++++
- 2 files changed, 248 insertions(+)
+ .../PhoneStatusBar$DevForceNavbarObserver.smali    |  115 ++++++++++++++++++++
+ .../systemui/statusbar/phone/PhoneStatusBar.smali  |  109 ++++++++++++++++++-
+ 2 files changed, 223 insertions(+), 1 deletion(-)
  create mode 100644 MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver.smali
 
 --- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver.smali
@@ -137,7 +137,7 @@ Subject: [PATCH] Force Navbar
          Lcom/android/systemui/statusbar/phone/PhoneStatusBar$FastColorDrawable;,
          Lcom/android/systemui/statusbar/phone/PhoneStatusBar$NotificationLongClicker;,
          Lcom/android/systemui/statusbar/phone/PhoneStatusBar$NotificationClicker;,
-@@ -99,6 +100,8 @@
+@@ -101,6 +102,8 @@
  
  .field mDarkMode:Z
  
@@ -146,10 +146,29 @@ Subject: [PATCH] Force Navbar
  .field mDisabled:I
  
  .field mDisplayMetrics:Landroid/util/DisplayMetrics;
-@@ -1096,6 +1099,100 @@
+@@ -13704,6 +13707,17 @@
+ 
+     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mNetworkController:Lcom/android/systemui/statusbar/policy/NetworkController;
+ 
++    new-instance v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
++
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mHandler:Lcom/android/systemui/statusbar/BaseStatusBar$H;
++
++    invoke-direct {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBar;Landroid/os/Handler;)V
++
++    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mDevForceNavbarObserver:Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
++
++    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mDevForceNavbarObserver:Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
++
++    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;->observe()V
+     new-instance v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
+ 
+     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mContext:Landroid/content/Context;
+@@ -15122,3 +15136,97 @@
+ 
      return-void
  .end method
- 
++
 +.method static synthetic access$wxl500(Lcom/android/systemui/statusbar/phone/PhoneStatusBar;)V
 +    .locals 0
 +    .param p0, "x0"    # Lcom/android/systemui/statusbar/phone/PhoneStatusBar;
@@ -243,28 +262,6 @@ Subject: [PATCH] Force Navbar
 +
 +    goto :goto_0
 +.end method
-+
- .method static synthetic access$4100(Lcom/android/systemui/statusbar/phone/PhoneStatusBar;)Lcom/android/systemui/statusbar/NotificationData;
-     .locals 1
-     .param p0, "x0"    # Lcom/android/systemui/statusbar/phone/PhoneStatusBar;
-@@ -13599,6 +13696,17 @@
- 
-     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mNetworkController:Lcom/android/systemui/statusbar/policy/NetworkController;
- 
-+    new-instance v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
-+
-+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mHandler:Lcom/android/systemui/statusbar/BaseStatusBar$H;
-+
-+    invoke-direct {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBar;Landroid/os/Handler;)V
-+
-+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mDevForceNavbarObserver:Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
-+
-+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mDevForceNavbarObserver:Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;
-+
-+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;->observe()V
-     new-instance v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
- 
-     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mContext:Landroid/content/Context;
 -- 
 1.7.9.5
 

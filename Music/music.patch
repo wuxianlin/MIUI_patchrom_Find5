@@ -1,0 +1,24 @@
+From 164cf1f78ebd2b9f3574dd5d67b42ebe7a1fcea9 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Fri, 22 May 2015 17:21:24 +0800
+Subject: [PATCH] fix Music
+
+---
+ Music/smali/com/xiaomi/music/util/Utils.smali |    3 +++
+ 1 file changed, 3 insertions(+)
+
+--- a/Music/smali/com/xiaomi/music/util/Utils.smali
++++ b/Music/smali/com/xiaomi/music/util/Utils.smali
+@@ -190,6 +190,9 @@
+     .locals 2
+ 
+     .prologue
++    const/4 v0, 0x1
++
++    return v0
+     const-string v0, "hammerhead"
+ 
+     sget-object v1, Landroid/os/Build;->BOARD:Ljava/lang/String;
+-- 
+1.7.9.5
+

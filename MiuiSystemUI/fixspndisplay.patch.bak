@@ -1,0 +1,32 @@
+From fbdceb09576fb5d6454d13e5ca8fb69417643ca0 Mon Sep 17 00:00:00 2001
+From: jchjian <671346@qq.com>
+Date: Tue, 28 Apr 2015 05:05:53 +0800
+Subject: [PATCH 1/1] fix spn show chinese
+
+---
+ .../com/android/systemui/statusbar/policy/BaseNetworkController.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/policy/BaseNetworkController.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/policy/BaseNetworkController.smali
+@@ -3788,7 +3788,7 @@
+ 
+     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BaseNetworkController;->mSpn:[Ljava/lang/String;
+ 
+-    aget-object v2, v0, p1
++    aget-object v4, v0, p1
+ 
+     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BaseNetworkController;->mShowPlmn:[Z
+ 
+@@ -3796,7 +3796,7 @@
+ 
+     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BaseNetworkController;->mPlmn:[Ljava/lang/String;
+ 
+-    aget-object v4, v0, p1
++    aget-object v2, v0, p1
+ 
+     move-object v0, p0
+ 
+-- 
+1.9.1
+
