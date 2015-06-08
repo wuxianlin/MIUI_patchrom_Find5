@@ -3055,11 +3055,13 @@
     invoke-static {v7, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 926
-    new-instance v164, Lcom/android/server/ThemeService;
+    #new-instance v164, Lcom/android/server/ThemeService;
 
-    move-object/from16 v0, v164
+    #move-object/from16 v0, v164
 
-    invoke-direct {v0, v5}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+    #invoke-direct {v0, v5}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+
+    const/16 v164, 0x0
     :try_end_5f
     .catch Ljava/lang/Throwable; {:try_start_5f .. :try_end_5f} :catch_37
 
@@ -3071,7 +3073,7 @@
 
     move-object/from16 v0, v164
 
-    invoke-static {v7, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    #invoke-static {v7, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_60
     .catch Ljava/lang/Throwable; {:try_start_60 .. :try_end_60} :catch_49
 
