@@ -165,7 +165,7 @@
 
     iget-object v3, p0, Lcom/android/internal/app/IAppOpsService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v4, 0xe
+    const/16 v4, 0x11
 
     const/4 v5, 0x0
 
@@ -735,7 +735,7 @@
 
     iget-object v3, p0, Lcom/android/internal/app/IAppOpsService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v4, 0xd
+    const/16 v4, 0x10
 
     const/4 v5, 0x0
 
