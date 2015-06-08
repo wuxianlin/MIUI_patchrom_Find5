@@ -4,8 +4,8 @@ isFrameworkApk: true
 usesFramework:
   ids:
   - 1
-  - 8
-  - 9
+  - 16
+  - 17
 packageInfo:
   rename-manifest-package: com.miui.framework
 compressionType: false

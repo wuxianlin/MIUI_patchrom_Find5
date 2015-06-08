@@ -1,0 +1,81 @@
+From 6ea089db1cc2753046348e5815ff3397c11298d8 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Mon, 1 Jun 2015 23:56:36 +0800
+Subject: [PATCH] advanced power menu
+
+---
+ .../internal/policy/impl/MiuiGlobalActions$1.smali |   64 ++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+
+--- a/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions$1.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions$1.smali
+@@ -110,6 +110,66 @@
+     goto :goto_0
+ 
+     :cond_3
++    const-string v0, "recovery"
++
++    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v0
++
++    if-eqz v0, :cond_wxl_0
++
++    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$1;->this$0:Lcom/android/internal/policy/impl/MiuiGlobalActions;
++
++    # getter for: Lcom/android/internal/policy/impl/MiuiGlobalActions;->mContext:Landroid/content/Context;
++    invoke-static {v0}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100(Lcom/android/internal/policy/impl/MiuiGlobalActions;)Landroid/content/Context;
++
++    move-result-object v0
++
++    const-string v1, "power"
++
++    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    const-string v1, "recovery"
++
++    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++
++    goto :goto_0
++
++    :cond_wxl_0
++    const-string v0, "bootloader"
++
++    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v0
++
++    if-eqz v0, :cond_wxl_1
++
++    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$1;->this$0:Lcom/android/internal/policy/impl/MiuiGlobalActions;
++
++    # getter for: Lcom/android/internal/policy/impl/MiuiGlobalActions;->mContext:Landroid/content/Context;
++    invoke-static {v0}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100(Lcom/android/internal/policy/impl/MiuiGlobalActions;)Landroid/content/Context;
++
++    move-result-object v0
++
++    const-string v1, "power"
++
++    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    const-string v1, "bootloader"
++
++    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++
++    goto :goto_0
++
++    :cond_wxl_1
+     const-string v0, "shutdown"
+ 
+     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+-- 
+1.7.9.5
+

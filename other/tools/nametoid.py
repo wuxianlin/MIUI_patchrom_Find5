@@ -6,11 +6,10 @@ Created on 2012-12-25
 @author: jock
 '''
 from xml.dom import minidom
-import codecs
 import sys
-import traceback
 import re
 import os
+import android_manifest
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -20,6 +19,7 @@ class nametoid(object):
     classdocs
     '''
     mIdToNameDict = {}
+    CONST_LEN = len('const/high16')
 
     def __init__(self, xmlPath, inDir):
         '''
@@ -54,12 +54,17 @@ class nametoid(object):
         root = publicXml.documentElement
         idList = {}
 
+        pkgName = android_manifest.getPackageNameFromPublicXml(xmlPath)
+        Log.d("package name: %s" %pkgName)
+        pkgName = pkgName + ':'
         for item in root.childNodes:
             if item.nodeType == minidom.Node.ELEMENT_NODE:
                 itemType = item.getAttribute("type")
                 itemName = item.getAttribute("name")
                 itemId = item.getAttribute("id").replace(r'0x0', r'0x')
-                idList["%s@%s" % (itemType, itemName)] = itemId
+                idList["%s%s@%s" % (pkgName, itemType, itemName)] = itemId
+                if pkgName == "android:":
+                    idList["%s@%s" % (itemType, itemName)] = itemId
 
         return idList
 
@@ -70,12 +75,21 @@ class nametoid(object):
         return arrayId.replace('0x0', '0x')
 
     def getArrayStr(self, arrayId):
-         arrayStr = '0x%st 0x%st 0x%st 0x%st' % (arrayId[-2:], arrayId[-4:-2], arrayId[-6:-4], arrayId[-7:-6])
-         return arrayStr.replace('0x0', '0x')
+        if cmp(arrayId[-8], "x") == 0:
+            arrayStr = '0x%st 0x%st 0x%st 0x%st' % (arrayId[-2:], arrayId[-4:-2], arrayId[-6:-4], arrayId[-7:-6])
+        else:
+            arrayStr = '0x%st 0x%st 0x%st 0x%st' % (arrayId[-2:], arrayId[-4:-2], arrayId[-6:-4], arrayId[-8:-6])
+        return arrayStr.replace('0x0', '0x')
+
+    def getHigh16Name(self, high16Str):
+        idx = high16Str.index('#')
+        hName = high16Str[idx:]
+        return (hName,high16Str[0:idx])
 
     def nametoid(self):
         normalNameRule = re.compile(r'#[^ \t\n]*@[^ \t\n]*#t')
         arrayNameRule = re.compile(r'#[^ \t\n]*@[^ \t\n]*#a')
+        high16NameRule = re.compile(r'const/high16[ ]*v[0-9][0-9]*,[ ]*#[^ \t\n]*@[^ \t\n]*#h')
 
         for smaliFile in self.smaliFileList:
 #           print "start modify: %s" % smaliFile
@@ -83,7 +97,7 @@ class nametoid(object):
             fileStr = sf.read()
             modify = False
 
-            for matchArrName in  arrayNameRule.findall(fileStr):
+            for matchArrName in  list(set(arrayNameRule.findall(fileStr))):
                 arrId = self.nameToIdMap.get(matchArrName[1:-2], None)
                 if arrId is not None:
                     newArrIdStr = self.getArrayStr(arrId)
@@ -91,12 +105,24 @@ class nametoid(object):
                     modify = True
                     Log.d(">>> change array name from %s to id %s" % (matchArrName[1:-2], newArrIdStr))
 
-            for matchName in normalNameRule.findall(fileStr):
+            for matchName in list(set(normalNameRule.findall(fileStr))):
                 newId = self.nameToIdMap.get(matchName[1:-2], None)
                 if newId is not None:
                     fileStr = fileStr.replace(matchName, newId)
                     modify = True
                     Log.d(">>> change name from %s to id %s" % (matchName[1:-2], newId))
+
+            for matchHighName in list(set(high16NameRule.findall(fileStr))):
+                (hName, preStr) = self.getHigh16Name(matchHighName)
+                newId = self.nameToIdMap.get(hName[1:-2], None)
+                if newId is not None:
+                    if newId[-4:] != '0000':
+                        newStr = r'const%s%s' % (preStr[nametoid.CONST_LEN:], newId)
+                    else:
+                        newStr = r'%s%s' % (preStr, newId[:-4])
+                    fileStr = fileStr.replace(matchHighName, newStr)
+                    Log.d(">>> change name from %s to id %s" % (matchHighName, newStr))
+                    modify = True
 
             if modify is True:
                 sf.seek(0, 0)
@@ -111,11 +137,17 @@ class Log:
     def d(message):
         if Log.DEBUG: print message
 
+    @staticmethod
+    def i(message):
+        print message
+
 def main():
     if len(sys.argv) == 3:
         nametoid(sys.argv[1], sys.argv[2]).nametoid()
     else:
-        print "USAGE: nametoid.py -add/-map public_ori.xml public_baidu.xml out1.txt [out2.txt]"
+        print "USAGE: nametoid public.xml DIRECTORY"
+        print "eg: nametoid public.xml framework.jar.out"
+        print "change all of type@name in framework.jar.out to resource id"
         sys.exit(1)
 
     print ">>> change the name to id done"

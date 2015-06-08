@@ -1813,6 +1813,10 @@
     .line 1432
     .end local v3    # "wakeLock":Lcom/android/server/power/PowerManagerService$WakeLock;
     :cond_2
+    iget-object v5, p0, Lcom/android/server/power/PowerManagerService;->mWakeLocks:Ljava/util/ArrayList;
+
+    invoke-static {v5, p3}, Lcom/android/server/power/PowerManagerServiceInjector;->checkWhenSleepRequested(Ljava/util/ArrayList;I)V
+
     const/16 v5, 0xaa4
 
     invoke-static {v5, v2}, Landroid/util/EventLog;->writeEvent(II)I
@@ -2255,7 +2259,7 @@
 .end method
 
 .method private handleUserActivityTimeout()V
-    .locals 2
+    .locals 5
 
     .prologue
     .line 1794
@@ -2271,7 +2275,14 @@
 
     iput v0, p0, Lcom/android/server/power/PowerManagerService;->mDirty:I
 
-    .line 1800
+    iget-object v0, p0, Lcom/android/server/power/PowerManagerService;->mWakeLocks:Ljava/util/ArrayList;
+
+    iget-wide v2, p0, Lcom/android/server/power/PowerManagerService;->mLastUserActivityTime:J
+
+    iget-object v4, p0, Lcom/android/server/power/PowerManagerService;->mDisplayPowerRequest:Lcom/android/server/power/DisplayPowerRequest;
+
+    invoke-static {v0, v2, v3, v4}, Lcom/android/server/power/PowerManagerServiceInjector;->checkUserActivityTimeout(Ljava/util/ArrayList;JLcom/android/server/power/DisplayPowerRequest;)V
+
     invoke-direct {p0}, Lcom/android/server/power/PowerManagerService;->updatePowerStateLocked()V
 
     .line 1801
@@ -8292,7 +8303,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/Watchdog;->addThread(Landroid/os/Handler;Ljava/lang/String;)V
 
-    .line 474
+    invoke-static {p0}, Lcom/android/server/power/PowerManagerServiceInjector;->init(Lcom/android/server/power/PowerManagerService;)V
+
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService;->mDisplayBlanker:Lcom/android/server/power/PowerManagerService$DisplayBlankerImpl;
 
     invoke-virtual {v0}, Lcom/android/server/power/PowerManagerService$DisplayBlankerImpl;->unblankAllDisplays()V

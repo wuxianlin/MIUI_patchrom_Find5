@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Enable USB mode selection -->
+    <bool name="config_enableUsbModeSelection">true</bool>
+
+    <bool name="enable_magnifier_when_input">true</bool>
+
+</resources>

@@ -9,6 +9,7 @@ from xml.dom import minidom
 import sys
 import re
 import os
+import android_manifest
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -52,12 +53,15 @@ class idtoname(object):
         root = publicXml.documentElement
         idList = {}
 
+        pkgName = android_manifest.getPackageNameFromPublicXml(xmlPath)
+        Log.d("package name: %s" %pkgName)
+        pkgName = pkgName + ':'
         for item in root.childNodes:
             if item.nodeType == minidom.Node.ELEMENT_NODE:
                 itemType = item.getAttribute("type")
                 itemName = item.getAttribute("name")
                 itemId = item.getAttribute("id").replace(r'0x0', r'0x')
-                idList[itemId] = "%s@%s" % (itemType, itemName)
+                idList[itemId] = "%s%s@%s" % (pkgName, itemType, itemName)
 
         return idList
 
@@ -67,9 +71,15 @@ class idtoname(object):
         arrayId = "0x%s" % (arrayId.replace('x', '0'))
         return arrayId.replace('0x0', '0x')
 
+    def getIdByHigh16(self, high16Str):
+        idx = high16Str.index('0x')
+        rId = '%s%s' % (high16Str[idx:], '0000')
+        return (rId,high16Str[0:idx])
+
     def idtoname(self):
-        normalIdRule = re.compile(r'0x[1-9][0-1][0-9a-f]{5}')
-        arrayIdRule = re.compile(r'(?:0x[0-9a-f]{1,2}t ){3}0x[1-9]t')
+        normalIdRule = re.compile(r'0x(?:[1-9a-f]|7f)[0-1][0-9a-f]{5}')
+        arrayIdRule = re.compile(r'(?:0x[0-9a-f]{1,2}t ){3}0x(?:[1-9a-f]|7f)t')
+        high16IdRule = re.compile(r'const/high16[ ]*v[0-9][0-9]*,[ ]*0x(?:[1-9a-f]|7f)[0-1][0-9a-f]')
 
         for smaliFile in self.smaliFileList:
             #print "start modify: %s" % smaliFile
@@ -77,20 +87,27 @@ class idtoname(object):
             fileStr = sf.read()
             modify = False
 
-            for matchId in normalIdRule.findall(fileStr):
+            for matchId in list(set(normalIdRule.findall(fileStr))):
                 name = self.idToNameMap.get(matchId, None)
                 if name is not None:
                     fileStr = fileStr.replace(matchId, r'#%s#t' % name)
                     modify = True
                     Log.d("change id from %s to name %s" % (matchId, name))
 
-            for matchArrIdStr in  arrayIdRule.findall(fileStr):
+            for matchArrIdStr in  list(set(arrayIdRule.findall(fileStr))):
                 matchArrId = self.getArrayId(matchArrIdStr)
                 arrName = self.idToNameMap.get(matchArrId, None)
                 if arrName is not None:
                     fileStr = fileStr.replace(matchArrIdStr, r'#%s#a' % arrName)
                     modify = True
                     Log.d("change array id from %s to name %s" % (matchArrIdStr, arrName))
+
+            for matchHigh16IdStr in list(set(high16IdRule.findall(fileStr))):
+                (rId, preStr) = self.getIdByHigh16(matchHigh16IdStr)
+                name = self.idToNameMap.get(rId, None)
+                if name is not None:
+                    fileStr = fileStr.replace(matchHigh16IdStr, r'%s#%s#h' % (preStr, name))
+                    modify = True
 
             if modify is True:
                 sf.seek(0, 0)
@@ -105,13 +122,17 @@ class Log:
     def d(message):
         if Log.DEBUG: print message
 
+    @staticmethod
+    def i(message):
+        print message
+
 def main():
     print "start change id to name...."
     if len(sys.argv) == 3:
         idtoname(sys.argv[1], sys.argv[2]).idtoname()
     else:
-        print "USAGE: idtoname.py public.xml DIRECTORY"
-        print "eg: idtoname.py public.xml framework.jar.out"
+        print "USAGE: idtoname public.xml DIRECTORY"
+        print "eg: idtoname public.xml framework.jar.out"
         print "change all of the id in framework.jar.out to type@name"
         sys.exit(1)
 

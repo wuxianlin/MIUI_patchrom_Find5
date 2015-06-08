@@ -392,14 +392,14 @@
     const/4 v4, 0x0
 
     .local v4, "listener":Landroid/content/DialogInterface$OnClickListener;
-    const v6, 0x104000a
+    sget v6, Lcom/android/internal/R$string;->ok:I
 
     .local v6, "positiveButtonText":I
     if-eqz v3, :cond_5
 
     if-eqz p1, :cond_4
 
-    const v10, 0x1040554
+    sget v10, Lcom/android/internal/R$string;->sim_added_title:I
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -436,7 +436,7 @@
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     if-eqz v5, :cond_1
 
-    const/high16 v10, 0x1040000
+    sget v10, Lcom/android/internal/R$string;->cancel:I
 
     const/4 v12, 0x0
 
@@ -527,7 +527,7 @@
     .end local v0    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v1    # "dialog":Landroid/app/AlertDialog;
     :cond_4
-    const v10, 0x104054f
+    sget v10, Lcom/android/internal/R$string;->sim_removed_title:I
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -550,7 +550,7 @@
     goto/16 :goto_0
 
     :cond_6
-    const v10, 0x104054f
+    sget v10, Lcom/android/internal/R$string;->sim_removed_title:I
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
