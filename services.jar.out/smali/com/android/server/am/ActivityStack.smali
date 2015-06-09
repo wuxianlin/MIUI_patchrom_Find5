@@ -818,24 +818,18 @@
 
     .line 994
     monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 998
     :goto_0
-    #invoke-direct {p0, p1}, Lcom/android/server/am/ActivityStack;->updatePrivacyGuardNotificationLocked(Lcom/android/server/am/ActivityRecord;)V
-
-    .line 999
     return-void
 
     .line 994
     :catchall_0
     move-exception v1
 
-    :try_start_1
     monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
 
@@ -1924,115 +1918,6 @@
     .line 618
     :cond_0
     return-void
-.end method
-
-.method private final updatePrivacyGuardNotificationLocked(Lcom/android/server/am/ActivityRecord;)V
-    .locals 6
-    .param p1, "next"    # Lcom/android/server/am/ActivityRecord;
-
-    .prologue
-    .line 1707
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
-
-    iget-object v2, v3, Lcom/android/server/am/ActivityStackSupervisor;->mPrivacyGuardPackageName:Ljava/lang/String;
-
-    .line 1708
-    .local v2, "privacyGuardPackageName":Ljava/lang/String;
-    if-eqz v2, :cond_1
-
-    iget-object v3, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    .line 1726
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 1712
-    :cond_1
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mAppOpsService:Lcom/android/server/AppOpsService;
-
-    iget-object v4, p1, Lcom/android/server/am/ActivityRecord;->app:Lcom/android/server/am/ProcessRecord;
-
-    iget v4, v4, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    iget-object v5, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
-
-    #invoke-virtual {v3, v4, v5}, Lcom/android/server/AppOpsService;->getPrivacyGuardSettingForPackage(ILjava/lang/String;)Z
-
-    #move-result v1
-    const/4 v1, 0x1
-    .line 1715
-    .local v1, "privacy":Z
-    if-eqz v2, :cond_2
-
-    if-nez v1, :cond_2
-
-    .line 1716
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mHandler:Landroid/os/Handler;
-
-    const/16 v4, 0x29
-
-    iget v5, p1, Lcom/android/server/am/ActivityRecord;->userId:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v4, v5}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 1718
-    .local v0, "msg":Landroid/os/Message;
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
-    .line 1719
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
-
-    const/4 v4, 0x0
-
-    iput-object v4, v3, Lcom/android/server/am/ActivityStackSupervisor;->mPrivacyGuardPackageName:Ljava/lang/String;
-
-    goto :goto_0
-
-    .line 1720
-    .end local v0    # "msg":Landroid/os/Message;
-    :cond_2
-    if-eqz v1, :cond_0
-
-    .line 1721
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mHandler:Landroid/os/Handler;
-
-    const/16 v4, 0x28
-
-    invoke-virtual {v3, v4, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 1723
-    .restart local v0    # "msg":Landroid/os/Message;
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
-    .line 1724
-    iget-object v3, p0, Lcom/android/server/am/ActivityStack;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
-
-    iget-object v4, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
-
-    iput-object v4, v3, Lcom/android/server/am/ActivityStackSupervisor;->mPrivacyGuardPackageName:Ljava/lang/String;
-
-    goto :goto_0
 .end method
 
 
