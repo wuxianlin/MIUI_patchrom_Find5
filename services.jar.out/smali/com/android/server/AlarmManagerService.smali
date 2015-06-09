@@ -85,8 +85,6 @@
     .end annotation
 .end field
 
-.field private final mAppOps:Landroid/app/AppOpsManager;
-
 .field private final mBlockedUids:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -455,19 +453,6 @@
 
     .line 544
     :goto_0
-    iget-object v3, p0, Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
-
-    const-string v4, "appops"
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/app/AppOpsManager;
-
-    iput-object v3, p0, Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
-
-    .line 545
     return-void
 
     .line 541
@@ -631,17 +616,6 @@
     .prologue
     .line 72
     iget-object v0, p0, Lcom/android/server/AlarmManagerService;->mTriggeredUids:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1800(Lcom/android/server/AlarmManagerService;)Landroid/app/AppOpsManager;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/server/AlarmManagerService;
-
-    .prologue
-    .line 72
-    iget-object v0, p0, Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
 
     return-object v0
 .end method
@@ -1601,7 +1575,7 @@
     goto :goto_0
 .end method
 
-.method private removeWithReportLocked(Landroid/app/PendingIntent;)Z
+.method public removeLocked(Landroid/app/PendingIntent;)V
     .locals 16
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
@@ -1817,7 +1791,7 @@
 
     .line 906
     :cond_4
-    return v11
+    return-void
 .end method
 
 .method private rescheduleKernelAlarmsLocked()V
@@ -1953,7 +1927,7 @@
 .method private native set(IIJJ)V
 .end method
 
-.method private setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;Z)V
+.method private setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;)V
     .locals 22
     .param p1, "type"    # I
     .param p2, "when"    # J
@@ -1965,7 +1939,6 @@
     .param p13, "isStandalone"    # Z
     .param p14, "doValidate"    # Z
     .param p15, "workSource"    # Landroid/os/WorkSource;
-    .param p16, "wakeupFiltered"    # Z
 
     .prologue
     .line 638
@@ -1991,39 +1964,6 @@
 
     .line 642
     .local v5, "a":Lcom/android/server/AlarmManagerService$Alarm;
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p12
-
-    invoke-direct {v0, v1}, Lcom/android/server/AlarmManagerService;->removeWithReportLocked(Landroid/app/PendingIntent;)Z
-
-    move-result v20
-
-    .line 646
-    .local v20, "foundExistingWakeup":Z
-    if-nez v20, :cond_0
-
-    if-eqz p16, :cond_0
-
-    .line 647
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
-
-    const/16 v7, 0x2e
-
-    invoke-virtual/range {p12 .. p12}, Landroid/app/PendingIntent;->getCreatorUid()I
-
-    move-result v8
-
-    invoke-virtual/range {p12 .. p12}, Landroid/app/PendingIntent;->getCreatorPackage()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v6, v7, v8, v9}, Landroid/app/AppOpsManager;->noteOpNoThrow(IILjava/lang/String;)I
-
-    .line 652
-    :cond_0
     if-eqz p13, :cond_2
 
     const/16 v21, -0x1
@@ -2437,15 +2377,13 @@
 
     move-object/from16 v21, v0
 
-    const/16 v22, 0x0
-
     move-object/from16 v6, p0
 
     move v7, v10
 
     move-wide v10, v4
 
-    invoke-direct/range {v6 .. v22}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;Z)V
+    invoke-direct/range {v6 .. v21}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;)V
 
     .line 1201
     .end local v4    # "nextElapsed":J
@@ -3911,15 +3849,13 @@
 
     move-object/from16 v21, v0
 
-    const/16 v22, 0x0
-
     move-object/from16 v6, p0
 
     move-wide v10, v4
 
     move/from16 v20, p1
 
-    invoke-direct/range {v6 .. v22}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;Z)V
+    invoke-direct/range {v6 .. v21}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;)V
 
     .line 423
     add-int/lit8 v27, v27, 0x1
@@ -4133,18 +4069,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
-.end method
-
-.method public removeLocked(Landroid/app/PendingIntent;)V
-    .locals 0
-    .param p1, "operation"    # Landroid/app/PendingIntent;
-
-    .prologue
-    .line 871
-    invoke-direct {p0, p1}, Lcom/android/server/AlarmManagerService;->removeWithReportLocked(Landroid/app/PendingIntent;)Z
-
-    .line 872
-    return-void
 .end method
 
 .method public removeLocked(Ljava/lang/String;)V
@@ -4582,59 +4506,6 @@
     .line 605
     .local v15, "maxElapsed":J
     :goto_1
-    const/16 v23, 0x0
-
-    .line 606
-    .local v23, "wakeupFiltered":Z
-    invoke-virtual/range {p8 .. p8}, Landroid/app/PendingIntent;->getCreatorUid()I
-
-    move-result v7
-
-    const/16 v8, 0x2710
-
-    if-lt v7, v8, :cond_6
-
-    if-eqz p1, :cond_5
-
-    const/4 v7, 0x2
-
-    move/from16 v0, p1
-
-    if-ne v0, v7, :cond_6
-
-    :cond_5
-    move-object/from16 v0, p0
-
-    iget-object v7, v0, Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
-
-    const/16 v8, 0x2e
-
-    invoke-virtual/range {p8 .. p8}, Landroid/app/PendingIntent;->getCreatorUid()I
-
-    move-result v9
-
-    invoke-virtual/range {p8 .. p8}, Landroid/app/PendingIntent;->getCreatorPackage()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v7, v8, v9, v10}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
-
-    move-result v7
-
-    if-eqz v7, :cond_6
-
-    .line 614
-    if-nez p1, :cond_9
-
-    .line 615
-    const/16 p1, 0x1
-
-    .line 620
-    :goto_2
-    const/16 v23, 0x1
-
-    .line 623
-    :cond_6
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
@@ -4665,7 +4536,7 @@
     move-object/from16 v22, p10
 
     :try_start_0
-    invoke-direct/range {v7 .. v23}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;Z)V
+    invoke-direct/range {v7 .. v22}, Lcom/android/server/AlarmManagerService;->setImplLocked(IJJJJJLandroid/app/PendingIntent;ZZLandroid/os/WorkSource;)V
 
     .line 632
     monitor-exit v28
@@ -4683,7 +4554,6 @@
 
     .line 599
     .end local v15    # "maxElapsed":J
-    .end local v23    # "wakeupFiltered":Z
     :cond_7
     const-wide/16 v7, 0x0
 
@@ -4708,13 +4578,6 @@
 
     .restart local v15    # "maxElapsed":J
     goto :goto_1
-
-    .line 617
-    .restart local v23    # "wakeupFiltered":Z
-    :cond_9
-    const/16 p1, 0x3
-
-    goto :goto_2
 .end method
 
 .method public setTime(J)V

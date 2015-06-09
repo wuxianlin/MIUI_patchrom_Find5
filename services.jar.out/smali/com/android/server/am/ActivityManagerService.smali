@@ -54,8 +54,6 @@
 
 .field static final CANCEL_HEAVY_NOTIFICATION_MSG:I = 0x19
 
-.field static final CANCEL_PRIVACY_NOTIFICATION_MSG:I = 0x29
-
 .field static final CHECK_EXCESSIVE_WAKE_LOCKS_MSG:I = 0x1b
 
 .field static final CLEAR_DNS_CACHE_MSG:I = 0x1c
@@ -203,8 +201,6 @@
 .field static final PERSIST_URI_GRANTS_MSG:I = 0x26
 
 .field static final POST_HEAVY_NOTIFICATION_MSG:I = 0x18
-
-.field static final POST_PRIVACY_NOTIFICATION_MSG:I = 0x28
 
 .field static final POWER_CHECK_DELAY:I = 0xdbba0
 

@@ -1470,92 +1470,12 @@
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->args:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    if-eqz v3, :cond_1b
+    if-eqz v3, :cond_1c
 
     .line 969
     const/16 v30, 0x1
 
-    .line 972
-    :cond_1b
-    if-nez v58, :cond_1c
-
-    move-object/from16 v0, v51
-
-    iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->pkg:Landroid/content/pm/PackageParser$Package;
-
-    iget-object v3, v3, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    # invokes: Lcom/android/server/pm/PackageManagerService;->isSystemApp(Landroid/content/pm/ApplicationInfo;)Z
-    invoke-static {v3}, Lcom/android/server/pm/PackageManagerService;->access$800(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1c
-
-    .line 973
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$PackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
-
-    iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string v4, "privacy_guard_default"
-
-    const/4 v5, 0x0
-
-    const/4 v7, -0x2
-
-    invoke-static {v3, v4, v5, v7}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-ne v3, v4, :cond_24
-
-    const/16 v48, 0x1
-
-    .line 977
-    .local v48, "privacyGuard":Z
-    :goto_a
-    if-eqz v48, :cond_1c
-
-    .line 978
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$PackageHandler;->this$0:Lcom/android/server/pm/PackageManagerService;
-
-    # getter for: Lcom/android/server/pm/PackageManagerService;->mAppOps:Landroid/app/AppOpsManager;
-    invoke-static {v3}, Lcom/android/server/pm/PackageManagerService;->access$900(Lcom/android/server/pm/PackageManagerService;)Landroid/app/AppOpsManager;
-
-    move-result-object v3
-
-    move-object/from16 v0, v51
-
-    iget-object v4, v0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->pkg:Landroid/content/pm/PackageParser$Package;
-
-    iget-object v4, v4, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v4, v4, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    move-object/from16 v0, v51
-
-    iget-object v5, v0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->pkg:Landroid/content/pm/PackageParser$Package;
-
-    iget-object v5, v5, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    const/4 v7, 0x1
-
-    #invoke-virtual {v3, v4, v5, v7}, Landroid/app/AppOpsManager;->setPrivacyGuardSettingForPackage(ILjava/lang/String;Z)V
-
     .line 985
-    .end local v48    # "privacyGuard":Z
     :cond_1c
     const/16 v3, 0xc26
 
@@ -1817,20 +1737,10 @@
 
     goto/16 :goto_9
 
-    .line 973
-    .restart local v12    # "category":Ljava/lang/String;
-    .restart local v58    # "update":Z
-    :cond_24
-    const/16 v48, 0x0
-
-    goto/16 :goto_a
-
     .line 994
     .end local v6    # "extras":Landroid/os/Bundle;
     .end local v9    # "firstUsers":[I
-    .end local v12    # "category":Ljava/lang/String;
     .end local v16    # "updateUsers":[I
-    .end local v58    # "update":Z
     :catchall_2
     move-exception v3
 

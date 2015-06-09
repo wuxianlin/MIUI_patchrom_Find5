@@ -485,32 +485,6 @@
 
     invoke-static {v1}, Landroid/app/ActivityManagerNative;->noteWakeupAlarm(Landroid/app/PendingIntent;)V
 
-    .line 1434
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/android/server/AlarmManagerService$AlarmThread;->this$0:Lcom/android/server/AlarmManagerService;
-
-    # getter for: Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
-    invoke-static {v1}, Lcom/android/server/AlarmManagerService;->access$1800(Lcom/android/server/AlarmManagerService;)Landroid/app/AppOpsManager;
-
-    move-result-object v1
-
-    const/16 v7, 0x2e
-
-    iget-object v8, v13, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
-
-    invoke-virtual {v8}, Landroid/app/PendingIntent;->getCreatorUid()I
-
-    move-result v8
-
-    iget-object v9, v13, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
-
-    invoke-virtual {v9}, Landroid/app/PendingIntent;->getCreatorPackage()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v1, v7, v8, v9}, Landroid/app/AppOpsManager;->noteOpNoThrow(IILjava/lang/String;)I
-
     .line 1391
     .end local v14    # "bs":Lcom/android/server/AlarmManagerService$BroadcastStats;
     .end local v16    # "fs":Lcom/android/server/AlarmManagerService$FilterStats;
