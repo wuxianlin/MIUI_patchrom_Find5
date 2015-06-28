@@ -20,7 +20,7 @@ local-miui-removed-apps :=
 
 local-miui-removed-priv-apps := 
 
-local-miui-modified-apps := MiuiFramework Settings TeleService MiuiSystemUI DeskClock Music
+local-miui-modified-apps := miuisystem Settings TeleService MiuiSystemUI DeskClock Music
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -51,9 +51,6 @@ local-pre-zip-misc:
 	cp -rf other/boot.img $(ZIP_DIR)/boot.img
 
 	cp -rf other/system $(ZIP_DIR)/
-
-	rm -rf $(ZIP_DIR)/system/app/Nfc.apk
-	cp -rf stockrom/system/app/Nfc.apk $(ZIP_DIR)/system/app/com.android.nfc-1.apk
 
 	mv $(ZIP_DIR)/system/app/QuickSearchBox.apk $(ZIP_DIR)/system/priv-app/QuickSearchBox.apk
 

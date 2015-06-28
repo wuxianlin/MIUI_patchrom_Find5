@@ -61,7 +61,7 @@ if [ $1 = "DeskClock" ];then
     other/tools/nametoid.py framework-res/res/values/public.xml $2/smali
 fi
 
-if [ $1 = "MiuiFramework" ];then
+if [ $1 = "miuisystem" ];then
     applyPatch $1 $2
     cp $1/find5.xml $2/assets/device_features/
     cp $1/find5_legacy.xml $2/assets/device_features/

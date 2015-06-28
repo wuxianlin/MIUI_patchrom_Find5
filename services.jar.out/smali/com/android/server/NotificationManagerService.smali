@@ -5027,22 +5027,7 @@
 
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mScreenOn:Z
 
-    #if-eqz v8, :cond_7
-    if-nez v8, :cond_6
-
-    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
-
-    iget-object v9, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
-
-    iget-object v9, v9, Lcom/android/server/NotificationManagerService$NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
-
-    const-string v10, "_led"
-
-    invoke-static {v8, v9, v10}, Lmiui/util/NotificationFilterHelper;->isAllowed(Landroid/content/Context;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_7
+    if-eqz v8, :cond_7
 
     iget-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mDreaming:Z
 
@@ -5065,7 +5050,22 @@
 
     move-result v8
 
-    if-eqz v8, :cond_8
+    if-nez v8, :cond_wxl
+
+    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v9, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+
+    iget-object v9, v9, Lcom/android/server/NotificationManagerService$NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
+
+    const-string v10, "_led"
+
+    invoke-static {v8, v9, v10}, Lmiui/util/NotificationFilterHelper;->isAllowed(Landroid/content/Context;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_8
+    :cond_wxl
 
     .line 2527
     const/4 v0, 0x0
@@ -5136,19 +5136,6 @@
     .line 2556
     .local v3, "ledOffMS":I
     :goto_5
-
-    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
-
-    iget v9, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
-
-    invoke-static {v8, v6, v9}, Lcom/android/server/NotificationLightController;->updateNotificationLight(Landroid/content/Context;Landroid/app/Notification;I)V
-
-    iget v2, v6, Landroid/app/Notification;->ledARGB:I
-
-    iget v4, v6, Landroid/app/Notification;->ledOnMS:I
-
-    iget v3, v6, Landroid/app/Notification;->ledOffMS:I
-
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
     const/4 v9, 0x1
@@ -5200,6 +5187,18 @@
     .line 2548
     .restart local v4    # "ledOnMS":I
     iget v3, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
+
+    iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+
+    iget v9, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
+
+    invoke-static {v8, v6, v9}, Lcom/android/server/NotificationLightController;->updateNotificationLight(Landroid/content/Context;Landroid/app/Notification;I)V
+
+    iget v2, v6, Landroid/app/Notification;->ledARGB:I
+
+    iget v4, v6, Landroid/app/Notification;->ledOnMS:I
+
+    iget v3, v6, Landroid/app/Notification;->ledOffMS:I
 
     .restart local v3    # "ledOffMS":I
     goto :goto_5

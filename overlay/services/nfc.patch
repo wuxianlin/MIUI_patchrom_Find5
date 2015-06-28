@@ -1,0 +1,23 @@
+From f279631fdf320532807c5e2607ee340f7fdc073e Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Fri, 26 Jun 2015 14:45:47 +0800
+Subject: [PATCH] fix nfc
+
+---
+ .../server/pm/PackageManagerServiceInjector.smali  |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/services/smali/com/android/server/pm/PackageManagerServiceInjector.smali
++++ b/services/smali/com/android/server/pm/PackageManagerServiceInjector.smali
+@@ -93,7 +93,7 @@
+ 
+     sget-boolean v0, Lmiui/os/Build;->IS_MI2A:Z
+ 
+-    if-nez v0, :cond_0
++    goto :cond_0
+ 
+     sget-object v0, Lcom/android/server/pm/PackageManagerServiceInjector;->sIgnoreApks:Ljava/util/Set;
+ 
+-- 
+1.7.9.5
+

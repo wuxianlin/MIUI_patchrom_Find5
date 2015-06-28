@@ -369,7 +369,7 @@ system/etc/.has_su_daemon 0 0 644
 system/etc/hosts 0 0 644
 system/etc/init.d 0 0 755
 system/etc/init.d/00banner 0 2000 755
-system/etc/init.d/51miuimusic 0 2000 755
+system/etc/init.d/91fixoverlays 0 2000 755
 system/etc/init.d/90userinit 0 2000 755
 system/etc/init.qcom.bt.sh 0 0 644
 system/etc/install-cm-recovery.sh 0 0 544
