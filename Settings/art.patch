@@ -1,0 +1,22 @@
+From 96286dbdf7346ff4d6a2ba14b790ba713f4e930d Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Sun, 28 Jun 2015 19:37:29 +0800
+Subject: [PATCH] add runtime select
+
+---
+ Settings/res/xml/development_prefs.xml |    1 +
+ 1 file changed, 1 insertion(+)
+
+--- a/Settings/res/xml/development_prefs.xml
++++ b/Settings/res/xml/development_prefs.xml
+@@ -6,6 +6,7 @@
+     <CheckBoxPreference android:title="@string/development_enable" android:key="development_enable" />
+     <PreferenceCategory />
+     <CheckBoxPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" />
++    <ListPreference android:key="select_runtime" android:title="@string/select_runtime_title" android:dialogTitle="@string/select_runtime_dialog_title" android:entries="@array/select_runtime_titles" android:entryValues="@array/select_runtime_values" />
+     <CheckBoxPreference android:persistent="false" android:title="@string/unlock_set_enter_system" android:key="unlock_enter_system" android:summary="@string/unlock_set_enter_system_summary" />
+     <ListPreference android:entries="@array/hdcp_checking_titles" android:title="@string/hdcp_checking_title" android:key="hdcp_checking" android:dialogTitle="@string/hdcp_checking_dialog_title" android:entryValues="@array/hdcp_checking_values" />
+     <CheckBoxPreference android:title="@string/bt_hci_snoop_log" android:key="bt_hci_snoop_log" android:summary="@string/bt_hci_snoop_log_summary" />
+-- 
+1.7.9.5
+

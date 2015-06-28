@@ -4793,204 +4793,68 @@
 .end method
 
 .method private updateNotificationsLocked()V
-    .locals 14
+    .locals 4
 
     .prologue
     invoke-static {}, Lcom/google/android/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
-    move-result-object v6
-
-    .local v6, "beforeNotifs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
-    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
-
-    invoke-virtual {v6, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-    
-    goto :cond_3
-
-    invoke-direct {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    .local v7, "currentTime":J
-    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPolicy:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    .local v0, "beforeNotifs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
+    iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
 
-    move-result-object v9
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .local v9, "i$":Ljava/util/Iterator;
+    iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
+
+    iget-boolean v3, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mRestrictBackground:Z
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "NetworkPolicy:allowBackground"
+
+    invoke-direct {p0, v3}, Lcom/android/server/net/NetworkPolicyManagerService;->enqueueRestrictedNotification(Ljava/lang/String;)V
+
     :cond_0
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, "i$":Ljava/util/Iterator;
+    :cond_1
     :goto_0
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_3
+    if-eqz v3, :cond_2
 
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v2
 
-    check-cast v10, Landroid/net/NetworkPolicy;
-
-    .line 643
-    .local v10, "policy":Landroid/net/NetworkPolicy;
-    iget-object v0, v10, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
-
-    invoke-direct {p0, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->isTemplateRelevant(Landroid/net/NetworkTemplate;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 644
-    invoke-virtual {v10}, Landroid/net/NetworkPolicy;->hasCycle()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 646
-    invoke-static {v7, v8, v10}, Landroid/net/NetworkPolicyManager;->computeLastCycleBoundary(JLandroid/net/NetworkPolicy;)J
-
-    move-result-wide v2
+    check-cast v2, Ljava/lang/String;
 
     .line 647
-    .local v2, "start":J
-    move-wide v4, v7
+    .local v2, "tag":Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
 
-    .line 648
-    .local v4, "end":J
-    iget-object v1, v10, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    move-object v0, p0
+    move-result v3
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/net/NetworkPolicyManagerService;->getTotalBytes(Landroid/net/NetworkTemplate;JJ)J
-
-    move-result-wide v12
-
-    .line 650
-    .local v12, "totalBytes":J
-    invoke-virtual {v10, v12, v13}, Landroid/net/NetworkPolicy;->isOverLimit(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 651
-    iget-wide v0, v10, Landroid/net/NetworkPolicy;->lastLimitSnooze:J
-
-    cmp-long v0, v0, v2
-
-    if-ltz v0, :cond_1
-
-    .line 652
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v10, v0, v12, v13}, Lcom/android/server/net/NetworkPolicyManagerService;->enqueueNotification(Landroid/net/NetworkPolicy;IJ)V
-
-    goto :goto_0
-
-    .line 654
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v10, v0, v12, v13}, Lcom/android/server/net/NetworkPolicyManagerService;->enqueueNotification(Landroid/net/NetworkPolicy;IJ)V
+    if-nez v3, :cond_1
 
     .line 655
-    iget-object v0, v10, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
-
-    invoke-direct {p0, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->notifyOverLimitLocked(Landroid/net/NetworkTemplate;)V
+    invoke-direct {p0, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->cancelNotification(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 659
+    .end local v2    # "tag":Ljava/lang/String;
     :cond_2
-    iget-object v0, v10, Landroid/net/NetworkPolicy;->template:Landroid/net/NetworkTemplate;
-
-    invoke-direct {p0, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->notifyUnderLimitLocked(Landroid/net/NetworkTemplate;)V
-
-    .line 661
-    invoke-virtual {v10, v12, v13}, Landroid/net/NetworkPolicy;->isOverWarning(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-wide v0, v10, Landroid/net/NetworkPolicy;->lastWarningSnooze:J
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    .line 662
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v10, v0, v12, v13}, Lcom/android/server/net/NetworkPolicyManagerService;->enqueueNotification(Landroid/net/NetworkPolicy;IJ)V
-
-    goto :goto_0
-
-    .line 668
-    .end local v2    # "start":J
-    .end local v4    # "end":J
-    .end local v10    # "policy":Landroid/net/NetworkPolicy;
-    .end local v12    # "totalBytes":J
-    :cond_3
-    iget-boolean v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mRestrictBackground:Z
-
-    if-eqz v0, :cond_4
-
-    .line 669
-    const-string v0, "NetworkPolicy:allowBackground"
-
-    invoke-direct {p0, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->enqueueRestrictedNotification(Ljava/lang/String;)V
-
-    .line 673
-    :cond_4
-    invoke-virtual {v6}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    :cond_5
-    :goto_1
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/lang/String;
-
-    .line 674
-    .local v11, "tag":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mActiveNotifs:Ljava/util/HashSet;
-
-    invoke-virtual {v0, v11}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 675
-    invoke-direct {p0, v11}, Lcom/android/server/net/NetworkPolicyManagerService;->cancelNotification(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 678
-    .end local v11    # "tag":Ljava/lang/String;
-    :cond_6
     return-void
 .end method
 

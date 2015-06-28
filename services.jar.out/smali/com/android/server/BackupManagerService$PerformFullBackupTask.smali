@@ -1982,33 +1982,14 @@
 
     .line 2812
     .restart local v22    # "pkg":Landroid/content/pm/PackageInfo;
-    move-object/from16 v0, v22
-
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    move-object/from16 v25, v0
-
-    move-object/from16 v0, v25
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move/from16 v25, v0
-
-    const v26, 0x8000
-
-    and-int v25, v25, v26
-
-    if-nez v25, :cond_3
-
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/BackupManagerService$PerformFullBackupTask;->mNoninteractive:Z
 
     move/from16 v25, v0
 
-    #if-eqz v25, :cond_4
+    if-eqz v25, :cond_4
 
-    :cond_3
     move-object/from16 v0, v22
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;

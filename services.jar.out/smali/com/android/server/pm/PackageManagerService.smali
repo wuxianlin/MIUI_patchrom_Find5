@@ -9843,45 +9843,7 @@
 
     move-result v2
 
-    goto :cond_0
-
-    .line 10310
-    const-string v2, "PackageManager"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Not removing package "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ": has active device admin"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 10311
-    const/4 v2, -0x2
-
-    .line 10379
-    :goto_0
-    return v2
+    if-eqz v2, :cond_0
 
     .line 10314
     :cond_0
@@ -10175,7 +10137,8 @@
 
     const/4 v2, 0x1
 
-    goto/16 :goto_0
+    :goto_wxl
+    return v2
 
     .line 10328
     .end local v6    # "allUsers":[I
@@ -10242,7 +10205,7 @@
     :cond_9
     const/4 v2, -0x1
 
-    goto/16 :goto_0
+    goto :goto_wxl
 .end method
 
 .method private deleteSystemPackageLI(Lcom/android/server/pm/PackageSetting;[I[ZILcom/android/server/pm/PackageManagerService$PackageRemovedInfo;Z)Z
