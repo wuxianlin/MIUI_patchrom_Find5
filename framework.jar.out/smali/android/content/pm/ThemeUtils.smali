@@ -1543,9 +1543,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    const/4 v1, 0x0
-
-    goto :goto_miui_0
     .line 515
     :try_start_0
     const-string v1, "com.android.systemui"
@@ -1571,7 +1568,6 @@
     .line 521
     .end local v0    # "uiContext":Landroid/content/Context;
     :goto_0
-    :goto_miui_0
     return-object v1
 
     .line 518
