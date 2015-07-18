@@ -1568,6 +1568,7 @@
     .line 521
     .end local v0    # "uiContext":Landroid/content/Context;
     :goto_0
+    const/4 v1, 0x0
     return-object v1
 
     .line 518
