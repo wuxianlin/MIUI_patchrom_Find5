@@ -1982,13 +1982,13 @@
 
     .line 2812
     .restart local v22    # "pkg":Landroid/content/pm/PackageInfo;
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/server/BackupManagerService$PerformFullBackupTask;->mNoninteractive:Z
+    #iget-boolean v0, v0, Lcom/android/server/BackupManagerService$PerformFullBackupTask;->mNoninteractive:Z
 
-    move/from16 v25, v0
+    #move/from16 v25, v0
 
-    if-eqz v25, :cond_4
+    #if-eqz v25, :cond_4
 
     move-object/from16 v0, v22
 
