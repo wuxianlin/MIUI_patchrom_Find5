@@ -79,6 +79,9 @@ ro.qc.sdk.izat.service_mask=0x0
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
 
+# enable auto-brightness adjustment
+persist.power.useautobrightadj=true
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
@@ -96,6 +99,7 @@ ro.baseband.arch=mdm
 ro.opengles.version=196608
 ro.product.wireless=WCN3660
 ro.qualcomm.bt.hci_transport=smd
+ro.telephony.default_network=18
 ro.telephony.call_ring.multiple=false
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
@@ -135,20 +139,24 @@ ro.modversion=11-20150414-UNOFFICIAL-find5
 ro.cmlegal.url=https://www.cyanogenmod.org/docs/privacy
 persist.sys.recovery_update=false
 ro.cm.display.version=11-20150414-UNOFFICIAL-find5
+persist.sys.mcd_config_file=/system/etc/mcd_default.conf
+persist.sys.klo=on
 persist.sys.dalvik.vm.lib=libdvm.so
 dalvik.vm.lockprof.threshold=500
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
+
+# begin miui build properties
 persist.miui.overlay_density=true
 persist.miui.density=460
 ro.miui.has_real_blur=0
-ro.miui.has_handy_mode_sf=0
 ro.config.sms_received_sound=FadeIn.ogg
 ro.config.sms_delivered_sound=MessageComplete.ogg
 ro.com.android.mobiledata=false
-ro.product.manufacturer=Xiaomi
 ro.config.elder-ringtone=Angel.mp3
+keyguard.no_require_sim=true
 persist.sys.mitalk.enable=true
 ro.config.ringtone=Ring_Synth_04.ogg
 ro.config.notification_sound=pixiedust.ogg
 ro.config.alarm_alert=Alarm_Classic.ogg
+ro.miui.has_handy_mode_sf=0
