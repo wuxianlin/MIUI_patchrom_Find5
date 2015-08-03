@@ -1578,6 +1578,11 @@
 
     .line 605
     .local v15, "basePath":Ljava/lang/String;
+    if-nez p1, :cond_miui_00
+
+    return-void
+
+    :cond_miui_00
     const-string v1, "f"
 
     move-object/from16 v0, p5
