@@ -1964,6 +1964,12 @@
 
     .line 642
     .local v5, "a":Lcom/android/server/AlarmManagerService$Alarm;
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p12
+
+    invoke-virtual {v0, v1}, Lcom/android/server/AlarmManagerService;->removeLocked(Landroid/app/PendingIntent;)V
+
     if-eqz p13, :cond_2
 
     const/16 v21, -0x1
