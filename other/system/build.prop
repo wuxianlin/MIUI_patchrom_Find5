@@ -147,8 +147,7 @@ net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
 # begin miui build properties
-persist.miui.overlay_density=true
-persist.miui.density=460
+persist.sys.density=480
 ro.miui.has_real_blur=0
 ro.config.sms_received_sound=FadeIn.ogg
 ro.config.sms_delivered_sound=MessageComplete.ogg

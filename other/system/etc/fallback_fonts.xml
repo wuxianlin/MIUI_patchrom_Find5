@@ -84,6 +84,32 @@
             <file variant="compact">NotoSansDevanagariUI-Bold.ttf</file>
         </fileset>
     </family>
+    <!-- Gujarati should come after Devanagari -->
+    <family>
+        <fileset>
+            <file variant="elegant">NotoSansGujarati-Regular.ttf</file>
+            <file variant="elegant">NotoSansGujarati-Bold.ttf</file>
+        </fileset>
+    </family>
+    <family>
+        <fileset>
+            <file variant="compact">NotoSansGujaratiUI-Regular.ttf</file>
+            <file variant="compact">NotoSansGujaratiUI-Bold.ttf</file>
+        </fileset>
+    </family>
+    <!-- Gurmukhi should come after Devanagari -->
+    <family>
+        <fileset>
+            <file variant="elegant">NotoSansGurmukhi-Regular.ttf</file>
+            <file variant="elegant">NotoSansGurmukhi-Bold.ttf</file>
+        </fileset>
+    </family>
+    <family>
+        <fileset>
+            <file variant="compact">NotoSansGurmukhiUI-Regular.ttf</file>
+            <file variant="compact">NotoSansGurmukhiUI-Bold.ttf</file>
+        </fileset>
+    </family>
     <family>
         <fileset>
             <file variant="elegant">NotoSansTamil-Regular.ttf</file>
@@ -166,6 +192,18 @@
         <fileset>
             <file variant="compact">NotoSansLaoUI-Regular.ttf</file>
             <file variant="compact">NotoSansLaoUI-Bold.ttf</file>
+        </fileset>
+    </family>
+    <family>
+        <fileset>
+            <file variant="elegant">NotoSansMyanmar-Regular.ttf</file>
+            <file variant="elegant">NotoSansMyanmar-Bold.ttf</file>
+        </fileset>
+    </family>
+    <family>
+        <fileset>
+            <file variant="compact">NotoSansMyanmarUI-Regular.ttf</file>
+            <file variant="compact">NotoSansMyanmarUI-Bold.ttf</file>
         </fileset>
     </family>
     <family>

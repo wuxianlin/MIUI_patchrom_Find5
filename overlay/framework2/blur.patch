@@ -1,0 +1,23 @@
+From 5851bc719c05c8e62feb09444829a9647758daba Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Thu, 20 Aug 2015 20:05:25 +0800
+Subject: [PATCH] fix blur
+
+---
+ .../smali/miui/util/ScreenshotDrawable.smali       |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/framework2/smali/miui/util/ScreenshotDrawable.smali
++++ b/framework2/smali/miui/util/ScreenshotDrawable.smali
+@@ -55,7 +55,7 @@
+ 
+     const-string v0, "persist.sys.real_blur_black"
+ 
+-    const/16 v1, 0x45
++    const/4 v1, 0x0
+ 
+     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+ 
+-- 
+1.7.9.5
+

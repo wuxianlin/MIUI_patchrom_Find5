@@ -1,0 +1,187 @@
+From 11d68db1e038e1b7a8708d85eb8572ecfd36e740 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Sat, 6 Jun 2015 13:14:03 +0800
+Subject: [PATCH] add double-tap to sleep
+
+---
+ .../statusbar/phone/PhoneStatusBarView$6.smali     | 83 ++++++++++++++++++++++
+ .../statusbar/phone/PhoneStatusBarView.smali       | 47 +++++++++++-
+ 2 files changed, 128 insertions(+), 2 deletions(-)
+ create mode 100644 MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBarView$6.smali
+
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBarView$6.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBarView$6.smali
+@@ -0,0 +1,83 @@
++.class Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$6;
++.super Landroid/view/GestureDetector$SimpleOnGestureListener;
++.source "PhoneStatusBarView.java"
++
++
++# annotations
++.annotation system Ldalvik/annotation/EnclosingMethod;
++    value = Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
++.end annotation
++
++.annotation system Ldalvik/annotation/InnerClass;
++    accessFlags = 0x0
++    name = null
++.end annotation
++
++
++# instance fields
++.field final synthetic this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
++
++
++# direct methods
++.method constructor <init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)V
++    .locals 0
++
++    .prologue
++    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$6;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
++
++    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
++
++    return-void
++.end method
++
++
++# virtual methods
++.method public onDoubleTap(Landroid/view/MotionEvent;)Z
++    .locals 3
++    .param p1, "e"    # Landroid/view/MotionEvent;
++
++    .prologue
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$6;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
++
++    # getter for: Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mContext:Landroid/content/Context;
++    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->access$0(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)Landroid/content/Context;
++
++    move-result-object v1
++
++    const-string v2, "power"
++
++    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    .local v0, "pm":Landroid/os/PowerManager;
++    const-string v1, "PhoneStatusBarView"
++
++    const-string v2, "Gesture!!"
++
++    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    if-eqz v0, :cond_0
++
++    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
++
++    move-result-wide v1
++
++    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->goToSleep(J)V
++
++    :goto_0
++    const/4 v1, 0x1
++
++    return v1
++
++    :cond_0
++    const-string v1, "PhoneStatusBarView"
++
++    const-string v2, "getSystemService returned null PowerManager"
++
++    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    goto :goto_0
++.end method
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBarView.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBarView.smali
+@@ -12,6 +12,7 @@
+ 
+ .field mCapturingEvents:Z
+ 
++.field private mDoubleTapGesture:Landroid/view/GestureDetector;
+ .field mEndAlpha:I
+ 
+ .field mEndTime:J
+@@ -35,7 +36,7 @@
+ 
+ # direct methods
+ .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+-    .locals 2
++    .locals 3
+     .param p1, "context"    # Landroid/content/Context;
+     .param p2, "attrs"    # Landroid/util/AttributeSet;
+ 
+@@ -64,9 +65,29 @@
+ 
+     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mCapturingEvents:Z
+ 
++    new-instance v0, Landroid/view/GestureDetector;
++
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mContext:Landroid/content/Context;
++
++    new-instance v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$6;
++
++    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$6;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)V
++
++    invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
++
++    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDoubleTapGesture:Landroid/view/GestureDetector;
++
+     return-void
+ .end method
+ 
++.method static synthetic access$0(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)Landroid/content/Context;
++    .locals 1
++
++    iget-object v0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
++
++    return-object v0
++.end method
++
+ .method static synthetic access$000(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)Landroid/content/Context;
+     .locals 1
+     .param p0, "x0"    # Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
+@@ -654,7 +675,7 @@
+ .end method
+ 
+ .method public onTouchEvent(Landroid/view/MotionEvent;)Z
+-    .locals 2
++    .locals 4
+     .param p1, "event"    # Landroid/view/MotionEvent;
+ 
+     .prologue
+@@ -680,6 +701,28 @@
+     invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->interceptTouchEvent(Landroid/view/MotionEvent;)Z
+ 
+     :cond_2
++
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mContext:Landroid/content/Context;
++
++    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v1
++
++    const-string v2, "double_tap_sleep_gesture"
++
++    const/4 v3, 0x0
++
++    invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
++
++    move-result v1
++
++    if-eqz v1, :cond_3
++
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDoubleTapGesture:Landroid/view/GestureDetector;
++
++    invoke-virtual {v1, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
++
++    :cond_3
+     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mService:Lcom/android/systemui/statusbar/phone/PhoneStatusBar;
+ 
+     iget-boolean v1, v1, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mExpanded:Z
+-- 
+1.9.1
+
