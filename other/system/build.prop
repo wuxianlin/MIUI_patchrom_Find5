@@ -151,13 +151,6 @@ dalvik.vm.stack-trace-file=/data/anr/traces.txt
 # begin miui build properties
 persist.sys.density=480
 ro.miui.has_real_blur=0
-ro.config.sms_received_sound=FadeIn.ogg
-ro.config.sms_delivered_sound=MessageComplete.ogg
 ro.com.android.mobiledata=false
-ro.config.elder-ringtone=Angel.mp3
-keyguard.no_require_sim=true
 persist.sys.mitalk.enable=true
-ro.config.ringtone=Ring_Synth_04.ogg
-ro.config.notification_sound=pixiedust.ogg
-ro.config.alarm_alert=Alarm_Classic.ogg
 ro.miui.has_handy_mode_sf=0
