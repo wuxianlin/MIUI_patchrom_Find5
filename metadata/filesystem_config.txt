@@ -1868,7 +1868,7 @@ system/xbin/sha1sum 0 2000 755
 system/xbin/sha256sum 0 2000 755
 system/xbin/sha3sum 0 2000 755
 system/xbin/sha512sum 0 2000 755
-system/xbin/shelld 0 1000 6750
+system/xbin/shelld 0 1000 754
 system/xbin/showmap 0 2000 755
 system/xbin/showslab 0 2000 755
 system/xbin/sleep 0 2000 755
