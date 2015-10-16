@@ -62,7 +62,7 @@
 
     move-result v2
 
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
     if-lt v2, v3, :cond_1
 

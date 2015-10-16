@@ -2894,6 +2894,7 @@
     <public type="style" name="Theme.DeviceDefault.Dialog.NoFrame" id="0x0103031e" />
     <public type="style" name="webviewchromium_AutofillPopupWindow" id="0x0103031f" />
     <public type="style" name="webviewchromium_SelectPopupDialog" id="0x01030320" />
+    <public type="string" name="config_mms_user_agent_profile_url" id="0x0104002e" />
     <public type="string" name="cancel" id="0x01040000" />
     <public type="string" name="copy" id="0x01040001" />
     <public type="string" name="copyUrl" id="0x01040002" />
@@ -2940,7 +2941,6 @@
     <public type="string" name="db_wal_sync_mode" id="0x0104002b" />
     <public type="string" name="config_useragentprofile_url" id="0x0104002c" />
     <public type="string" name="config_mms_user_agent" id="0x0104002d" />
-    <public type="string" name="config_mms_user_agent_profile_url" id="0x0104002e" />
     <public type="string" name="config_isoImagePath" id="0x0104002f" />
     <public type="string" name="config_ntpServer" id="0x01040030" />
     <public type="string" name="config_wimaxServiceJarLocation" id="0x01040031" />
@@ -4413,109 +4413,111 @@
     <public type="string" name="restr_pin_error_too_short" id="0x010405ec" />
     <public type="string" name="restr_pin_try_later" id="0x010405ed" />
     <public type="string" name="immersive_mode_confirmation" id="0x010405ee" />
-    <public type="string" name="webviewchromium_actionbar_share" id="0x01040620" />
-    <public type="string" name="webviewchromium_actionbar_web_search" id="0x01040621" />
-    <public type="string" name="webviewchromium_accessibility_content_view" id="0x01040622" />
-    <public type="string" name="webviewchromium_date_picker_dialog_title" id="0x01040623" />
-    <public type="string" name="webviewchromium_date_picker_dialog_set" id="0x01040624" />
-    <public type="string" name="webviewchromium_date_picker_dialog_clear" id="0x01040625" />
-    <public type="string" name="webviewchromium_date_picker_dialog_other_button_label" id="0x01040626" />
-    <public type="string" name="webviewchromium_date_time_picker_dialog_title" id="0x01040627" />
-    <public type="string" name="webviewchromium_time_picker_dialog_title" id="0x01040628" />
-    <public type="string" name="webviewchromium_time_picker_dialog_am" id="0x01040629" />
-    <public type="string" name="webviewchromium_time_picker_dialog_pm" id="0x0104062a" />
-    <public type="string" name="webviewchromium_time_picker_dialog_hour_minute_separator" id="0x0104062b" />
-    <public type="string" name="webviewchromium_time_picker_dialog_minute_second_separator" id="0x0104062c" />
-    <public type="string" name="webviewchromium_time_picker_dialog_second_subsecond_separator" id="0x0104062d" />
-    <public type="string" name="webviewchromium_month_picker_dialog_title" id="0x0104062e" />
-    <public type="string" name="webviewchromium_week_picker_dialog_title" id="0x0104062f" />
-    <public type="string" name="webviewchromium_accessibility_datetime_picker_date" id="0x01040630" />
-    <public type="string" name="webviewchromium_accessibility_datetime_picker_time" id="0x01040631" />
-    <public type="string" name="webviewchromium_accessibility_date_picker_month" id="0x01040632" />
-    <public type="string" name="webviewchromium_accessibility_date_picker_week" id="0x01040633" />
-    <public type="string" name="webviewchromium_accessibility_date_picker_year" id="0x01040634" />
-    <public type="string" name="webviewchromium_accessibility_time_picker_hour" id="0x01040635" />
-    <public type="string" name="webviewchromium_accessibility_time_picker_minute" id="0x01040636" />
-    <public type="string" name="webviewchromium_accessibility_time_picker_second" id="0x01040637" />
-    <public type="string" name="webviewchromium_accessibility_time_picker_milli" id="0x01040638" />
-    <public type="string" name="webviewchromium_accessibility_time_picker_ampm" id="0x01040639" />
-    <public type="string" name="webviewchromium_media_player_error_title" id="0x0104063a" />
-    <public type="string" name="webviewchromium_media_player_error_text_invalid_progressive_playback" id="0x0104063b" />
-    <public type="string" name="webviewchromium_media_player_error_text_unknown" id="0x0104063c" />
-    <public type="string" name="webviewchromium_media_player_error_button" id="0x0104063d" />
-    <public type="string" name="webviewchromium_media_player_loading_video" id="0x0104063e" />
-    <public type="string" name="webviewchromium_color_picker_button_more" id="0x0104063f" />
-    <public type="string" name="webviewchromium_color_picker_hue" id="0x01040640" />
-    <public type="string" name="webviewchromium_color_picker_saturation" id="0x01040641" />
-    <public type="string" name="webviewchromium_color_picker_value" id="0x01040642" />
-    <public type="string" name="webviewchromium_color_picker_button_set" id="0x01040643" />
-    <public type="string" name="webviewchromium_color_picker_button_cancel" id="0x01040644" />
-    <public type="string" name="webviewchromium_color_picker_dialog_title" id="0x01040645" />
-    <public type="string" name="webviewchromium_color_picker_button_red" id="0x01040646" />
-    <public type="string" name="webviewchromium_color_picker_button_cyan" id="0x01040647" />
-    <public type="string" name="webviewchromium_color_picker_button_blue" id="0x01040648" />
-    <public type="string" name="webviewchromium_color_picker_button_green" id="0x01040649" />
-    <public type="string" name="webviewchromium_color_picker_button_magenta" id="0x0104064a" />
-    <public type="string" name="webviewchromium_color_picker_button_yellow" id="0x0104064b" />
-    <public type="string" name="webviewchromium_color_picker_button_black" id="0x0104064c" />
-    <public type="string" name="webviewchromium_color_picker_button_white" id="0x0104064d" />
-    <public type="string" name="webviewchromium_copy_to_clipboard_failure_message" id="0x0104064e" />
-    <public type="string" name="webviewchromium_low_memory_error" id="0x0104064f" />
-    <public type="string" name="webviewchromium_opening_file_error" id="0x01040650" />
-    <public type="string" name="webviewchromium_private_browsing_warning" id="0x01040651" />
-    <public type="string" name="webviewchromium_profiler_started_toast" id="0x01040652" />
-    <public type="string" name="webviewchromium_profiler_stopped_toast" id="0x01040653" />
-    <public type="string" name="webviewchromium_profiler_no_storage_toast" id="0x01040654" />
-    <public type="string" name="webviewchromium_profiler_error_toast" id="0x01040655" />
-    <public type="string" name="permlab_accessAllPrintJobs" id="0x010405ef" />
-    <public type="string" name="permdesc_accessAllPrintJobs" id="0x010405f0" />
-    <public type="string" name="status_bar_device_locked" id="0x010405f1" />
-    <public type="string" name="media_route_chooser_grouping_done" id="0x010405f2" />
-    <public type="string" name="wifi_display_notification_title" id="0x010405f3" />
-    <public type="string" name="wifi_display_notification_message" id="0x010405f4" />
-    <public type="string" name="mediaSize_iso_a0" id="0x010405f5" />
-    <public type="string" name="mediaSize_iso_a1" id="0x010405f6" />
-    <public type="string" name="mediaSize_iso_a2" id="0x010405f7" />
-    <public type="string" name="mediaSize_iso_a3" id="0x010405f8" />
-    <public type="string" name="mediaSize_iso_a4" id="0x010405f9" />
-    <public type="string" name="mediaSize_iso_a5" id="0x010405fa" />
-    <public type="string" name="mediaSize_iso_a6" id="0x010405fb" />
-    <public type="string" name="mediaSize_iso_a7" id="0x010405fc" />
-    <public type="string" name="mediaSize_iso_a8" id="0x010405fd" />
-    <public type="string" name="mediaSize_iso_a9" id="0x010405fe" />
-    <public type="string" name="mediaSize_iso_a10" id="0x010405ff" />
-    <public type="string" name="mediaSize_iso_b0" id="0x01040600" />
-    <public type="string" name="mediaSize_iso_b1" id="0x01040601" />
-    <public type="string" name="mediaSize_iso_b2" id="0x01040602" />
-    <public type="string" name="mediaSize_iso_b3" id="0x01040603" />
-    <public type="string" name="mediaSize_iso_b4" id="0x01040604" />
-    <public type="string" name="mediaSize_iso_b5" id="0x01040605" />
-    <public type="string" name="mediaSize_iso_b6" id="0x01040606" />
-    <public type="string" name="mediaSize_iso_b7" id="0x01040607" />
-    <public type="string" name="mediaSize_iso_b8" id="0x01040608" />
-    <public type="string" name="mediaSize_iso_b9" id="0x01040609" />
-    <public type="string" name="mediaSize_iso_b10" id="0x0104060a" />
-    <public type="string" name="mediaSize_iso_c0" id="0x0104060b" />
-    <public type="string" name="mediaSize_iso_c1" id="0x0104060c" />
-    <public type="string" name="mediaSize_iso_c2" id="0x0104060d" />
-    <public type="string" name="mediaSize_iso_c3" id="0x0104060e" />
-    <public type="string" name="mediaSize_iso_c4" id="0x0104060f" />
-    <public type="string" name="mediaSize_iso_c5" id="0x01040610" />
-    <public type="string" name="mediaSize_iso_c6" id="0x01040611" />
-    <public type="string" name="mediaSize_iso_c7" id="0x01040612" />
-    <public type="string" name="mediaSize_iso_c8" id="0x01040613" />
-    <public type="string" name="mediaSize_iso_c9" id="0x01040614" />
-    <public type="string" name="mediaSize_iso_c10" id="0x01040615" />
-    <public type="string" name="mediaSize_na_letter" id="0x01040616" />
-    <public type="string" name="mediaSize_na_gvrnmt_letter" id="0x01040617" />
-    <public type="string" name="mediaSize_na_legal" id="0x01040618" />
-    <public type="string" name="mediaSize_na_junior_legal" id="0x01040619" />
-    <public type="string" name="mediaSize_na_ledger" id="0x0104061a" />
-    <public type="string" name="mediaSize_na_tabloid" id="0x0104061b" />
-    <public type="string" name="permlab_accessInputFlinger" id="0x0104061e" />
-    <public type="string" name="permdesc_accessInputFlinger" id="0x0104061f" />
-    <public type="string" name="permlab_hotwordRecognition" id="0x0104061c" />
-    <public type="string" name="permdesc_hotwordRecognition" id="0x0104061d" />
+    <public type="string" name="permlab_bindJobService" id="0x010405ef" />
+    <public type="string" name="permdesc_bindJobService" id="0x010405f0" />
+    <public type="string" name="webviewchromium_actionbar_share" id="0x01040622" />
+    <public type="string" name="webviewchromium_actionbar_web_search" id="0x01040623" />
+    <public type="string" name="webviewchromium_accessibility_content_view" id="0x01040624" />
+    <public type="string" name="webviewchromium_date_picker_dialog_title" id="0x01040625" />
+    <public type="string" name="webviewchromium_date_picker_dialog_set" id="0x01040626" />
+    <public type="string" name="webviewchromium_date_picker_dialog_clear" id="0x01040627" />
+    <public type="string" name="webviewchromium_date_picker_dialog_other_button_label" id="0x01040628" />
+    <public type="string" name="webviewchromium_date_time_picker_dialog_title" id="0x01040629" />
+    <public type="string" name="webviewchromium_time_picker_dialog_title" id="0x0104062a" />
+    <public type="string" name="webviewchromium_time_picker_dialog_am" id="0x0104062b" />
+    <public type="string" name="webviewchromium_time_picker_dialog_pm" id="0x0104062c" />
+    <public type="string" name="webviewchromium_time_picker_dialog_hour_minute_separator" id="0x0104062d" />
+    <public type="string" name="webviewchromium_time_picker_dialog_minute_second_separator" id="0x0104062e" />
+    <public type="string" name="webviewchromium_time_picker_dialog_second_subsecond_separator" id="0x0104062f" />
+    <public type="string" name="webviewchromium_month_picker_dialog_title" id="0x01040630" />
+    <public type="string" name="webviewchromium_week_picker_dialog_title" id="0x01040631" />
+    <public type="string" name="webviewchromium_accessibility_datetime_picker_date" id="0x01040632" />
+    <public type="string" name="webviewchromium_accessibility_datetime_picker_time" id="0x01040633" />
+    <public type="string" name="webviewchromium_accessibility_date_picker_month" id="0x01040634" />
+    <public type="string" name="webviewchromium_accessibility_date_picker_week" id="0x01040635" />
+    <public type="string" name="webviewchromium_accessibility_date_picker_year" id="0x01040636" />
+    <public type="string" name="webviewchromium_accessibility_time_picker_hour" id="0x01040637" />
+    <public type="string" name="webviewchromium_accessibility_time_picker_minute" id="0x01040638" />
+    <public type="string" name="webviewchromium_accessibility_time_picker_second" id="0x01040639" />
+    <public type="string" name="webviewchromium_accessibility_time_picker_milli" id="0x0104063a" />
+    <public type="string" name="webviewchromium_accessibility_time_picker_ampm" id="0x0104063b" />
+    <public type="string" name="webviewchromium_media_player_error_title" id="0x0104063c" />
+    <public type="string" name="webviewchromium_media_player_error_text_invalid_progressive_playback" id="0x0104063d" />
+    <public type="string" name="webviewchromium_media_player_error_text_unknown" id="0x0104063e" />
+    <public type="string" name="webviewchromium_media_player_error_button" id="0x0104063f" />
+    <public type="string" name="webviewchromium_media_player_loading_video" id="0x01040640" />
+    <public type="string" name="webviewchromium_color_picker_button_more" id="0x01040641" />
+    <public type="string" name="webviewchromium_color_picker_hue" id="0x01040642" />
+    <public type="string" name="webviewchromium_color_picker_saturation" id="0x01040643" />
+    <public type="string" name="webviewchromium_color_picker_value" id="0x01040644" />
+    <public type="string" name="webviewchromium_color_picker_button_set" id="0x01040645" />
+    <public type="string" name="webviewchromium_color_picker_button_cancel" id="0x01040646" />
+    <public type="string" name="webviewchromium_color_picker_dialog_title" id="0x01040647" />
+    <public type="string" name="webviewchromium_color_picker_button_red" id="0x01040648" />
+    <public type="string" name="webviewchromium_color_picker_button_cyan" id="0x01040649" />
+    <public type="string" name="webviewchromium_color_picker_button_blue" id="0x0104064a" />
+    <public type="string" name="webviewchromium_color_picker_button_green" id="0x0104064b" />
+    <public type="string" name="webviewchromium_color_picker_button_magenta" id="0x0104064c" />
+    <public type="string" name="webviewchromium_color_picker_button_yellow" id="0x0104064d" />
+    <public type="string" name="webviewchromium_color_picker_button_black" id="0x0104064e" />
+    <public type="string" name="webviewchromium_color_picker_button_white" id="0x0104064f" />
+    <public type="string" name="webviewchromium_copy_to_clipboard_failure_message" id="0x01040650" />
+    <public type="string" name="webviewchromium_low_memory_error" id="0x01040651" />
+    <public type="string" name="webviewchromium_opening_file_error" id="0x01040652" />
+    <public type="string" name="webviewchromium_private_browsing_warning" id="0x01040653" />
+    <public type="string" name="webviewchromium_profiler_started_toast" id="0x01040654" />
+    <public type="string" name="webviewchromium_profiler_stopped_toast" id="0x01040655" />
+    <public type="string" name="webviewchromium_profiler_no_storage_toast" id="0x01040656" />
+    <public type="string" name="webviewchromium_profiler_error_toast" id="0x01040657" />
+    <public type="string" name="permlab_accessAllPrintJobs" id="0x010405f1" />
+    <public type="string" name="permdesc_accessAllPrintJobs" id="0x010405f2" />
+    <public type="string" name="status_bar_device_locked" id="0x010405f3" />
+    <public type="string" name="media_route_chooser_grouping_done" id="0x010405f4" />
+    <public type="string" name="wifi_display_notification_title" id="0x010405f5" />
+    <public type="string" name="wifi_display_notification_message" id="0x010405f6" />
+    <public type="string" name="mediaSize_iso_a0" id="0x010405f7" />
+    <public type="string" name="mediaSize_iso_a1" id="0x010405f8" />
+    <public type="string" name="mediaSize_iso_a2" id="0x010405f9" />
+    <public type="string" name="mediaSize_iso_a3" id="0x010405fa" />
+    <public type="string" name="mediaSize_iso_a4" id="0x010405fb" />
+    <public type="string" name="mediaSize_iso_a5" id="0x010405fc" />
+    <public type="string" name="mediaSize_iso_a6" id="0x010405fd" />
+    <public type="string" name="mediaSize_iso_a7" id="0x010405fe" />
+    <public type="string" name="mediaSize_iso_a8" id="0x010405ff" />
+    <public type="string" name="mediaSize_iso_a9" id="0x01040600" />
+    <public type="string" name="mediaSize_iso_a10" id="0x01040601" />
+    <public type="string" name="mediaSize_iso_b0" id="0x01040602" />
+    <public type="string" name="mediaSize_iso_b1" id="0x01040603" />
+    <public type="string" name="mediaSize_iso_b2" id="0x01040604" />
+    <public type="string" name="mediaSize_iso_b3" id="0x01040605" />
+    <public type="string" name="mediaSize_iso_b4" id="0x01040606" />
+    <public type="string" name="mediaSize_iso_b5" id="0x01040607" />
+    <public type="string" name="mediaSize_iso_b6" id="0x01040608" />
+    <public type="string" name="mediaSize_iso_b7" id="0x01040609" />
+    <public type="string" name="mediaSize_iso_b8" id="0x0104060a" />
+    <public type="string" name="mediaSize_iso_b9" id="0x0104060b" />
+    <public type="string" name="mediaSize_iso_b10" id="0x0104060c" />
+    <public type="string" name="mediaSize_iso_c0" id="0x0104060d" />
+    <public type="string" name="mediaSize_iso_c1" id="0x0104060e" />
+    <public type="string" name="mediaSize_iso_c2" id="0x0104060f" />
+    <public type="string" name="mediaSize_iso_c3" id="0x01040610" />
+    <public type="string" name="mediaSize_iso_c4" id="0x01040611" />
+    <public type="string" name="mediaSize_iso_c5" id="0x01040612" />
+    <public type="string" name="mediaSize_iso_c6" id="0x01040613" />
+    <public type="string" name="mediaSize_iso_c7" id="0x01040614" />
+    <public type="string" name="mediaSize_iso_c8" id="0x01040615" />
+    <public type="string" name="mediaSize_iso_c9" id="0x01040616" />
+    <public type="string" name="mediaSize_iso_c10" id="0x01040617" />
+    <public type="string" name="mediaSize_na_letter" id="0x01040618" />
+    <public type="string" name="mediaSize_na_gvrnmt_letter" id="0x01040619" />
+    <public type="string" name="mediaSize_na_legal" id="0x0104061a" />
+    <public type="string" name="mediaSize_na_junior_legal" id="0x0104061b" />
+    <public type="string" name="mediaSize_na_ledger" id="0x0104061c" />
+    <public type="string" name="mediaSize_na_tabloid" id="0x0104061d" />
+    <public type="string" name="permlab_accessInputFlinger" id="0x01040620" />
+    <public type="string" name="permdesc_accessInputFlinger" id="0x01040621" />
+    <public type="string" name="permlab_hotwordRecognition" id="0x0104061e" />
+    <public type="string" name="permdesc_hotwordRecognition" id="0x0104061f" />
     <public type="dimen" name="app_icon_size" id="0x01050000" />
     <public type="dimen" name="thumbnail_height" id="0x01050001" />
     <public type="dimen" name="thumbnail_width" id="0x01050002" />
@@ -4854,8 +4856,6 @@
     <public type="array" name="common_nicknames" id="0x01070032" />
     <public type="array" name="imAddressTypes" id="0x01070033" />
     <public type="array" name="carrier_properties" id="0x01070034" />
-    <public type="drawable" name="background_holo_dark" id="0x010800ca" />
-    <public type="drawable" name="background_holo_light" id="0x010800cb" />
     <public type="drawable" name="blank_tile" id="0x010800cf" />
     <public type="drawable" name="default_wallpaper" id="0x01080223" />
     <public type="drawable" name="indicator_code_lock_drag_direction_green_up" id="0x010803ab" />
@@ -4915,6 +4915,8 @@
     <public type="drawable" name="app_icon_background" id="0x010800c7" />
     <public type="drawable" name="background_cache_hint_selector_holo_dark" id="0x010800c8" />
     <public type="drawable" name="background_cache_hint_selector_holo_light" id="0x010800c9" />
+    <public type="drawable" name="background_holo_dark" id="0x010800ca" />
+    <public type="drawable" name="background_holo_light" id="0x010800cb" />
     <public type="drawable" name="box" id="0x010800d0" />
     <public type="drawable" name="btn_browser_zoom_fit_page" id="0x010800d1" />
     <public type="drawable" name="btn_browser_zoom_page_overview" id="0x010800d2" />

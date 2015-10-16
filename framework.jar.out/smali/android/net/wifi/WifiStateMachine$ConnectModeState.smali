@@ -727,7 +727,7 @@
 
     const v11, 0x25001
 
-    invoke-virtual {v10, v11}, Landroid/net/wifi/SupplicantStateTracker;->sendMessage(I)V
+    invoke-virtual {v10, v11, v2}, Landroid/net/wifi/SupplicantStateTracker;->sendMessage(II)V
 
     .line 3638
     iget-object v10, p0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;

@@ -49,6 +49,8 @@ Subject: [PATCH] doubletap home action
 +
 +    goto/16 :goto_1
 +
+     nop
+ 
      :sswitch_data_0
      .sparse-switch
          0x3 -> :sswitch_0

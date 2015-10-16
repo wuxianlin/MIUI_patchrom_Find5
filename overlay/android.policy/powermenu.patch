@@ -9,7 +9,7 @@ Subject: [PATCH] advanced power menu
 
 --- a/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions$1.smali
 +++ b/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions$1.smali
-@@ -110,6 +110,66 @@
+@@ -114,6 +114,70 @@
      goto :goto_0
  
      :cond_3
@@ -21,24 +21,26 @@ Subject: [PATCH] advanced power menu
 +
 +    if-eqz v0, :cond_wxl_0
 +
-+    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$1;->this$0:Lcom/android/internal/policy/impl/MiuiGlobalActions;
-+
-+    # getter for: Lcom/android/internal/policy/impl/MiuiGlobalActions;->mContext:Landroid/content/Context;
-+    invoke-static {v0}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100(Lcom/android/internal/policy/impl/MiuiGlobalActions;)Landroid/content/Context;
-+
-+    move-result-object v0
-+
-+    const-string v1, "power"
-+
-+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++    :try_start_wxl_0
++    # invokes: Lcom/android/internal/policy/impl/MiuiGlobalActions;->getPowerManager()Landroid/os/IPowerManager;
++    invoke-static {}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100()Landroid/os/IPowerManager;
 +
 +    move-result-object v0
 +
-+    check-cast v0, Landroid/os/PowerManager;
++    const/4 v1, 0x0
 +
-+    const-string v1, "recovery"
++    const-string v2, "recovery"
 +
-+    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++    const/4 v3, 0x0
++
++    invoke-interface {v0, v1, v2, v3}, Landroid/os/IPowerManager;->reboot(ZLjava/lang/String;Z)V
++    :try_end_wxl_0
++    .catch Landroid/os/RemoteException; {:try_start_wxl_0 .. :try_end_wxl_0} :catch_wxl_0
++
++    goto :goto_0
++
++    :catch_wxl_0
++    move-exception v0
 +
 +    goto :goto_0
 +
@@ -51,24 +53,26 @@ Subject: [PATCH] advanced power menu
 +
 +    if-eqz v0, :cond_wxl_1
 +
-+    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$1;->this$0:Lcom/android/internal/policy/impl/MiuiGlobalActions;
-+
-+    # getter for: Lcom/android/internal/policy/impl/MiuiGlobalActions;->mContext:Landroid/content/Context;
-+    invoke-static {v0}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100(Lcom/android/internal/policy/impl/MiuiGlobalActions;)Landroid/content/Context;
-+
-+    move-result-object v0
-+
-+    const-string v1, "power"
-+
-+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++    :try_start_wxl_1
++    # invokes: Lcom/android/internal/policy/impl/MiuiGlobalActions;->getPowerManager()Landroid/os/IPowerManager;
++    invoke-static {}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->access$100()Landroid/os/IPowerManager;
 +
 +    move-result-object v0
 +
-+    check-cast v0, Landroid/os/PowerManager;
++    const/4 v1, 0x0
 +
-+    const-string v1, "bootloader"
++    const-string v2, "bootloader"
 +
-+    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++    const/4 v3, 0x0
++
++    invoke-interface {v0, v1, v2, v3}, Landroid/os/IPowerManager;->reboot(ZLjava/lang/String;Z)V
++    :try_end_wxl_1
++    .catch Landroid/os/RemoteException; {:try_start_wxl_1 .. :try_end_wxl_1} :catch_wxl_1
++
++    goto :goto_0
++
++    :catch_wxl_1
++    move-exception v0
 +
 +    goto :goto_0
 +

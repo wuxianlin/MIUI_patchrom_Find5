@@ -75,6 +75,8 @@
 
 .field private final mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
+.field private mDefaultWindowStyleID:I
+
 .field private final mH:Landroid/os/Handler;
 
 .field private mNextAppTransition:I
@@ -106,7 +108,7 @@
 
 # direct methods
 .method constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
-    .locals 2
+    .locals 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "h"    # Landroid/os/Handler;
 
@@ -131,6 +133,8 @@
     iput v1, p0, Lcom/android/server/wm/AppTransition;->mCurrentUserId:I
 
     .line 153
+    iput v1, p0, Lcom/android/server/wm/AppTransition;->mDefaultWindowStyleID:I
+
     iput-object p1, p0, Lcom/android/server/wm/AppTransition;->mContext:Landroid/content/Context;
 
     .line 154
@@ -166,6 +170,22 @@
     iput-object v0, p0, Lcom/android/server/wm/AppTransition;->mThumbnailFadeoutInterpolator:Landroid/view/animation/Interpolator;
 
     .line 169
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const-string v1, "Animation.Holo.Activity"
+
+    const-string v2, "style"
+
+    const-string v3, "android"
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/server/wm/AppTransition;->mDefaultWindowStyleID:I
+
     return-void
 .end method
 
@@ -1835,7 +1855,7 @@
 .end method
 
 .method loadAnimation(Landroid/view/WindowManager$LayoutParams;I)Landroid/view/animation/Animation;
-    .locals 5
+    .locals 6
     .param p1, "lp"    # Landroid/view/WindowManager$LayoutParams;
     .param p2, "animAttr"    # I
 
@@ -1849,9 +1869,17 @@
 
     .line 287
     .local v1, "context":Landroid/content/Context;
-    if-ltz p2, :cond_0
+    if-ltz p2, :cond_1
+
+    if-eqz p1, :cond_1
 
     .line 288
+    iget v3, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+
+    .local v3, "oldAnimations":I
+    packed-switch p2, :pswitch_data_0
+
+    :goto_0
     invoke-direct {p0, p1}, Lcom/android/server/wm/AppTransition;->getCachedAnimations(Landroid/view/WindowManager$LayoutParams;)Lcom/android/server/AttributeCache$Entry;
 
     move-result-object v2
@@ -1864,32 +1892,54 @@
     iget-object v1, v2, Lcom/android/server/AttributeCache$Entry;->context:Landroid/content/Context;
 
     .line 291
-    iget-object v3, v2, Lcom/android/server/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
+    iget-object v4, v2, Lcom/android/server/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v3, p2, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v4, p2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
     .line 294
-    .end local v2    # "ent":Lcom/android/server/AttributeCache$Entry;
     :cond_0
-    if-eqz v0, :cond_1
+    iput v3, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+    .end local v2    # "ent":Lcom/android/server/AttributeCache$Entry;
+    .end local v3    # "oldAnimations":I
+    :cond_1
+    if-eqz v0, :cond_2
 
     .line 295
     invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
-    move-result-object v3
+    move-result-object v4
 
     .line 297
-    :goto_0
-    return-object v3
+    :goto_1
+    return-object v4
 
-    :cond_1
-    const/4 v3, 0x0
+    .restart local v3    # "oldAnimations":I
+    :pswitch_0
+    iget v4, p0, Lcom/android/server/wm/AppTransition;->mDefaultWindowStyleID:I
+
+    iput v4, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     goto :goto_0
+
+    .end local v3    # "oldAnimations":I
+    :cond_2
+    const/4 v4, 0x0
+
+    goto :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x10
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method loadAnimation(Landroid/view/WindowManager$LayoutParams;IZII)Landroid/view/animation/Animation;

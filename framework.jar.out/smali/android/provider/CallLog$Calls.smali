@@ -96,6 +96,7 @@
 
 .field public static final VOICEMAIL_URI:Ljava/lang/String; = "voicemail_uri"
 
+.field public static final SUBSCRIPTION:Ljava/lang/String;
 
 # direct methods
 .method static constructor <clinit>()V
@@ -141,6 +142,10 @@
 
     sput-object v0, Landroid/provider/CallLog$Calls;->CONTENT_URI_WITH_VOICEMAIL:Landroid/net/Uri;
 
+    sget-object v0, Lmiui/telephony/SubscriptionManager;->SLOT_KEY:Ljava/lang/String;
+
+    sput-object v0, Landroid/provider/CallLog$Calls;->SUBSCRIPTION:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -166,7 +171,13 @@
 
     .prologue
     .line 334
-    const/4 v8, 0x0
+    invoke-static {}, Lmiui/telephony/SubscriptionManager;->getDefault()Lmiui/telephony/SubscriptionManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lmiui/telephony/SubscriptionManager;->getDefaultSlotId()I
+
+    move-result v8
 
     const/4 v9, 0x0
 
@@ -564,10 +575,6 @@
     invoke-virtual {v1, v2, v13}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v12
-
-    .line 467
-    .local v12, "result":Landroid/net/Uri;
-    invoke-static/range {p1 .. p1}, Landroid/provider/CallLog$Calls;->removeExpiredEntries(Landroid/content/Context;)V
 
     .line 469
     return-object v12

@@ -40,6 +40,8 @@ function mergyXmlPart() {
 
 if [ $1 = "MiuiSystemUI" ];then
     applyPatch $1 $2
+    other/tools/idtoname.py other/tools/public-miui.xml $2/smali
+    other/tools/nametoid.py framework-res/res/values/public.xml $2/smali
 fi
 
 if [ $1 = "Music" ];then
@@ -62,12 +64,14 @@ if [ $1 = "DeskClock" ];then
 fi
 
 if [ $1 = "miuisystem" ];then
+    sed -i -e '/  - 16/a\  - 17' $2/apktool.yml
     applyPatch $1 $2
     cp $1/find5.xml $2/assets/device_features/
     cp $1/find5_legacy.xml $2/assets/device_features/
 fi
 
 if [ $1 = "Settings" ];then
+    sed -i -e '/  - 17/a\  - 18' $2/apktool.yml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 	$XMLMERGYTOOL $1/res/values-zh-rCN $2/res/values-zh-rCN
 	$XMLMERGYTOOL $1/res/values-zh-rTW $2/res/values-zh-rTW
