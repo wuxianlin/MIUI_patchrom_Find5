@@ -134,9 +134,9 @@ Subject: [PATCH] force navbar
  .annotation system Ldalvik/annotation/MemberClasses;
      value = {
 +        Lcom/android/systemui/statusbar/phone/PhoneStatusBar$DevForceNavbarObserver;,
-         Lcom/android/systemui/statusbar/phone/PhoneStatusBar$FastColorDrawable;,
          Lcom/android/systemui/statusbar/phone/PhoneStatusBar$NotificationLongClicker;,
          Lcom/android/systemui/statusbar/phone/PhoneStatusBar$NotificationClicker;,
+         Lcom/android/systemui/statusbar/phone/PhoneStatusBar$H;
 @@ -103,6 +104,8 @@
  
  .field mDarkMode:Z
@@ -214,7 +214,7 @@ Subject: [PATCH] force navbar
 +
 +    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 +
-+    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setBar(Lcom/android/systemui/statusbar/BaseStatusBar;)V
++    #invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setBar(Lcom/android/systemui/statusbar/BaseStatusBar;)V
 +
 +    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 +

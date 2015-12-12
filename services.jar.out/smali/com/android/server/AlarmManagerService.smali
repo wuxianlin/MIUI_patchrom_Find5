@@ -2265,14 +2265,25 @@
 
     iput v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->count:I
 
-    .line 1204
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
+
+    move-object/from16 v0, v24
+
+    invoke-static {v2, v0}, Lcom/android/server/AlarmManagerServiceInjector;->checkAlarmIsAllowedSend(Landroid/content/Context;Lcom/android/server/AlarmManagerService$Alarm;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_miui_3
+
     move-object/from16 v0, p1
 
     move-object/from16 v1, v24
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1208
+    :cond_miui_3
     move-object/from16 v0, v24
 
     iget-wide v2, v0, Lcom/android/server/AlarmManagerService$Alarm;->repeatInterval:J

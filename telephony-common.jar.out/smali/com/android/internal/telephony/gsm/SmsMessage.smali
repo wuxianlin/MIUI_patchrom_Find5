@@ -35,6 +35,8 @@
 # instance fields
 .field private mDataCodingScheme:I
 
+.field private mEncodingType:I
+
 .field private mIsStatusReportMessage:Z
 
 .field private mMti:I
@@ -68,6 +70,8 @@
 
     .line 84
     iput v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mVoiceMailCount:I
+
+    iput v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mEncodingType:I
 
     .line 619
     return-void
@@ -2172,6 +2176,8 @@
 
     iput-object v8, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mUserDataHeader:Lcom/android/internal/telephony/SmsHeader;
 
+    iput v2, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mEncodingType:I
+
     .line 1307
     if-eqz p2, :cond_17
 
@@ -2969,6 +2975,15 @@
     .prologue
     .line 922
     iget v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mDataCodingScheme:I
+
+    return v0
+.end method
+
+.method public getEncodingType()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mEncodingType:I
 
     return v0
 .end method

@@ -1,0 +1,40 @@
+From 6635de3f9dd6411605d2e0e1187c1316d8192798 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Tue, 12 May 2015 16:28:13 +0800
+Subject: [PATCH] fix root 5 times 5s
+
+---
+ .../miui/permcenter/root/RootApplyActivity.smali   |    9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+--- a/SecurityCenter/smali/com/miui/permcenter/root/RootApplyActivity.smali
++++ b/SecurityCenter/smali/com/miui/permcenter/root/RootApplyActivity.smali
+@@ -31,11 +31,11 @@
+     .prologue
+     invoke-direct {p0}, Lmiui/app/Activity;-><init>()V
+ 
+-    const/4 v0, 0x1
++    const/4 v0, 0x5
+ 
+     iput v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->mCurrentStep:I
+ 
+-    const/4 v0, 0x5
++    const/4 v0, 0x1
+ 
+     iput v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->mAutoNextStepTime:I
+ 
+@@ -471,6 +471,11 @@
+     invoke-virtual {p0}, Lcom/miui/permcenter/root/RootApplyActivity;->finish()V
+ 
+     :goto_0
++
++    iget-object v0, p0, Lcom/miui/permcenter/root/RootApplyActivity;->mAcceptButton:Landroid/widget/Button;
++
++    invoke-virtual {v0}, Landroid/widget/Button;->performClick()Z
++
+     return-void
+ 
+     :cond_0
+-- 
+1.7.9.5
+

@@ -1,0 +1,33 @@
+From e8a6a8d3fb5196ea6b631cb98033b4bf2a87fda5 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Fri, 20 Nov 2015 19:06:34 +0800
+Subject: [PATCH] fix no sim
+
+---
+ .../xiaomi/xmsf/activate/SimStateReceiver.smali    |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+--- a/XiaomiServiceFramework/smali/com/xiaomi/xmsf/activate/SimStateReceiver.smali
++++ b/XiaomiServiceFramework/smali/com/xiaomi/xmsf/activate/SimStateReceiver.smali
+@@ -29,7 +29,8 @@
+     move-result v0
+ 
+     .local v0, "simIndex":I
+-    if-gez v0, :cond_0
++
++    if-ltz v0, :cond_0
+ 
+     const-string v1, "xmsf/SimStateReceiver"
+ 
+@@ -65,6 +66,8 @@
+     return-void
+ 
+     :cond_0
++    const/4 v0, 0x0
++
+     invoke-static {v0, p3}, Lcom/xiaomi/activate/SysEventSink;->onSimStateChanged(IZ)V
+ 
+     goto :goto_0
+-- 
+1.7.9.5
+

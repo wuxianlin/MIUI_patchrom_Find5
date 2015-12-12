@@ -9,7 +9,7 @@ Subject: [PATCH] stock settings
 
 --- a/Settings/res/xml/settings_headers.xml
 +++ b/Settings/res/xml/settings_headers.xml
-@@ -40,6 +40,9 @@
+@@ -38,6 +38,9 @@
          <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.OldmanModeSettings" />
      </header>
      <header android:icon="@drawable/ic_children_mode_settings" android:id="@id/children_mode_settings" android:title="@string/children_mode_title" android:fragment="com.android.settings.ChildrenModeSettings" />
@@ -17,18 +17,18 @@ Subject: [PATCH] stock settings
 +        <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
 +    </header>
      <header android:icon="@drawable/ic_other_advanced_settings" android:id="@id/other_advanced_settings" android:title="@string/other_advanced_settings" android:fragment="com.android.settings.OtherPersonalSettings" />
-     <header android:icon="@drawable/ic_location_settings" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings.location.MiuiLocationSettings" />
      <header android:id="@id/account_settings" android:title="@string/header_category_accounts" />
-@@ -57,9 +60,6 @@
-     <header android:icon="@drawable/ic_key_settings" android:id="@id/key_settings" android:title="@string/key_settings_title" android:fragment="com.android.settings.KeySettings" />
-     <header android:icon="@drawable/ic_led_settings" android:id="@id/led_settings" android:title="@string/led_settings" android:fragment="com.android.settings.LedSettings" />
-     <header android:icon="@drawable/music_ic_headset_settings" android:id="@id/headset_settings" android:title="@string/music_headset_settings" android:fragment="com.android.settings.HeadsetSettings" />
+     <header android:id="@id/micloud_settings" android:title="@string/xiaomi_account">
+@@ -47,9 +50,6 @@
+     <header android:icon="@drawable/ic_account_list" android:id="@id/account_list" android:title="@string/account_list" android:fragment="com.android.settings.accounts.MiuiAccountListSettings" />
+     <header android:icon="@drawable/ic_sync_settings" android:id="@id/sync_settings" android:title="@string/sync_settings" android:fragment="com.android.settings.accounts.MiuiManageAccountsSettings" />
+     <header android:id="@id/space" />
 -    <header android:id="@id/manufacturer_settings">
 -        <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
 -    </header>
-     <header android:icon="@drawable/ic_date_time_settings" android:id="@id/date_time_settings" android:title="@string/date_and_time_settings_title" android:fragment="com.android.settings.DateTimeSettings" />
-     <header android:icon="@drawable/ic_language_settings" android:id="@id/language_settings" android:title="@string/language_settings" android:fragment="com.android.settings.inputmethod.InputMethodAndLanguageSettings" />
-     <header android:id="@id/other_section" />
+     <header android:icon="@drawable/ic_system_app_settings" android:id="@id/system_section" android:title="@string/system_app_settings" android:fragment="com.android.settings.applications.SystemAppSettings" />
+     <header android:icon="@drawable/ic_application_settings" android:id="@id/application_settings" android:title="@string/applications_settings" android:fragment="com.android.settings.applications.ApplicationsContainer" />
+     <header android:icon="@drawable/ic_account_autostar" android:id="@id/account_autostar" android:title="@string/account_autostar_label" android:fragment="com.android.settings.Autostar.AutoMangement" />
 -- 
 1.7.9.5
 

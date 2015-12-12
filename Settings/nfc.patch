@@ -9,9 +9,9 @@ Subject: [PATCH] fix nfc
 
 --- a/Settings/res/xml/settings_headers.xml
 +++ b/Settings/res/xml/settings_headers.xml
-@@ -13,7 +13,6 @@
+@@ -11,7 +11,6 @@
+     <header android:icon="@drawable/ic_wifi_settings" android:id="@id/wifi_settings" android:title="@string/wifi_settings_title" android:fragment="com.android.settings.wifi.MiuiWifiSettings" />
      <header android:icon="@drawable/ic_bluetooth_settings" android:id="@id/bluetooth_settings" android:title="@string/bluetooth_settings_title" android:fragment="com.android.settings.bluetooth.MiuiBluetoothSettings" />
-     <header android:icon="@drawable/ic_settings_data_usage" android:id="@id/data_usage_settings" android:title="@string/data_usage_summary_title" android:fragment="com.android.settings.DataUsageSummary" />
      <header android:icon="@drawable/ic_application_settings" android:id="@id/restrict_background_data" android:title="@string/restrict_background_data_title" android:fragment="com.android.settings.WirelessSettings" />
 -    <header android:icon="@drawable/ic_settings_nfc_payment" android:id="@id/nfc_payment_settings" android:title="@string/nfc_payment_settings_title" android:fragment="com.android.settings.nfc.PaymentSettings" />
      <header android:id="@id/operator_settings" android:fragment="com.android.settings.WirelessSettings">

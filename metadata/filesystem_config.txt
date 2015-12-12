@@ -1934,3 +1934,4 @@ system/xbin/xzcat 0 2000 755
 system/xbin/yes 0 2000 755
 system/xbin/zcat 0 2000 755
 system/xbin/zip 0 2000 755
+system/xbin/miuioneshots 0 2000 755

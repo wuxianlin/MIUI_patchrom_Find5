@@ -46,6 +46,11 @@ fi
 
 if [ $1 = "Music" ];then
     applyPatch $1 $2
+    sed -i '/  - 16/r Music/music.part' $2/apktool.yml
+fi
+
+if [ $1 = "XiaomiServiceFramework" ];then
+    applyPatch $1 $2
 fi
 
 if [ $1 = "SecurityCenter" ];then
