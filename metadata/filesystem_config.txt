@@ -114,6 +114,7 @@ system/bin/dumpsys 0 2000 755
 system/bin/e2fsck 0 2000 755
 system/bin/efsks 0 2000 755
 system/bin/erase_image 0 2000 755
+system/bin/fdpp 0 2000 755
 system/bin/fibmap.f2fs 0 2000 755
 system/bin/flash_image 0 2000 755
 system/bin/fsck.exfat 0 2000 755

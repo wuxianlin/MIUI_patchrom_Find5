@@ -904,7 +904,8 @@
     .line 60
     invoke-static {p0}, Lcom/android/internal/telephony/PhoneFactory;->makeDefaultPhone(Landroid/content/Context;)V
 
-    .line 61
+    invoke-static {p0}, Lmiui/telephony/MiuiTelephony;->init(Landroid/content/Context;)V
+
     return-void
 .end method
 

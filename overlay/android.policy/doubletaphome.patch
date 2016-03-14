@@ -12,7 +12,7 @@ Subject: [PATCH] doubletap home action
 @@ -1866,6 +1866,15 @@
  
      .end local v7    # "sbm":Landroid/app/StatusBarManager;
-     :cond_d
+     :cond_e
 +    invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setMyhomeKeyAction()Z
 +
 +    move-result v11
@@ -29,7 +29,7 @@ Subject: [PATCH] doubletap home action
  
      .local v4, "i":I
      :goto_5
--    if-ge v4, v10, :cond_b
+-    if-ge v4, v10, :cond_c
 +    if-ge v4, v10, :cond_miui_10
  
      sget-object v11, Lcom/android/internal/policy/impl/BaseMiuiPhoneWindowManager;->WINDOW_TYPES_WHERE_HOME_DOESNT_WORK:[I
@@ -39,9 +39,9 @@ Subject: [PATCH] doubletap home action
      goto/16 :goto_1
  
 +    :cond_miui_10
-+    if-eqz v2, :cond_b
++    if-eqz v2, :cond_c
 +
-+    if-nez v6, :cond_b
++    if-nez v6, :cond_c
 +
 +    invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->resetMyhomeKeyAction()V
 +
