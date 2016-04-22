@@ -54,6 +54,7 @@ if [ $1 = "XiaomiServiceFramework" ];then
 fi
 
 if [ $1 = "SecurityCenter" ];then
+    sed -i -e '/  - 16/a\  - 18' $2/apktool.yml
     applyPatch $1 $2
 fi
 

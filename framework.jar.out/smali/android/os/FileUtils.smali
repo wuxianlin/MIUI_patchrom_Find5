@@ -182,6 +182,84 @@
     goto :goto_1
 .end method
 
+.method public static contains(Ljava/io/File;Ljava/io/File;)Z
+    .locals 4
+    .param p0, "dir"    # Ljava/io/File;
+    .param p1, "file"    # Ljava/io/File;
+
+    .prologue
+    .line 370
+    if-nez p1, :cond_0
+
+    const/4 v2, 0x0
+
+    .line 382
+    :goto_0
+    return v2
+
+    .line 372
+    :cond_0
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 373
+    .local v0, "dirPath":Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 375
+    .local v1, "filePath":Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 376
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    .line 379
+    :cond_1
+    const-string v2, "/"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 380
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "/"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 382
+    :cond_2
+    invoke-virtual {v1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    goto :goto_0
+.end method
+
 .method public static copyFile(Ljava/io/File;Ljava/io/File;)Z
     .locals 4
     .param p0, "srcFile"    # Ljava/io/File;
