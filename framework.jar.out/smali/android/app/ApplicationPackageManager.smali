@@ -2362,8 +2362,55 @@
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_0
 
+    iget-object v0, p0, Landroid/app/ApplicationPackageManager;->mPM:Landroid/content/pm/IPackageManager;
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v2
+
+    invoke-interface {v0, v2}, Landroid/content/pm/IPackageManager;->getNameForUid(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v0, "com.tencent.mm"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_01
+
+    const-string v0, "com.android.fileexplorer"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_00
+
+    :goto_miui_00
+    invoke-virtual {v1}, Landroid/content/pm/PackageInfo;->ReplaceSignatureInfo()V
+
+    :cond_miui_00
     .line 75
     return-object v1
+
+    :cond_miui_01
+    const/4 v2, 0x5
+
+    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v0, "tmsdkobf"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_00
+
+    goto :goto_miui_00
 
     .line 77
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;

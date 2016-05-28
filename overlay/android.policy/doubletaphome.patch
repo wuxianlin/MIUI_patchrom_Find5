@@ -11,8 +11,8 @@ Subject: [PATCH] doubletap home action
 +++ b/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
 @@ -1866,6 +1866,15 @@
  
-     .end local v7    # "sbm":Landroid/app/StatusBarManager;
-     :cond_e
+     if-nez v11, :cond_f
+ 
 +    invoke-super {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setMyhomeKeyAction()Z
 +
 +    move-result v11

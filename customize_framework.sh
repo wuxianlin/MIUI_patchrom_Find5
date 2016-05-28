@@ -57,7 +57,8 @@ then
             rm -rf "$file"
     done
     cp -rf overlay/framework/smali/* $BUILD_OUT/framework/smali
-    cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
+    #cp -rf ../android/Editor/* $BUILD_OUT/framework/smali/android/widget/
+    cp -rf out/framework_miui/smali/android/widget/Editor*.smali $BUILD_OUT/framework/smali/android/widget/
     sed -i 's/persist.miui.density_v2/persist.sys.density/g' $2/smali/android/util/MiuiDisplayMetrics.smali
 fi
 
