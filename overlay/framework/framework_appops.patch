@@ -1,0 +1,203 @@
+From 6c9889b05ae54ed95497cc27f18386dc2ace9555 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Thu, 29 Sep 2016 11:48:11 +0800
+Subject: [PATCH] framework:fix appops
+
+---
+ framework/smali/android/app/AppOpsManager.smali | 147 +++++++++++++++++++++++-
+ 1 file changed, 145 insertions(+), 2 deletions(-)
+
+--- a/framework/smali/android/app/AppOpsManager.smali
++++ b/framework/smali/android/app/AppOpsManager.smali
+@@ -267,7 +267,7 @@
+ 
+ .field public static final TAG:Ljava/lang/String; = "AppOps"
+ 
+-.field public static final _NUM_OP:I = 0x3f
++.field public static final _NUM_OP:I = 0x45
+ 
+ .field private static sOpAllowSystemRestrictionBypass:[Z
+ 
+@@ -341,7 +341,7 @@
+ 
+     const/4 v6, 0x0
+ 
+-    const/16 v5, 0x3f
++    const/16 v5, 0x45
+ 
+     const/4 v4, 0x0
+ 
+@@ -663,6 +663,42 @@
+ 
+     aput-object v3, v1, v2
+ 
++    const-string v2, "android:wifi_change"
++
++    const/16 v3, 0x3f
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android:bluetooth_change"
++
++    const/16 v3, 0x40
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android:boot_completed"
++
++    const/16 v3, 0x41
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android:nfc_change"
++
++    const/16 v3, 0x42
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android:data_connect_change"
++
++    const/16 v3, 0x43
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android:su"
++
++    const/16 v3, 0x44
++
++    aput-object v2, v1, v3
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1039,6 +1075,42 @@
+ 
+     aput-object v3, v1, v2
+ 
++    const-string v2, "WIFI_CHANGE"
++
++    const/16 v3, 0x3f
++
++    aput-object v2, v1, v3
++
++    const-string v2, "BLUETOOTH_CHANGE"
++
++    const/16 v3, 0x40
++
++    aput-object v2, v1, v3
++
++    const-string v2, "BOOT_COMPLETED"
++
++    const/16 v3, 0x41
++
++    aput-object v2, v1, v3
++
++    const-string v2, "NFC_CHANGE"
++
++    const/16 v3, 0x42
++
++    aput-object v2, v1, v3
++
++    const-string v2, "DATA_CONNECT_CHANGE"
++
++    const/16 v3, 0x43
++
++    aput-object v2, v1, v3
++
++    const-string v2, "SU"
++
++    const/16 v3, 0x44
++
++    aput-object v2, v1, v3
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1359,6 +1431,38 @@
+ 
+     aput-object v3, v1, v2
+ 
++    const-string v2, "android.permission.CHANGE_WIFI_STATE"
++
++    const/16 v3, 0x3f
++
++    aput-object v2, v1, v3
++
++    const/16 v2, 0x40
++
++    aput-object v4, v1, v2
++
++    const-string v2, "android.permission.RECEIVE_BOOT_COMPLETED"
++
++    const/16 v3, 0x41
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android.permission.NFC"
++
++    const/16 v3, 0x42
++
++    aput-object v2, v1, v3
++
++    const-string v2, "android.permission.MODIFY_PHONE_STATE"
++
++    const/16 v3, 0x43
++
++    aput-object v2, v1, v3
++
++    const/16 v2, 0x44
++
++    aput-object v4, v1, v2
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Ljava/lang/String;
+@@ -1665,6 +1769,32 @@
+ 
+     aput-object v4, v1, v2
+ 
++    const/16 v2, 0x3f
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x40
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x41
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x42
++
++    aput-object v4, v1, v2
++
++    const/16 v2, 0x43
++
++    aput-object v4, v1, v2
++
++    const-string v2, "no_su"
++
++    const/16 v3, 0x44
++
++    aput-object v2, v1, v3
++
+     sput-object v1, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
+ 
+     new-array v1, v5, [Z
+@@ -2185,6 +2315,12 @@
+         0x3c
+         0x3d
+         0x3e
++        0x3f
++        0x40
++        0x41
++        0x42
++        0x43
++        0x44
+     .end array-data
+ 
+     :array_1
+-- 
+1.9.1
+
