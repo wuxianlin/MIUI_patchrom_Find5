@@ -97066,7 +97066,7 @@
 
     move/from16 v0, v22
 
-    move-object/from16 v1, v29
+    move-object/from16 v1, v31
 
     invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerServiceInjector;->handleExtraConfigurationChangesForSystem(ILandroid/content/res/Configuration;)V
 
