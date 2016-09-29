@@ -1,0 +1,33 @@
+From ad8b72b49e2ac188b17fc8ef080e44b01212ecc3 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Thu, 29 Sep 2016 19:48:14 +0800
+Subject: [PATCH] fix com.android.phone fc java.lang.NullPointerException:
+ Attempt to invoke virtual method 'void
+ com.android.internal.telephony.TelephonyPluginDelegate.initSubscriptionController(android.content.Context,
+ com.android.internal.telephony.CommandsInterface[])' on a null object
+ reference
+
+---
+ TeleService/smali/com/android/phone/PhoneGlobals.smali | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+--- a/TeleService/smali/com/android/phone/PhoneGlobals.smali
++++ b/TeleService/smali/com/android/phone/PhoneGlobals.smali
+@@ -757,7 +757,13 @@
+ 
+     if-nez v10, :cond_2
+ 
+-    invoke-static {p0}, Lcom/android/internal/telephony/PhoneFactory;->makeDefaultPhones(Landroid/content/Context;)V
++    invoke-static {p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;)V
++
++    invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
++
++    move-result-object v10
++
++    invoke-virtual {v10, p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->makeDefaultPhones(Landroid/content/Context;)V
+ 
+     new-instance v5, Landroid/content/Intent;
+ 
+-- 
+1.9.1
+
