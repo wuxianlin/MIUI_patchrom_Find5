@@ -97056,22 +97056,24 @@
 
     const/16 v16, 0x0
 
-    .line 17887
     const/16 v18, 0x3e8
 
     const/16 v19, -0x1
 
     move-object/from16 v3, p0
 
-    .line 17885
     invoke-direct/range {v3 .. v19}, Lcom/android/server/am/ActivityManagerService;->broadcastIntentLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZIII)I
 
-    .line 17888
+    move/from16 v0, v22
+
+    move-object/from16 v1, v29
+
+    invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerServiceInjector;->handleExtraConfigurationChangesForSystem(ILandroid/content/res/Configuration;)V
+
     and-int/lit8 v3, v22, 0x4
 
     if-eqz v3, :cond_a
 
-    .line 17890
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
