@@ -67,6 +67,8 @@
     .end annotation
 .end field
 
+.field private mLocalVideoCapable:Z
+
 .field protected mNumberConverted:Z
 
 .field protected mNumberPresentation:I
@@ -85,6 +87,8 @@
 .end field
 
 .field public mPreHandoverState:Lcom/android/internal/telephony/Call$State;
+
+.field private mRemoteVideoCapable:Z
 
 .field mUserData:Ljava/lang/Object;
 
@@ -584,7 +588,25 @@
     return v0
 .end method
 
+.method public isLocalVideoCapable()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
+
+    return v0
+.end method
+
 .method public abstract isMultiparty()Z
+.end method
+
+.method public isRemoteVideoCapable()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
+
+    return v0
 .end method
 
 .method public isRinging()Z
@@ -1040,6 +1062,84 @@
 
     .line 645
     .end local v0    # "l":Lcom/android/internal/telephony/Connection$Listener;
+    :cond_0
+    return-void
+.end method
+
+.method public setLocalVideoCapable(Z)V
+    .locals 3
+    .param p1, "capable"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
+
+    iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .local v0, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
+
+    .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
+    iget-boolean v2, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
+
+    invoke-interface {v1, v2}, Lcom/android/internal/telephony/Connection$Listener;->onLocalVideoCapabilityChanged(Z)V
+
+    goto :goto_0
+
+    .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
+    :cond_0
+    return-void
+.end method
+
+.method public setRemoteVideoCapable(Z)V
+    .locals 3
+    .param p1, "capable"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
+
+    iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .local v0, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
+
+    .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
+    iget-boolean v2, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
+
+    invoke-interface {v1, v2}, Lcom/android/internal/telephony/Connection$Listener;->onRemoteVideoCapabilityChanged(Z)V
+
+    goto :goto_0
+
+    .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
 .end method
