@@ -11700,7 +11700,7 @@
     .line 916
     .local v32, "parser":Landroid/content/res/XmlResourceParser;
     :try_start_0
-    new-instance v35, Landroid/content/res/Resources;
+    new-instance v35, Landroid/content/res/MiuiResources;
 
     move-object/from16 v0, p0
 
