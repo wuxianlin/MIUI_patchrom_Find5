@@ -1,0 +1,71 @@
+From 2a48151ee145ee1fc6725106e845a55c183b64f4 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Thu, 29 Sep 2016 14:39:20 +0800
+Subject: [PATCH] fix AbstractMethodError onSwipeFromLeft
+
+---
+ .../ShowNavBarGesturesListenerCallbacks.smali      | 50 ++++++++++++++++++++++
+ 1 file changed, 50 insertions(+)
+
+--- a/services/smali/com/android/server/policy/ShowNavBarGesturesListenerCallbacks.smali
++++ b/services/smali/com/android/server/policy/ShowNavBarGesturesListenerCallbacks.smali
+@@ -108,6 +108,56 @@
+ 
+     iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
+ 
++    iget-boolean v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mNavigationBarLeftInLandscape:Z
++
++    if-nez v0, :cond_0
++
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
++
++    iget-boolean v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mHideNavBar:Z
++
++    if-eqz v0, :cond_0
++
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mContext:Landroid/content/Context;
++
++    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v0
++
++    const-string v1, "hide_nav_bar"
++
++    const/4 v2, 0x0
++
++    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
++
++    :cond_0
++    return-void
++.end method
++
++.method public onSwipeFromLeft()V
++    .locals 3
++
++    .prologue
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
++
++    iget-object v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
++
++    if-eqz v0, :cond_0
++
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
++
++    iget-boolean v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mNavigationBarOnBottom:Z
++
++    if-nez v0, :cond_0
++
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
++
++    iget-boolean v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mNavigationBarLeftInLandscape:Z
++
++    if-eqz v0, :cond_0
++
++    iget-object v0, p0, Lcom/android/server/policy/ShowNavBarGesturesListenerCallbacks;->mManager:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
++
+     iget-boolean v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mHideNavBar:Z
+ 
+     if-eqz v0, :cond_0
+-- 
+1.9.1
+
