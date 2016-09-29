@@ -118,7 +118,7 @@
 
 # virtual methods
 .method go()V
-    .locals 20
+    .locals 21
 
     .prologue
     .line 11985
@@ -200,27 +200,53 @@
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$PreBootContinuation;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    .line 11992
+    iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
     move-object/from16 v0, v18
 
-    iget-object v3, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v0, v1}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v20
 
     .line 11991
-    const/4 v2, 0x3
+    .local v20, "label":Ljava/lang/CharSequence;
+    move-object/from16 v0, p0
 
-    .line 11992
+    iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$PreBootContinuation;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$PreBootContinuation;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v2, v2, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    aput-object v20, v3, v4
 
-    const/4 v6, 0x0
+    const v4, 0x10403f6
+
+    invoke-virtual {v2, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
 
     .line 11991
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/ActivityManagerService;->updateBootProgress(ILandroid/content/pm/ApplicationInfo;IIZ)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/server/am/ActivityManagerService;->showBootMessage(Ljava/lang/CharSequence;Z)V
 
     .line 11994
     .end local v18    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v19    # "comp":Landroid/content/ComponentName;
+    .end local v20    # "label":Ljava/lang/CharSequence;
     :cond_0
     const-string/jumbo v1, "ActivityManager"
 

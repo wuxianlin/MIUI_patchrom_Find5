@@ -87180,6 +87180,33 @@
     throw v5
 .end method
 
+.method public showBootMessage(Ljava/lang/CharSequence;Z)V
+    .locals 2
+    .param p1, "msg"    # Ljava/lang/CharSequence;
+    .param p2, "always"    # Z
+
+    .prologue
+    .line 6543
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v0
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_0
+
+    .line 6547
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
+
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/WindowManagerService;->showBootMessage(Ljava/lang/CharSequence;Z)V
+
+    .line 6542
+    return-void
+.end method
+
 .method final showLaunchWarningLocked(Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityRecord;)V
     .locals 2
     .param p1, "cur"    # Lcom/android/server/am/ActivityRecord;
@@ -96475,46 +96502,6 @@
     monitor-exit p0
 
     throw v9
-.end method
-
-.method public updateBootProgress(ILandroid/content/pm/ApplicationInfo;IIZ)V
-    .locals 6
-    .param p1, "stage"    # I
-    .param p2, "optimizedApp"    # Landroid/content/pm/ApplicationInfo;
-    .param p3, "currentAppPos"    # I
-    .param p4, "totalAppCount"    # I
-    .param p5, "always"    # Z
-
-    .prologue
-    .line 6564
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
-
-    move-result v0
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_0
-
-    .line 6568
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
-
-    move v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/WindowManagerService;->updateBootProgress(ILandroid/content/pm/ApplicationInfo;IIZ)V
-
-    .line 6563
-    return-void
 .end method
 
 .method public updateConfiguration(Landroid/content/res/Configuration;)V

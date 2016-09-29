@@ -307,7 +307,7 @@
 
 .field volatile mBeganFromNonInteractive:Z
 
-.field mBootMsgDialog:Lorg/cyanogenmod/internal/BootDexoptDialog;
+.field mBootMsgDialog:Landroid/app/ProgressDialog;
 
 .field mBroadcastWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -1630,7 +1630,7 @@
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mWifiDisplayReceiver:Landroid/content/BroadcastReceiver;
 
     .line 7018
-    iput-object v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Lorg/cyanogenmod/internal/BootDexoptDialog;
+    iput-object v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     .line 7083
     new-instance v0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
@@ -3237,17 +3237,17 @@
     monitor-exit v0
 
     .line 6589
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Lorg/cyanogenmod/internal/BootDexoptDialog;
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_1
 
     .line 6591
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Lorg/cyanogenmod/internal/BootDexoptDialog;
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v0}, Lorg/cyanogenmod/internal/BootDexoptDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 6592
-    iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Lorg/cyanogenmod/internal/BootDexoptDialog;
+    iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     .line 6582
     :cond_1
@@ -29484,6 +29484,25 @@
     goto :goto_0
 .end method
 
+.method public showBootMessage(Ljava/lang/CharSequence;Z)V
+    .locals 2
+    .param p1, "msg"    # Ljava/lang/CharSequence;
+    .param p2, "always"    # Z
+
+    .prologue
+    .line 7016
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/android/server/policy/PhoneWindowManager$26;
+
+    invoke-direct {v1, p0, p1}, Lcom/android/server/policy/PhoneWindowManager$26;-><init>(Lcom/android/server/policy/PhoneWindowManager;Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 7015
+    return-void
+.end method
+
 .method public showGlobalActions()V
     .locals 2
 
@@ -30054,37 +30073,6 @@
     monitor-exit v2
 
     throw v1
-.end method
-
-.method public updateBootProgress(ILandroid/content/pm/ApplicationInfo;II)V
-    .locals 7
-    .param p1, "stage"    # I
-    .param p2, "optimizedApp"    # Landroid/content/pm/ApplicationInfo;
-    .param p3, "currentAppPos"    # I
-    .param p4, "totalAppCount"    # I
-
-    .prologue
-    .line 7024
-    iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
-
-    new-instance v0, Lcom/android/server/policy/PhoneWindowManager$24;
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/policy/PhoneWindowManager$24;-><init>(Lcom/android/server/policy/PhoneWindowManager;ILandroid/content/pm/ApplicationInfo;II)V
-
-    invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 7023
-    return-void
 .end method
 
 .method updateOrientationListenerLp()V

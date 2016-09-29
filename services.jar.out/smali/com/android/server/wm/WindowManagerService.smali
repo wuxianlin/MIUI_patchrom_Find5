@@ -44234,6 +44234,104 @@
     return-void
 .end method
 
+.method public showBootMessage(Ljava/lang/CharSequence;Z)V
+    .locals 3
+    .param p1, "msg"    # Ljava/lang/CharSequence;
+    .param p2, "always"    # Z
+
+    .prologue
+    .line 5951
+    const/4 v0, 0x0
+
+    .line 5952
+    .local v0, "first":Z
+    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
+
+    monitor-enter v2
+
+    .line 5961
+    :try_start_0
+    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mAllowBootMessages:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_0
+
+    monitor-exit v2
+
+    .line 5962
+    return-void
+
+    .line 5964
+    :cond_0
+    :try_start_1
+    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v1, :cond_2
+
+    .line 5965
+    if-nez p2, :cond_1
+
+    monitor-exit v2
+
+    .line 5966
+    return-void
+
+    .line 5968
+    :cond_1
+    const/4 v0, 0x1
+
+    .line 5970
+    :cond_2
+    :try_start_2
+    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mSystemBooted:Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v1, :cond_3
+
+    monitor-exit v2
+
+    .line 5971
+    return-void
+
+    .line 5973
+    :cond_3
+    const/4 v1, 0x1
+
+    :try_start_3
+    iput-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
+
+    .line 5974
+    iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    invoke-interface {v1, p1, p2}, Landroid/view/WindowManagerPolicy;->showBootMessage(Ljava/lang/CharSequence;Z)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    monitor-exit v2
+
+    .line 5976
+    if-eqz v0, :cond_4
+
+    .line 5977
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->performEnableScreen()V
+
+    .line 5950
+    :cond_4
+    return-void
+
+    .line 5952
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v2
+
+    throw v1
+.end method
+
 .method public showCircularMask(Z)V
     .locals 8
     .param p1, "visible"    # Z
@@ -45740,107 +45838,6 @@
     monitor-exit v10
 
     throw v7
-.end method
-
-.method public updateBootProgress(ILandroid/content/pm/ApplicationInfo;IIZ)V
-    .locals 3
-    .param p1, "stage"    # I
-    .param p2, "optimizedApp"    # Landroid/content/pm/ApplicationInfo;
-    .param p3, "currentAppPos"    # I
-    .param p4, "totalAppCount"    # I
-    .param p5, "always"    # Z
-
-    .prologue
-    .line 5965
-    const/4 v0, 0x0
-
-    .line 5966
-    .local v0, "first":Z
-    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
-
-    monitor-enter v2
-
-    .line 5979
-    :try_start_0
-    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mAllowBootMessages:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v1, :cond_0
-
-    monitor-exit v2
-
-    .line 5980
-    return-void
-
-    .line 5982
-    :cond_0
-    :try_start_1
-    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez v1, :cond_2
-
-    .line 5983
-    if-nez p5, :cond_1
-
-    monitor-exit v2
-
-    .line 5984
-    return-void
-
-    .line 5986
-    :cond_1
-    const/4 v0, 0x1
-
-    .line 5988
-    :cond_2
-    :try_start_2
-    iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mSystemBooted:Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz v1, :cond_3
-
-    monitor-exit v2
-
-    .line 5989
-    return-void
-
-    .line 5991
-    :cond_3
-    const/4 v1, 0x1
-
-    :try_start_3
-    iput-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
-
-    .line 5992
-    iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
-
-    invoke-interface {v1, p1, p2, p3, p4}, Landroid/view/WindowManagerPolicy;->updateBootProgress(ILandroid/content/pm/ApplicationInfo;II)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit v2
-
-    .line 5994
-    if-eqz v0, :cond_4
-
-    .line 5995
-    invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->performEnableScreen()V
-
-    .line 5964
-    :cond_4
-    return-void
-
-    .line 5966
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v2
-
-    throw v1
 .end method
 
 .method updateDisplayAndOrientationLocked()Landroid/view/DisplayInfo;
