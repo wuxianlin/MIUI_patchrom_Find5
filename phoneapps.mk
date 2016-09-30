@@ -24,6 +24,7 @@ private-phone-apps := \
 	qcrilmsgtunnel \
 	PrintSpooler \
 	Stk \
+	telresources \
 	WAPPushManager
 
 private-phone-priv-apps := \
