@@ -87186,7 +87186,6 @@
     .param p2, "always"    # Z
 
     .prologue
-    .line 6543
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -87197,13 +87196,11 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 6547
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/WindowManagerService;->showBootMessage(Ljava/lang/CharSequence;Z)V
 
-    .line 6542
     return-void
 .end method
 

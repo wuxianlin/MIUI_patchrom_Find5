@@ -1640,20 +1640,17 @@
 
     move-result-object v3
 
-    .line 620
+    .line 625
     invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 621
-    const v7, 0x10403f7
+    sget v7, Lcom/android/internal/R$string;->android_upgrading_starting_apps:I
 
-    .line 620
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 622
     const/4 v7, 0x0
 
     .line 624

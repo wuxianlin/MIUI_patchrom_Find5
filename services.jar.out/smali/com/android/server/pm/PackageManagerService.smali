@@ -25709,7 +25709,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 6454
+    .line 6497
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -25726,17 +25726,15 @@
 
     aput-object v4, v3, v5
 
-    .line 6453
-    const v4, 0x10403f5
+    sget v4, Lcom/android/internal/R$string;->android_upgrading_apk:I
 
     invoke-virtual {v2, v4, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6454
+    .line 6495
     const/4 v3, 0x1
 
-    .line 6452
     invoke-interface {v0, v2, v3}, Landroid/app/IActivityManager;->showBootMessage(Ljava/lang/CharSequence;Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -64959,48 +64957,48 @@
     .locals 30
 
     .prologue
-    .line 6296
+    .line 6340
     const-string/jumbo v26, "Only the system can request dexopt be performed"
 
     invoke-static/range {v26 .. v26}, Lcom/android/server/pm/PackageManagerService;->enforceSystemOrRoot(Ljava/lang/String;)V
 
-    .line 6300
+    .line 6344
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v13
 
-    .line 6301
+    .line 6345
     .local v13, "ms":Landroid/os/storage/IMountService;
     if-eqz v13, :cond_5
 
-    .line 6302
+    .line 6346
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService;->isUpgrade()Z
 
     move-result v9
 
-    .line 6303
+    .line 6347
     .local v9, "isUpgrade":Z
     move v5, v9
 
-    .line 6304
+    .line 6348
     .local v5, "doTrim":Z
     if-eqz v5, :cond_4
 
-    .line 6305
+    .line 6349
     const-string/jumbo v26, "PackageManager"
 
     const-string/jumbo v27, "Running disk maintenance immediately due to system update"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6320
+    .line 6364
     .end local v5    # "doTrim":Z
     :cond_0
     :goto_0
     if-eqz v5, :cond_2
 
-    .line 6321
+    .line 6365
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService;->isFirstBoot()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -65009,13 +65007,13 @@
 
     if-nez v26, :cond_1
 
-    .line 6323
+    .line 6367
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v26
 
-    .line 6324
+    .line 6368
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -65026,23 +65024,19 @@
 
     move-result-object v27
 
-    .line 6325
-    const v28, 0x10403f4
+    sget v28, Lcom/android/internal/R$string;->android_upgrading_fstrim:I
 
-    .line 6324
     invoke-virtual/range {v27 .. v28}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
     move-result-object v27
 
-    .line 6325
     const/16 v28, 0x1
 
-    .line 6323
+    .line 6367
     invoke-interface/range {v26 .. v28}, Landroid/app/IActivityManager;->showBootMessage(Ljava/lang/CharSequence;Z)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 6329
+    .line 6372
     :cond_1
     :goto_1
     :try_start_2
@@ -65050,7 +65044,7 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 6339
+    .line 6382
     .end local v9    # "isUpgrade":Z
     .end local v13    # "ms":Landroid/os/storage/IMountService;
     :cond_2
@@ -65063,7 +65057,7 @@
 
     monitor-enter v27
 
-    .line 6340
+    .line 6383
     :try_start_3
     move-object/from16 v0, p0
 
@@ -65080,15 +65074,15 @@
     .local v19, "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/pm/PackageParser$Package;>;"
     monitor-exit v27
 
-    .line 6343
+    .line 6386
     if-eqz v19, :cond_c
 
-    .line 6346
+    .line 6389
     new-instance v20, Ljava/util/ArrayList;
 
     invoke-direct/range {v20 .. v20}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6348
+    .line 6391
     .local v20, "sortedPkgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/PackageParser$Package;>;"
     invoke-virtual/range {v19 .. v19}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -65103,14 +65097,14 @@
 
     if-eqz v26, :cond_6
 
-    .line 6349
+    .line 6392
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v16
 
     check-cast v16, Landroid/content/pm/PackageParser$Package;
 
-    .line 6350
+    .line 6393
     .local v16, "pkg":Landroid/content/pm/PackageParser$Package;
     move-object/from16 v0, v16
 
@@ -65120,19 +65114,19 @@
 
     if-eqz v26, :cond_3
 
-    .line 6354
+    .line 6397
     move-object/from16 v0, v20
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6355
+    .line 6398
     invoke-interface {v12}, Ljava/util/Iterator;->remove()V
 
     goto :goto_3
 
-    .line 6308
+    .line 6352
     .end local v12    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PackageParser$Package;>;"
     .end local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v19    # "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/pm/PackageParser$Package;>;"
@@ -65152,18 +65146,18 @@
 
     move-result-object v26
 
-    .line 6309
+    .line 6353
     const-string/jumbo v27, "fstrim_mandatory_interval"
 
-    .line 6310
+    .line 6354
     const-wide/32 v28, 0xf731400
 
-    .line 6307
+    .line 6351
     invoke-static/range {v26 .. v29}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
 
     move-result-wide v10
 
-    .line 6311
+    .line 6355
     .local v10, "interval":J
     const-wide/16 v26, 0x0
 
@@ -65171,7 +65165,7 @@
 
     if-lez v26, :cond_0
 
-    .line 6312
+    .line 6356
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v26
@@ -65182,16 +65176,16 @@
 
     sub-long v22, v26, v28
 
-    .line 6313
+    .line 6357
     .local v22, "timeSinceLast":J
     cmp-long v26, v22, v10
 
     if-lez v26, :cond_0
 
-    .line 6314
+    .line 6358
     const/4 v5, 0x1
 
-    .line 6315
+    .line 6359
     .local v5, "doTrim":Z
     const-string/jumbo v26, "PackageManager"
 
@@ -65213,10 +65207,10 @@
 
     move-result-object v27
 
-    .line 6316
+    .line 6360
     const-string/jumbo v28, "; running immediately"
 
-    .line 6315
+    .line 6359
     invoke-virtual/range {v27 .. v28}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v27
@@ -65229,7 +65223,7 @@
 
     goto/16 :goto_0
 
-    .line 6334
+    .line 6377
     .end local v5    # "doTrim":Z
     .end local v9    # "isUpgrade":Z
     .end local v10    # "interval":J
@@ -65241,7 +65235,7 @@
     .local v6, "e":Landroid/os/RemoteException;
     goto/16 :goto_2
 
-    .line 6332
+    .line 6375
     .end local v6    # "e":Landroid/os/RemoteException;
     .restart local v13    # "ms":Landroid/os/storage/IMountService;
     :cond_5
@@ -65255,7 +65249,7 @@
 
     goto/16 :goto_2
 
-    .line 6339
+    .line 6382
     .end local v13    # "ms":Landroid/os/storage/IMountService;
     :catchall_0
     move-exception v26
@@ -65264,7 +65258,7 @@
 
     throw v26
 
-    .line 6359
+    .line 6402
     .restart local v12    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/PackageParser$Package;>;"
     .restart local v19    # "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/pm/PackageParser$Package;>;"
     .restart local v20    # "sortedPkgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/PackageParser$Package;>;"
@@ -65277,7 +65271,7 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6360
+    .line 6403
     .local v8, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -65285,7 +65279,7 @@
 
     move-result-object v18
 
-    .line 6361
+    .line 6404
     .local v18, "pkgNames":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-virtual/range {v19 .. v19}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -65299,14 +65293,14 @@
 
     if-eqz v26, :cond_8
 
-    .line 6362
+    .line 6405
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v16
 
     check-cast v16, Landroid/content/pm/PackageParser$Package;
 
-    .line 6363
+    .line 6406
     .restart local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     move-object/from16 v0, v16
 
@@ -65324,19 +65318,19 @@
 
     if-eqz v26, :cond_7
 
-    .line 6367
+    .line 6410
     move-object/from16 v0, v20
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6368
+    .line 6411
     invoke-interface {v12}, Ljava/util/Iterator;->remove()V
 
     goto :goto_4
 
-    .line 6372
+    .line 6415
     .end local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     :cond_8
     move-object/from16 v0, p0
@@ -65345,7 +65339,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/pm/PackageManagerService;->filterRecentlyUsedApps(Ljava/util/Collection;)V
 
-    .line 6374
+    .line 6417
     invoke-interface/range {v19 .. v19}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v17
@@ -65364,7 +65358,7 @@
 
     check-cast v16, Landroid/content/pm/PackageParser$Package;
 
-    .line 6378
+    .line 6421
     .restart local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     move-object/from16 v0, v20
 
@@ -65374,7 +65368,7 @@
 
     goto :goto_5
 
-    .line 6382
+    .line 6425
     .end local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     :cond_9
     move-object/from16 v0, p0
@@ -65385,30 +65379,30 @@
 
     if-eqz v26, :cond_a
 
-    .line 6383
+    .line 6426
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
     invoke-direct {v0, v1}, Lcom/android/server/pm/PackageManagerService;->filterRecentlyUsedApps(Ljava/util/Collection;)V
 
-    .line 6386
+    .line 6429
     :cond_a
     const/4 v7, 0x0
 
-    .line 6387
+    .line 6430
     .local v7, "i":I
     invoke-virtual/range {v20 .. v20}, Ljava/util/ArrayList;->size()I
 
     move-result v21
 
-    .line 6388
+    .line 6431
     .local v21, "total":I
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v4
 
-    .line 6389
+    .line 6432
     .local v4, "dataDir":Ljava/io/File;
     move-object/from16 v0, p0
 
@@ -65426,7 +65420,7 @@
 
     move-result-wide v14
 
-    .line 6390
+    .line 6433
     .local v14, "lowThreshold":J
     const-wide/16 v26, 0x0
 
@@ -65434,7 +65428,7 @@
 
     if-nez v26, :cond_b
 
-    .line 6391
+    .line 6434
     new-instance v26, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v27, "Invalid low memory threshold"
@@ -65443,7 +65437,7 @@
 
     throw v26
 
-    .line 6393
+    .line 6436
     :cond_b
     invoke-interface/range {v20 .. v20}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -65462,19 +65456,19 @@
 
     check-cast v16, Landroid/content/pm/PackageParser$Package;
 
-    .line 6394
+    .line 6437
     .restart local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     invoke-virtual {v4}, Ljava/io/File;->getUsableSpace()J
 
     move-result-wide v24
 
-    .line 6395
+    .line 6438
     .local v24, "usableSpace":J
     cmp-long v26, v24, v14
 
     if-gez v26, :cond_d
 
-    .line 6396
+    .line 6439
     const-string/jumbo v26, "PackageManager"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -65501,7 +65495,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6295
+    .line 6339
     .end local v4    # "dataDir":Ljava/io/File;
     .end local v7    # "i":I
     .end local v8    # "intent":Landroid/content/Intent;
@@ -65516,7 +65510,7 @@
     :cond_c
     return-void
 
-    .line 6399
+    .line 6442
     .restart local v4    # "dataDir":Ljava/io/File;
     .restart local v7    # "i":I
     .restart local v8    # "intent":Landroid/content/Intent;
@@ -65541,7 +65535,7 @@
 
     goto :goto_6
 
-    .line 6326
+    .line 6369
     .end local v4    # "dataDir":Ljava/io/File;
     .end local v7    # "i":I
     .end local v8    # "intent":Landroid/content/Intent;

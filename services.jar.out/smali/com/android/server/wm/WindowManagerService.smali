@@ -44240,16 +44240,13 @@
     .param p2, "always"    # Z
 
     .prologue
-    .line 5951
     const/4 v0, 0x0
 
-    .line 5952
     .local v0, "first":Z
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 5961
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mAllowBootMessages:Z
     :try_end_0
@@ -44259,10 +44256,8 @@
 
     monitor-exit v2
 
-    .line 5962
     return-void
 
-    .line 5964
     :cond_0
     :try_start_1
     iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
@@ -44271,19 +44266,15 @@
 
     if-nez v1, :cond_2
 
-    .line 5965
     if-nez p2, :cond_1
 
     monitor-exit v2
 
-    .line 5966
     return-void
 
-    .line 5968
     :cond_1
     const/4 v0, 0x1
 
-    .line 5970
     :cond_2
     :try_start_2
     iget-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mSystemBooted:Z
@@ -44294,17 +44285,14 @@
 
     monitor-exit v2
 
-    .line 5971
     return-void
 
-    .line 5973
     :cond_3
     const/4 v1, 0x1
 
     :try_start_3
     iput-boolean v1, p0, Lcom/android/server/wm/WindowManagerService;->mShowingBootMessages:Z
 
-    .line 5974
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     invoke-interface {v1, p1, p2}, Landroid/view/WindowManagerPolicy;->showBootMessage(Ljava/lang/CharSequence;Z)V
@@ -44313,17 +44301,13 @@
 
     monitor-exit v2
 
-    .line 5976
     if-eqz v0, :cond_4
 
-    .line 5977
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->performEnableScreen()V
 
-    .line 5950
     :cond_4
     return-void
 
-    .line 5952
     :catchall_0
     move-exception v1
 

@@ -75,7 +75,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x10403f8
+    sget v2, Lcom/android/internal/R$string;->android_upgrading_complete:I
 
     .line 12116
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
