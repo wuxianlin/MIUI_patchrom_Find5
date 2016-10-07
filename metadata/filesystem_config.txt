@@ -2034,7 +2034,7 @@ system/xbin/showslab 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0
 system/xbin/simpleperf 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/sqlite3 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/strace 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/xbin/su 0 2000 755 selabel=u:object_r:su_exec:s0 capabilities=0x0
+system/xbin/su 0 2000 6755 selabel=u:object_r:su_exec:s0 capabilities=0x0
 system/xbin/taskstats 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/tcpdump 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/unpigz 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2044,3 +2044,5 @@ system/xbin/vim 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/wget 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/zcat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/zip 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings/StockSettings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
