@@ -917,6 +917,30 @@
     return-object v4
 .end method
 
+.method public static patternToHash(Ljava/util/List;)[B
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/widget/LockPatternView$Cell;",
+            ">;)[B"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
+
+    const/4 v0, 0x3
+
+    invoke-static {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->patternToHash(Ljava/util/List;B)[B
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
 .method public static patternToHash(Ljava/util/List;B)[B
     .locals 9
     .param p1, "gridSize"    # B
@@ -1019,6 +1043,30 @@
     .line 941
     .local v4, "nsa":Ljava/security/NoSuchAlgorithmException;
     return-object v6
+.end method
+
+.method public static patternToString(Ljava/util/List;)Ljava/lang/String;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/widget/LockPatternView$Cell;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
+    const/4 v0, 0x3
+
+    invoke-static {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->patternToString(Ljava/util/List;B)Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
 .end method
 
 .method public static patternToString(Ljava/util/List;B)Ljava/lang/String;
@@ -1196,6 +1244,31 @@
     const/4 v0, 0x1
 
     goto :goto_0
+.end method
+
+.method public static stringToPattern(Ljava/lang/String;)Ljava/util/List;
+    .locals 2
+    .param p0, "string"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/widget/LockPatternView$Cell;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x3
+
+    invoke-static {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;B)Ljava/util/List;
+
+    move-result-object v1
+
+    return-object v1
 .end method
 
 .method public static stringToPattern(Ljava/lang/String;B)Ljava/util/List;

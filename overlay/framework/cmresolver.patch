@@ -1,0 +1,35 @@
+From 5036092cbec47182901c82494a94b723c3aa7a44 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Sun, 23 Oct 2016 17:53:24 +0800
+Subject: [PATCH] cm ResolverActivity http://review.cyanogenmod.org/#/c/147325/
+
+---
+ .../com/android/internal/app/ResolverActivity$ResolveListAdapter.smali  | 2 +-
+ framework/smali/com/android/internal/app/ResolverActivity.smali         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+--- a/framework/smali/com/android/internal/app/ResolverActivity$ResolveListAdapter.smali
++++ b/framework/smali/com/android/internal/app/ResolverActivity$ResolveListAdapter.smali
+@@ -2081,7 +2081,7 @@
+     return v0
+ .end method
+ 
+-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
++.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+     .locals 2
+     .param p1, "position"    # I
+     .param p2, "convertView"    # Landroid/view/View;
+--- a/framework/smali/com/android/internal/app/ResolverActivity.smali
++++ b/framework/smali/com/android/internal/app/ResolverActivity.smali
+@@ -35,7 +35,7 @@
+ # instance fields
+ .field private mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
+ 
+-.field private mAlwaysUseOption:Z
++.field mAlwaysUseOption:Z
+ 
+ .field private mComponentOrders:Ljava/util/List;
+     .annotation system Ldalvik/annotation/Signature;
+-- 
+1.9.1
+

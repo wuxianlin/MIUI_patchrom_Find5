@@ -1,0 +1,31 @@
+From b04445f846fc8f0330d585c26c3e57db010c5940 Mon Sep 17 00:00:00 2001
+From: wuxianlin <wuxianlinwxl@gmail.com>
+Date: Sun, 23 Oct 2016 15:58:54 +0800
+Subject: [PATCH] fix ResolverActivity
+
+---
+ .../com/android/internal/app/ResolverActivity$PageGridAdapter.smali    | 3 +++
+ 1 file changed, 3 insertions(+)
+
+--- a/framework/smali/com/android/internal/app/ResolverActivity$PageGridAdapter.smali
++++ b/framework/smali/com/android/internal/app/ResolverActivity$PageGridAdapter.smali
+@@ -228,6 +228,8 @@
+ 
+     check-cast v3, Lcom/android/internal/widget/MaskLayout;
+ 
++    if-eqz v3, :cond_wxl
++
+     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
+ 
+     # getter for: Lcom/android/internal/app/ResolverActivity;->mMaskColor:I
+@@ -237,6 +239,7 @@
+ 
+     invoke-virtual {v3, v4}, Lcom/android/internal/widget/MaskLayout;->setMaskColor(I)V
+ 
++    :cond_wxl
+     new-instance v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;
+ 
+     invoke-direct {v0, v2}, Lcom/android/internal/app/ResolverActivity$ViewHolder;-><init>(Landroid/view/View;)V
+-- 
+1.9.1
+

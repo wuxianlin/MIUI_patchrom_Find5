@@ -180,6 +180,25 @@
     throw v0
 .end method
 
+.method public static of(II)Lcom/android/internal/widget/LockPatternView$Cell;
+    .locals 2
+    .param p0, "row"    # I
+    .param p1, "column"    # I
+
+    .prologue
+    const/4 v1, 0x3
+
+    invoke-static {p0, p1, v1}, Lcom/android/internal/widget/LockPatternView$Cell;->checkRange(IIB)V
+
+    sget-object v0, Lcom/android/internal/widget/LockPatternView$Cell;->sCells:[[Lcom/android/internal/widget/LockPatternView$Cell;
+
+    aget-object v0, v0, p0
+
+    aget-object v0, v0, p1
+
+    return-object v0
+.end method
+
 .method public static updateSize(B)V
     .locals 5
     .param p0, "size"    # B
