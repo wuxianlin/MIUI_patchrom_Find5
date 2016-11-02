@@ -119,6 +119,42 @@
     return-void
 .end method
 
+.method public constructor <init>(IIJJIILjava/lang/String;)V
+    .locals 13
+    .param p1, "op"    # I
+    .param p2, "mode"    # I
+    .param p3, "time"    # J
+    .param p5, "rejectTime"    # J
+    .param p7, "duration"    # I
+    .param p8, "proxyUid"    # I
+    .param p9, "proxyPackage"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move v3, p2
+
+    move-wide/from16 v4, p3
+
+    move-wide/from16 v6, p5
+
+    move/from16 v8, p7
+
+    move/from16 v9, p8
+
+    move-object/from16 v10, p9
+
+    invoke-direct/range {v1 .. v12}, Landroid/app/AppOpsManager$OpEntry;-><init>(IIJJIILjava/lang/String;II)V
+
+    return-void
+.end method
+
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 2
     .param p1, "source"    # Landroid/os/Parcel;
