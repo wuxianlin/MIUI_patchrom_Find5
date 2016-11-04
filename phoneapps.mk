@@ -37,7 +37,6 @@ private-phone-priv-apps := \
 	FusedLocation \
 	InputDevices \
 	ProxyHandler \
-	Screencast \
 	SharedStorageBackup \
 	Shell \
 	Snap \
